@@ -1,7 +1,7 @@
 // Desafio 10
 
-let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = "Julia";
+// let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let name = "Julia";
 
 
 function techList(array, name) {
@@ -22,9 +22,6 @@ function techList(array, name) {
 }
 
 // techList(tecnologias, name);
-
-
-
 
 
 // Desafio 11
