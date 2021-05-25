@@ -1,17 +1,18 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   let isTrueOrFalse;
-  if (boolean1 && boolean2 == true) {
-    isTrueOrFalse = true
+  if (boolean1 === true && boolean2 === true) {
+    isTrueOrFalse = true;
   } else {
-    isTrueOrFalse = false
+    isTrueOrFalse = false;
   }
-  return isTrueOrFalse
+  return isTrueOrFalse;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
