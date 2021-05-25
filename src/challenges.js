@@ -1,3 +1,9 @@
+/* 
+  Project: Playgorund Functoions
+  Author: Wallacy Francis 
+  Portfolio: https://wallacyfrancis.github.io/
+*/
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
