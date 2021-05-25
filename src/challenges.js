@@ -1,23 +1,24 @@
-// Desafio 1 - se ambos os números forem par, retorna true.
+// Desafio 1 - se ambos os valores forem true...
 function compareTrue(num1, num2) {
-  if (num1 % 2 == 0 && num2 % 2 == 0) {
+  if (num1 && num2) {
     return true;
   }
   else {
-    return false;
-  }   
+    return false
+  }
 }
-// Desafio 2 - calculra a área de um triangulo!
+
+// Desafio 2 - calcula a área de um triangulo!
 function calcArea(base, height) {
   const calc = (base * height) / 2
   return calc
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return splitedArray = frase.split(' ');
 }
-
+console.log(splitSentence('go trybe'));
 // Desafio 4
 function concatName() {
   // seu código aqui
