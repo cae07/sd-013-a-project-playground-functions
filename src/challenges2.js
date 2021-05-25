@@ -50,14 +50,42 @@ console.log(generatePhoneNumber([1, 0, 4, 4, 2, 3, 7, 8, 9, 3, 1]));
 
   
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let condicao = false;
+function triangleCheck(l1, l2, l3) {
+  if (l1 < (l2 + l3) && l1 > Math.abs(l2 - l3) && l2 < (l1 + l3) && l2 > Math.abs(l1 - l3) && l3 < (l1 + l2) && l3 > Math.abs(l1 - l2)){
+  condicao = true;
 }
+  else {
+  condicao = false;
+  }
+  return condicao;
+}
+console.log(triangleCheck(1, 14, 8));
+
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Fonte: https://stackoverflow.com/questions/1862130/strip-all-non-numeric-characters-from-string-in-javascript
+function hydrate(input) {
+input = input.replace(/\D/g, ''); 
+  // Onde o '/D' acha todos os "nao numeros", o '/g' percorre TODA a string e o '.replace' substitui por espaços vazios
+let inputSeparada = input.split("").map(Number);
+// Fontehttps://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
+let sum = 0;
+for (let index in inputSeparada){
+  sum +=  inputSeparada[index];
 }
+let frase = "";
+if (sum === 1){
+  frase = sum + " copo de água";
+}
+else {
+  frase = sum + " copos de água";
+}
+return frase;
+}
+console.log(hydrate("1 cerveja"));
+
+
 
 module.exports = {
   generatePhoneNumber,
@@ -65,3 +93,10 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+
+
+
+
+
+
