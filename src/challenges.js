@@ -28,20 +28,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let repetido = 0;
+  let repetidos = 0;
+  let maiorNumero = array[0];
+
   for (let index = 0; index < array.length; index += 1) {
-    for (let index2 = 0; index2 <= array.length; index2 += 1) {
-      if (array[index] === array[index2]) {
-        repetido += 1;
-      }
+    if (maiorNumero < array[index]) {
+      maiorNumero = array[index];
+      repetidos = 0;
     }
-    return repetido;
+
+    if (maiorNumero === array[index]) {
+      repetidos += 1;
+    }
   }
+
+  return repetidos;
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
-console.log(highestCount([-2, -2, -1]))
-console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
