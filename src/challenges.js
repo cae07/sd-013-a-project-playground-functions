@@ -32,9 +32,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(list) {
-  biggest = -10000000;
+  biggest = 0;
   for (let index = 0; index < list.length; index += 1) {
-    if (list[index] > biggest){
+    if (Math.abs(list[index]) > biggest){
       biggest = list[index]; 
     }
   }
@@ -45,7 +45,7 @@ function highestCount(list) {
     }
   }return cont;
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7] ));
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
