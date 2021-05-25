@@ -82,11 +82,11 @@ function fizzBuzz(array) {
   let vazio = [];
   for (let key in array) {
     if (array[key] % 3 === 0 && array[key] % 5 === 0) {
-       vazio.push("fizzBuzz")
+      vazio.push("fizzBuzz")
     }
     else if (array[key] % 3 === 0) {
       vazio.push("fizz")
-    } else if (array[key]%  5 === 0) {
+    } else if (array[key] % 5 === 0) {
       vazio.push("buzz")
     }
     else {
@@ -95,14 +95,27 @@ function fizzBuzz(array) {
   }
   return vazio
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
+function encode(texto) {
   // seu código aqui
+  let resultado = "";
+  resultado = texto.replace(/a/g,1)
+  resultado = resultado.replace(/e/g, 2)
+  resultado = resultado.replace(/i/g, 3)
+  resultado = resultado.replace(/o/g, 4)
+  resultado = resultado.replace(/u/g, 5)
+  return resultado
 }
-function decode() {
+function decode(texto) {
   // seu código aqui
+  let resultado = "";
+  resultado = texto.replace(/1/g, "a");
+  resultado = resultado.replace(/2/g, "e");
+  resultado = resultado.replace(/3/g, "i");
+  resultado = resultado.replace(/4/g, "o");
+  resultado = resultado.replace(/5/g, "u");
+  return resultado
 }
 
 module.exports = {
