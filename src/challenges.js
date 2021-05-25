@@ -22,13 +22,26 @@ function concatName(listaDeNomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalDePonstos = 3 * wins + 1 * ties;
+  return totalDePonstos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(listaDeNumeros) {
+  let maior = listaDeNumeros[0];
+  let repetido = 0;
+  for (numero of listaDeNumeros) {
+    if (numero >= maior) {
+      maior = numero;
+    }
+  }
+  for (numero of listaDeNumeros) {
+    if (numero === maior) {
+      repetido += 1;
+    }
+  }
+  return repetido;
 }
 
 // Desafio 7
