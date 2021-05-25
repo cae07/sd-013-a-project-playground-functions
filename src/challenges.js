@@ -3,18 +3,14 @@ function compareTrue(value1, value2) {
   if(value1 == true && value2 == true){
     return true;
     } else {
-      return false;
+    return false;
     }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let base = 10;
-  let height = 50;
   let calcArea = parseFloat(base * height/2);
-  return calcArea
 }
-console.log(calcArea)
 
 // Desafio 3
 function splitSentence() {
