@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1: Crie uma função usando o operador &&
 function compareTrue(param1, param2) {
   if (param1 && param2 == true) {
     return true;
@@ -8,12 +8,14 @@ function compareTrue(param1, param2) {
 }
 // console.log(compareTrue(true, true));
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+// Desafio 2: Crie uma função que calcule a área de um triângulo
+function calcArea(base, altura,divisor) {
+  let area = (base * altura) / divisor;
+  return area;
 }
+// console.log(calcArea(5, 8, 2));
 
-// Desafio 3
+// Desafio 3: Crie uma função que divida a frase
 function splitSentence() {
   // seu código aqui
 }
