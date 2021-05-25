@@ -9,10 +9,21 @@ function calcArea(base, height) {
   let area = (base * height) / 2
   return area
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(setence) {
+  let phrase = setence
+  let phraseArray = ''
+  let array = [] ;
+
+  for (let index = 0; phrase.length >= index ; index +=1 ) {
+    if (phrase[index] === ' ' || phrase[index] === undefined) {
+      array.push(phraseArray);
+      phraseArray = '';
+    }else  {
+      phraseArray = phraseArray + phrase[index]
+    }
+  }
+  return array
 }
 
 // Desafio 4
