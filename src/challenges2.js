@@ -51,11 +51,25 @@ function generatePhoneNumber(myArray) {
   return strOutput;
 }
 
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  // let arrSomaDasMedidas = [];
+
+  let somaAB = lineA + lineB;
+  let somaAC = lineA + lineC;
+  let somaBC = lineB + lineC;
+
+  let diffAB = Math.abs(lineA - lineB);
+  let diffAC = Math.abs(lineA - lineC);
+  let diffBC = Math.abs(lineB - lineC);
+
+  if (lineA > somaBC || lineA < diffBC) return false;
+  if (lineB > somaAC || lineB < diffAC) return false;
+  if (lineC > somaAB || lineC < diffAB) return false;
+
+  return true;
+
 }
 
 // Desafio 13
