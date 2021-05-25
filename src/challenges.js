@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let indiceDoArray = `${arrayDeStrings[0]}, ${arrayDeStrings[arrayDeStrings.length - 1]}`;
+  let indiceDoArray = `${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}`;
   return indiceDoArray;
 }
 // Desafio 5
