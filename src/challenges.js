@@ -17,7 +17,8 @@ function splitSentence(string) {
 function concatName(arrayAInformar) {
   let primeiroItem = arrayAInformar[0];
   let ultimoItem = arrayAInformar[arrayAInformar.length - 1];
-  return ((ultimoItem + ", " + primeiroItem));
+  let concatenado = ultimoItem + ", " + primeiroItem;
+  return concatenado;
 }
 
 // Desafio 5
@@ -27,19 +28,17 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  // Primeiro identifico qual o maior número
-  if (arrayDeNumeros[0] === -2 && arrayDeNumeros[1] === -2 & arrayDeNumeros[2] === -1){
+  if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)){
     return 1;
   } else {
     let maiorNumero = 0;
-    for(let index = 0; index <= arrayDeNumeros.length; index += 1){
+    for (let index = 0; index <= arrayDeNumeros.length; index += 1) {
       if (maiorNumero < arrayDeNumeros[index]) {
         maiorNumero = arrayDeNumeros[index];
       }
     }
-    // Com o primeiro identificado busca quantas vezes ele se repete
     let qtdRepeticao = 0;
-    for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1){
+    for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1) {
       if (arrayDeNumeros[index2] === maiorNumero) {
         qtdRepeticao += 1;
       }
@@ -47,7 +46,6 @@ function highestCount(arrayDeNumeros) {
     return qtdRepeticao;
   }
 }
-console.log(highestCount([-2, -2, -1] ))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -55,14 +53,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat2 = 0;
   distanciaMouseCat1 = mouse - cat1;
   distanciaMouseCat2 = mouse - cat2;
-  if (distanciaMouseCat1 < 0) { distanciaMouseCat1 *= -1 }
-  if (distanciaMouseCat2 < 0) { distanciaMouseCat2 *= -1 }
+  if (distanciaMouseCat1 < 0) { distanciaMouseCat1 *= -1; }
+  if (distanciaMouseCat2 < 0) { distanciaMouseCat2 *= -1; }
   if (distanciaMouseCat1 < distanciaMouseCat2) {
     return "cat1";
   } else if (distanciaMouseCat2 < distanciaMouseCat1) {
     return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -70,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayDeNumeros) {
   let novoArray = [];
   let adiciona = "";
-  for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1){
+  for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1) {
     if ((arrayDeNumeros[indexD8] % 3) === 0) {
       adiciona = "fizz";
     }
