@@ -1,17 +1,33 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2
+  return value1 && value2;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let palavra = '';
+  let palavras = [];
+  for (let i = 0; i < frase.length; i += 1) {
+    let letra = frase[i];
+    if (i === (frase.length - 1)) {
+      palavra += letra;
+      palavras.push(palavra);
+    } else if (letra === ' ') {
+      palavras.push(palavra);
+      palavra = '';
+    } else {
+      palavra += letra;
+    }
+  }
+  return palavras;
 }
+
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
