@@ -77,13 +77,33 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+
+  let check1 = lineA + lineB > lineC && lineC > Math.abs(lineA - lineB);
+  let check2 = lineA + lineC > lineB && lineB > Math.abs(lineA - lineC);
+  let check3 = lineB + lineC > lineA && lineA > Math.abs(lineB - lineC);
+
+  return check1 && check2 && check3;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  /*
+  https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  */
+  var numbers = str.match(/\d+/g).map(Number);
+
+  /*
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+  */
+  const sum = (x, y) => x + y;
+
+  if (numbers.reduce(sum) === 1) {
+    return '1 copo de água'
+  }
+  else {
+    return numbers.reduce(sum) + ' copos de água';
+  }
 }
 
 module.exports = {
