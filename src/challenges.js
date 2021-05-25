@@ -60,8 +60,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listaDeNumeros) {
+  let saida = [];
+  let numero;
+  for (numero of listaDeNumeros) {
+    // Divisibilidade por 3
+    if (numero % 3 === 0 && numero % 5 === 0) {
+      saida.push('fizzBuzz');
+    } else if (numero % 5 === 0) {
+      saida.push('buzz');
+    } else if (numero % 3 === 0) {
+      saida.push('fizz');
+    } else {
+      saida.push('bug!');
+    }
+  }
+  return saida;
 }
 
 // Desafio 9
