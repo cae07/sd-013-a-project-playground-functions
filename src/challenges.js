@@ -80,11 +80,53 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let encodeWord = '';
+
+  for (index in word) {
+    if (word[index] === 'a') {
+      encodeWord += '1';
+    } else if (word[index] === 'e') {
+      encodeWord += '2';
+    } else if (word[index] === 'i') {
+      encodeWord += '3';
+    } else if (word[index] === 'o') {
+      encodeWord += '4';
+    } else if (word[index] === 'u') {
+      encodeWord += '5';
+    } else {
+      encodeWord += word[index]
+    }
+  }
+
+  return encodeWord;
 }
-function decode() {
-  // seu código aqui
+
+function decode(word) {
+  let decodeWord = '';
+
+  for (index in word) {
+    if (word[index] === '1') {
+      decodeWord += 'a';
+    } else if (word[index] === '2') {
+      decodeWord += 'e';
+    } else if (word[index] === '3') {
+      decodeWord += 'i';
+    } else if (word[index] === '4') {
+      decodeWord += 'o';
+    } else if (word[index] === '5') {
+      decodeWord += 'u';
+    } else {
+      decodeWord += word[index];
+    }
+  }
+
+  return decodeWord;
+}
+
+// Desafio 10
+function techList(techlist, name) {
+  
 }
 
 module.exports = {
@@ -98,4 +140,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList
 };
