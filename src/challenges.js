@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(bollean1, bollean2) {
-  boleano = false
-  if (bollean1 === true && bollean2 === true){
-   boleano = true
-  } else {
-  
+  let boleano = false;
+  if (bollean1 === true && bollean2 === true) {
+  boleano = true;
   }
-  return boleano
+  return boleano;
 }
 
 // Desafio 2
@@ -21,7 +19,7 @@ function splitSentence(sentenca) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length -1].concat( ', ' ,array[0]);
+  return array[array.length - 1].concat(', ' , array[0]);
 }
 
 // Desafio 5
@@ -35,18 +33,15 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maiorNumero = -99;
   let maiorNumeroSeRepete = 0;
-  for (let i = 0 ; i<array.length ; i += 1){
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > maiorNumero) {
       maiorNumero = array[i];
-    } else {
     }
   }
   let contador = 0;
-  for (let i = 0; i < array.length ; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (maiorNumero === array[i]) {
       contador += 1;
-    } else {
-
     }
     maiorNumeroSeRepete = contador;
   }
@@ -55,13 +50,15 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let gatoOuRato = ''
   if(cat1 - mouse > cat2 - mouse){
-    return 'cat2' ;
+    gatoOuRato = 'cat2' ;
   } else if (cat2 - mouse > mouse - cat1){
-    return 'cat1' ;
+    gatoOuRato = 'cat1' ;
   } else {
-    return 'os gatos trombam e o rato foge';
+    gatoOuRato = 'os gatos trombam e o rato foge';
   }
+  return gatoOuRato
 }
 
 // Desafio 8
