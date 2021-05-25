@@ -1,49 +1,139 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
+  if (value1 == true && value2 ==true){
+    return true
+  }
+  else {
+    return false
+  }
   // seu código aqui
 }
 
-
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return (base * height)/2
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+ let palavra = ['']
+ let indicePalavra = 0
+ 
+ for (let i=0 ; i < string.length; i++){
+   if (string[i] == ' '){
+     indicePalavra++
+     palavra[indicePalavra]=''
+     
+    }
+    else{
+      palavra[indicePalavra]+=string[i]
+    }
+ }
+ console.log(palavra)
+ return palavra 
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  let ultimaPosicao = array.length
+  ultimaPosicao--
+  let retorno = ['']
+  retorno[0] = array[ultimaPosicao]
+  retorno[1] = array[0]
+  let retornoStream = `${retorno[0]}, ${retorno[1]}`
+  return retornoStream
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let pontos = (3*wins) + ties
+  return pontos
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  let count = 0
+  let maior = numbers[0]
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] > maior){
+      maior = numbers[i]
+    }
+  }
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i]== maior){
+      count++
+    }
+  }
+  return count
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(mouse-cat1)
+  let distanciaCat2 = Math.abs(mouse-cat2)
+  if (distanciaCat1==distanciaCat2){
+    return 'os gatos trombam e o rato foge'
+  }
+  else if (distanciaCat1> distanciaCat2){
+    return 'cat2'
+  }
+  else{
+    return 'cat1'
+  }
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let retorno = []
+  let indiceRetorno = 0
+  for (let i = 0; i < array.length; i++){
+    if ((array[i]%3)==0){
+      if((array[i]%5)==0){
+        retorno[indiceRetorno] = 'fizzBuzz'
+        indiceRetorno++
+      }
+      else{
+        retorno[indiceRetorno] = 'fizz'
+        indiceRetorno++
+      }
+    }
+    else if ((array[i]%5)==0){
+      retorno[indiceRetorno] = 'buzz'
+      indiceRetorno++
+    }
+    else {
+      retorno[indiceRetorno] = 'bug!'
+      indiceRetorno++
+    }
+  }
+  console.log(retorno)
+  return retorno
   // seu código aqui
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let stringEncode = string.replace(/a/g, '1')
+  stringEncode = stringEncode.replace(/e/g, '2')
+  stringEncode = stringEncode.replace(/i/g, '3')
+  stringEncode = stringEncode.replace(/o/g, '4')
+  stringEncode = stringEncode.replace(/u/g, '5')
+  return stringEncode
   // seu código aqui
 }
-function decode() {
+function decode(string) {
+  let stringDecode = string.replace(/1/g, 'a')
+  stringDecode = stringDecode.replace(/2/g, 'e')
+  stringDecode = stringDecode.replace(/3/g, 'i')
+  stringDecode = stringDecode.replace(/4/g, 'o')
+  stringDecode = stringDecode.replace(/5/g, 'u')
+  return stringDecode
   // seu código aqui
 }
 
