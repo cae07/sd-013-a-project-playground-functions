@@ -67,12 +67,44 @@ function highestCount(numberArrays) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
 
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceBetweenMouseAndCat1 = Math.abs(mouse - cat1);
+  let distanceBetweenMouseAndCat2 = Math.abs(mouse - cat2);
+  let whoWin = '';
+  if (distanceBetweenMouseAndCat1 > distanceBetweenMouseAndCat2) {
+    whoWin = 'cat2';
+  }
+
+  if (distanceBetweenMouseAndCat2 > distanceBetweenMouseAndCat1) {
+    whoWin = 'cat1';
+  }
+
+  if (distanceBetweenMouseAndCat1 === distanceBetweenMouseAndCat2) {
+    whoWin = 'os gatos trombam e o rato foge';
+  }
+
+  return whoWin;
+}
+
+function isDividedBy(number) {
+  let string = '';
+  if ((number) % 3 === 0 && (number % 5) === 0) string = 'fizzBuzz';
+  else if ((number) % 5 === 0) string = 'buzz';
+  else if ((number) % 3 === 0) string = 'fizz';
+  else string = 'bug!';
+
+  return string;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbersArray) {
+  let stringsArray = [];
+  for (let number of numbersArray) {
+    stringsArray.push(isDividedBy(number));
+  }
+
+  return stringsArray;
 }
 
 // Desafio 9
