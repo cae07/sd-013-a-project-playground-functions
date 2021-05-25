@@ -48,15 +48,17 @@ function highestCount(list) {
 console.log(highestCount([1, 9, 2, 3, 9, 5, 7] ));
 
 // Desafio 7
-function catAndMouse(cat1,cat2) {
-  if (cat1 > cat2){
+function catAndMouse(mouse,cat1,cat2) {
+  let situation1 = cat1 - mouse;
+  let situation2 = cat2 - mouse;
+  if (situation1 < situation2){
+    return "cat1";
+  }else if(situation1 > situation2){
     return "cat2";
-  }else if(cat2 > cat1){
-    return "cat1"
-  }else{
+  }else if (situation2 == situation1){
     return "os gatos trombam e o rato foge"
   }
-}
+}console.log(catAndMouse(0,2,2));
 
 // Desafio 8
 function fizzBuzz(list) {
