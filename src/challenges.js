@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(array) {
-  let phrase = []
+  let phrase = []; 
   for(let index = 0; index < array.length; index +=1){
     if(array[index] % 3 === 0 && array[index] % 5 === 0){
       phrase[index]="fizzBuzz"
@@ -72,16 +72,55 @@ function fizzBuzz(array) {
   }
   return phrase
 }
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let phrase = ""
+ for(let index = 0; index < string.length; index+=1){
+   if(string[index] == "a"){
+     phrase+= 1;
+   }
+   else if(string[index] == "e"){
+     phrase+= 2;
+   }
+   else if(string[index] == "i"){
+    phrase+= 3;
+  }
+  else if(string[index] == "o"){
+    phrase+= 4;
+  }
+  else if(string[index] == "u"){
+    phrase+= 5;
+  }
+  else{
+    phrase+= string[index]
+  }
+ }
+ return phrase
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let phrase = ""
+  for(let index = 0; index < string.length; index+=1){
+    if(string[index] == 1){
+      phrase+= "a";
+    }
+    else if(string[index] == 2){
+      phrase+= "e";
+    }
+    else if(string[index] == 3){
+     phrase+= "i";
+   }
+   else if(string[index] == 4){
+     phrase+= "o";
+   }
+   else if(string[index] == 5){
+     phrase+= "u";
+   }
+   else{
+     phrase+= string[index]
+   }
+  }
+  return phrase
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
