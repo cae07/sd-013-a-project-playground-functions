@@ -91,37 +91,48 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumeros) {
   // seu código aqui
+  let resultado = [];
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
+    if (arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (arrayNumeros[i] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (arrayNumeros[i] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
 
 // Desafio 9
 function encode(frase) {
   // seu código aqui
   let codigo = '';
-  let atuateste ; 
-  for (let i =0; i < frase.length; i += 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     switch (frase[i]) {
-      case 'a':
-        codigo +='1';
-        break;
-      case 'e':
-        codigo += '2';
-        break;
-      case 'i':
-        codigo += '3';
-        break;
-      case 'o':
-        codigo += '4';
-        break;
-      case 'u':
-        codigo += '5';
-        break;
-      default:
-        codigo += frase[i]
-        break;
+    case 'a':
+      codigo += '1';
+      break;
+    case 'e':
+      codigo += '2';
+      break;
+    case 'i':
+      codigo += '3';
+      break;
+    case 'o':
+      codigo += '4';
+      break;
+    case 'u':
+      codigo += '5';
+      break;
+    default:
+      codigo += frase[i];
+      break;
     }
-    atuateste = frase[i]
   }
   return codigo;
 }
@@ -129,29 +140,27 @@ function encode(frase) {
 function decode(frase) {
   // seu código aqui
   let codigo = '';
-  let atuateste ; 
-  for (let i =0; i < frase.length; i += 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     switch (frase[i]) {
-      case '1':
-        codigo +='a';
-        break;
-      case '2':
-        codigo += 'e';
-        break;
-      case '3':
-        codigo += 'i';
-        break;
-      case '4':
-        codigo += 'o';
-        break;
-      case '5':
-        codigo += 'u';
-        break;
-      default:
-        codigo += frase[i]
-        break;
+    case '1':
+      codigo += 'a';
+      break;
+    case '2':
+      codigo += 'e';
+      break;
+    case '3':
+      codigo += 'i';
+      break;
+    case '4':
+      codigo += 'o';
+      break;
+    case '5':
+      codigo += 'u';
+      break;
+    default:
+      codigo += frase[i];
+      break;
     }
-    atuateste = frase[i]
   }
   return codigo;
 }
