@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) return true;
+  if (value1 === true && value2 === true) { return true; } else { return false; }
 }
 
 // Desafio 2
@@ -22,16 +22,26 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let vitoria = wins * 3;
-  let empate = ties * 1;
-
-  return vitoria + empate;
+  let total = (3 * wins) + ties;
+  return total;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let repetido = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    for (let index2 = 0; index2 <= array.length; index2 += 1) {
+      if (array[index] === array[index2]) {
+        repetido += 1;
+      }
+    }
+    return repetido;
+  }
 }
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+console.log(highestCount([-2, -2, -1]))
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
