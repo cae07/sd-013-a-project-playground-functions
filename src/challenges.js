@@ -11,15 +11,19 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-// Desafio 3
+// Desafio 3 - Ajudado por jackson pires no zoom
 function splitSentence(string) {
   let array = string.split(" ");
   return array;  
 }
 
 // Desafio 4
-function concatName(array) {
-
+function concatName(value) {
+  let result = [];
+  for (let index = 0; index < value.length; index +=1) {
+  }
+  result = value[value.length - 1] + ', ' + value[0];
+  return result;
 }
 
 // Desafio 5
