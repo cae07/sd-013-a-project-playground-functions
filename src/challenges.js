@@ -9,7 +9,7 @@ function compareTrue(p1, p2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 };
 
 // Desafio 3
@@ -17,20 +17,20 @@ function calcArea(base, height) {
 function splitSentence(frase) {
   for (let palavra in frase) {
     palavra = frase.split(' ');
-    return palavra
+    return palavra;
   };
 };
 
 // Desafio 4
 // Referência utilizada: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
 function concatName(stringArray) {
-  return `${stringArray[stringArray.length -1]}, ${stringArray[0]}`
+  return `${stringArray[stringArray.length -1]}, ${stringArray[0]}`;
 };
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
+};
 
 // Desafio 6
 function highestCount() {
