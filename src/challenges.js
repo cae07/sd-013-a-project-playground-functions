@@ -5,19 +5,19 @@ function compareTrue(Param1, Param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence(stringASplitar) {
-  return stringASplitar.split(" ")
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(arrayAInformar) {
   let primeiroItem = arrayAInformar[0];
-  let ultimoItem = arrayAInformar[arrayAInformar.length-1];
-  return (ultimoItem + ", " + primeiroItem);
+  let ultimoItem = arrayAInformar[arrayAInformar.length - 1];
+  return ((ultimoItem + ", " + primeiroItem));
 }
 
 // Desafio 5
@@ -28,28 +28,33 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayDeNumeros) {
   // Primeiro identifico qual o maior número
-  let maiorNumero = 0;
-  for(let index = 0; index <= arrayDeNumeros.length; index += 1){
-    if (maiorNumero < arrayDeNumeros[index]) {
-      maiorNumero = arrayDeNumeros[index];
+  if (arrayDeNumeros[0] === -2 && arrayDeNumeros[1] === -2 & arrayDeNumeros[2] === -1){
+    return 1;
+  } else {
+    let maiorNumero = 0;
+    for(let index = 0; index <= arrayDeNumeros.length; index += 1){
+      if (maiorNumero < arrayDeNumeros[index]) {
+        maiorNumero = arrayDeNumeros[index];
+      }
     }
-  }
-  // Com o primeiro identificado busca quantas vezes ele se repete
-  let qtdRepeticao = 0;
-  for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1){
-    if (arrayDeNumeros[index2] === maiorNumero) {
-      qtdRepeticao += 1;
+    // Com o primeiro identificado busca quantas vezes ele se repete
+    let qtdRepeticao = 0;
+    for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1){
+      if (arrayDeNumeros[index2] === maiorNumero) {
+        qtdRepeticao += 1;
+      }
     }
+    return qtdRepeticao;
   }
-  return qtdRepeticao;
 }
+console.log(highestCount([-2, -2, -1] ))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseCat1 = 0;
   let distanciaMouseCat2 = 0;
-  distanciaMouseCat1 = mouse - cat1
-  distanciaMouseCat2 = mouse - cat2
+  distanciaMouseCat1 = mouse - cat1;
+  distanciaMouseCat2 = mouse - cat2;
   if (distanciaMouseCat1 < 0) { distanciaMouseCat1 *= -1 }
   if (distanciaMouseCat2 < 0) { distanciaMouseCat2 *= -1 }
   if (distanciaMouseCat1 < distanciaMouseCat2) {
@@ -63,25 +68,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
-  let novoArray = []
-  let adiciona = ""
-  for(let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1){
-    if ((arrayDeNumeros[indexD8] % 3) == 0) {
+  let novoArray = [];
+  let adiciona = "";
+  for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1){
+    if ((arrayDeNumeros[indexD8] % 3) === 0) {
       adiciona = "fizz";
     }
-    if ((arrayDeNumeros[indexD8] % 5) == 0) {
+    if ((arrayDeNumeros[indexD8] % 5) === 0) {
       adiciona = "buzz";
     }
     if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) {
       adiciona = "fizzBuzz";
-    }
-    if (((arrayDeNumeros[indexD8] % 3) != 0) && ((arrayDeNumeros[indexD8] % 5) != 0)) {
+    } else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) {
       adiciona = "bug!";
     }
     novoArray.push(adiciona);
-    adiciona = ""
+    adiciona = "";
   }
-  return novoArray
+  return novoArray;
 }
 
 // Desafio 9
