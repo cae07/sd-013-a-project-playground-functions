@@ -19,13 +19,16 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  var resultado = frase.split(" ");
+
+  return resultado
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) { 
+  var resultado = (nomes[nomes.length -1] + ", " + nomes[0]) 
+ return resultado;
 }
 
 // Desafio 5
