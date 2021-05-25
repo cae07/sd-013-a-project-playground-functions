@@ -22,9 +22,10 @@ function splitSentence(frase) {
 };
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+// Referência utilizada: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+function concatName(stringArray) {
+  return `${stringArray[stringArray.length -1]}, ${stringArray[0]}`
+};
 
 // Desafio 5
 function footballPoints() {
