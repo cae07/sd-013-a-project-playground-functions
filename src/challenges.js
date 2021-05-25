@@ -1,17 +1,23 @@
-// Desafio 1
+ // Desafio 1
 function compareTrue(p1, p2) {
-  if(p1 == true && p2 == true) {
+  if (p1 == true && p2 == true) {
   return true;
   } else {
-    return false;
+  return false;
   }
 }
-console.log(compareTrue);
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-
-}
+function calcArea(base, height) {
+  if (base >= 5 && height >= 2){
+    return (base * height) / 2
+    } else if (base >= 10 && height >= 50) {
+      return (base * height) / 2
+    } else if (base >= 51 && height >= 1){
+      return (base * height) / 2
+    }
+  }
 
 // Desafio 3
 function splitSentence() {
@@ -62,4 +68,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
