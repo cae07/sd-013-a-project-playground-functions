@@ -47,7 +47,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // depois de bater a cabeça, percebi que 
+  // depois de bater a cabeça, percebi que o ultimo if trazia numero negativo
+  // com o método abs (absolute) do objeto Math, da pra sair dessa
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
 
@@ -124,11 +125,6 @@ function decode(word) {
   return decodeWord;
 }
 
-// Desafio 10
-function techList(techlist, name) {
-  
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -139,6 +135,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-  techList
+  splitSentence
 };
