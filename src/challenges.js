@@ -8,7 +8,7 @@ function compareTrue(value, value1) {
   }
 
 }
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 
@@ -56,22 +56,39 @@ function highestCount(array1) {
     }
   }
 
-  
   for(let ii = 0; ii <array1.length; ii+=1){
     if(array1[ii] === nmaior){
       value += 1;
     }
   }
 
-
   return value;
 }
-// console.log(highestCount([0, 0, 0]));
+//console.log(highestCount([1,2,3,4,5,5,5,5]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
+let dist1 = cat1 - mouse; 
+let dist2 = cat2 - mouse;
+  if(dist1 < 0){
+    dist1*(-1);
+  }
+  if(dist2 < 0){
+    dist2*(-1);
+  }
 
+  if(dist1 > dist2){
+    return "cat2";
+  }
+  else if(dist2 > dist1){
+    return "cat1";
+  }
+  else{
+    return "os gatos trombam e o rato foge";
+  }
 }
+console.log(catAndMouse(0,6,12));
+
 
 // Desafio 8
 function fizzBuzz() {
