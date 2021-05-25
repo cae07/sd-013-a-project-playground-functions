@@ -8,14 +8,18 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(param1, param2) {
+    
+  return (param1 * param2)/2
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(param1) {
   // seu código aqui
+  return param1.split(' ');
 }
+
+console.log(splitSentence("foguete"));
 
 // Desafio 4
 function concatName() {
