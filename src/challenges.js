@@ -2,18 +2,18 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  }else{
+  }else {
     return false;
   }
 }
 console.log(compareTrue(false,false))
 // Desafio 2
-function calcArea(base,height) {
-  return (base * height)/2
+function calcArea(base, height) {
+  return (base * height) /2
 }
-let sum = calcArea(10,50)
-let sum2 = calcArea(5,2)
-let sum3 = calcArea(51,1)
+let sum = calcArea(10, 50)
+let sum2 = calcArea(5, 2)
+let sum3 = calcArea(51, 1)
 
 console.log(sum, sum2, sum3)
 // Desafio 3
@@ -22,10 +22,14 @@ function splitSentence(string) {
 }
 console.log(splitSentence("go trybe vamo que vamo foguete"))
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(phrase) {
+  let concatenacao = phrase[phrase.length -1] + ", " + phrase[0];
+  return concatenacao
 }
-
+let name = concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+let trybe = concatName(['foguete', 'não', 'tem', 'ré']);
+let pirate = concatName(['captain', 'my', 'captain']);
+console.log(name, trybe, pirate)
 // Desafio 5
 function footballPoints() {
   // seu código aqui
