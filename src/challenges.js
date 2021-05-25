@@ -54,8 +54,32 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function isDivisibleByThreeOnly(n) {
+    return ( !(n % 3) && n % 5);
+}
+
+function isDivisibleByFiveOnly(n) {
+    return ( !(n % 5) && n % 3);
+}
+
+function isDivisibleByThreeAndFive(n) {
+    return ( !(n % 3) && !(n % 5));
+}
+
+function fizzBuzz(numbersArray) {
+    for (let i = 0; i < numbersArray.length; i++) {
+        if (isDivisibleByThreeAndFive(numbersArray[i])) {
+            numbersArray[i] = 'fizzBuzz';
+        } else if (isDivisibleByThreeOnly(numbersArray[i])) {
+            numbersArray[i] = 'fizz';
+        } else if (isDivisibleByFiveOnly(numbersArray[i])) {
+            numbersArray[i] = 'buzz';
+        } else {
+            numbersArray[i] = 'bug!';
+        }
+    }
+
+    return numbersArray;
 }
 
 // Desafio 9
