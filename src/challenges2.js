@@ -22,7 +22,6 @@ function generatePhoneNumber(phoneNumbersArray) {
   }
   let contaRepete = 0;
   if (phoneNumbersArray.length < 11 || phoneNumbersArray.length > 11) {
-      console.log ('Array com tamanho incorreto.');
       return "Array com tamanho incorreto.";
   }
   for (let comparaRepetido of phoneNumbersArray) {
@@ -31,7 +30,6 @@ function generatePhoneNumber(phoneNumbersArray) {
               contaRepete += 1
           }
           if (contaRepete >= 3) {
-              console.log ('não é possível gerar um número de telefone com esses valores');
               return "não é possível gerar um número de telefone com esses valores";
           }
       }
@@ -39,7 +37,6 @@ function generatePhoneNumber(phoneNumbersArray) {
   }
     for (let pegaNum of phoneNumbersArray) {
       if (pegaNum < 0 || pegaNum > 9) {
-          console.log ('não é possível gerar um número de telefone com esses valores');
           return "não é possível gerar um número de telefone com esses valores";
       }
   }
@@ -53,17 +50,37 @@ function generatePhoneNumber(phoneNumbersArray) {
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
-    return 'true'; 
+    return true; 
   } else {
-    return 'false';
+    return false;
   }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(barString) {
+    let regularExp = /\d+/g;
+    let stringBebedeira = 0;
+    let somatorio = 0;
+    // console.log(barString);
 
+    for (let drinks of barString) {
+        if (drinks.match(regularExp) !== null){
+        stringBebedeira += drinks.match(regularExp);
+        }
+    }
+
+    for (let somador of stringBebedeira) {
+        somatorio += parseInt(somador);
+    }
+    // console.log(somatorio);
+    if (somatorio > 1){
+      // console.log(`${somatorio} copos de água`);
+      return `${somatorio} copos de água`;
+    } else {
+      // console.log(`${somatorio} copo de água`);
+      return `${somatorio} copo de água`;
+    }
+}
 module.exports = {
   generatePhoneNumber,
   techList,
