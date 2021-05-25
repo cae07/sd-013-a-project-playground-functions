@@ -23,14 +23,12 @@ function concatName(list) {
   last = list[0];
   return first + "," + last;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-
-
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (3*wins) + (1*ties)
 }
+
 
 // Desafio 6
 function highestCount() {
