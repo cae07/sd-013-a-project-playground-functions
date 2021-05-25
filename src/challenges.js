@@ -37,20 +37,25 @@ function footballPoints(wins, ties) {
   return (wins * 3 + ties * 1);
 }
 
+// Numero de ocorrencias
+function quantidadeDeOcorrencias(array, numero) {
+  let contagem = 0;
+  for (const n of array) {
+    if (numero === n) { contagem += 1; }
+  }
+
+  return contagem;
+}
+
 // Desafio 6
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(numeros) {
   let maiorNumero = numeros[0];
-  let contagem = 0;
 
   for (const numero of numeros) {
     if (maiorNumero < numero) { maiorNumero = numero; }
   }
-  for (const numero of numeros) {
-    if (maiorNumero === numero) { contagem += 1; }
-  }
 
-  return contagem;
+  return quantidadeDeOcorrencias(numeros, maiorNumero);
 }
 
 // Desafio 7
@@ -69,13 +74,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Divisivel por 3 ou 5 = fizzBuzz
 function divisivelPor(numero) {
-  let divisivel = 0;
+  let divisivel = 'bug!';
   if ((numero % 3) === 0 && (numero % 5) === 0) {
-    divisivel = 1;
+    divisivel = 'fizzBuzz';
   } else if ((numero % 3) === 0) {
-    divisivel = 2;
+    divisivel = 'fizz';
   } else if ((numero % 5) === 0) {
-    divisivel = 3;
+    divisivel = 'buzz';
   }
   return divisivel;
 }
@@ -84,18 +89,9 @@ function divisivelPor(numero) {
 function fizzBuzz(numeros) {
   let resultado = [];
 
-  for (let i = 0; i < numeros.length; i += 1) {
-    if (divisivelPor(numeros[i]) === 1) {
-      resultado.push('fizzBuzz');
-    } else if (divisivelPor(numeros[i]) === 2) {
-      resultado.push('fizz');
-    } else if (divisivelPor(numeros[i]) === 3) {
-      resultado.push('buzz');
-    } else {
-      resultado.push('bug!');
-    }
+  for (const numero of numeros) {
+    resultado.push(divisivelPor(numero));
   }
-
   return resultado;
 }
 
