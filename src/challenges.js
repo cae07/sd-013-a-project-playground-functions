@@ -192,6 +192,7 @@ function techList(myArray, name) {
       obj = {
       tech: ordem[i],
       name: name
+      
       };
       newArray.push(obj)
      };
