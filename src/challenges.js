@@ -38,8 +38,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-
+function concatName(array) {
+  let primaryItem = array[0];
+  let lastItem = array[array.length - 1];
+  return (lastItem+", "+primaryItem);
 }
 
 // Desafio 5
