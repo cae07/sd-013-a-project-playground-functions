@@ -1,11 +1,16 @@
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Desafio 1 - se ambos os números forem
+function compareTrue(num1, num2) {
+  if (num1 % 2 == 0 && num2 % 2 == 0) {
+    return true; 
+  }
+  else {
+    return false;
+  }   
 }
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  
 }
 
 // Desafio 3
