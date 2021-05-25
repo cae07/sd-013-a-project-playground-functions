@@ -108,15 +108,54 @@ function fizzBuzz(array) {
       answer.push("bug!")
     }
   }
-  return(answer)
+  return (answer)
 }
+
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let string = '';
+
+  for (let index = 0; phrase.length > index; index +=1){
+    if (phrase[index] == 'a'){
+      string = string + '1'
+    }else if (phrase[index] == 'e'){
+      string = string + '2'
+    }else if (phrase[index] == 'i'){
+      string = string + '3'
+    }else if (phrase[index] == 'o'){
+      string = string + '4'
+    }else if (phrase[index] == 'u'){
+      string = string + '5'
+    }else {
+      string = string + phrase[index]
+    }
+  }
+
+  return (string)
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let string = '';
+
+  for (let index = 0; phrase.length > index; index +=1){
+    if (phrase[index] == '1'){
+      string = string + 'a'
+    }else if (phrase[index] == '2'){
+      string = string + 'e'
+    }else if (phrase[index] == '3'){
+      string = string + 'i'
+    }else if (phrase[index] == '4'){
+      string = string + 'o'
+    }else if (phrase[index] == '5'){
+      string = string + 'u'
+    }else {
+      string = string + phrase[index]
+    }
+  }
+  return (string)
 }
+
 
 module.exports = {
   calcArea,
