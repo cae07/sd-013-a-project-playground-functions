@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(t, f) {
   // seu código aqui
-  if(t === true && f === true){
+  if (t === true && f === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -38,15 +37,15 @@ function footballPoints(wins, ties) {
 function highestCount(arr) {
   // seu código aqui
   let higherNumber = arr[0];
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] > higherNumber){
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > higherNumber) {
       higherNumber = arr[i];
     }
   }
   let counter = 0;
-  for(let j = 0; j < arr.length; j++){
+  for(let j = 0; j < arr.length; j++) {
     if(higherNumber === arr[j]){
-      counter ++;
+      counter++;
     }
   }
   return counter;
@@ -69,28 +68,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arr) {
   // seu código aqui
-  function fizzBuzz(arr){
-    let text = [];
-    for(let i = 0; i < arr.length; i++){
-      if (arr[i] % 3 === 0 && arr[i] % 5 !== 0) {
-        text.push("fizzBuzz");
-      } else {
-        if (arr[i] % 3 === 0) {
-          text.push('fizz');
-        }
-  
-        if (arr[i] % 5 === 0) {
-          text.push('buzz');
-        }
+  let text = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+      text.push("fizzBuzz");
+    } else {
+      if (arr[i] % 3 === 0) {
+        text.push("fizz");
       }
-      if (arr[i] % 3 !== 0 && arr[i] % 5 !== 0) {
-        text.push('bug!');
+
+      if (arr[i] % 5 === 0) {
+        text.push("buzz");
       }
     }
-    return arr;
+    if (arr[i] % 3 !== 0 && arr[i] % 5 !== 0) {
+      text.push("bug!");
+    }
   }
+  return text;
 }
 
 // Desafio 9

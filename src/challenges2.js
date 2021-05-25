@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(arrTech) {
+function techList(arrTech, name) {
   // seu código aqui
   const arrSort = arrTech.sort();
   let tech = [];
@@ -35,17 +35,16 @@ function repeatedNumber(arr){
 }
 function generatePhoneNumber(arr) {
   // seu código aqui
+  if(arr.length !== 11){
+    return "Array com tamanho incorreto.";
+  }
   for(let i = 0; i < arr.length; i++){
-    if(arr.length !== 11){
-      return "Array com tamanho incorreto.";
-      break;
-    } else if(arr[i] < 0 || arr[i] > 9 || repeatedNumber(arr) >= 3){
+    if(arr[i] < 0 || arr[i] > 9 || repeatedNumber(arr) >= 3){
       return "não é possível gerar um número de telefone com esses valores";
     } 
   }
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`
 }
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
@@ -58,10 +57,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(manyDrinks) {
   // seu código aqui
-  //Code ideia on stackoverflow: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  //Code idea on stackoverflow: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
   let regex = /\d+/g;
   let numbers = manyDrinks.match(regex).map(Number);
-   sum = 0;
+  let sum = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     sum = sum + numbers[index];
   }
