@@ -19,45 +19,47 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
+// Função para ver se está fora do intervalo 0 - 9
+function outRange(number) {
+  let foraIntervalo = false;
+  for (let num of number) {
+    if ((num < 0) || (num > 9)) foraIntervalo = true;
+  }
+  return foraIntervalo;
+}
+// Função para comparar arrays e formar um novo array com quant de cada número
+function auxCompare(number, i, quantNum, aux) {
+  for (let j of number) {
+    if (i === j) quantNum[aux] += 1;
+  }
+  return quantNum;
+}
+function compareArrayQuant(number) {
+  let quantNum = Array(11).fill(0);
+  let aux = 0;
+  for (let i of number) {
+    auxCompare(number, i, quantNum, aux);
+    aux += 1;
+  }
+  return quantNum;
+}
+// Função para verificar um número repete mais de 3x
+function repeatMore3(number) {
+  let quantNum3 = false;
+  for (let quant of compareArrayQuant(number)) {
+    if (quant >= 3) quantNum3 = true;
+  }
+  return quantNum3;
+}
 function generatePhoneNumber(number) {
   // seu código aqui
-
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let quantNum = [];
-  let quantNum3 = false;
-  let foraIntervalo = false; // Verificar se algum número está fora do intervalo 0 - 9
-
-  // Criando array quantNum inicializado em 0 para cada item no tamanho do array informado
-  for (let i = 0; i < number.length; i += 1) {
-    quantNum[i] = 0;
-  }
-
-  for (let i = 0; i < number.length; i += 1) {
-    // Verificar número fora do intervalo 0 - 9
-    if ((number[i] < 0) || (number[i] > 9)) {
-      foraIntervalo = true;
-    }
-
-    // Comparação entre
-    for (let j = 0; j < number.length; j += 1) {
-      if (number[i] === number[j]) {
-        quantNum[i] += 1;
-      }
-    }
-  }
-
-  // Verificação se um número repete mais de 3x
-  for (let i = 0; i < number.length; i += 1) {
-    if (quantNum[i] >= 3) {
-      quantNum3 = true;
-    }
-  }
-
-  if (foraIntervalo || quantNum3) {
+  if (outRange(number) || repeatMore3(number)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
+
   number = number.join('');
   let ddd = number.slice(0, 2);
   let parte1 = number.slice(2, 7);
@@ -66,19 +68,31 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
+// Utilizando o conceito de matemática
+// | b - c | < a < b + c
+// | a - c | < b < a + c
+// | a - b | < c < a + b
+// função para verificar a primeira propriedade
+function property1(lineA, lineB, lineC) {
+  return Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC);
+}
+// função para verificar a segunda propriedade
+function property2(lineA, lineB, lineC) {
+  return Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC);
+}
+// função para verificar a terceira propriedade
+function property3(lineA, lineB, lineC) {
+  return Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB);
+}
+// função para verificar se todas as  outras funções conferem
+function isTriangle(lineA, lineB, lineC) {
+  return (property1(lineA, lineB, lineC)
+    && property2(lineA, lineB, lineC)
+    && property3(lineA, lineB, lineC));
+}
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-
-  // Utilizando o conceito de matemática
-  // | b - c | < a < b + c
-  // | a - c | < b < a + c
-  // | a - b | < c < a + b
-
-  if (
-    (Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC))
-    && (Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC))
-    && (Math.abs(lineA - lineB) < lineC && lineC < (lineA + lineB))
-  ) {
+  if (isTriangle(lineA, lineB, lineC)) {
     return true;
   }
   return false;
