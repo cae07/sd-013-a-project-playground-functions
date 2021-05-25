@@ -67,7 +67,7 @@ function fizzBuzz(list) {
     }else if (resto3 == 0 ){
       list[index] = "fizz";
     }else if (resto5 == 0 ){
-      list[index] = "Buzz";
+      list[index] = "buzz";
     }else{
       list[index] = "bug!";
     }
