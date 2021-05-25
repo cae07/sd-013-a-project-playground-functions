@@ -7,19 +7,23 @@ function compareTrue(value1, value2) {
     }
 }
 // Desafio 2
-function calcArea() {
-  let base = 10, height = 50;
-  return calcArea = parseFloat((base * height)/2)
+function calcArea(base, height) {
+  let result = parseFloat((base * height)/2);
+  return result
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+ let array = [];
+ for(i = 0; i <string.lenght; i += 1) {
+   return string.split(" ")
+ }
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiroItem = array[0];
+  let ultimoItem = array[array.lenght - 1];
+    return ultimoItem + " " + primeiroItem
 }
 
 // Desafio 5
