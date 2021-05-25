@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let fizzBuzzArray = []
+  let fizzBuzzArray = [];
   for (let index = 0; index < numbers.length; index += 1) {
     let divisibleFor3 = numbers[index] % 3;
     let divisibleFor5 = numbers[index] % 5;
@@ -94,11 +94,43 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let encodedPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === 'a') {
+      encodedPhrase += '1';
+    } else if (phrase[index] === 'e') {
+      encodedPhrase += '2';
+    } else if (phrase[index] === 'i') {
+      encodedPhrase += '3';
+    } else if (phrase[index] === 'o') {
+      encodedPhrase += '4';
+    } else if (phrase[index] === 'u') {
+      encodedPhrase += '5';
+    } else {
+      encodedPhrase += phrase[index];
+    }
+  }
+  return encodedPhrase;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let decodedPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === '1') {
+      decodedPhrase += 'a';
+    } else if (phrase[index] === '2') {
+      decodedPhrase += 'e';
+    } else if (phrase[index] === '3') {
+      decodedPhrase += 'i';
+    } else if (phrase[index] === '4') {
+      decodedPhrase += 'o';
+    } else if (phrase[index] === '5') {
+      decodedPhrase += 'u';
+    } else {
+      decodedPhrase += phrase[index];
+    }
+  }
+  return decodedPhrase;
 }
 
 module.exports = {
