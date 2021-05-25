@@ -23,14 +23,18 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontsTime = 0;
-  wins = 3;
-  ties = 1;
+  let pointswins = 3;
+  let pointsties = 1;
+  let sumWins = pointswins * wins;
+  let sumTies = pointsties * ties;
+
+  return sumTies + sumWins;
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  
 }
 
 // Desafio 7
@@ -39,9 +43,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(i) {
+
+  for (let i = 1; i <= i.length; i++){
+    if(i % 3 === 0 && i % 5 === 0){
+      console.log("fizzBuzz");
+    } else if(i % 3 === 0){
+      console.log("fizz");
+    } else if(i % 5 === 0){
+      console.log("buzz");
+    } else {
+      console.log("bug!");
+    }
+  } return i;
 }
+//console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode() {
