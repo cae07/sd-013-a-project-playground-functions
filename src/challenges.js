@@ -25,7 +25,6 @@ function concatName(array) {
   return resultado
   } 
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré'],))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -50,12 +49,19 @@ function highestCount(array) {
   }
     return repeticao
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse - cat1 == cat2 - mouse) {
+    return "os gatos trombam e o rato foge"
+  } else if (mouse + cat1 < cat2 + mouse){
+    return "cat1"
+  } else if (cat1 + mouse > cat2 + mouse){
+    return "cat2"
+  }
 }
+console.log(catAndMouse(0, 6, 12));
 
 // Desafio 8
 function fizzBuzz() {
