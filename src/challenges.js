@@ -15,14 +15,17 @@ function calcArea(base , height) {
 };
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;
+};
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  let i = (array.length - 1)
+    return array[i] + ", " + array[0]
+  };
+
 
 // Desafio 5
 function footballPoints() {
