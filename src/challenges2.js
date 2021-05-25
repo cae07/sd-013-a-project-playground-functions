@@ -8,7 +8,7 @@ function techList(techNamesArray, name) {
   let saida = [];
 
   for (let i in arrayOrdenada) {
-    saida.push({tech: arrayOrdenada[i], name: name})
+    saida.push({ tech: arrayOrdenada[i], name: name });
   }
 
   return saida;
@@ -57,8 +57,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBebidas) {
+  let reg = /\d+/g;
+  let resultado = stringBebidas.match(reg);
+  let total = 0;
+
+  for (let i in resultado) {
+    total += parseInt(resultado[i]);
+  }
+
+  if (total == 1) {
+    return '1 copo de água';
+  } else {
+    return `${total} copos de água`;
+  }
 }
 
 module.exports = {
