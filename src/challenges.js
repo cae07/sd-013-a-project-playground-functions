@@ -34,8 +34,29 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(myArray) {    
+  //=============== primeira forma que eu realizei ================
+  // Apesar de atender os requisitos descritos no readme, não atendeu 1 requisito quando rodei o 'npm test ...'
+  
+  let sortArray = myArray.sort()
+  let newArray = [];
+  let intCount = 0;
+  
+  for (let index = 0; index < sortArray.length; index += 1) {
+    let firstWalkElement = sortArray[index];    
+    for (let i = 0; i < sortArray.length; i += 1) {
+      let secondWalkElement = sortArray[i];
+      if (secondWalkElement == firstWalkElement) intCount += 1
+    }
+    newArray.push(intCount);
+    intCount = 0; 
+  }  
+  return newArray[(newArray.length - 1)];  
+  
+  //=============== segunda forma que eu realizei ==================
+  // Essa atendeu todos os requisitos. Utilizei parcialmente sugestoes do stackoverflow
+  // source: https://stackoverflow.com/questions/4317456/getting-the-last-item-in-a-javascript-object
+
 }
 
 // Desafio 7
