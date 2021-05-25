@@ -62,8 +62,12 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winningPoints = wins * 3; //cada vitória vale 3 pontos
+  let tiesPoints = ties * 1;  //cada epate vale 1 ponto
+  let totalPoints = winningPoints + tiesPoints; //soma dos pontos totais do campeonato
+
+  return (totalPoints);
 }
 
 // Desafio 6
