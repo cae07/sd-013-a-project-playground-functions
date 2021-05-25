@@ -47,7 +47,7 @@ console.log(footballPoints(0,0));
 // Desafio 6
 
 function highestCount(numeros) {
-  let maiorValor = 0;
+  let maiorValor = numeros[0];
   for (let indice in numeros) {
     if (numeros[indice] > maiorValor){
       maiorValor = numeros[indice];
@@ -62,12 +62,22 @@ function highestCount(numeros) {
   return cont;
 }
 
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let d1 = mouse - cat1;
+  let d2 = mouse - cat2;
+  if ( Math.abs(d1) == Math.abs(d2) ) {
+    return 'os gatos trombam e o rato foge';
+  } else if ( Math.abs(d1) < Math.abs(d2)) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
+
+console.log(catAndMouse(10,4,22));
 
 // Desafio 8
 function fizzBuzz() {
@@ -94,5 +104,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
