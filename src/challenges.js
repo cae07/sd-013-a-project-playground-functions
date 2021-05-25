@@ -2,10 +2,10 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-   }
+  }
   else {
     return false;
-   }
+  }
 }
 
 // Desafio 2
@@ -22,13 +22,16 @@ function splitSentence(stringtosplit) {
 
 // Desafio 4
 function concatName(string) {
-  let orderString = [string[string.length - 1], string[0]];
+  let orderString = string[string.length - 1], string[0];
   return orderString;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winspoints = 3 * wins;
+  let tiespoints = 1 * ties;
+  let pontos = winspoints + tiespoints;
+  return pontos; 
 }
 
 // Desafio 6
