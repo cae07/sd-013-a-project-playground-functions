@@ -2,28 +2,24 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let res = (base * height) / 2;
-  return res;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 /* Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
 function splitSentence(myArray) {
-  const myFrase = myArray.split(' ');
-  return myFrase;
+  return myArray.split(' ');
 }
 
 // Desafio 4
 function concatName(myArray) {
-  let result = `${myArray[myArray.length - 1]}, ${myArray[0]}`;
-  return result;
+  return `${myArray[myArray.length - 1]}, ${myArray[0]}`;
 }
 
 // Desafio 5
