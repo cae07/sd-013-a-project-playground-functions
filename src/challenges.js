@@ -38,14 +38,11 @@ function highestCount(value) {
   let higherNumber = value[0];
   let cont = 0;
 
-  for (let index = 1; index < value.length; index += 1) {
-    if (value[index] > higherNumber) {
+  for (let index = 0; index < value.length; index += 1) {
+    if (higherNumber < value[index]) {
       higherNumber = value[index];
-    }
-  }
-
-  for (let index = 0; index < value.length; index += 1){
-    if (value[index] === higherNumber) {
+      cont = 1;
+    } else if (value[index] === higherNumber) {
       cont += 1;
     }
   }
