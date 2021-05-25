@@ -49,22 +49,86 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionC1, positionC2, positionMouse;
+  if (cat1 <= mouse) {
+    positionC1 = mouse - cat1;
+  } else {
+    positionC1 = cat1 - mouse;
+  }
+  if (cat2 <= mouse) {
+    positionC2 = mouse - cat2;
+  } else {
+    positionC2 = cat2 - mouse;
+  }
+  if (positionC1 > positionC2) {
+    return "cat2"
+  } else if (positionC2 > positionC1) {
+    return "cat1"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  number = [];
+  for (const key in array) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+      number.push('fizzBuzz')
+    } else if (array[key] % 5 === 0) {
+      number.push('buzz');
+    } else if (array[key] % 3 === 0) {
+      number.push('fizz')
+    } else {
+      number.push('bug!')
+    }
+  }
+  return number;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let par = str.split("");
+  let par2 = [];
+  for (const key in par) {
+    if (par[key] === 'a') {
+      par2 += '1';
+    } else if (par[key] === 'e') {
+      par2 += '2';
+    } else if (par[key] === 'i') {
+      par2 += '3';
+    } else if (par[key] === 'o') {
+      par2 += '4';
+    } else if (par[key] === 'u') {
+      par2 += '5';
+    } else {
+      par2 += par[key];
+    }
+  }
+  return par2;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let split = string.split("");
+  let conc = [];
+  for (const key in split) {
+    if (split[key] === '1') {
+      conc = conc + 'a';
+    } else if (split[key] === '2') {
+      conc = conc + 'e';
+    } else if (split[key] === '3') {
+      conc = conc + 'i';
+    } else if (split[key] === '4') {
+      conc = conc + 'o';
+    } else if (split[key] === '5') {
+      conc = conc + 'u';
+    } else {
+      conc += split[key];
+    }
+  }
+  return conc;
 }
 
 module.exports = {
