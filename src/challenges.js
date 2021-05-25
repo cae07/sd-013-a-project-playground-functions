@@ -14,7 +14,7 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(sentenca) {
-  return sentenca.split('');
+  return sentenca.split(' ');
 }
 
 // Desafio 4
@@ -54,11 +54,11 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if(cat1 - mouse > cat2 - mouse){
-    return ' cat2 ';
+    return 'cat2' ;
   } else if (cat2 - mouse > mouse - cat1){
-    return ' cat1 ';
+    return 'cat1' ;
   } else {
-    return ' os gatos trombam e o rato foge ';
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -67,16 +67,18 @@ function fizzBuzz(arrayDeNumeros) {
   let arrayDeResposta = []
   for (let index = 0; index < arrayDeNumeros.length ; index += 1) {
     let numero = arrayDeNumeros[index]
-    if (divisivelPor3e5(numero) == true){
-      arrayDeResposta.push("fizzBuzz")
+    if (divisivelPor3e5(numero) === true) {
+      arrayDeResposta.push( 'fizzBuzz' )
     }
-    else if (divisivelPor5(numero) == true){
-      arrayDeResposta.push("buzz")
+    else if (divisivelPor5(numero) === true) {
+      arrayDeResposta.push( 'buzz' )
     }
-    else if (divisivelPor3(numero) == true){
-      arrayDeResposta.push("fizz")
+    else if (divisivelPor3(numero) === true) {
+      arrayDeResposta.push( 'fizz' )
     }
-    else {arrayDeResposta.push("bug!")}
+    else {
+      arrayDeResposta.push( 'bug!' )
+    }
   }
   return arrayDeResposta
   
@@ -84,7 +86,7 @@ function fizzBuzz(arrayDeNumeros) {
     if (numero%3 == 0){
       return true
     } else {
-      return false
+    false
     }
   }
 
@@ -92,15 +94,15 @@ function fizzBuzz(arrayDeNumeros) {
     if (numero%5 == 0){
       return true
     } else {
-      return false
+    false
     }
   }
 
-  function divisivelPor3e5(numero){
-    if (numero%3 == 0 && numero%5 == 0){
+  function divisivelPor3e5(numero) {
+    if (numero%3 === 0 && numero%5 === 0){
       return true
     } else {
-      return false
+    false
     }
   }
 }
@@ -114,11 +116,11 @@ function encode(string) {
     o:4,
     u:5
   }
-  palavraSaida = ""
-  for (let index = 0; index < string.length ; index += 1){
+  palavraSaida = ''
+  for (let index = 0; index < string.length ; index += 1) {
     let letraTeste = string[index]
     for (let key in decifrador){
-      if (letraTeste === key){
+      if (letraTeste === key) {
         letraTeste = decifrador[key]
       }
     }
@@ -138,10 +140,10 @@ function decode(string) {
     4:'o',
     5:'u'
   }
-  palavraSaida = ""
-  for (let index = 0; index < string.length ; index += 1){
+  palavraSaida = ''
+  for (let index = 0; index < string.length ; index += 1) {
     let letraTeste = string[index]
-    for (let key in desdecifrador){
+    for (let key in desdecifrador) {
       if (letraTeste === key){
         letraTeste = desdecifrador[key]
       }
