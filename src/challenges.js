@@ -132,7 +132,7 @@ function encode(myString) {
     i: 3,
     o: 4,
     u: 5
-  }
+  };
 
   let strOutput = "";  
   
