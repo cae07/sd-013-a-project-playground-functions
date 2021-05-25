@@ -20,21 +20,36 @@ function splitSentence(splitSentence){
   return separador;
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array){
+  for (let index = 0; index < array.length; index +=1) {
+    concatName = array[array.length-1]+", "+array[0];    
+  }
+  return concatName;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties){
+  let totalPontos = (wins * 3) + (ties * 1);
+  return totalPontos;
 }
 
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array){
+  let maiorNumero = array[0];
+  let numeroRepetido = 0;
+  for (let index = 0; index < array.length; index +=1) {
+    if(array[index] > maiorNumero){
+      maiorNumero = array[index];
+      numeroRepetido =1;
+    }else if(array[index] == maiorNumero){
+      numeroRepetido += 1;
+    }
+    
+  }
+    return(numeroRepetido);
+  }
 
 // Desafio 7
 function catAndMouse() {
