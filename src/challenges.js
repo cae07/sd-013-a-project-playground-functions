@@ -41,9 +41,28 @@ function footballPoints(wins ,ties) {
 // console.log(footballPoints(3 , 1));
 
 // Desafio 6
-function highestCount() {
+function highestCount(ArrayN) {
 	// seu código aqui
-}
+	let counter = 0;
+	let highestCounter = -100;
+	for (let i = 0; i < ArrayN.length; i+=1) {
+		if (ArrayN[i] > highestCounter) {
+		 highestCounter = ArrayN[i];
+		} else {
+			continue
+		};
+	};
+	for (let i = 0; i < ArrayN.length; i+=1) {
+
+		if (ArrayN[i] == highestCounter) {
+			counter+=1;
+		}else {
+      continue
+		};
+  } return counter;
+} 
+ console.log(highestCount([-1,-2,-2]));
+
 
 // Desafio 7
 function catAndMouse() {
