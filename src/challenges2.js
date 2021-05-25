@@ -93,9 +93,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(frase) {
   // seu código aqui
+  // código para extrair números em https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  let numbers = frase.match(/\d+/g).map(Number);
+  let copoAgua = 0;
+
+  for (let num of numbers) {
+    copoAgua += num;
+  }
+
+  let fraseRetorno = copoAgua === 1 ? `${copoAgua} copo de água` : `${copoAgua} copos de água`;
+
+  return fraseRetorno;
 }
+
+console.log(hydrate("1 cachaça, 51 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
