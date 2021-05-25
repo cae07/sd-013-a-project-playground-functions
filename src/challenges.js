@@ -18,7 +18,7 @@ function splitSentence(phrases) {
   let palavra = '';
 
   if (phrases.indexOf(' ') > -1) {
-    for (let i = 0; i < phrases.length; i +=1 ) {
+    for (let i = 0; i < phrases.length; i += 1 ) {
       if (phrases[i] !== ' ') {
           palavra += phrases[i];
       } else {
@@ -36,12 +36,12 @@ function splitSentence(phrases) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length-1]}, ${array[0]}`;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
