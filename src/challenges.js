@@ -108,12 +108,12 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  }
+    u: 5,
+  };
   let palavraSaida = '';
-  for (let index = 0; index < string.length ; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     let letraTeste = string[index];
-    for (let key in decifrador){
+    for (let key in decifrador) {
       if (letraTeste === key) {
         letraTeste = decifrador[key];
       }
@@ -129,8 +129,8 @@ function decode(string) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
-  }
+    5: 'u',
+  };
   let palavraSaida = '';
   for (let index = 0; index < string.length; index += 1) {
     let letraTeste = string[index];
