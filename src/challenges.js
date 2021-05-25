@@ -88,21 +88,24 @@ function encode(stringEncode) {
     u: '5'
   };
   for (let indexE = 0; indexE < stringEncode.length; indexE += 1) {
-    for (let key in code) {
-      if (key == stringEncode[indexE]) {
-        encodeString += code[stringEncode[indexE]];
-        break;
-      };
-    }
-    if (stringEncode[indexE] === ' ') {
-      encodeString += ' ';
-    } else {
+    if (code[stringEncode[indexE]] === undefined) {
       encodeString += stringEncode[indexE];
+    } else {
+      encodeString += code[stringEncode[indexE]];
     }
+    // for (let key in code) {
+    //   if (key == stringEncode[indexE]) {
+    //     encodeString += code[stringEncode[indexE]];
+    //     break;
+    //   };
+    // } if (stringEncode[indexE] === ' ') {
+    //   encodeString += ' ';
+    // } else {
+    //   encodeString += stringEncode[indexE];
+    // }
   }
   return encodeString;
 }
-console.log(encode('hi there'));
 
 function decode() {
   // seu código aqui
