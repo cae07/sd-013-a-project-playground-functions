@@ -17,9 +17,9 @@ function splitSentence(phrases) {
   let array = [];
   let palavra = '';
 
-  if (phrases.indexOf(" ") > -1){
-    for (let i=0; i<phrases.length; i+=1){
-      if (phrases[i] !== " "){
+  if (phrases.indexOf(' ') > -1) {
+    for (let i = 0; i < phrases.length; i +=1 ) {
+      if (phrases[i] !== ' ') {
           palavra += phrases[i];
       } else {
         array.push(palavra);
@@ -33,10 +33,10 @@ function splitSentence(phrases) {
     return array;
   }
 }
-console.log(splitSentence('vamo que vamo'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length-1]}, ${array[0]}`;
 }
 
 // Desafio 5
