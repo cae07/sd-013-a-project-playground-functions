@@ -9,27 +9,39 @@ function compareTrue(par1, par2) {
 
 // Desafio 2
 function calcArea(base, height) {
-return (base*height)/2
+return (base*height)/2;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ")
+  return sentence.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length -1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3) + (ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  highestnum = numbers[0];
+  for (let indexhigh = 1; indexhigh < numbers.length; indexhigh += 1) {
+    if (highestnum < numbers[indexhigh]) {
+      highestnum = numbers[indexhigh];
+    }
+  }
+  let countRepetition = 0;
+  for (let indexrepetition = 0; indexrepetition < numbers.length; indexrepetition += 1) {
+    if (highestnum == numbers[indexrepetition]) {
+      countRepetition += 1;
+    }
+  }
+  return countRepetition;
 }
 
 // Desafio 7
