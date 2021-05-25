@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(bool1 , bool2) {
+function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true){
     return true;
   }
@@ -91,32 +91,42 @@ function fizzBuzz(stringNumeros) {
 
 // Desafio 9
 function encode(stringTexto) {
-  let novoTexto = stringTexto
-  for(let i = 0; i < stringTexto.length; i += 1){
-    if(stringTexto[i] === "a"){
-      novoTexto.replace("a","1")
-      console.log(novoTexto)
+  let novoTexto = stringTexto;
+  let trocaa = novoTexto.replace(/a/g,"1");
+  let trocaa2 = trocaa.replace(/e/g,"2");
+  let trocaa3 = trocaa2.replace(/i/g,"3");
+  let trocaa4 = trocaa3.replace(/o/g,"4");
+  let trocaa5 = trocaa4.replace(/u/g,"5");
+  // for(let i = 0; i < stringTexto.length; i += 1){
+  //   if(stringTexto[i] === "a"){
+  //     novoTexto.replace("a","1")
+  //     console.log(novoTexto)
+  //   };
+  //   if(stringTexto[i] === "e"){
+  //     novoTexto.replace("i","2")
+  //     console.log(novoTexto)
+  //   };    
+  //   if(stringTexto[i] === "i"){
+  //     novoTexto.replace("i","3")
+  //   };
+  //   if(stringTexto[i] === "o"){
+  //     novoTexto.replace("o","4")
+  //   };   
+  //   if(stringTexto[i] === "u"){
+  //     novoTexto.replace("u","5")
+  //     console.log(novoTexto) 
+  return trocaa5;
     };
-    if(stringTexto[i] === "e"){
-      novoTexto.replace("i","2")
-      console.log(novoTexto)
-    };    
-    if(stringTexto[i] === "i"){
-      novoTexto.replace("i","3")
-    };
-    if(stringTexto[i] === "o"){
-      novoTexto.replace("o","4")
-    };   
-    if(stringTexto[i] === "u"){
-      novoTexto.replace("u","5")
-      console.log(novoTexto)
-    };
-  return novoTexto
-  }
-};   console.log(encode("testando a e i o u"))
-function decode() {
- // seu código aqui
-}
+
+function decode(stringCodificada) {
+  let novoTexto = stringCodificada;
+  let troca = novoTexto.replace(/1/g,"a");
+  let troca2 = troca.replace(/2/g,"e");
+  let troca3 = troca2.replace(/3/g,"i");
+  let troca4 = troca3.replace(/4/g,"o");
+  let troca5 = troca4.replace(/5/g,"u");
+  return troca5;
+};
 
 module.exports = {
   calcArea,
