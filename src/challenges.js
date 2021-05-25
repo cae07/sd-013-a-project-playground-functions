@@ -99,9 +99,36 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  /*
+  Declarar a array numbers como parâmetro da função;
+  Criar um nova array vazia, como words, p.ex.;
+  Criar um loop for in; 
+  Criar uma condicional se o number[index] for divisível apenas por 3, adicionar na array words a string 'fizz';
+  Criar uma condicional se o number[index] for divisível apenas por 5, adicionar na array words a string 'buzz';
+  Criar uma condicional se o number[index] for divisível por 3 e 5, adicionar na array words a string 'fizzBuzz';
+  Se o number[index] não for divisível nem por 3 ou por 5, adicionar na array words a palavra 'bug'. 
+  Retornar a array words no final da função; 
+  */
+
+  let words = [];
+
+  for (let index in numbers){
+    if ((numbers[index] % 3) === 0 && (numbers[index] % 5) === 0) {
+      words.push('fizzBuzz')
+    } else if((numbers[index] % 3) === 0) {
+      words.push('fizz');
+    } else if((numbers[index] % 5) === 0) {
+      words.push('buzz');
+    } else {
+      words.push('bug!')
+    }
+  }
+
+  return words;
 }
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
