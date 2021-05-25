@@ -2,27 +2,27 @@
 function compareTrue(n1, n2) {
   if (n1 === true && n2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(word) {
   let sentence = [];
-  sentence = word.split(" ");
+  sentence = word.split(' ');
   return sentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let newName = `${names[(names.length) - 1]}, ${names[0]}`;
+  return newName;
 }
 
 // Desafio 5
