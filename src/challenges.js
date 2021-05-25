@@ -17,18 +17,23 @@ function calcArea(base, height) {
 console.log(calcArea(10, 50));
 
 // Desafio 3
+//Desafio realizado com a ajuda do estudante Erick Santos :D
 function splitSentence(texto) {
   return texto.split(" ");
 }
 
-console.log(splitSentence("vamo que vamo"))
+console.log(splitSentence('vamo que vamo'));
 
-//console.log("Ja, que, line".split(","))
+// console.log("Ja, que, line".split(","))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let text = array[array.length - 1] + " , " + array[0];
+  return text;
 }
+  
+console.log(concatName(['Diego', 'Jaqueline', 'Mel', 'Verusca']))
+
 
 // Desafio 5
 function footballPoints() {
