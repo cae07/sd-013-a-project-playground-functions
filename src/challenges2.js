@@ -21,7 +21,6 @@ function techList(arrayNomesTecnologias, name) {
 // Desafio 11
 function generatePhoneNumber(arrayDeNumeros) {
   let numeroTelefone = '';
-  let telefoneFormatado = '';
   let stringDoArray = '';
   let repetiu = 0;
   if (arrayDeNumeros.length == '') {
@@ -36,6 +35,7 @@ function generatePhoneNumber(arrayDeNumeros) {
       if (repetiu === 3) {
         numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
       }
+      checaRepeticao(arrayDeNumeros, numeroTelefone);
       if (arrayDeNumeros.length === 11) {
         for (let indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
           if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu >= 3)) {
@@ -49,7 +49,7 @@ function generatePhoneNumber(arrayDeNumeros) {
       stringDoArray = stringDoArray + arrayDeNumeros[indexD111];
     }
     if ((numeroTelefone !== 'não é possível gerar um número de telefone com esses valores') && (numeroTelefone !== 'Array com tamanho incorreto.')) {
-      numeroTelefone = '(' + stringDoArray.slice(0 , 2) + ') ' + stringDoArray.slice(2 , 7) + '-' + stringDoArray.slice(7 , 11);
+      numeroTelefone = '(' + stringDoArray.slice(0, 2) + ') ' + stringDoArray.slice(2, 7) + '-' + stringDoArray.slice(7, 11);
     }
   }
   return numeroTelefone;
@@ -58,12 +58,10 @@ function generatePhoneNumber(arrayDeNumeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ehtriangulo = false;
-  if ((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) {
-    if ((lineB < (lineC + lineA)) && (lineB > (lineC - lineA))) {
-      if ((lineC < (lineA + lineB)) && (lineC > (lineA - lineB))) {
+  if ( ((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) &&
+       ((lineB < (lineC + lineA)) && (lineB > (lineC - lineA))) && 
+       ((lineC < (lineA + lineB)) && (lineC > (lineA - lineB))) ) {
         ehtriangulo = true;
-      }
-    }
   }
   return ehtriangulo;
 }
@@ -72,19 +70,17 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let numeros = string.match(/\d+/g).map(Number);
   let soma = 0;
-  let recomendacao = "";
+  let recomendacao = '';
   for (let index13 = 0; index13 < numeros.length; index13 += 1) {
-    soma = soma + numeros[index13];
+    soma += numeros[index13];
   }
   if (soma > 1) {
-    recomendacao = soma + ' copos de água'
+    recomendacao = (soma + ' copos de água');
   } else {
-    recomendacao = soma + ' copo de água'
+    recomendacao = (soma + ' copo de água');
   }
   return recomendacao;
 }
-
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
