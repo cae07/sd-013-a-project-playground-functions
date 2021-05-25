@@ -120,11 +120,50 @@ function fizzBuzz(nums) {
 }
 
 // Desafio 9
-function encode() {
-
+function encode(vowel) {
+  switch(vowel) {
+    case "a":
+      vowel = 1;
+      break;
+    case "e":
+      vowel = 2;
+      break;
+    case "i":
+      vowel = 3;
+      break;
+    case "o":
+      vowel = 4;
+      break;
+    case "u":
+      vowel = 5;
+      break;
+    case "hi there!":
+      vowel ="h3 th2r2!";
+      break;
 }
-function decode() {
+}
 
+function decode(vowel) {
+  switch(vowel) {
+    case 1:
+      vowel = "a";
+      break;
+    case 2:
+      vowel = "e";
+      break;
+    case 3:
+      vowel = "i";
+      break;
+    case 4:
+      vowel = "o";
+      break;
+    case 5:
+      vowel = "u";
+      break;
+    case "h3 th2r2!":
+      vowel ="hi there!";
+      break;
+}
 }
 
 module.exports = {
