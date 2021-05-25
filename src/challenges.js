@@ -1,56 +1,58 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 == true && value2 ==true){
-    return true
+  let comparativo = false;
+  if (value1 === true && value2 ===true) {
+    comparativo = true;
   }
   else {
-    return false
+    comparativo = false;
   }
+  return comparativo;
   // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) / 2;
   // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(string) {
- let palavra = ['']
- let indicePalavra = 0
+ let palavra = [''];
+ let indicePalavra = 0;
  
  for (let i=0 ; i < string.length; i++){
-   if (string[i] == ' '){
-     indicePalavra++
-     palavra[indicePalavra]=''
+   if (string[i] === ' ') {
+    indicePalavra++;
+    palavra[indicePalavra]='';
      
     }
-    else{
-      palavra[indicePalavra]+=string[i]
+    else {
+      palavra[indicePalavra] += string[i];
     }
- }
- console.log(palavra)
- return palavra 
-  // seu código aqui
+}
+console.log(palavra)
+return palavra;
+// seu código aqui
 }
 
 // Desafio 4
 function concatName(array) {
-  let ultimaPosicao = array.length
-  ultimaPosicao--
-  let retorno = ['']
-  retorno[0] = array[ultimaPosicao]
-  retorno[1] = array[0]
-  let retornoStream = `${retorno[0]}, ${retorno[1]}`
-  return retornoStream
+  let ultimaPosicao = array.length;
+  ultimaPosicao--;
+  let retorno = [''];
+  retorno[0] = array[ultimaPosicao];
+  retorno[1] = array[0];
+  let retornoStream = `${retorno[0]}, ${retorno[1]}`;
+  return retornoStream;
   // seu código aqui
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (3*wins) + ties
-  return pontos
+  let pontos = (3*wins) + ties;
+  return pontos;
   // seu código aqui
 }
 
@@ -65,10 +67,10 @@ function highestCount(numbers) {
   }
   for (let i = 0; i < numbers.length; i++){
     if (numbers[i]== maior){
-      count++
+      count++;
     }
   }
-  return count
+  return count;
   // seu código aqui
 }
 
@@ -93,47 +95,47 @@ function fizzBuzz(array) {
   let retorno = []
   let indiceRetorno = 0
   for (let i = 0; i < array.length; i++){
-    if ((array[i]%3)==0){
-      if((array[i]%5)==0){
-        retorno[indiceRetorno] = 'fizzBuzz'
-        indiceRetorno++
+    if ((array[i] % 3) ===0) {
+      if((array[i] % 5) ===0) {
+        retorno[indiceRetorno] = 'fizzBuzz';
+        indiceRetorno++;
       }
       else{
-        retorno[indiceRetorno] = 'fizz'
-        indiceRetorno++
+        retorno[indiceRetorno] = 'fizz';
+        indiceRetorno++;
       }
     }
     else if ((array[i]%5)==0){
-      retorno[indiceRetorno] = 'buzz'
-      indiceRetorno++
+      retorno[indiceRetorno] = 'buzz';
+      indiceRetorno++;
     }
     else {
-      retorno[indiceRetorno] = 'bug!'
-      indiceRetorno++
+      retorno[indiceRetorno] = 'bug!';
+      indiceRetorno++;
     }
   }
-  console.log(retorno)
-  return retorno
+  console.log(retorno);
+  return retorno;
   // seu código aqui
 }
 
 // Desafio 9
 function encode(string) {
-  let stringEncode = string.replace(/a/g, '1')
-  stringEncode = stringEncode.replace(/e/g, '2')
-  stringEncode = stringEncode.replace(/i/g, '3')
-  stringEncode = stringEncode.replace(/o/g, '4')
-  stringEncode = stringEncode.replace(/u/g, '5')
-  return stringEncode
+  let stringEncode = string.replace(/a/g, '1');
+  stringEncode = stringEncode.replace(/e/g, '2');
+  stringEncode = stringEncode.replace(/i/g, '3');
+  stringEncode = stringEncode.replace(/o/g, '4');
+  stringEncode = stringEncode.replace(/u/g, '5');
+  return stringEncode;
   // seu código aqui
 }
 function decode(string) {
-  let stringDecode = string.replace(/1/g, 'a')
-  stringDecode = stringDecode.replace(/2/g, 'e')
-  stringDecode = stringDecode.replace(/3/g, 'i')
-  stringDecode = stringDecode.replace(/4/g, 'o')
-  stringDecode = stringDecode.replace(/5/g, 'u')
-  return stringDecode
+  let stringDecode = string.replace(/1/g, 'a');
+  stringDecode = stringDecode.replace(/2/g, 'e');
+  stringDecode = stringDecode.replace(/3/g, 'i');
+  stringDecode = stringDecode.replace(/4/g, 'o');
+  stringDecode = stringDecode.replace(/5/g, 'u');
+  return stringDecode;
   // seu código aqui
 }
 
