@@ -1,21 +1,20 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  return b === true && a === true;
 }
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (Number(base) && Number(height)) ? ((base * height) / 2) : 'Numero Invalido!!!';
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.length > 0 ? frase.split(' ') : 'String Vazia!!!';
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(meuArray) {
+  return meuArray.length >= 1 && `${meuArray[meuArray.length - 1]}, ${meuArray[0]}`;
 }
 
 // Desafio 5
