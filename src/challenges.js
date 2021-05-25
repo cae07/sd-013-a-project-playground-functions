@@ -15,7 +15,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayAInformar) {
-  return '${arrayAInformar[arrayAInformar.length - 1]}, ${arrayAInformar[0]}';
+  let concatenado = ""
+  concatenado = (arrayAInformar[arrayAInformar.length - 1] + ', ' + arrayAInformar[0]);
+  return concatenado;
 }
 
 // Desafio 5
@@ -26,8 +28,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayDeNumeros) {
   let quantidade = 0;
-  if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)) { quantidade = 1; }
-   else {
+  if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)) {
+    quantidade = 1;
+   } else {
     let maiorNumero = 0;
     for (let index = 0; index <= arrayDeNumeros.length; index += 1) {
       if (maiorNumero < arrayDeNumeros[index]) { maiorNumero = arrayDeNumeros[index]; }
@@ -67,8 +70,10 @@ function fizzBuzz(arrayDeNumeros) {
   for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1) {
     if ((arrayDeNumeros[indexD8] % 3) === 0) { adiciona = 'fizz'; }
     if ((arrayDeNumeros[indexD8] % 5) === 0) { adiciona = 'buzz'; }
-    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) { adiciona = 'fizzBuzz';
-    } else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) { adiciona = 'bug!'; }
+    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) {
+      adiciona = 'fizzBuzz';
+    } else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) {
+      adiciona = 'bug!'; }
     novoArray.push(adiciona);
     adiciona = '';
   }
