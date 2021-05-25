@@ -25,12 +25,14 @@ function concatName(array) {
   let concatenacao = array[array.length -1] + "," + array[0]
   
     return concatenacao
-  
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+} 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(vitoria, empate) {
+  let wins = vitoria * 3
+  let ties = empate *1
+  let resultadoDoCampeonato = (wins+ties)
+  return resultadoDoCampeonato
 }
 
 // Desafio 6
