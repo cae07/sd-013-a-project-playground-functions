@@ -25,23 +25,36 @@ function splitSentence(phrase) {
 function concatName(names) {
   let lastAndFirst = '';
   for (let index = names.length; index >= 0; index -= 1) {
-    if (index == (names.length - 1)) {
+    if (index === (names.length - 1)) {
       lastAndFirst += `${names[index]},`;
     } else if (index === 0) {
       lastAndFirst += ` ${names[index]}`;
     }
   }
-  return lastAndFirst
+  return lastAndFirst;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + (ties * 1);
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let biggest = numbers[0];
+  let counter = 0;
+  for (let indexBiggest = 1; indexBiggest < numbers.length; indexBiggest += 1) {
+    if (numbers[indexBiggest] > biggest) {
+      biggest = numbers[indexBiggest];
+    }
+  }
+  for (let indexRepeat = 0; indexRepeat < numbers.length; indexRepeat += 1) {
+    if (biggest === numbers[indexRepeat]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
