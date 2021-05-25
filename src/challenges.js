@@ -96,11 +96,64 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let codigo = '';
+  let atuateste ; 
+  for (let i =0; i < frase.length; i += 1) {
+    switch (frase[i]) {
+      case 'a':
+        codigo +='1';
+        break;
+      case 'e':
+        codigo += '2';
+        break;
+      case 'i':
+        codigo += '3';
+        break;
+      case 'o':
+        codigo += '4';
+        break;
+      case 'u':
+        codigo += '5';
+        break;
+      default:
+        codigo += frase[i]
+        break;
+    }
+    atuateste = frase[i]
+  }
+  return codigo;
 }
-function decode() {
+
+function decode(frase) {
   // seu código aqui
+  let codigo = '';
+  let atuateste ; 
+  for (let i =0; i < frase.length; i += 1) {
+    switch (frase[i]) {
+      case '1':
+        codigo +='a';
+        break;
+      case '2':
+        codigo += 'e';
+        break;
+      case '3':
+        codigo += 'i';
+        break;
+      case '4':
+        codigo += 'o';
+        break;
+      case '5':
+        codigo += 'u';
+        break;
+      default:
+        codigo += frase[i]
+        break;
+    }
+    atuateste = frase[i]
+  }
+  return codigo;
 }
 
 module.exports = {
