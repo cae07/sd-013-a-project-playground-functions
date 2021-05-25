@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  // seu código aqui
+  return value1 && value2
 }
 
 // Desafio 2
