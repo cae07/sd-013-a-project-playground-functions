@@ -43,21 +43,93 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  if (Math.abs(mouse - cat1) == Math.abs(mouse - cat2)) {
+    return "os gatos trombam e o rato foge";
+  }
+  else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return "cat1";
+  }
+  else {
+    return "cat2";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let strArray = [];
+
+  for (let key in arr) {
+    if (arr[key] % 3 == 0 && arr[key] % 5 == 0) {
+      strArray.push('fizzBuzz')
+    }
+    else if (arr[key] % 3 == 0) {
+      strArray.push('fizz')
+    }
+    else if (arr[key] % 5 == 0) {
+      strArray.push('buzz')
+    }
+    else {
+      strArray.push('bug!')
+    }
+  }
+
+  return strArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let code = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5
+  }
+
+  let strArray = string.split('');
+  let strOut = '';
+
+  for (let key in code) {
+    for (let key2 in strArray) {
+      if (strArray[key2] == key) {
+        strArray[key2] = code[key];
+      }
+    }
+  }
+
+  for (let key in strArray) {
+    strOut += strArray[key];
+  }
+
+  return strOut;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let code = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5
+  }
+
+  let strArray = string.split('');
+  let strOut = '';
+
+  for (let key in code) {
+    for (let key2 in strArray) {
+      if (strArray[key2] == code[key]) {
+        strArray[key2] = key;
+      }
+    }
+  }
+
+  for (let key in strArray) {
+    strOut += strArray[key];
+  }
+
+  return strOut;
 }
 
 module.exports = {
