@@ -53,8 +53,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
+// [9, 1, 2, 3, 9, 5, 7]
+//  [-2, -2, -1]
+//
+//
+//
+function highestCount(nums) {
+  let repeat =0;
+  // aqui eu verifico qual o maior numero https://pt.stackoverflow.com/questions/285005/como-pegar-o-maior-valor-em-um-array-com-javascript
+  let biggerNum = Math.max(...nums);
+  // aqui eu verifico quantas vezes o maior numero se repete
+  for (let j= 0; j<nums.length; j +=1) {
+    if(biggerNum == nums[j]) {
+      repeat = repeat + 1;
+    }
+  }
+  return repeat;
 }
 
 // Desafio 7
