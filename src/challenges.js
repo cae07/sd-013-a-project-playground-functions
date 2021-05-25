@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -14,18 +14,32 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  return strArray[strArray.length - 1] + ', ' + strArray[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + ties;
+  
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  /*
+  Documentação consultada para uso da função Math.max.
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  */
+  let highValue = Math.max(...arr);
+  let count = 0;
+  for (key in arr) {
+    if (arr[key] == highValue) {
+      count += 1;
+    }
+  }
+
+  return count;
 }
 
 // Desafio 7
