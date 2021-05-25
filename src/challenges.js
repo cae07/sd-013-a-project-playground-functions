@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(x, y) {
-  same = false;
+  let same = false;
   
   if (x && y) {
     same = true;
@@ -16,14 +16,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  child = "";
-  splitArray = [];
+  let child = '';
+  let splitArray = [];
   for (let c of string) {
-    if (c !== " ") {
+    if (c !== ' ') {
       child += c;
-    } if (c === " ") {
+    } if (c === ' ') {
       splitArray.push(child);
-      child = "";
+      child = '';
     }
   }
   splitArray.push(child);
@@ -32,9 +32,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(fullName) {
-  lastName = fullName[fullName.length -1];
-  firstName = fullName[0];
-  return lastName + ", " + firstName;
+  let lastName = fullName[fullName.length -1];
+  let firstName = fullName[0];
+  return lastName + ', ' + firstName;
 }
 
 // Desafio 5
@@ -44,8 +44,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  highestValue = array[0];
-  count = 0;
+  let highestValue = array[0];
+  let count = 0;
   for (let i of array) {
     if (i > highestValue) {
       highestValue = i;
@@ -62,7 +62,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if ((Math.abs(mouse - cat1) < Math.abs(mouse - cat2))) {
     return 'cat1';
   } else {
@@ -75,13 +75,13 @@ function fizzBuzz(array) {
   let result = [];
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (i % 3 !== 0 && i % 5 !== 0) {
-      result.push("bug!");
+      result.push('bug!');
     } else if (i % 3 === 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (i % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     }
   }
   return result;
@@ -89,7 +89,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let child = "";
+  let child = '';
   for (let i of string) {
     if (i === 'a') {
       child += 1;
@@ -109,7 +109,7 @@ function encode(string) {
 }
 
 function decode(string) {
-  let child = "";
+  let child = '';
   for (let i of string) {
     if (i === '1') {
       child += 'a';
