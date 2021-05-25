@@ -26,13 +26,17 @@ function splitSentence(string){
     return string.split(" ") //tags: " ", " ", "", etc
   }
 }
-console.log(splitSentence("go Trybe"))
+console.log(splitSentence("foguete não tem ré"))
 
 
 // Desafio 4
-function concatName() {
-
+function concatName(array) {
+//o índice do primeiro item é 0, e do último é índice - 1
+let primeiroItem = array[0];
+let ultimoItem = array[array.length - 1];
+  return ultimoItem + "," + " " + primeiroItem
 }
+console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]))
 
 // Desafio 5
 function footballPoints() {
