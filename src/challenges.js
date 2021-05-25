@@ -1,40 +1,42 @@
 // Desafio 1
-boolean1 = true;
-boolean2 = true;
 function compareTrue(boolean1, boolean2) {
-if (boolean1 == true && boolean2 == true) {
-  return true;
-} else {
-  return false;
-}
-
-console.log()
-  // seu código aqui
+  if (boolean1 == true && boolean2 == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  var area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(" ");
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 A TERMINAR
+function concatName(array) {
+  for (i=0;i<=array.length; i++) {
+    
+  }
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
+  var soma = wins + ties;
+  return soma;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+highestCount();
+function highestCount(array) {
+
 }
 
 // Desafio 7
