@@ -58,8 +58,20 @@ function generatePhoneNumber(digitsArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  const sides = [a, b, c];
+
+  for (let i = 0; i < sides.length; i++) {
+    const otherSides = [];
+    for (let j = 0; j < sides.length; j++) {
+      i !== j && otherSides.push(sides[j]);
+    }
+
+    let sum = sumArray(otherSides);
+    let diff = Math.abs(subtractArray(otherSides));
+
+    return sides[i] < sum && sides[i] > diff;
+  }
 }
 
 // Desafio 13
@@ -75,6 +87,22 @@ module.exports = {
 };
 
 // *********************
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function sumArray(array) {
+  return array.reduce(add);
+}
+
+function subtractArray(array) {
+  return array.reduce(subtract);
+}
 
 function higherThan(a) {
   return function (b) {
