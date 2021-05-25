@@ -38,8 +38,6 @@ function highestCount(arrayDeNumeros) {
 
 // Desafio 7: Crie uma função de Caça ao Rato
 function catAndMouse(cat1, cat2, mouse) {
-  cat1 = Math.abs(mouse - cat1);
-  cat2= Math.abs(mouse - cat2);
   if (cat1 < cat2) {
       return "cat1"
   } else if (cat2 < cat1) {
