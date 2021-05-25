@@ -73,7 +73,7 @@ function fizzBuzz(value) {
     } else if (higherNumber % 3 === 0 && higherNumber % 5 === 0) {
        arr.push('fizzBuzz');
     } else {
-       arr.push('bug!');
+       arr.push('bug!'); 
     }
   }
   return arr;
