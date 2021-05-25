@@ -34,9 +34,20 @@ function footballPoints(wins , ties) {
 };
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(arrayNumerico) {
+  let test = arrayNumerico[0];
+  for(let i = 0; i < arrayNumerico.length; i += 1){
+    if(test < arrayNumerico[i]){
+      test = arrayNumerico[i];
+    }
+  }
+  let count = 0
+  for(let i2 = 0; i2 < arrayNumerico.length; i2 += 1){
+    if (test == arrayNumerico[i2]){
+      count += 1;
+    }
+  } return count;
+};
 
 // Desafio 7
 function catAndMouse(mouse , cat1 , cat2) {
@@ -79,11 +90,32 @@ function fizzBuzz(stringNumeros) {
 };
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(stringTexto) {
+  let novoTexto = stringTexto
+  for(let i = 0; i < stringTexto.length; i += 1){
+    if(stringTexto[i] === "a"){
+      novoTexto.replace("a","1")
+      console.log(novoTexto)
+    };
+    if(stringTexto[i] === "e"){
+      novoTexto.replace("i","2")
+      console.log(novoTexto)
+    };    
+    if(stringTexto[i] === "i"){
+      novoTexto.replace("i","3")
+    };
+    if(stringTexto[i] === "o"){
+      novoTexto.replace("o","4")
+    };   
+    if(stringTexto[i] === "u"){
+      novoTexto.replace("u","5")
+      console.log(novoTexto)
+    };
+  return novoTexto
+  }
+};   console.log(encode("testando a e i o u"))
 function decode() {
-  // seu código aqui
+ // seu código aqui
 }
 
 module.exports = {
