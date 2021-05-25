@@ -6,6 +6,15 @@ function compareTrue(value1 , value2) {
   return false;
 }
 
+function compareTrue(value1,value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
