@@ -28,22 +28,16 @@ function generatePhoneNumber(arrayDeNumeros) {
   } else {
     for (let indexD111 = 0; indexD111 < arrayDeNumeros.length; indexD111 += 1) {
       for (let indexD112 = 0; indexD112 < arrayDeNumeros.length; indexD112 += 1) {
-        if (arrayDeNumeros[indexD111] === arrayDeNumeros[indexD112]) {
-          repetiu += 1;
-        }
+        if (arrayDeNumeros[indexD111] === arrayDeNumeros[indexD112]) { repetiu += 1; }
       }
-      if (repetiu === 3) {
-        numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
-      }
+      if (repetiu === 3) { numeroTelefone = 'não é possível gerar um número de telefone com esses valores'; }
       if (arrayDeNumeros.length === 11) {
         for (let indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
           if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu >= 3)) {
             numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
           }
         }
-      } else if (arrayDeNumeros.length !== 11) {
-        numeroTelefone = 'Array com tamanho incorreto.';
-      }
+      } else if (arrayDeNumeros.length !== 11) { numeroTelefone = 'Array com tamanho incorreto.'; }
       repetiu = 0;
       stringDoArray = stringDoArray + arrayDeNumeros[indexD111];
     }

@@ -15,8 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayAInformar) {
-  let concatenado = arrayAInformar[arrayAInformar.length - 1] + ', ' + arrayAInformar[0];
-  return (concatenado);
+  return '${arrayAInformar[arrayAInformar.length - 1]}, ${arrayAInformar[0]}';
 }
 
 // Desafio 5
@@ -68,8 +67,8 @@ function fizzBuzz(arrayDeNumeros) {
   for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1) {
     if ((arrayDeNumeros[indexD8] % 3) === 0) { adiciona = 'fizz'; }
     if ((arrayDeNumeros[indexD8] % 5) === 0) { adiciona = 'buzz'; }
-    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) { adiciona = 'fizzBuzz'; }
-    else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) { adiciona = 'bug!'; }
+    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) { adiciona = 'fizzBuzz';
+    } else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) { adiciona = 'bug!'; }
     novoArray.push(adiciona);
     adiciona = '';
   }
