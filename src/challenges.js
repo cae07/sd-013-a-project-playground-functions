@@ -86,7 +86,7 @@ function fizzBuzz(a) {
     }
   }
   return result;
-}
+};
 
 // Desafio 9
 function encode() {
