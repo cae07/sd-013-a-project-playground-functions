@@ -8,10 +8,11 @@ function compareTrue(valor1, valor2) {
 }
 console.log(compareTrue(true, true))
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
-
+console.log(calcArea(51,1))
 // Desafio 3
 function splitSentence() {
   // seu código aqui
