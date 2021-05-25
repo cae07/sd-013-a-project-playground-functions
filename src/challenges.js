@@ -17,8 +17,8 @@ function calcArea(base ,height) {
 // Desafio 3
 function splitSentence(string) {
 	// seu código aqui
-  let arraySentence = [];
-  arraySentence = string.split(' ');
+	let arraySentence = [];
+	arraySentence = string.split(' ');
 	return arraySentence
 }
 //  console.log(splitSentence('vamo que vamo'));
@@ -31,12 +31,14 @@ function concatName(array) {
 	concact = array[arrayL-1]+", "+array[0];
 	return concact;
 }
-console.log(concatName(["captain" , "my" ,"captain"]))
+// console.log(concatName(["captain" , "my" ,"captain"]))
 
 // Desafio 5
-function footballPoints() {
-	// seu código aqui
-}
+function footballPoints(wins ,ties) {
+	result = (wins * 3) + ties
+	return result
+} 
+// console.log(footballPoints(3 , 1));
 
 // Desafio 6
 function highestCount() {
