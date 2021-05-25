@@ -67,9 +67,36 @@ function catAndMouse(mouse, cat1, cat2) {
   return vencedor;
 }
 
+// Divisivel por 3 ou 5 = fizzBuzz
+function divisivelPor(numero) {
+  let divisivel = 0;
+  if ((numero % 3) === 0 && (numero % 5) === 0) {
+    divisivel = 1;
+  } else if ((numero % 3) === 0) {
+    divisivel = 2;
+  } else if ((numero % 5) === 0) {
+    divisivel = 3;
+  }
+  return divisivel;
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resultado = [];
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (divisivelPor(numeros[i]) === 1) {
+      resultado.push('fizzBuzz');
+    } else if (divisivelPor(numeros[i]) === 2) {
+      resultado.push('fizz');
+    } else if (divisivelPor(numeros[i]) === 3) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+
+  return resultado;
 }
 
 // Desafio 9
