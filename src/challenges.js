@@ -31,18 +31,32 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(fullName) {
+  lastName = fullName[fullName.length -1];
+  firstName = fullName[0];
+  return lastName + ", " + firstName;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  highestValue = array[0];
+  count = 0;
+  for (let i of array) {
+    if (i > highestValue) {
+      highestValue = i;
+    }
+  }
+  for (let i of array) {
+    if (i == highestValue) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
