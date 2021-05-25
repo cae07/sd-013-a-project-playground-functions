@@ -31,15 +31,6 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
-  // seu código aqui
-  /*
-  let primeiroItem = array.length - (array.length + 1);
-  let ultimoItem = array.length - 1;
-
-  let concat = `${primeiroItem}, ${ultimoItem}`;
-
-  return concat;
-  */
 
   let primeiroItem;
   let ultimoItem;
@@ -63,9 +54,15 @@ function concatName(array) {
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsPoints = wins * 3; 
+  let tiesPoints = ties * 1;
+
+  let points = winsPoints + tiesPoints;
+  return points;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
