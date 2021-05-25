@@ -54,9 +54,6 @@ function generatePhoneNumber(arrayDeNumeros) {
   }
   return numeroTelefone;
 }
-console.log(generatePhoneNumber([0, 1, 6]));
-console.log(generatePhoneNumber([]));
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -73,8 +70,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  
+  let numeros = string.match(/\d+/g).map(Number);
+  let soma = 0;
+  let recomendacao = "";
+  for (let index13 = 0; index13 < numeros.length; index13 += 1) {
+    soma = soma + numeros[index13];
+  }
+  if (soma > 1) {
+    recomendacao = soma + ' copos de água'
+  } else {
+    recomendacao = soma + ' copo de água'
+  }
+  return recomendacao;
 }
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
