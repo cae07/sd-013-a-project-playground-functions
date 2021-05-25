@@ -38,6 +38,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(numeros) {
   let maiorNumero = numeros[0];
   let contagem = 0;
@@ -53,8 +54,17 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let vencedor;
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    vencedor = 'cat2';
+  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    vencedor = 'cat1';
+  } else {
+    vencedor = 'os gatos trombam e o rato foge';
+  }
+
+  return vencedor;
 }
 
 // Desafio 8
