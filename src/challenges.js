@@ -81,13 +81,46 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
+  let resEncode = "";
+  for(let index in string){
+    if (string[index] === "a"){
+      resEncode = resEncode + "1"
+    } else if (string[index] === "e"){
+      resEncode = resEncode + "2"
+    } else if (string[index] === "i"){
+      resEncode = resEncode + "3"
+    } else if (string[index] === "o"){
+      resEncode = resEncode + "4"
+    } else if (string[index] === "u"){
+      resEncode = resEncode + "5"
+    } else {
+      resEncode = resEncode + string[index]
+    } 
+  } return resEncode
 }
 function decode(string) {
-  // seu código aqui
+  let resDecode = "";
+  for(let index in string){
+    if (string[index] === "1"){
+      resDecode = resDecode + "a"
+    } else if (string[index] === "2"){
+      resDecode = resDecode + "e"
+    } else if (string[index] === "3"){
+      resDecode = resDecode + "i"
+    } else if (string[index] === "4"){
+      resDecode = resDecode + "o"
+    } else if (string[index] === "5"){
+      resDecode = resDecode + "u"
+    } else {
+      resDecode = resDecode + string[index]
+    } 
+  } return resDecode
 }
 
-console.log();
+
+console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"))
+
 
 module.exports = {
   calcArea,
