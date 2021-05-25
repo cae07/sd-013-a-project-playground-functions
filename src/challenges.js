@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maiorNumero = 0
+  let maiorNumero = -10
   let repeticao = 0
   for(let index in array){
     if(array[index] > maiorNumero){
@@ -49,6 +49,7 @@ function highestCount(array) {
   }
     return repeticao
 }
+console.log(highestCount([0, 0, 0]));
 
 
 // Desafio 7
@@ -77,15 +78,16 @@ function fizzBuzz(arrayNumeros) {
 }
  } return resultado
 }
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
 }
-function decode() {
+function decode(string) {
   // seu código aqui
 }
+
+console.log();
 
 module.exports = {
   calcArea,
