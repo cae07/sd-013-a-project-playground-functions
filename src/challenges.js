@@ -20,9 +20,13 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let arrayConcat = [];
+  arrayConcat.push(array[array.length - 1]);
+  arrayConcat.push(array[0]);
+  return arrayConcat.join(', ');
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
