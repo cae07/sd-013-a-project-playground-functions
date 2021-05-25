@@ -1,30 +1,37 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ( param1 === true && param2 === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+  let resultado;
+
+  if ( param1 === true && param2 === true) {  
+    resultado = true;  
+  } else {  
+  resultado = false;  
+  }  
+  return resultado;
+} 
 
 // Desafio 2
 function calcArea(param1, param2) {
-    
-  return (param1 * param2)/2
+  let resultado = (param1 * param2)/2;
+  
+  return resultado;
 }
 
 // Desafio 3
 function splitSentence(param1) {
-  // seu código aqui
-  return param1.split(' ');
+  let resultado = param1.split(' ');
+  
+  return resultado;
 }
-
-console.log(splitSentence("foguete"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+let arrayNomes = ['captain', 'my', 'captain']; 
+
+function concatName(array) {
+let resultado = `'${array[array.length-1]}, ${array[0]}'`; 
+
+return resultado;
+} 
 
 // Desafio 5
 function footballPoints() {
