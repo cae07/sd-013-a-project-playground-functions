@@ -35,7 +35,7 @@ function concatName(array) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints (wins, ties) {
   let vitorias = wins * 3;
   let empates = ties * 1;
   let results = vitorias + empates;
@@ -45,9 +45,24 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(numeros) {
+  let maiorValor = 0;
+  for (let indice in numeros) {
+    if (numeros[indice] > maiorValor){
+      maiorValor = numeros[indice];
+    } 
+  }
+  let cont = 0;
+  for ( let indice in numeros) {
+    if ( numeros[indice] == maiorValor) {
+      cont ++;
+    }
+  }
+  return cont;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
@@ -79,3 +94,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
