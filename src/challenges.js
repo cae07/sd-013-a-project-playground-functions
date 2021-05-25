@@ -5,39 +5,50 @@ function compareTrue(param1, param2) {
   } else {
   return false;
   }
-}
-// console.log(compareTrue(true, true));
+}// console.log(compareTrue(true, true));
 
 // Desafio 2: Crie uma função que calcule a área de um triângulo
 function calcArea(base, height) {
   return(base * height) / 2;
-}
- console.log(calcArea(51, 1));
+} // console.log(calcArea(51, 1));
 
 // Desafio 3: Crie uma função que divida a frase
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  return string.split(" ", 3);
+} // console.log(splitSentence("foguete"));
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
-}
+// Desafio 4: Crie uma função que usa concatenação de strings
+function concatName(array) {
+  return "'" + array [array.length -1] + "'" +','+' '+ "'" + array[0] + "'";
+} // console.log(concatName(['capitão', 'meu', 'capitão']));
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+// Desafio 5: Crie uma função que calcule a quantidade de pontos no futebol
+function footballPoints(wins, ties) {
+ return (wins * 3) + (ties * 1)
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+} //console.log(footballPoints(1, 2));
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 6// for (indice = 0; indice < arrayDeNumeros.length; indice += 1)
+function highestCount(arrayDeNumeros) {
+   let ordem = arrayDeNumeros.sort()
+    maiorNumero == maiorNumero += 1
+   return ordem
+
 }
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+// Desafio 7: Crie uma função de Caça ao Rato
+function catAndMouse(cat1, cat2, mouse) {
+  cat1 = Math.abs(mouse - cat1);
+  cat2= Math.abs(mouse - cat2);
+  if (cat1 < cat2) {
+      return "cat1"
+  } else if (cat2 < cat1) {
+      return "cat2"
+  } else {
+      return 'os gatos trombam e o gato foge'
+    }
+}; //console.log(catAndMouse(5, 5, 0));
 
 // Desafio 8
 function fizzBuzz() {
