@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(conone, condos) {
+  if ((conone === true) && (condos === true)) {
+    return  true;
+  } else {
+    return  false;
+  }
 }
 
 // Desafio 2
@@ -45,7 +49,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-console.log("hello world!");
+
 module.exports = {
   calcArea,
   catAndMouse,
