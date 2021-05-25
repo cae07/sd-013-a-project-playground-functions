@@ -1,16 +1,16 @@
-// Desafio 1 - se ambos os números forem
+// Desafio 1 - se ambos os números forem par, retorna true.
 function compareTrue(num1, num2) {
   if (num1 % 2 == 0 && num2 % 2 == 0) {
-    return true; 
+    return true;
   }
   else {
     return false;
   }   
 }
-
-// Desafio 2
-function calcArea() {
-  
+// Desafio 2 - calculra a área de um triangulo!
+function calcArea(base, height) {
+  const calc = (base * height) / 2
+  return calc
 }
 
 // Desafio 3
