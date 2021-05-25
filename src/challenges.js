@@ -10,12 +10,16 @@ function compareTrue(p1, p2) {
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
-}
+};
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+// Referência utilizada: https://www.w3schools.com/jsref/jsref_split.asp
+function splitSentence(frase) {
+  for (let palavra in frase) {
+    palavra = frase.split(' ');
+    return palavra
+  };
+};
 
 // Desafio 4
 function concatName() {
