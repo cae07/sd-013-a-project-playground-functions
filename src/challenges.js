@@ -98,8 +98,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(nums) {
+  let string = [];
+  for (let i = 0; i < nums.length; i +=1) {
 
+      if(nums[i] %3 ==0 && nums[i] %5 ==0) {
+        string[i] = "fizzBuzz";
+
+      } else if (nums[i] % 5 ==0) {
+          string[i] = "buzz";
+
+      } else if (nums[i] % 3 ==0) {
+          string[i] = "fizz";
+
+      } else {
+        string[i] = "bug!";
+
+      }
+  }
+  return string;
 }
 
 // Desafio 9
