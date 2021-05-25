@@ -19,9 +19,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(list) {
-  first = list[list.length-1];
-  last = list[0];
-  return first + "," + last;
+  let first = list[list.length-1];
+  let last = list[0];
+  return first + ", " + last;
 }
 
 // Desafio 5
