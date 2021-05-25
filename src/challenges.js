@@ -22,9 +22,11 @@ let myString = "foguete"
 console.log(splitSentence(myString))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+ let soma = array[array.length -1] + ", " + array[0] 
+ return soma
 }
+console.log(concatName(['Lucas','Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
