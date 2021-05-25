@@ -14,18 +14,25 @@ function calcArea(base,height) {
   tri = tri/2
   return tri
 }
-console.log(calcArea(10,50))
-
 // Desafio 3
-function splitSentence() {
+function splitSentence(texto) {
   // seu código aqui
+  let tratamento 
+  tratamento = texto.split(" ")
+  return tratamento
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let nome = "";
+  let nome1 = "";
+  let resultado = ""
+  nome = array[array.length-1];
+  nome1 = array[0]
+  resultado =`${nome}, ${nome1}`
+  return resultado;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
