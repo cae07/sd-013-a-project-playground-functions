@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let sentence = ""
+  let sentence = "";
   let phrase = [];
   let n = 0;
   for(let index = 0; index < string.length; index += 1){
@@ -30,7 +30,6 @@ function splitSentence(string) {
   }
   return phrase
 }
-
 // Desafio 4
 function concatName(array) {
   return array[array.length - 1] + ", " + array[0];
@@ -113,19 +112,19 @@ function encode(string) {
 function decode(string) {
   let phrase = ""
   for(let index = 0; index < string.length; index+=1){
-    if(string[index] === 1){
+    if(string[index] === "1"){
       phrase += "a";
     }
-    else if(string[index] === 2){
+    else if(string[index] === "2"){
       phrase += "e";
     }
-    else if(string[index] === 3){
+    else if(string[index] === "3"){
      phrase += "i";
    }
-   else if(string[index] === 4){
+   else if(string[index] === "4"){
      phrase += "o";
    }
-   else if(string[index] === 5){
+   else if(string[index] === "5"){
      phrase += "u";
    }
    else{
