@@ -22,8 +22,16 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let lastAndFirst = '';
+  for (let index = names.length; index >= 0; index -= 1) {
+    if (index == (names.length - 1)) {
+      lastAndFirst += `${names[index]},`;
+    } else if (index === 0) {
+      lastAndFirst += ` ${names[index]}`;
+    }
+  }
+  return lastAndFirst
 }
 
 // Desafio 5
