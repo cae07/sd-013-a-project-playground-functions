@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 == OK, passou nos 3 testes
 function compareTrue(veredito1, veredito2) {
 
   if( veredito1 == true && veredito2 == true){
@@ -8,7 +8,7 @@ function compareTrue(veredito1, veredito2) {
 }
 console.log(compareTrue(false, false));
 
-// Desafio 2
+// Desafio 2 == OK, passou nos 3 testes
 function calcArea(base, height) {
 
   let area = base * height / 2;
@@ -16,10 +16,12 @@ function calcArea(base, height) {
 }
 console.log(calcArea(51, 1))
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 == OK, passou nos 3 testes
+function splitSentence(string) {
+  string = string.split(' ');
+  return string;
 }
+  console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
