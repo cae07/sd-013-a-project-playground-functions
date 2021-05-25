@@ -30,9 +30,37 @@ function splitSentence(sentence) {
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  /*
+  let primeiroItem = array.length - (array.length + 1);
+  let ultimoItem = array.length - 1;
+
+  let concat = `${primeiroItem}, ${ultimoItem}`;
+
+  return concat;
+  */
+
+  let primeiroItem;
+  let ultimoItem;
+  let concat;
+
+  for (let indexConcat = 0; indexConcat < array.length; indexConcat += 1){
+
+    if (indexConcat === 0) {
+      primeiroItem = array[indexConcat];
+    } else if (indexConcat === (array.length - 1)) {
+      ultimoItem = array[indexConcat]
+    } else {
+      continue;
+    }
+
+    concat = `${ultimoItem}, ${primeiroItem}`;
+  }
+  return concat;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
