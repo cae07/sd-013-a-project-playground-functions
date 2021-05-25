@@ -59,11 +59,26 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  return string
+    .split('')
+    .map((c) => {
+      let foundIndex = vowels.indexOf(c);
+      return foundIndex !== -1 ? foundIndex + 1 : c;
+    })
+    .join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  return string
+    .split('')
+    .map((c) => {
+      return Number(c) ? vowels[c - 1] : c;
+    })
+    .join('');
 }
 
 module.exports = {
