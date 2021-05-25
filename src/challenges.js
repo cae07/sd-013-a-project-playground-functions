@@ -9,7 +9,7 @@ function compareTrue(value, value1) {
   }
 
 }
-console.log(compareTrue());
+console.log(compareTrue(true, true));
 // <---corrigir
 
 // Desafio 2
@@ -31,7 +31,7 @@ console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName(string1) {
-  let concat = (string1[string1.length-1] + ", " + string1[0])
+  let concat = string1[string1.length-1] + ", " + string1[0];
   return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -47,14 +47,31 @@ console.log(footballPoints(14,8));
 
 // Desafio 6
 function highestCount(array1) {
-  
+  let nmaior = 0;
+  let value  = 0;
+
+  for(let i = 0; i < array1.length; i += 1){
+    if (array1[i] > nmaior){
+      nmaior = array1[i]
+    }
+  }
 
   
+  for(let ii = 0; ii <array1.length; ii+=1){
+    if(array1[ii] === nmaior){
+      value += 1;
+    }
+  }
+
+
+  return value;
 }
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
+  
 }
 
 // Desafio 8
