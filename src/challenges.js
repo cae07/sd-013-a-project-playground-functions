@@ -40,10 +40,8 @@ function highestCount(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > bigNumber) {
       bigNumber = arrayNumbers[index];
-    }
-  }
-  for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
-    if (arrayNumbers[index2] === bigNumber) {
+      bigNumberCount = 0;
+    } if (bigNumber === arrayNumbers[index]) {
       bigNumberCount += 1;
     }
   }
@@ -80,9 +78,26 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+  let encondeArray = '';
+  let stringEncodeSplit = stringEncode.split('');
+  let code = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+  for (let indexEncode = 0; indexEncode < stringEncodeSplit.length; indexEncode += 1) {
+    if (stringEncodeSplit[indexEncode] === 'a') {
+      encondeArray = code['a'];
+      stringEncodeSplit[indexEncode] = encondeArray;
+    }
+  }
+  return stringEncodeSplit;
 }
+console.log(encode('ha there!'));
+
 function decode() {
   // seu código aqui
 }
@@ -99,3 +114,17 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+// let stringEncondeSplit = stringEncode.split('');
+// let stringEncondeArray = [];
+// for (let indexEncode = 0; indexEncode < stringEncondeSplit.length; indexEncode += 1) {
+//   if (stringEncondeSplit[indexEncode] === 'a') {
+//     let stringArray = '1';
+//     stringEncondeSplit[indexEncode] = stringArray;
+//   } else if (stringEncondeSplit[indexEncode] === 'e') {
+//     let stringArray = '2';
+//     stringEncondeSplit[indexEncode] = stringArray;
+//   }
+// }
+// return stringEncondeSplit;
