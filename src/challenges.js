@@ -104,14 +104,15 @@ function encode(sentence) {
         break;
       default:
         result += sentence.charAt(i);
-  };
+    };
+  }
   return result;
 }
+
 function decode(sentence) {
   let result = "";
 
   for(let i = 0; i < sentence.length; i += 1){
-
     switch(sentence.charAt(i)){
       case '1':
         result += 'a';
@@ -130,9 +131,8 @@ function decode(sentence) {
         break;
       default:
         result += sentence.charAt(i);
-    };
-
-  };
+    }
+  }
   return result;
 }
 
@@ -147,4 +147,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
