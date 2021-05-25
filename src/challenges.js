@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(Param1, Param2) {
-  if( Param1 == true && Param2 == true) {
-    return true;
-  } else {
-    return false;
-  }
+  return Param1 && Param2;
 }
 
 // Desafio 2
@@ -20,8 +16,8 @@ function splitSentence(stringASplitar) {
 // Desafio 4
 function concatName(arrayAInformar) {
   let primeiroItem = arrayAInformar[0];
-  let ultimoItem = arrayAInformar[arrayAInformar.length-1]
-  return (ultimoItem + ", " + primeiroItem)
+  let ultimoItem = arrayAInformar[arrayAInformar.length-1];
+  return (ultimoItem + ", " + primeiroItem);
 }
 
 // Desafio 5
@@ -31,14 +27,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  //Primeiro identifico qual o maior número
+  // Primeiro identifico qual o maior número
   let maiorNumero = 0;
   for(let index = 0; index <= arrayDeNumeros.length; index += 1){
     if (maiorNumero < arrayDeNumeros[index]) {
       maiorNumero = arrayDeNumeros[index];
     }
   }
-  //Com o primeiro identificado busca quantas vezes ele se repete
+  // Com o primeiro identificado busca quantas vezes ele se repete
   let qtdRepeticao = 0;
   for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1){
     if (arrayDeNumeros[index2] === maiorNumero) {
@@ -66,8 +62,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let novoArray = []
+  let adiciona = ""
+  for(let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1){
+    if ((arrayDeNumeros[indexD8] % 3) == 0) {
+      adiciona = "fizz";
+    }
+    if ((arrayDeNumeros[indexD8] % 5) == 0) {
+      adiciona = "buzz";
+    }
+    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) {
+      adiciona = "fizzBuzz";
+    }
+    if (((arrayDeNumeros[indexD8] % 3) != 0) && ((arrayDeNumeros[indexD8] % 5) != 0)) {
+      adiciona = "bug!";
+    }
+    novoArray.push(adiciona);
+    adiciona = ""
+  }
+  return novoArray
 }
 
 // Desafio 9
