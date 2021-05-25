@@ -60,28 +60,28 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return gatoOuRato;
 }
-function divisivelPortres(numero){
+function divisivelPortres(numero) {
   let divisivel = false;
-  if (numero%3 == 0){
-    divisivel = true
+  if (numero % 3 === 0){
+    divisivel = true;
     }
-  return divisivel
+  return divisivel;
 }
 
-function divisivelPor5(numero){
+function divisivelPor5(numero) {
   let divisivel = false;
-  if (numero%5 == 0){
-    divisivel =  true
+  if (numero % 5 === 0){
+    divisivel =  true;
   }
-  return divisivel
+  return divisivel;
 }
 
 function divisivelPor3e5(numero) {
   let divisivel = false
-  if (numero%3 === 0 && numero%5 === 0){
-    divisivel = true
+  if (numero % 3 === 0 && numero % 5 === 0){
+    divisivel = true;
   }
-  return divisivel
+  return divisivel;
 }
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
@@ -101,58 +101,50 @@ function fizzBuzz(arrayDeNumeros) {
       arrayDeResposta.push('bug!');
     }
   }
-  return arrayDeResposta
-  
-  
+  return arrayDeResposta;
 }
 
 // Desafio 9
 function encode(string) {
   let decifrador = {
-    a:1,
-    e:2,
-    i:3,
-    o:4,
-    u:5
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
   }
-  palavraSaida = ''
+  let palavraSaida = ''
   for (let index = 0; index < string.length ; index += 1) {
     let letraTeste = string[index]
     for (let key in decifrador){
       if (letraTeste === key) {
-        letraTeste = decifrador[key]
+        letraTeste = decifrador[key];
       }
     }
-    palavraSaida += letraTeste
-
+    palavraSaida += letraTeste;
   }
-
-return palavraSaida
-
+  return palavraSaida;
 }
 
 function decode(string) {
   let desdecifrador = {
-    1:'a',
-    2:'e',
-    3:'i',
-    4:'o',
-    5:'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
   }
-  palavraSaida = ''
+  let palavraSaida = ''
   for (let index = 0; index < string.length ; index += 1) {
     let letraTeste = string[index]
     for (let key in desdecifrador) {
       if (letraTeste === key){
-        letraTeste = desdecifrador[key]
+        letraTeste = desdecifrador[key];
       }
     }
-    palavraSaida += letraTeste
-
+    palavraSaida += letraTeste;
   }
-
-return palavraSaida
-
+  return palavraSaida;
 }
 
 module.exports = {
