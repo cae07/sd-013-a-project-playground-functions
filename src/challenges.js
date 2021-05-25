@@ -12,12 +12,14 @@ function compareTrue(a,b) {
 function calcArea(base,height) {
   return (base * height)/2
 }
-  console.log(calcArea(10,6))
+  console.log(calcArea(51,1))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(' ', 4);
+  return array;
 }
+  console.log(splitSentence('A Trybe é demais'))
 
 // Desafio 4
 function concatName() {
