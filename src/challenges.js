@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
+  if (param1 === true && param2 === true) {
     return true;
   } else {
     return false;
@@ -13,11 +13,15 @@ function calcArea(base, height) {
   return res;
 }
 
+// Desafio 3 resolvido com ajuda do seguinte link https://www.w3schools.com/jsref/jsref_split.asp
+
 // Desafio 3
 function splitSentence(string) {
   let res = string.split(' ');
   return res;
 }
+
+// Desafio 4 resolvido com ajuda do seguinte link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 // Desafio 4
 function concatName(nome) {
@@ -30,13 +34,37 @@ function concatName(nome) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontoVitoria = wins * 3;
+  let pontoEmpate = ties * 1;
+
+  let res = pontoVitoria + pontoEmpate;
+
+  return res
+  // receber numero de vitorias com nome wins
+  // receber numero de empates com nome ties
+
 }
 
+// Desafio realizado com ajuda do seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(parametro) {
+  let contador = 0;
+  let maiorNumero = parametro[0];
+  
+  for (let indice = 0; indice < parametro.length; indice += 1){
+    if (parametro[indice] > maiorNumero){
+      maiorNumero = parametro[indice];
+    }
+  }
+    for (let index = 0; index < parametro.length; index += 1) {
+      if (parametro[index] == maiorNumero) {
+        contador += 1;
+      }
+    }
+  return contador;
+  // Deverá retornar a quantidade de vezes que o numero se repete
 }
 
 // Desafio 7
