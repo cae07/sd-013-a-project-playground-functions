@@ -85,7 +85,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+  /* Dúvidas sobre o exercício esclarecidas pelo Sumo no plantão
+  Math.abs sendo usado para os casos em que a distância for negativa (como a posição do rato ser 1 e do cat1 ser 0, p.ex), tornando o resultado um valor positivo */
   let distance1 = Math.abs(cat1 - mouse);
   let distance2 = Math.abs(cat2 - mouse);
 
