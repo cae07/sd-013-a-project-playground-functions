@@ -1,6 +1,6 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let myArray = array;
 }
 
 // Desafio 11
