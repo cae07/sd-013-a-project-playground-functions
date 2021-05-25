@@ -63,9 +63,23 @@ if (difcat1 < difcat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let numbersArray = [];
+
+  for (let number of numbers) {
+    if (number % 3 === 0 && number % 5 === 0){
+      numbersArray.push("fizzBuzz");
+    } else if (number % 5 === 0) {
+      numbersArray.push("buzz");
+    } else if (number % 3 === 0) {
+      numbersArray.push("fizz");
+ } else {
+  numbersArray.push("bug!");
+ }
+ }
+ return numbersArray
 }
+
 
 // Desafio 9
 function encode() {
