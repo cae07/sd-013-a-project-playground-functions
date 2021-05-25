@@ -105,17 +105,71 @@ function fizzBuzz(arrNumb) {
   }
 return arrResult;
 }
-x = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(x));
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+
+  let novaStr = '';
+  let arrStr = str.split('');
+  
+  for (let i = 0; i < arrStr.length; i += 1) {
+    
+    if (arrStr[i] === 'a') {
+      arrStr[i] = 1;
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === 'e') {
+      arrStr[i] = 2;
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === 'i') {
+      arrStr[i] = 3;
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === 'o') {
+      arrStr[i] = 4;
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === 'u') {
+      arrStr[i] = 5;
+      novaStr += arrStr[i];
+    } else {
+      novaStr += arrStr[i];
+    }
+
+  }
+
+return novaStr;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  
+  let novaStr = '';
+  let arrStr = str.split('');
+  
+  for (let i = 0; i < arrStr.length; i += 1) {
+    
+    if (arrStr[i] === '1') {
+      arrStr[i] = 'a';
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === '2') {
+      arrStr[i] = 'e';
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === '3') {
+      arrStr[i] = 'i';
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === '4') {
+      arrStr[i] = 'o';
+      novaStr += arrStr[i];
+    } else if (arrStr[i] === '5') {
+      arrStr[i] = 'u';
+      novaStr += arrStr[i];
+    } else {
+      novaStr += arrStr[i];
+    }
+
+  }
+
+return novaStr;
 }
+
+
 
 module.exports = {
   calcArea,
