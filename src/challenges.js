@@ -2,10 +2,10 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
-  };
-};
+  } //else {
+  return false;
+  //};
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -15,13 +15,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ")
+  return str.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
   for (const key in array) {
-    return array[array.length - 1] + ", " + array[0];
+    return array[array.length - 1] + ', ' + array[0];
   }
 }
 
@@ -42,7 +42,7 @@ function highestCount(array) {
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === hightNumber) {
-      count += 1
+      count += 1;
     }
   }
   return count;
@@ -50,7 +50,7 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionC1, positionC2, positionMouse;
+  let positionC1, positionC2;
   if (cat1 <= mouse) {
     positionC1 = mouse - cat1;
   } else {
@@ -62,13 +62,12 @@ function catAndMouse(mouse, cat1, cat2) {
     positionC2 = cat2 - mouse;
   }
   if (positionC1 > positionC2) {
-    return "cat2"
+    return 'at2';
   } else if (positionC2 > positionC1) {
-    return "cat1"
+    return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge';
   }
-
 }
 
 // Desafio 8
@@ -80,9 +79,9 @@ function fizzBuzz(array) {
     } else if (array[key] % 5 === 0) {
       number.push('buzz');
     } else if (array[key] % 3 === 0) {
-      number.push('fizz')
+      number.push('fizz');
     } else {
-      number.push('bug!')
+      number.push('bug!');
     }
   }
   return number;
@@ -90,7 +89,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-  let par = str.split("");
+  let par = str.split('');
   let par2 = [];
   for (const key in par) {
     if (par[key] === 'a') {
