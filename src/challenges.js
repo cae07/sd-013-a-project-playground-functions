@@ -19,15 +19,18 @@ function splitSentence(value) {
 
 // Desafio 4
 function concatName(value) {
-  let v1 = value.shift(),
-      v2 = value.pop(),
-      v3 = `${v2}, ${v1}`; 
+  let v1 = value.shift();
+  let v2 = value.pop();
+  let v3 = `${v2}, ${v1}`;
   return v3;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vit = 3 * wins;
+  let emp = 1 * ties;
+  let result = vit + emp;
+  return result;
 }
 
 // Desafio 6
