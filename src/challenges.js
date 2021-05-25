@@ -18,8 +18,11 @@ function splitSentence(Sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(allNames) {
+  let primeiros = allNames[0];
+  let ultimo = allNames[allNames.length - 1];
+
+  return ultimo + ", " + primeiros; 
 }
 
 // Desafio 5
