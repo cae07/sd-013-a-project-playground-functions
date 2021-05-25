@@ -2,19 +2,19 @@
 function techList(arrayTec, name) {
   // seu código aqui
   let arrayresultado = [];
-  let obj = {
-    tech:  "",
-    name: ""
-  }
+  let aviso = 'Vazio!'
   arrayTec.sort();
+  if (arrayTec.length ==0 ) {
+    return aviso;
+  }
   for (let i = 0; i < arrayTec.length; i += 1) {
-    arrayresultado.push( obj.tech = arrayTec[i],obj.name = name);
+    arrayresultado.push(obj = {
+      tech:  arrayTec[i],
+      name: name  
+    })
   }
   return arrayresultado;
 }
-
-// let arrayteste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// console.log(techList(arrayteste, "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
@@ -57,8 +57,7 @@ function generatePhoneNumber(arrayTelefone) {
   return resultado
 }
 
-let arrayTeste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0] ;
-console.log(generatePhoneNumber(arrayTeste));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
