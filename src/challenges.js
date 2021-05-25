@@ -24,11 +24,46 @@ function concatName(words) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let points = 0;
+
+  for (let indexWins = 0; indexWins < wins; indexWins += 1) {
+    points += 3;
+  }
+
+  for (let indexTies = 0; indexTies < ties; indexTies += 1) {
+    points += 1;
+  }
+
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
+
+function verifyHigher(numberArrays) {
+  let maior = 0;
+  for (let index = 0; index < numberArrays.length; index += 1) {
+    if (numberArrays[index] > maior) {
+      maior = numberArrays[index];
+    }
+  }
+  return maior;
+}
+
+function verifyEquals(numberArrays, higher) {
+  let qtd = 0;
+  for (let index = 0; index < numberArrays.length; index += 1) {
+    if (numberArrays[index] === higher) {
+      qtd += 1;
+    }
+  }
+  return qtd;
+}
+
+function highestCount(numberArrays) {
+  let maior = verifyHigher(numberArrays);
+  let equals = verifyEquals(numberArrays, maior);
+  return equals;
 }
 
 // Desafio 7
