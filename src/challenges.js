@@ -80,10 +80,23 @@ function catAndMouse(num1,num2,num3) {
   }
 }
 
-console.log(catAndMouse(1,0,2));
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(stringer) {
+  let array=[];
+  for(i=0 ; i<stringer.length; i+=1){
+      if(stringer[i]%3==0 && stringer[i]%5==0){
+       array.push("fizzBuzz");
+      }
+      else  if(stringer[i]%3==0){
+        array.push("fizz");
+      }
+      else if(stringer[i]%5==0){
+        array.push("buzz");
+      }
+      else{
+        array.push("bug!");
+      }
+  }
+  return array;
 }
 
 // Desafio 9
