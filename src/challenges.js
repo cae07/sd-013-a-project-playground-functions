@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  let quantidade = 0
+  let quantidade = 0;
   if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)) {
     quantidade = 1;
   } else {
@@ -46,7 +46,7 @@ function highestCount(arrayDeNumeros) {
     }
     quantidade = qtdRepeticao;
   }
-  return quantidade
+  return quantidade;
 }
 
 // Desafio 7
