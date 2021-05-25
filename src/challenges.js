@@ -96,11 +96,43 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// usado como referencia https://qastack.com.br/programming/1098040/checking-if-a-key-exists-in-a-javascript-object
+function encode(frase) {
+  let fraseCodificada = '';
+  let codigo = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (const letra of frase) {
+    if (codigo[letra] !== undefined) {
+      fraseCodificada += codigo[letra];
+    } else { fraseCodificada += letra; }
+  }
+
+  return (fraseCodificada);
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let fraseDecodificada = '';
+  let codigo = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (const letra of frase) {
+    if (codigo[letra] !== undefined) {
+      fraseDecodificada += codigo[letra];
+    } else { fraseDecodificada += letra; }
+  }
+
+  return (fraseDecodificada);
 }
 
 module.exports = {
