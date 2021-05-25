@@ -27,8 +27,14 @@ function concatName(lista) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontoVitoria = 3;
+  let pontoImpate = 1;
+  let pontosFinais = 0;
+
+  pontosFinais = (wins * pontoVitoria) + (ties * pontoImpate);
+
+  return pontosFinais;
 }
 
 // Desafio 6
