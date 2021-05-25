@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(n1, n2) {
-  if( n1 && n2) {
+  if (n1 && n2){
     return true;
   }
   return false;
@@ -19,8 +19,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  let resultado = `${nome[nome.length - 1]}, ${nome[0]}`;
+
+  return resultado;
 }
 
 // Desafio 5
