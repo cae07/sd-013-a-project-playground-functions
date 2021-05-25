@@ -18,13 +18,20 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  for(let i = array.length-1; i = array.length-1; i++){
+    resultado = [array[i] + ", " + array[0] ]
+    resultado = resultado.toString();
+  return resultado
+  } 
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré'],))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  points = wins * 3 + ties;
+  return points
 }
 
 // Desafio 6
