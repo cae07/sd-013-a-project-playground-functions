@@ -25,11 +25,15 @@ function splitSentence(str) {
   return finalStr;
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let separateName = name.split(" ");
+  let firstName = separateName[0];
+  let lastName = separateName[separateName.length - 1];
+  let resultName = lastName + ', ' + firstName
+  return resultName;
 }
+console.log(concatName('Wallacy Francisco da Silva'));
 
 // Desafio 5
 function footballPoints() {
