@@ -74,10 +74,12 @@ function fizzBuzz(array) {
   let string = '';
 
   for (let index of array) {
-    if (index % 3 === 0) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      string = 'fizzBuzz';
+    } else if (index % 3 === 0) {
       string = 'fizz';
     } else if (index % 5 === 0) {
-      string += 'buzz';
+      string = 'buzz';
     } else {
       string = 'bug!';
     }
