@@ -33,21 +33,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// função para retornar maior num da função
+function maiorNumero(num) {
+  let maiorNum = num[0];
+
+  for (let numbers of num) {
+    if (numbers > maiorNum) maiorNum = numbers;
+  }
+  return maiorNum;
+}
+
 function highestCount(num) {
   // seu código aqui
-  let maiorNum = num[0];
   let quantMaiorNum = 0;
+  let maiorNum = maiorNumero(num);
 
-  for (let i = 0; i < num.length; i += 1) {
-    if (num[i] > maiorNum) {
-      maiorNum = num[i];
-    }
-  }
-
-  for (let i = 0; i < num.length; i += 1) {
-    if (num[i] === maiorNum) {
-      quantMaiorNum += 1;
-    }
+  for (let numbers of num) {
+    if (numbers === maiorNum) quantMaiorNum += 1;
   }
 
   return quantMaiorNum;
@@ -71,21 +73,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Função para retornar uma string
+function printBuzz(num) {
+  let str = '';
+  if (((num % 3) === 0) && ((num % 5) === 0)) {
+    str = 'fizzBuzz';
+  } else if ((num % 3) === 0) {
+    str = 'fizz';
+  } else if ((num % 5) === 0) {
+    str = 'buzz';
+  } else {
+    str = 'bug!';
+  }
+  return str;
+}
 function fizzBuzz(numeros) {
   // seu código aqui
   let arrayStr = [];
   for (let num of numeros) {
-    if (((num % 3) === 0) && ((num % 5) === 0)) {
-      arrayStr.push('fizzBuzz');
-    } else if ((num % 3) === 0) {
-      arrayStr.push('fizz');
-    } else if ((num % 5) === 0) {
-      arrayStr.push('buzz');
-    } else {
-      arrayStr.push('bug!');
-    }
+    arrayStr.push(printBuzz(num));
   }
-
   return arrayStr;
 }
 
