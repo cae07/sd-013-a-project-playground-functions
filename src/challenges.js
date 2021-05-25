@@ -79,8 +79,35 @@ function fizzBuzz(arrayFizzBuzz) {
 
 // Desafio 9
 function encode(stringEncode) {
-  
+  let encondeArray = '';
+  let stringEncodeSplit = stringEncode.split('');
+  let code = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+  for (let indexEncode = 0; indexEncode < stringEncodeSplit.length; indexEncode += 1) {
+    for (let key in code) {
+
+      // switch (code[key]) {
+      //   case 'a' : stringEncodeSplit[indexEncode] = '1';
+      //   break;
+      //   case 'e' : stringEncodeSplit[indexEncode] = '2';
+      //   break;
+      //   case 'i': stringEncodeSplit[indexEncode] = '3';
+      //   break;
+      //   case 'o': stringEncodeSplit[indexEncode] = '4';
+      //   break;
+      //   case 'u': stringEncodeSplit[indexEncode] = '5';
+      //   break;
+      // }
+    }
+  return stringEncodeSplit;
+  }
 }
+console.log(encode('hi there!'));
 
 function decode() {
   // seu código aqui
@@ -98,17 +125,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
-// let stringEncondeSplit = stringEncode.split('');
-// let stringEncondeArray = [];
-// for (let indexEncode = 0; indexEncode < stringEncondeSplit.length; indexEncode += 1) {
-//   if (stringEncondeSplit[indexEncode] === 'a') {
-//     let stringArray = '1';
-//     stringEncondeSplit[indexEncode] = stringArray;
-//   } else if (stringEncondeSplit[indexEncode] === 'e') {
-//     let stringArray = '2';
-//     stringEncondeSplit[indexEncode] = stringArray;
-//   }
-// }
-// return stringEncondeSplit;
