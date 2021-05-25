@@ -1,6 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  // Verificando se a E b são verdadeiros. Se A=true E B=true então a função retorna verdadeiro.
+  if (a === true && b === true) {
+    return (true);
+  } 
+    // senão, ou seja, ou A=false E B=true -----ou----- A=false E B=false -------ou-------- A=true E B=false, então retorna false.
+    else {
+      return (false);
+    }
 }
 
 // Desafio 2
