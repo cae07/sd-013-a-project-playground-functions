@@ -68,12 +68,73 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
+  let arrayDeResposta = []
+  for (let index = 0; index < arrayDeNumeros.length ; index += 1){
+    let numero = arrayDeNumeros[index]
+    if (divisivelPor3e5(numero) == true){
+      arrayDeResposta.push("fizzBuzz")
+    }
+    else if (divisivelPor5(numero) == true){
+      arrayDeResposta.push("buzz")
+    }
+    else if (divisivelPor3(numero) == true){
+      arrayDeResposta.push("fizz")
+    }
+    else {arrayDeResposta.push("bug!")}
+  }
+  return arrayDeResposta
   
+  function divisivelPor3(numero){
+    if (numero%3 == 0){
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function divisivelPor5(numero){
+    if (numero%5 == 0){
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function divisivelPor3e5(numero){
+    if (numero%3 == 0 && numero%5 == 0){
+      return true
+    } else {
+      return false
+    }
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let decifrador = {
+    a:1,
+    e:2,
+    i:3,
+    o:4,
+    u:5
+  }
+  arraySaida = []
+  for (let index = 0; index < string.length ; index += 1){
+    let letraTeste = string[index]
+  
+    for (let key in decifrador){
+      if (letraTeste == key){
+        letraTeste[index] = decifrador[key]
+        arraySaida.push(letraTeste)
+      } else {
+        arraySaida.push(letraTeste)
+      }
+
+    }
+
+  }
+  return arraySaida
+
 }
 function decode() {
   // seu código aqui
@@ -91,5 +152,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-splitSentence("go trybe")
