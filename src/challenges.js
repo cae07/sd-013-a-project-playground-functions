@@ -174,24 +174,32 @@ function decode(phrase) {
 
 
 // Desafio 10
-// vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 
-function technology(myArray, name) {
+function techList(myArray, name) {
   
-  let ordem = myArray.sort();
-  let newArray = [];
-  let obj;
+  msg = "Vazio!"
+
+  if (techList(myArray.length) == 0) {
+    return msg;    
+  } else {
+
+    let ordem = myArray.sort();
+    let newArray = [];
+    let obj;
   
-  for (let i = 0; i < ordem.length; i += 1) {
+    for (let i = 0; i < ordem.length; i += 1) {
       obj = {
       tech: ordem[i],
       name: name
-    };
-    newArray.push(obj)
-  };
-  return newArray;
-}
-// console.log(technology(vetor, "Felipe"))
+      };
+      newArray.push(obj)
+     };
+    return newArray;
+  }
+} 
+
+console.log(techList(vetor, "Felipe"))
 
 module.exports = {
   calcArea,
