@@ -97,8 +97,24 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Calculando a distância entre mouse e cat 1  ------- 'math.abs' retorna o valor absoluto, não importando a ordem de subtração.
+  let distanceCat1 = Math.abs (cat1 - mouse);
+
+  // Calculando a distância entre mouse e cat 2  ------- 'math.abs' retorna o valor absoluto, não importando a ordem de subtração.
+  let distanceCat2 = Math.abs (cat2 - mouse);
+
+  // Verificando qual distância é maior, se do 'gato1 ao rato' ou 'gato2 ao rato', ou se estão na mesma posição. Já retorna resultado. 
+  if (distanceCat1 == distanceCat2) {
+    return ("os gatos trombam e o rato foge");
+  }
+//----------- se a distância é maior, o gato está mais longe do rato, ou seja, vai demorar mais para pegá-lo.
+  else if (distanceCat1 > distanceCat2) {   
+    return ("cat2");
+  } 
+    else {
+      return("cat1");
+    }
 }
 
 // Desafio 8
