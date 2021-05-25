@@ -17,12 +17,15 @@ function splitSentence(phrase) {
 function concatName(array) {
   let first = array[0];
   let last = array[array.length - 1];
-  return last.concat(', ', first)
+  return last.concat(', ', first);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+
+  return vitoria + empate;
 }
 
 // Desafio 6
