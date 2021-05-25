@@ -5,19 +5,49 @@ function compareTrue(n1, n2) {
   } else {
     return false;
   }
-}
+};
 
 // Desafio 2
 function calcArea(base, height) {
   let area = base * height / 2;
   
   return area
-}
+};
 
+/*
+3 - Crie uma função que divida a frase
+Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+
+O que será verificado:
+
+Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
+
+Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
+
+Retorne o valor ['foguete'] se a função receber a string 'foguete'
+*/
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+//stringExemplo = "João da Silva Oliveira";
+//resultado = stringExemplo.split(" ", 3);
+//console.log(resultado);
+
+function splitSentence(frase) {
+  let split = frase.split(" ");
+  return split
+};
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 4
 function concatName() {
