@@ -1,17 +1,20 @@
 // Desafio 1
 function compareTrue(val1, val2) {
   // seu código aqui
-  if(val1&&val2){
-    return true;
+  let condition = true;
+  if (val1 && val2) {
+    condition = true;
+  } else {
+    condition = false;
   }
-  else{
-    return false
-  }
+  return condition;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
