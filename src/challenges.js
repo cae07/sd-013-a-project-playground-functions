@@ -80,13 +80,22 @@ function fizzBuzz(numbers) {
  return numbersArray
 }
 
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(code) {
+  code = code.replace(/a/g, '1');
+  code = code.replace(/e/g, '2');
+  code = code.replace(/i/g, '3');
+  code = code.replace(/o/g, '4');
+  code = code.replace(/u/g, '5');
+  return code;
 }
-function decode() {
-  // seu código aqui
+function decode(code) {
+  code = code.replace(/1/g, 'a');
+  code = code.replace(/2/g, 'e');
+  code = code.replace(/3/g, 'i');
+  code = code.replace(/4/g, 'o');
+  code = code.replace(/5/g, 'u');
+  return code;
 }
 
 module.exports = {
