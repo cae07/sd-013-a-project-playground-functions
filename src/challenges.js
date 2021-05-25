@@ -6,13 +6,15 @@ function compareTrue(a,b) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  var conta = base * height / 2;
+  return conta
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  var array = [];
+  return string.split(" ")
 }
 
 // Desafio 4
