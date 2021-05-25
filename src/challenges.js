@@ -57,10 +57,30 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(num1,num2,num3) {
+  // funcão q funciona - > Math.abs 
+  
+  let dist1 = num2 - num1;
+  let dist2 = num3 - num1;
+  if(dist1 <0){
+    dist1*= -1;
+  }
+  if(dist2<0){
+    dist2*= -1;
+  }
+
+  if(dist1 < dist2){
+    return "cat1";
+  }
+  else if( dist2 < dist1){
+    return "cat2";
+  }
+  else if(dist2 == dist1){
+    return "os gatos trombam e o rato foge";
+  }
 }
 
+console.log(catAndMouse(1,0,2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
