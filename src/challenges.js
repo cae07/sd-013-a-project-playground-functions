@@ -132,11 +132,72 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  //Referências usadas para consulta sobre concatenação: https://www.w3schools.com/jsref/jsref_concat_string.asp // https://masteringjs.io/tutorials/fundamentals/string-concat
+  let encodedMessage = "";
+  for (let index in message) {
+    switch (message[index]) {
+      case 'a': 
+        encodedMessage += "1";
+        break;
+
+      case 'e':
+        encodedMessage += "2";
+        break;
+
+      case 'i': 
+        encodedMessage += "3";
+        break;
+
+      case 'o': 
+        encodedMessage += "4";
+        break;
+
+      case 'u': 
+        encodedMessage += "5";
+        break;
+
+      default: 
+        encodedMessage += message[index];
+        break;
+    }
+  }
+
+  return encodedMessage;
 }
-function decode() {
+
+function decode(message) {
   // seu código aqui
+  let decodedMessage = "";
+  for (let index in message) {
+    switch (message[index]) {
+      case '1': 
+        decodedMessage += "a";
+        break;
+
+      case '2':
+        decodedMessage += "e";
+        break;
+
+      case '3': 
+        decodedMessage += "i";
+        break;
+
+      case '4': 
+        decodedMessage += "o";
+        break;
+
+      case '5': 
+        decodedMessage += "u";
+        break;
+
+      default: 
+        decodedMessage += message[index];
+        break;
+    }
+  }
+
+  return decodedMessage;
 }
 
 module.exports = {
