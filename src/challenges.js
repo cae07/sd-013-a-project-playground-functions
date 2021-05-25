@@ -1,8 +1,6 @@
 // Desafio 1
 function compareTrue(n1, n2) {
-  if (n1 === true && n2 === true) {
-    return true;
-  }
+  if (n1 === true && n2 === true) return true;
   return false;
 }
 
@@ -33,15 +31,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let ordered = numbers.sort();
-  let highest = ordered[ordered.length - 1];
+  let highest = Math.max.apply(null, numbers);
   let count = 0;
   for (const key in numbers) {
     if (highest === numbers[key]) {
       count += 1;
     }
   }
-  return `${count}; ${highest}; ${ordered}`;
+  return count;
 }
 
 // Desafio 7
@@ -66,7 +63,7 @@ function fizzBuzz(numbers) {
       phrase.push('buzz');
     } else if ((numbers[key] % 1) === 0 && (numbers[key] % 3) === 0) {
       phrase.push('fizz');
-    } else { //((numbers[key] / 3) != 0 || (numbers[key] / 5) != 0)
+    } else {// ((numbers[key] / 3) != 0 || (numbers[key] / 5) != 0)
       phrase.push('bug!');
     }
   }
@@ -74,12 +71,21 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vowel) {
+  let sentence = [];
+  for (const key in vowel) {
+    if (vowel[key] === 'a') {
+      sentence[key] = 1;
+    } else if (vowel[key] === 'i') {
+      sentence[key] = 3;
+    }
+  }
+  return sentence;
 }
 function decode() {
   // seu código aqui
 }
+console.log(encode('hi there'));
 
 module.exports = {
   calcArea,
