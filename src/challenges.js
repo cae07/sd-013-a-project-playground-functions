@@ -4,7 +4,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     answer = true
   }
-  
+
   return (answer)
 }
 // Desafio 2
@@ -66,12 +66,35 @@ function highestCount(array) {
   }
   return (contador)
 }
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+    if (distanceCat1 < 0) {
+      distanceCat1 = distanceCat1 *-1
+    }else {
+      distanceCat1 = distanceCat1
+    }
+  let distanceCat2 = mouse - cat2;
+    if (distanceCat2 < 0) {
+      distanceCat2 = distanceCat2 *-1
+    }else {
+      distanceCat2 = distanceCat2
+    }
+
+  let answer = '';
+
+  if (distanceCat1 < distanceCat2){
+    answer = 'cat1'
+  }else if (distanceCat2 < distanceCat1){
+    answer = 'cat2'
+  }else{
+    answer = "os gatos trombam e o rato foge"
+  }
+
+  return(answer)
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
