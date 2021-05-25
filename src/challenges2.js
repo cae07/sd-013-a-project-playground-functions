@@ -35,7 +35,6 @@ function generatePhoneNumber(arrayDeNumeros) {
       if (repetiu === 3) {
         numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
       }
-      checaRepeticao(arrayDeNumeros, numeroTelefone);
       if (arrayDeNumeros.length === 11) {
         for (let indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
           if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu >= 3)) {
@@ -58,9 +57,7 @@ function generatePhoneNumber(arrayDeNumeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let ehtriangulo = false;
-  if ( ((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) &&
-       ((lineB < (lineC + lineA)) && (lineB > (lineC - lineA))) && 
-       ((lineC < (lineA + lineB)) && (lineC > (lineA - lineB))) ) {
+  if (((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) && ((lineB < (lineC + lineA)) && (lineB > (lineC - lineA))) && ((lineC < (lineA + lineB)) && (lineC > (lineA - lineB)))) {
         ehtriangulo = true;
   }
   return ehtriangulo;
