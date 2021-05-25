@@ -20,12 +20,14 @@ function splitSentence(stringSentence) {
   arrayStrings = stringSentence.split(" ");
   return arrayStrings;
 }
-console.log(splitSentence("go trybe!"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayConc) {
+  stringConcat = "";
+  stringConcat = arrayConc[arrayConc.length - 1] + ", " + arrayConc[0];
+  return stringConcat;
 }
+
 
 // Desafio 5
 function footballPoints() {
