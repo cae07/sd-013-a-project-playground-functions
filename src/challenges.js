@@ -17,11 +17,15 @@ function splitSentence(string) {
   return string.split(" ");
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(list) {
+  first = list[list.length-1];
+  last = list[0];
+  return first + "," + last;
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+
+
 
 // Desafio 5
 function footballPoints() {
