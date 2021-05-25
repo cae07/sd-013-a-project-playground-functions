@@ -99,11 +99,44 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == 'a') {
+      newString = newString + '1';  
+    } else if (string[index] == 'e') {
+        newString = newString + '2';
+      } else if (string[index] == "i") {
+          newString = newString + '3';
+        } else if (string[index] == 'o') {
+            newString = newString + '4';
+          } else if (string[index] == 'u') {
+              newString = newString + '5';
+            } else {
+              newString = newString + string[index];
+            }
+  }
+  return(newString);
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == '1') {
+      newString = newString + 'a';  
+    } else if (string[index] == '2') {
+        newString = newString + 'e';
+      } else if (string[index] == '3') {
+          newString = newString + 'i';
+        } else if (string[index] == '4') {
+            newString = newString + 'o';
+          } else if (string[index] == '5') {
+              newString = newString + 'u';
+            } else {
+              newString = newString + string[index];
+            }
+  }
+  return(newString);
 }
 
 module.exports = {
