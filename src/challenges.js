@@ -6,7 +6,6 @@ function compareTrue(valor1,valor2) {
     return false;
   }
 }
-console.log(compareTrue(false,false))
 // Desafio 2
 function calcArea() {
   // seu código aqui
