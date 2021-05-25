@@ -47,7 +47,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestCount(array1) {
-  let nmaior = 0;
+  let nmaior = array1[0];
   let value  = 0;
 
   for(let i = 0; i < array1.length; i += 1){
@@ -64,7 +64,7 @@ function highestCount(array1) {
 
   return value;
 }
-//console.log(highestCount([1,2,3,4,5,5,5,5]));
+console.log(highestCount([-2,-2,-1]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -87,7 +87,7 @@ let dist2 = cat2 - mouse;
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(0,6,12));
+console.log(catAndMouse(5,-3,12));
 
 
 // Desafio 8
