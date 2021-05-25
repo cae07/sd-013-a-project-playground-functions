@@ -18,8 +18,12 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let concatena = '';
+  for (let index = 0; index < lista.length; index += 1) {
+    concatena = `${lista[lista.length - 1]}, ${lista[0]}`;
+  }
+  return concatena;
 }
 
 // Desafio 5
