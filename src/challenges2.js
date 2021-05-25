@@ -22,14 +22,14 @@ function techList(arrayNomesTecnologias, name) {
 function generatePhoneNumber(arrayDeNumeros) {
   let numeroTelefone = '';
   let telefoneFormatado = '';
-  let stringDoArray = ""
+  let stringDoArray = '';
   let repetiu = 0;
-  if (arrayDeNumeros.length == "") {
+  if (arrayDeNumeros.length === '') {
     numeroTelefone = 'Array com tamanho incorreto.';
   } else {
-    for (let indexD11_1 = 0; indexD11_1 < arrayDeNumeros.length; indexD11_1 += 1) {
-      for (let indexD11_2 = 0; indexD11_2 < arrayDeNumeros.length; indexD11_2 += 1) {
-        if (arrayDeNumeros[indexD11_1] === arrayDeNumeros[indexD11_2]) {
+    for (let indexD111 = 0; indexD111 < arrayDeNumeros.length; indexD111 += 1) {
+      for (let indexD112 = 0; indexD112 < arrayDeNumeros.length; indexD112 += 1) {
+        if (arrayDeNumeros[indexD111] === arrayDeNumeros[indexD112]) {
           repetiu += 1;
         }
       }
@@ -37,34 +37,40 @@ function generatePhoneNumber(arrayDeNumeros) {
         numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
       }
       if (arrayDeNumeros.length === 11) {
-        for (indexD11_3 = 0; indexD11_3 < arrayDeNumeros.length; indexD11_3 += 1) {
-          if ((arrayDeNumeros[indexD11_3] < 0) || (arrayDeNumeros[indexD11_3] > 9) || (repetiu === 3)) {
+        for (indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
+          if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu === 3)) {
             numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
-          }  
+          }
         }
-      } else if (arrayDeNumeros.length != 11) {
+      } else if (arrayDeNumeros.length !== 11) {
         numeroTelefone = 'Array com tamanho incorreto.';
       }
       repetiu = 0;
-      stringDoArray = stringDoArray + arrayDeNumeros[indexD11_1];
+      stringDoArray = stringDoArray + arrayDeNumeros[indexD111];
     }
-    //(12) 34567-8901
     if ((numeroTelefone != 'não é possível gerar um número de telefone com esses valores') && (numeroTelefone != 'Array com tamanho incorreto.')) {
-      telefoneFormatado = "(" + stringDoArray.slice(0,2) + ") " + stringDoArray.slice(2,7) + "-" + stringDoArray.slice(7,11)
-      numeroTelefone = telefoneFormatado
+      numeroTelefone = "(" + stringDoArray.slice(0,2) + ") " + stringDoArray.slice(2,7) + "-" + stringDoArray.slice(7,11);
     }
   }
   return numeroTelefone;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let ehtriangulo = false;
+  if ((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) {
+    if ((lineB < (lineC + lineA)) && (lineB > (lineC - lineA))) {
+      if ((lineC < (lineA + lineB)) && (lineC > (lineA - lineB))) {
+        ehtriangulo = true;
+      }
+    }
+  }
+  return ehtriangulo
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  
 }
 
 module.exports = {
