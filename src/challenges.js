@@ -18,12 +18,12 @@ function splitSentence(goTrybe) {
   
 }
 
-console.log(splitSentence('go Trybe, as, as '));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(bola) {
+  return `${bola[bola.length-1]}, ${bola[0]}`
 }
+
+
 
 // Desafio 5
 function footballPoints() {
