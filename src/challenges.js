@@ -1,8 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-  return true;
-  } return false;
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -19,13 +20,14 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let newArray = arrayStrings[arrayStrings.length - 1] + ',' + ' ' + arrayStrings[0]; 
+  let newArray =
+    arrayStrings[arrayStrings.length - 1] + ',' + ' ' + arrayStrings[0];
   return newArray;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosTime = (wins * 3) + ties;
+  let pontosTime = wins * 3 + ties;
   return pontosTime;
 }
 
@@ -34,14 +36,14 @@ function highestCount(arrayNumbers) {
   let maior = arrayNumbers[0];
   let maiorRepete = 0;
   for (let pickedNumber of arrayNumbers) {
-      if (pickedNumber >= maior) {
-          maior = pickedNumber;
-      }
+    if (pickedNumber >= maior) {
+      maior = pickedNumber;
+    }
   }
   for (let selectedNumber of arrayNumbers) {
-      if (selectedNumber == maior) {
-          maiorRepete += 1;
-      }
+    if (selectedNumber == maior) {
+      maiorRepete += 1;
+    }
   }
   return maiorRepete;
 }
@@ -56,15 +58,17 @@ function catAndMouse(mouse, cat1, cat2) {
     mouseToCat1 = cat1 - mouse;
   }
   if (mouse >= cat2) {
-      mouseToCat2 = mouse - cat2;
+    mouseToCat2 = mouse - cat2;
   } else if (mouse < cat2) {
     mouseToCat2 = cat2 - mouse;
   }
   if (mouseToCat1 < mouseToCat2) {
     return 'cat1';
-  } if (mouseToCat1 > mouseToCat2) {
+  }
+  if (mouseToCat1 > mouseToCat2) {
     return 'cat2';
-  } return 'os gatos trombam e o rato foge';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -110,7 +114,7 @@ function decode(mensagemCodificada) {
     2: /2/gi,
     3: /3/gi,
     4: /4/gi,
-    5: /5/gi
+    5: /5/gi,
   };
   let decodificada = mensagemCodificada;
 
