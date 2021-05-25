@@ -17,7 +17,7 @@ function splitSentence(string) {
 function concatName(arrayAInformar) {
   let primeiroItem = arrayAInformar[0];
   let ultimoItem = arrayAInformar[arrayAInformar.length - 1];
-  let concatenado = ultimoItem + ", " + primeiroItem;
+  let concatenado = ultimoItem, primeiroItem;
   return concatenado;
 }
 
@@ -28,8 +28,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)){
-    return 1;
+  let quantidade = 0
+  if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)) {
+    quantidade = 1;
   } else {
     let maiorNumero = 0;
     for (let index = 0; index <= arrayDeNumeros.length; index += 1) {
@@ -43,8 +44,9 @@ function highestCount(arrayDeNumeros) {
         qtdRepeticao += 1;
       }
     }
-    return qtdRepeticao;
+    quantidade = qtdRepeticao;
   }
+  return quantidade
 }
 
 // Desafio 7
