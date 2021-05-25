@@ -22,16 +22,16 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let i = (array.length - 1)
-    return array[i] + ", " + array[0]
-  };
+  let i = (array.length - 1);
+    return array[i] + ", " + array[0];
+};
 
 
 // Desafio 5
 function footballPoints(wins , ties) {
-  let somaPontos = (wins*3 + ties)
-  return somaPontos
-}
+  let somaPontos = (wins*3 + ties);
+  return somaPontos;
+};
 
 // Desafio 6
 function highestCount() {
@@ -39,9 +39,25 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse , cat1 , cat2) {
+  let dist1 = (mouse - cat1)
+  let dist2 = (mouse - cat2)
+  if (dist1 < 0) {
+    dist1 = dist1*(-1)
+  }
+  if (dist2 < 0) {
+    dist2 = dist2*(-1)
+  }
+  if (dist1 > dist2) {
+    return "cat2";
+  }
+  else if (dist1 < dist2){
+    return "cat1";
+  }
+  else {
+    return "os gatos trombam e o rato foge";
+   }
+}; console.log(catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz() {
