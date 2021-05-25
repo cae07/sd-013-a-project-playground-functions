@@ -21,8 +21,8 @@ function splitSentence(strIngs) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(palavra) {
+  return palavra[palavra.length -1] + ", " + palavra[0]
 }
 
 // Desafio 5
