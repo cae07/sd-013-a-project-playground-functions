@@ -49,9 +49,18 @@ return somador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let difcat1 = Math.abs(mouse - cat1);
+  let difcat2 = Math.abs(mouse - cat2);
+if (difcat1 < difcat2) {
+  return "cat1"
+} else if (difcat1 > difcat2) {
+  return "cat2"
+} else {
+   return "os gatos trombam e o rato foge"
 }
+}
+
 
 // Desafio 8
 function fizzBuzz() {
