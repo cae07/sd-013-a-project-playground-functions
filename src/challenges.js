@@ -34,7 +34,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let winsPoint = 3;
   let tiesPoint = 1;
-  
+
   let numberWins = wins * winsPoint;
   let numberTies = ties * tiesPoint;
 
@@ -42,8 +42,21 @@ return numberWins + numberTies;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestNumber = array[0];
+  let count = 0;
+
+  for (let index = 0; index < array.length; index +=1) {
+    if (highestNumber < array[index]){
+    highestNumber = array[index];
+    }
+  }
+  for (let index2 = 0; index2 < array.length; index2 +=1) {
+    if (array[index2] == highestNumber) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
