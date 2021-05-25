@@ -23,7 +23,7 @@ function splitSentence(string) {
 }
   console.log(splitSentence('go trybe'));
 
-// Desafio 4
+// Desafio 4 == OK, passou nos 3 testes
 function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length-1];
@@ -32,10 +32,14 @@ function concatName(array) {
 }
 console.log(concatName(['captain', 'my', 'captain']));
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Desafio 5 == OK, passou nos 3 testes.
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+  let result = vitoria + empate;
+  return result;
 }
+console.log(footballPoints(0,0))
 
 // Desafio 6
 function highestCount() {
