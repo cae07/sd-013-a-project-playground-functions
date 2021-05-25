@@ -2,7 +2,7 @@
 function compareTrue(bollean1, bollean2) {
   let boleano = false;
   if (bollean1 === true && bollean2 === true) {
-  boleano = true;
+    boleano = true;
   }
   return boleano;
 }
@@ -19,7 +19,7 @@ function splitSentence(sentenca) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1].concat(', ' , array[0]);
+  return array[array.length - 1].concat(', ', array[0]);
 }
 
 // Desafio 5
@@ -45,12 +45,12 @@ function highestCount(array) {
     }
     maiorNumeroSeRepete = contador;
   }
-  return(maiorNumeroSeRepete)
+  return (maiorNumeroSeRepete)
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gatoOuRato = ''
+  let gatoOuRato = '';
   if(cat1 - mouse > cat2 - mouse){
     gatoOuRato = 'cat2' ;
   } else if (cat2 - mouse > mouse - cat1){
@@ -63,45 +63,42 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
-  let arrayDeResposta = []
+  let arrayDeResposta = [];
   for (let index = 0; index < arrayDeNumeros.length ; index += 1) {
     let numero = arrayDeNumeros[index]
     if (divisivelPor3e5(numero) === true) {
-      arrayDeResposta.push( 'fizzBuzz' )
+      arrayDeResposta.push( 'fizzBuzz' );
     }
     else if (divisivelPor5(numero) === true) {
-      arrayDeResposta.push( 'buzz' )
+      arrayDeResposta.push( 'buzz' );
     }
     else if (divisivelPor3(numero) === true) {
-      arrayDeResposta.push( 'fizz' )
+      arrayDeResposta.push( 'fizz' );
     }
     else {
-      arrayDeResposta.push( 'bug!' )
+      arrayDeResposta.push( 'bug!' );
     }
   }
   return arrayDeResposta
   
-  function divisivelPor3(numero){
+  function divisivelPor3(numero) {
+    let divisivel = false;
     if (numero%3 == 0){
-      return true
-    } else {
-    false
+      divisivel = true;
     }
   }
 
-  function divisivelPor5(numero){
+  function divisivelPor5(numero) {
+    let divisivel = false;
     if (numero%5 == 0){
-      return true
-    } else {
-    false
+      divisivel =  true;
     }
   }
 
   function divisivelPor3e5(numero) {
-    if (numero%3 === 0 && numero%5 === 0){
-      return true
-    } else {
-    false
+    let divisivel = false;
+    if (numero%3 === 0 && numero%5 === 0) {
+      divisivel = true;
     }
   }
 }
@@ -115,19 +112,19 @@ function encode(string) {
     o:4,
     u:5
   }
-  palavraSaida = ''
+  palavraSaida = '';
   for (let index = 0; index < string.length ; index += 1) {
-    let letraTeste = string[index]
-    for (let key in decifrador){
+    let letraTeste = string[index];
+    for (let key in decifrador) {
       if (letraTeste === key) {
-        letraTeste = decifrador[key]
+        letraTeste = decifrador[key];
       }
     }
-    palavraSaida += letraTeste
+    palavraSaida += letraTeste;
 
   }
 
-return palavraSaida
+return palavraSaida;
 
 }
 
@@ -139,19 +136,17 @@ function decode(string) {
     4:'o',
     5:'u'
   }
-  palavraSaida = ''
+  palavraSaida = '';
   for (let index = 0; index < string.length ; index += 1) {
-    let letraTeste = string[index]
+    let letraTeste = string[index];
     for (let key in desdecifrador) {
-      if (letraTeste === key){
-        letraTeste = desdecifrador[key]
-      }
-    }
-    palavraSaida += letraTeste
+      if (letraTeste === key) {
+        letraTeste = desdecifrador[key];
+    palavraSaida += letraTeste;
 
   }
 
-return palavraSaida
+return palavraSaida;
 
 }
 
