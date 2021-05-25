@@ -2,7 +2,7 @@
 function compareTrue(bollean1, bollean2) {
   let boleano = false;
   if (bollean1 === true && bollean2 === true) {
-  boleano = true;
+    boleano = true;
   }
   return boleano;
 }
@@ -19,7 +19,7 @@ function splitSentence(sentenca) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1].concat(', ' , array[0]);
+  return array[array.length - 1].concat(', ', array[0]);
 }
 
 // Desafio 5
@@ -45,65 +45,65 @@ function highestCount(array) {
     }
     maiorNumeroSeRepete = contador;
   }
-  return(maiorNumeroSeRepete)
+  return (maiorNumeroSeRepete);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let gatoOuRato = '';
-  if(cat1 - mouse > cat2 - mouse){
-    gatoOuRato = 'cat2' ;
-  } else if (cat2 - mouse > mouse - cat1){
-    gatoOuRato = 'cat1' ;
+  if (cat1 - mouse > cat2 - mouse) {
+    gatoOuRato = 'cat2';
+  } else if (cat2 - mouse > mouse - cat1) {
+    gatoOuRato = 'cat1';
   } else {
     gatoOuRato = 'os gatos trombam e o rato foge';
   }
-  return gatoOuRato
+  return gatoOuRato;
+}
+function divisivelPortres(numero){
+  let divisivel = false;
+  if (numero%3 == 0){
+    divisivel = true
+    }
+  return divisivel
 }
 
+function divisivelPor5(numero){
+  let divisivel = false;
+  if (numero%5 == 0){
+    divisivel =  true
+  }
+  return divisivel
+}
+
+function divisivelPor3e5(numero) {
+  let divisivel = false
+  if (numero%3 === 0 && numero%5 === 0){
+    divisivel = true
+  }
+  return divisivel
+}
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
   let arrayDeResposta = [];
-  for (let index = 0; index < arrayDeNumeros.length ; index += 1) {
-    let numero = arrayDeNumeros[index]
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    let numero = arrayDeNumeros[index];
     if (divisivelPor3e5(numero) === true) {
-      arrayDeResposta.push( 'fizzBuzz' );
+      arrayDeResposta.push('fizzBuzz');
     }
     else if (divisivelPor5(numero) === true) {
-      arrayDeResposta.push( 'buzz' );
+      arrayDeResposta.push('buzz');
     }
-    else if (divisivelPor3(numero) === true) {
-      arrayDeResposta.push( 'fizz' );
+    else if (divisivelPortres(numero) === true) {
+      arrayDeResposta.push('fizz');
     }
     else {
-      arrayDeResposta.push( 'bug!' );
+      arrayDeResposta.push('bug!');
     }
   }
   return arrayDeResposta
   
-  function divisivelPor3(numero){
-    let divisivel = false;
-    if (numero%3 == 0){
-      divisivel = true
-      }
-    return divisivel
-  }
-
-  function divisivelPor5(numero){
-    let divisivel = false;
-    if (numero%5 == 0){
-      divisivel =  true
-    }
-    return divisivel
-  }
-
-  function divisivelPor3e5(numero) {
-    let divisivel = false
-    if (numero%3 === 0 && numero%5 === 0){
-      divisivel = true
-    }
-    return divisivel
-  }
+  
 }
 
 // Desafio 9
