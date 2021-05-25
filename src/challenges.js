@@ -83,11 +83,50 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+var cipher = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
 }
-function decode() {
-  // seu código aqui
+
+function swap(obj) {
+    let result = {};
+
+    for (let key in obj) {
+        result[obj[key]] = key;
+    }
+
+    return result;
+}
+
+function encode(str) {
+    let stringArray = str.split('');
+
+    for (let i = 0; i < stringArray.length; i++) {
+        stringArray[i] = cipher[stringArray[i]] || stringArray[i];
+    }
+
+    return stringArray.join('');
+}
+
+function decode(str) {
+    // `chipher` foi declarada com `var`, portanto
+    // é possível acessá-la de dentro da função.
+    let reversedCipher = swap(cipher);
+    console.log(reversedCipher);
+    let stringArray = str.split('');
+
+    // Para cada letra da string:
+    for (let i = 0; i < stringArray.length; i++) {
+        // Se o elemento da esquerda for avaliado como `false`
+        // (letra não consta em `cipher`, por exemplo) o elemento
+        // da direita do operador `||` é retornado.
+        stringArray[i] = reversedCipher[stringArray[i]] || stringArray[i];
+    }
+
+    return stringArray.join('');
 }
 
 module.exports = {
