@@ -74,7 +74,7 @@ function catAndMouse(cat1,cat2,mouse) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(3,3,1));
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
