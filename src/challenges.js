@@ -25,8 +25,14 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrStr) {
+
+  let firstName = arrStr[0];
+  let lastIndex = arrStr.length -1;
+  let lastName = arrStr[lastIndex];
+  
+  return `${lastName}, ${firstName}`;
+
 }
 
 // Desafio 5
