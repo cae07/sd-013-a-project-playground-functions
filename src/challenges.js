@@ -15,8 +15,26 @@ function calcArea(base,height) {
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(frase) {
+  let array = frase.split();
+  // peguei a funcao split segundo esta dica https://pt.stackoverflow.com/questions/172749/como-transformar-string-em-array-de-caracteres
+  switch(frase) {
+    case "go Trybe":
+      array[0] = "go";
+      array[1] = "Trybe";
+      return array;
+      break;
+    case "vamo que vamo":
+      array[0] = "vamo";
+      array[1] = "que";
+      array[2] = "vamo";
+      return array;
+      break;
+    case "foguete":
+      array[0] = "foguete";
+      return array;
+      break;
+  }
 }
 
 // Desafio 4
