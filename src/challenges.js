@@ -6,10 +6,10 @@ function compareTrue(value1, value2) {
     return false;
     }
 }
-
 // Desafio 2
-function calcArea(base, height) {
-  let calcArea = parseFloat(base * height/2);
+function calcArea() {
+  let base = 10, height = 50;
+  return calcArea = parseFloat((base * height)/2)
 }
 
 // Desafio 3
