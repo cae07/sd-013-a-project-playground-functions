@@ -62,23 +62,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 function divisivelPortres(numero) {
   let divisivel = false;
-  if (numero % 3 === 0){
+  if (numero % 3 === 0) {
     divisivel = true;
-    }
+  }
   return divisivel;
 }
 
 function divisivelPor5(numero) {
   let divisivel = false;
-  if (numero % 5 === 0){
-    divisivel =  true;
+  if (numero % 5 === 0) {
+    divisivel = true;
   }
   return divisivel;
 }
 
 function divisivelPor3e5(numero) {
-  let divisivel = false
-  if (numero % 3 === 0 && numero % 5 === 0){
+  let divisivel = false;
+  if (numero % 3 === 0 && numero % 5 === 0) {
     divisivel = true;
   }
   return divisivel;
@@ -90,14 +90,11 @@ function fizzBuzz(arrayDeNumeros) {
     let numero = arrayDeNumeros[index];
     if (divisivelPor3e5(numero) === true) {
       arrayDeResposta.push('fizzBuzz');
-    }
-    else if (divisivelPor5(numero) === true) {
+    } else if (divisivelPor5(numero) === true) {
       arrayDeResposta.push('buzz');
-    }
-    else if (divisivelPortres(numero) === true) {
+    } else if (divisivelPortres(numero) === true) {
       arrayDeResposta.push('fizz');
-    }
-    else {
+    } else {
       arrayDeResposta.push('bug!');
     }
   }
@@ -113,9 +110,9 @@ function encode(string) {
     o: 4,
     u: 5
   }
-  let palavraSaida = ''
+  let palavraSaida = '';
   for (let index = 0; index < string.length ; index += 1) {
-    let letraTeste = string[index]
+    let letraTeste = string[index];
     for (let key in decifrador){
       if (letraTeste === key) {
         letraTeste = decifrador[key];
@@ -134,11 +131,11 @@ function decode(string) {
     4: 'o',
     5: 'u'
   }
-  let palavraSaida = ''
-  for (let index = 0; index < string.length ; index += 1) {
-    let letraTeste = string[index]
+  let palavraSaida = '';
+  for (let index = 0; index < string.length; index += 1) {
+    let letraTeste = string[index];
     for (let key in desdecifrador) {
-      if (letraTeste === key){
+      if (letraTeste === key) {
         letraTeste = desdecifrador[key];
       }
     }
