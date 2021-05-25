@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(x, y) {
   let same = false;
-  
+
   if (x && y) {
     same = true;
   }
@@ -32,7 +32,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(fullName) {
-  let lastName = fullName[fullName.length -1];
+  let lastName = fullName[fullName.length - 1];
   let firstName = fullName[0];
   return lastName + ', ' + firstName;
 }
