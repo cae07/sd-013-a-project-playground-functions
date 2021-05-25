@@ -32,18 +32,33 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  var quantWins = wins * 3;
+  var quantTies = ties * 1;
+
+  var resultado = quantWins + quantTies
+
+  return resultado;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeroMaior) {
+
+ var numero = Math.max(numeroMaior)
+ var resultado = 0;
+
+ for (let index = 0; index < numeroMaior.length; index++) {
+   if(numero === numeroMaior[index]){
+    resultado++;
+   }
+     
+ }
+ return resultado;
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  // seu código aqui -- dica:olhar o Math.abs()
 }
 
 // Desafio 8
