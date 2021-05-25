@@ -1,26 +1,34 @@
+const { rules } = require("eslint-plugin-sonarjs");
+
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(x, y) {
+  return x === true && y === true;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  var v = base * height 
+  return v / 2
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Desafio feito com a ajuda do material: https://blog.betrybe.com/javascript/javascript-split/
+function splitSentence(string) {
+  return string.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let x = names [names.length - 1]
+  let y = names[0];
+  return `${x}, ${y}`
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let gamesWins = wins * 3
+  let gamesTies = ties * 1 
+  return gamesWins + gamesTies
 }
 
 // Desafio 6
