@@ -44,8 +44,21 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let stringReturn = "";
+
+  // for começa de trás pra frente. 
+  for (let index = arrayString.length - 1; index >= 0; index -= 1) {
+    // Se o index do for é igual ao último elemento do array
+    if (index == arrayString.length - 1) {
+      stringReturn = arrayString[index] + ", ";         //adiciona na variável a string: ['ulitmoelemento,]
+    } 
+// senão se index=0, ou seja, primeira posição do array
+    else if (index == 0) {
+      stringReturn = stringReturn + arrayString[index]; //adiciona na variável que já contem ['ulitmoelemento,], a string [primeiroelemento']
+    }
+  }
+  return (stringReturn);
 }
 
 // Desafio 5
