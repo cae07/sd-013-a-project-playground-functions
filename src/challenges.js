@@ -1,16 +1,21 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
-  if(valor1 === true && valor2 === true){
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
     return true;
-  }else {
+  }else{
     return false;
   }
 }
+console.log(compareTrue(false,false))
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  return (base * height)/2
 }
+let sum = calcArea(10,50)
+let sum2 = calcArea(5,2)
+let sum3 = calcArea(51,1)
 
+console.log(sum, sum2, sum3)
 // Desafio 3
 function splitSentence() {
   // seu código aqui
