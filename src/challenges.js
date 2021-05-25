@@ -2,15 +2,13 @@
 function compareTrue(valor, valor1) {
   if (valor && valor1) {
     return true;
-  } else {
-    return false;
   }
-
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return (base * altura) / 2;
 }
 
 // Desafio 3
