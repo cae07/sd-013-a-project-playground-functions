@@ -20,9 +20,14 @@ function splitSentence(frase) {
 };
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+
+function concatName(arrayDeStrings) {
+
+  let palavras = ("");
+  palavras = (arrayDeStrings[arrayDeStrings.length - 1] + ", " + arrayDeStrings[0]);
+  return palavras;
+  
+};
 
 // Desafio 5
 function footballPoints() {
