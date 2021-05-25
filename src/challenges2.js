@@ -24,7 +24,7 @@ function generatePhoneNumber(arrayDeNumeros) {
   let telefoneFormatado = '';
   let stringDoArray = '';
   let repetiu = 0;
-  if (arrayDeNumeros.length === '') {
+  if (arrayDeNumeros.length == '') {
     numeroTelefone = 'Array com tamanho incorreto.';
   } else {
     for (let indexD111 = 0; indexD111 < arrayDeNumeros.length; indexD111 += 1) {
@@ -37,8 +37,8 @@ function generatePhoneNumber(arrayDeNumeros) {
         numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
       }
       if (arrayDeNumeros.length === 11) {
-        for (indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
-          if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu === 3)) {
+        for (let indexD113 = 0; indexD113 < arrayDeNumeros.length; indexD113 += 1) {
+          if ((arrayDeNumeros[indexD113] < 0) || (arrayDeNumeros[indexD113] > 9) || (repetiu >= 3)) {
             numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
           }
         }
@@ -48,12 +48,15 @@ function generatePhoneNumber(arrayDeNumeros) {
       repetiu = 0;
       stringDoArray = stringDoArray + arrayDeNumeros[indexD111];
     }
-    if ((numeroTelefone != 'não é possível gerar um número de telefone com esses valores') && (numeroTelefone != 'Array com tamanho incorreto.')) {
-      numeroTelefone = "(" + stringDoArray.slice(0,2) + ") " + stringDoArray.slice(2,7) + "-" + stringDoArray.slice(7,11);
+    if ((numeroTelefone !== 'não é possível gerar um número de telefone com esses valores') && (numeroTelefone !== 'Array com tamanho incorreto.')) {
+      numeroTelefone = '(' + stringDoArray.slice(0 , 2) + ') ' + stringDoArray.slice(2 , 7) + '-' + stringDoArray.slice(7 , 11);
     }
   }
   return numeroTelefone;
 }
+console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -65,7 +68,7 @@ function triangleCheck(lineA, lineB, lineC) {
       }
     }
   }
-  return ehtriangulo
+  return ehtriangulo;
 }
 
 // Desafio 13
