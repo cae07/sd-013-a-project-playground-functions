@@ -75,8 +75,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzArray = []
+  for (let index = 0; index < numbers.length; index += 1) {
+    let divisibleFor3 = numbers[index] % 3;
+    let divisibleFor5 = numbers[index] % 5;
+    if (divisibleFor3 === 0 && divisibleFor5 === 0) {
+      fizzBuzzArray.push('fizzBuzz');
+    } else if (divisibleFor3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (divisibleFor5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
+    }
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
