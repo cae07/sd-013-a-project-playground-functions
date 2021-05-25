@@ -30,10 +30,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6// for (indice = 0; indice < arrayDeNumeros.length; indice += 1)
 function highestCount(arrayDeNumeros) {
-   let ordem = arrayDeNumeros.sort()
-    maiorNumero == maiorNumero += 1
-   return ordem
-
+  // let ordem = arrayDeNumeros.sort()
+   // maiorNumero == maiorNumero += 1
+   //return ordem */
 }
   console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
@@ -50,12 +49,12 @@ function catAndMouse(cat1, cat2, mouse) {
     }
 }; //console.log(catAndMouse(5, 5, 0));
 
-// Desafio 8
+// Desafio 8: Crie uma função FizzBuzz
 function fizzBuzz() {
   // seu código aqui
 }
 
-// Desafio 9
+// Desafio 9: Crie uma função que Codifique e Decodifique
 function encode() {
   // seu código aqui
 }
