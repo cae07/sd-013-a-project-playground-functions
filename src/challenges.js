@@ -52,17 +52,30 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  if(cat1 > cat2) {
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < mouse){
+    cat1 = cat1 + mouse;   
+  }
+  else {
+    cat1 = cat1 - mouse
+  }
+  if (cat2 < mouse){
+    cat2= cat2 + mouse;   
+  }
+  else {
+    cat2 = cat2 - mouse
+  }
+  if (cat1 > cat2) {
     return 'cat2';
   }
-  else if(cat1 === cat2) {
+  else if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   }
   else {
-    return 'cat1'
-  } 
+    return 'cat1';
+  }
 }
+console.log(catAndMouse(1,0,2))
 
 // Desafio 8
 function fizzBuzz() {
