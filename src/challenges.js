@@ -21,8 +21,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayStr) {
   // seu código aqui
+  let primeiroItem = arrayStr[0];
+  let ultimoItem = arrayStr[arrayStr.length -1];
+  return `${ultimoItem}, ${primeiroItem}`;
 }
 
 // Desafio 5
