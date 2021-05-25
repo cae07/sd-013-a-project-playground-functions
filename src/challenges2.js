@@ -1,13 +1,13 @@
 // Desafio 10
 function techList(arrayNomesTecnologias, name) {
   arrayNomesTecnologias = arrayNomesTecnologias.sort();
-  let resultado = ""
+  let resultado = '';
   let novoArrayNomesTecnologias = [];
   for (let indexD10 = 0; indexD10 < arrayNomesTecnologias.length; indexD10 += 1) {
     let objetoAAdicionar = {
       tech: arrayNomesTecnologias[indexD10],
-      name: name,
-    }
+      name: name
+    };
     novoArrayNomesTecnologias.push(objetoAAdicionar);
   }
   if (arrayNomesTecnologias.length === 0) {
@@ -15,7 +15,7 @@ function techList(arrayNomesTecnologias, name) {
   } else {
     resultado = novoArrayNomesTecnologias;
   }
-  return resultado; 
+  return resultado;
 }
 
 // Desafio 11
