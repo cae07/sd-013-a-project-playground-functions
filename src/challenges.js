@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  let
+  let = a
 }
 
 // Desafio 2
