@@ -123,14 +123,67 @@ function fizzBuzz(myArray) {
   return arrResult;
 }
 
-console.log(fizzBuzz([9, 25]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(myString) {
+  
+  let objVogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+
+  let strOutput = "";  
+  
+  for (let char of myString) {
+    if (!objVogais[char] && char <= 5 && char != ' ') {
+      for (let key in objVogais) {
+        if (objVogais[key] == char) {
+          strOutput = strOutput + key;
+        }
+      }
+  
+    } else if (!objVogais[char]) {  
+      strOutput = strOutput + char;
+    } else {
+      strOutput = strOutput + objVogais[char];
+    }
+  }
+  return strOutput;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hello'));
+// console.log(encode('h2ll4'));
+// console.log(encode('How are you today?'));
+
+function decode(myString) {
+  
+  let objVogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }
+
+  let strOutput = "";  
+  
+  for (let char of myString) {
+    if (!objVogais[char] && char <= 5 && char != ' ') {
+      for (let key in objVogais) {
+        if (objVogais[key] == char) {
+          strOutput = strOutput + key;
+        }
+      }
+  
+    } else if (!objVogais[char]) {  
+      strOutput = strOutput + char;
+    } else {
+      strOutput = strOutput + objVogais[char];
+    }
+  }
+  return strOutput;
 }
 
 module.exports = {
