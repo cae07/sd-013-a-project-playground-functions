@@ -19,20 +19,19 @@ function splitSentence(goTrybe) {
 }
 
 // Desafio 4
-function concatName(bola) {
-  return `${bola[bola.length-1]}, ${bola[0]}`
+function concatName(stringArrays) {
+  return `${stringArrays[stringArrays.length-1]}, ${stringArrays[0]}`
 }
-
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3) + ties
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+
 }
 
 // Desafio 7
