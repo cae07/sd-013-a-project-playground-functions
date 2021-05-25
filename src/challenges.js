@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     positionC2 = cat2 - mouse;
   }
   if (positionC1 > positionC2) {
-    return 'at2';
+    return 'cat2';
   } else if (positionC2 > positionC1) {
     return 'cat1';
   } else {
