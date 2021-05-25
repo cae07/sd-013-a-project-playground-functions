@@ -1,28 +1,29 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 == true && value2 == true){
+  if (value1 === true && value2 === true) {
     return true;
-  }
+   }
   else {
-    return false;  
-  }
+    return false;
+   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let sum = (base * height) / 2;
-  return sum
+  return sum;
 }
 
 // Desafio 3
 function splitSentence(stringtosplit) {
-  let splits = stringtosplit.split(' ')
+  let splits = stringtosplit.split(' ');
   return splits;
-}  
+}
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let orderString = [string[string.length - 1], string[0]];
+  return orderString;
 }
 
 // Desafio 5
