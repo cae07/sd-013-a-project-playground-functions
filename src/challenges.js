@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-    return true
+    return (true)
   }else {
-    return false
+    return (false)
   }
 }
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2
-  return area
+  return (area)
 }
 // Desafio 3
 function splitSentence(setence) {
@@ -25,7 +25,7 @@ function splitSentence(setence) {
       phraseArray = phraseArray + phrase[index]
     }
   }
-  return array
+  return (array)
 }
 // Desafio 4
 function concatName(array) {
@@ -42,11 +42,12 @@ function concatName(array) {
     for ( let secondIndex = 0; word.length > secondIndex; secondIndex +=1) {
       string = string + word[secondIndex]
     }
-  return string
+  return (string)
 }
 // Desafio 5
-function footballPoints() {
-  
+function footballPoints(wins, ties) {
+  let points = (wins*3) + (ties*1)
+  return (points)
 }
 
 // Desafio 6
