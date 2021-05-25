@@ -22,7 +22,7 @@ function splitSentence(stringtosplit) {
 
 // Desafio 4
 function concatName(string) {
-  let orderString = string[string.length - 1], string[0];
+  let orderString = string[string.length - 1]+', '+ string[0];
   return orderString;
 }
 
