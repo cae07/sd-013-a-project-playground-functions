@@ -11,7 +11,7 @@ function compareTrue(x, y) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return 0.5 * base * height
+  return 0.5 * base * height;
 }
 
 // Desafio 3
@@ -19,15 +19,15 @@ function splitSentence(string) {
   child = "";
   splitArray = [];
   for (let c of string) {
-    if (c != " ") {
+    if (c !== " ") {
       child += c;
-      string = string.substring(1)
-    } if ((string.indexOf(c) == string.length - 1) || (c == " ")) {
+    } if (c === " ") {
       splitArray.push(child);
       child = "";
     }
   }
-  return splitArray
+  splitArray.push(child);
+  return splitArray;
 }
 
 // Desafio 4
@@ -52,7 +52,7 @@ function highestCount(array) {
     }
   }
   for (let i of array) {
-    if (i == highestValue) {
+    if (i === highestValue) {
       count += 1;
     }
   }
@@ -61,8 +61,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) == Math.abs(mouse - cat2)) {
-    return "os gatos trombam e o rato foge"
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return "os gatos trombam e o rato foge";
   } else if ((Math.abs(mouse - cat1) < Math.abs(mouse - cat2))) {
     return 'cat1';
   } else {
@@ -74,14 +74,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   for (let i of array) {
-    if (i % 3 == 0 && i % 5 == 0) {
-      result.push("fizzBuzz")
-    } else if (i % 3 != 0 && i % 5 != 0) {
-      result.push("bug!")
-    } else if (i % 3 == 0) {
-      result.push("fizz")
-    } else if (i % 5 == 0) {
-      result.push("buzz")
+    if (i % 3 === 0 && i % 5 === 0) {
+      result.push("fizzBuzz");
+    } else if (i % 3 !== 0 && i % 5 !== 0) {
+      result.push("bug!");
+    } else if (i % 3 === 0) {
+      result.push("fizz");
+    } else if (i % 5 === 0) {
+      result.push("buzz");
     }
   }
   return result;
@@ -89,17 +89,17 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  child = ""
+  let child = "";
   for (let i of string) {
-    if (i == 'a') {
+    if (i === 'a') {
       child += 1;
-    } else if (i == 'e') {
+    } else if (i === 'e') {
       child += 2;
-    } else if (i == 'i') {
+    } else if (i === 'i') {
       child += 3;
-    } else if (i == 'o') {
+    } else if (i === 'o') {
       child += 4;
-    } else if (i == 'u') {
+    } else if (i === 'u') {
       child += 5;
     } else {
       child += i;
@@ -109,17 +109,17 @@ function encode(string) {
 }
 
 function decode(string) {
-  child = ""
+  let child = "";
   for (let i of string) {
-    if (i == 1) {
+    if (i === '1') {
       child += 'a';
-    } else if (i == 2) {
+    } else if (i === '2') {
       child += 'e';
-    } else if (i == 3) {
+    } else if (i === '3') {
       child += 'i';
-    } else if (i == 4) {
+    } else if (i === '4') {
       child += 'o';
-    } else if (i == 5) {
+    } else if (i === '5') {
       child += 'u';
     } else {
       child += i;
