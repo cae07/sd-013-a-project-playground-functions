@@ -45,7 +45,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
+console.log("hello world!");
 module.exports = {
   calcArea,
   catAndMouse,
