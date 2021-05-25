@@ -28,7 +28,7 @@ function concatName(arrayX) {
   let ultimoPrimeiro = '';
   for (let i = arrayX.length; i > 0; i -= 1) {
     if (i === arrayX.length) {
-      ultimoPrimeiro = arrayX[arrayX.length - 1] + ', ';
+      ultimoPrimeiro = `${arrayX[arrayX.length - 1]}, `;
     } else if (i === 1) {
       ultimoPrimeiro += arrayX[0];
     }
@@ -84,7 +84,8 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distancat1 < distancat2) {
     resultado = 'cat1';
     return resultado;
-  } else if (distancat2 < distancat1) {
+  }
+  if (distancat2 < distancat1) {
     resultado = 'cat2';
     return resultado;
   }
