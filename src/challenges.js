@@ -172,6 +172,27 @@ function decode(phrase) {
   return res;
 };
 
+
+// Desafio 10
+// vetor = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+
+function technology(myArray, name) {
+  
+  let ordem = myArray.sort();
+  let newArray = [];
+  let obj;
+  
+  for (let i = 0; i < ordem.length; i += 1) {
+      obj = {
+      tech: ordem[i],
+      name: name
+    };
+    newArray.push(obj)
+  };
+  return newArray;
+}
+// console.log(technology(vetor, "Felipe"))
+
 module.exports = {
   calcArea,
   catAndMouse,
