@@ -19,15 +19,12 @@ function splitSentence(Sentence) {
 
 // Desafio 4
 function concatName(allNames) {
-  let primeiros = allNames[0];
-  let ultimo = allNames[allNames.length - 1];
-
-  return ultimo + ", " + primeiros; 
+  return allNames[allNames.length - 1] + ", " + allNames[0]; 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties
 }
 
 // Desafio 6
