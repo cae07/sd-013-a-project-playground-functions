@@ -18,8 +18,13 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(primeiraPalav) {
+  let ultimaPalav = '';
+  for (let index = 0; index < primeiraPalav.length; index += 1) {
+    ultimaPalav = primeiraPalav[index];
+  }
+  let soma = `${ultimaPalav}, ${primeiraPalav[0]}`;
+  return soma;
 }
 
 // Desafio 5
