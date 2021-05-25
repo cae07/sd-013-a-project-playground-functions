@@ -18,8 +18,11 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(str) {
+  primeiroItem = str[0];
+  ultimoItem = str[str.length-1]
+  teste = `${ultimoItem}, ${primeiroItem}`
+  return teste
 }
 
 // Desafio 5
