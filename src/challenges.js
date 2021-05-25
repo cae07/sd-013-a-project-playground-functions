@@ -17,10 +17,10 @@ let sum3 = calcArea(51,1)
 
 console.log(sum, sum2, sum3)
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ")
 }
-
+console.log(splitSentence("go trybe vamo que vamo foguete"))
 // Desafio 4
 function concatName() {
   // seu código aqui
