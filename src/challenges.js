@@ -72,8 +72,29 @@ function highestCount(nums) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  cat1 = mouse - cat1;
+  cat2 = mouse - cat2;
+  let primaryCat;
 
+  if (cat1 < 0) {
+    cat1 = cat1 *-1;
+   } else if (cat2 < 0)  {
+    cat2 = cat2 *-1;
+  }
+
+  if (cat1 > cat2) {
+    primaryCat = "cat2";
+    return primaryCat;
+
+  } else if (cat2 > cat1) {
+    primaryCat = "cat1";
+    return primaryCat;
+
+  } else if (cat1 === cat2) {
+    primaryCat = "os gatos trombam e o rato foge";
+    return primaryCat;
+  }
 }
 
 // Desafio 8
