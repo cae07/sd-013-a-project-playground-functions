@@ -39,9 +39,13 @@ let ultimoItem = array[array.length - 1];
 console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]))
 
 // Desafio 5
-function footballPoints() {
-
+function footballPoints(wins, ties) {
+  let points = 3;
+  return (wins * points) + ties;
 }
+console.log(footballPoints(14, 8))
+
+
 
 // Desafio 6
 function highestCount() {
