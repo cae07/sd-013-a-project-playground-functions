@@ -22,9 +22,12 @@ function splitSentence(string) {
   console.log(splitSentence('A Trybe é demais'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let string = [];
+  string.push(array[array.length-1], array[0]);
+  return string.join(' ');
 }
+  console.log(concatName(['foguete', 'não', 'tem', 'ré,']))
 
 // Desafio 5
 function footballPoints() {
