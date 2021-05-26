@@ -71,17 +71,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let novoArray = [];
-  let string = '';
 
   for (let index of array) {
-    if (index % 3 === 0 && index % 5 === 0) {
+    let string = 'bug!';
+    if (index % 15 === 0) {
       string = 'fizzBuzz';
     } else if (index % 3 === 0) {
       string = 'fizz';
     } else if (index % 5 === 0) {
       string = 'buzz';
-    } else {
-      string = 'bug!';
     }
     novoArray.push(string);
   }
