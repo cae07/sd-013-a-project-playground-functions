@@ -1,7 +1,6 @@
 // Desafio 1 - se ambos os valores forem true...
 function compareTrue(num1, num2) {
-  if (num1 && num2) {
-  
+  if (num1 && num2);
   return true;
 }
 // Desafio 2 - calcula a área de um triangulo!
@@ -19,8 +18,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nomes) {
   let ultimo = nomes.length - 1;
-  let lastOne = [nomes[ultimo], nomes[0]].join(', ')
-  return lastOne.toString(lastOne);
+  let lastOne = [nomes[ultimo], nomes[0]].join(', ');
+  return String(lastOne);
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -63,4 +62,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
