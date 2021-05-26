@@ -114,8 +114,6 @@ function encode(string) {
   return separate.join('');
 }
 
-
-
 function decode(string) {
   let separate = string.split('');
 
