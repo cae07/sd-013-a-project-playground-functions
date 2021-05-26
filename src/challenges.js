@@ -1,15 +1,15 @@
 // Desafio 1
-function compareTrue(num1,num2) {
+function compareTrue(num1, num2) {
   // seu código aqui
-  if(num1 == true && num2 == true){
+  if (num1 === true && num2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
@@ -20,9 +20,13 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4
-function concatName() {
+// Desafio 4 
+function concatName(arr) {
   // seu código aqui
+  let first = arr[0];
+  let last = arr[arr.length -1];
+  let merge = last + ', ' + first;
+  return merge;
 }
 
 // Desafio 5
