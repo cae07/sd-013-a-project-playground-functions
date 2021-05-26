@@ -41,6 +41,8 @@ function footballPoints(wins, ties) {
 return numberWins + numberTies;
 }
 
+// Desafio 5 realizado com as dicas do Instrutor Fernando Soares
+
 // Desafio 6
 function highestCount(array) {
   let highestNumber = array[0];
@@ -59,9 +61,22 @@ function highestCount(array) {
   return count;
 }
 
+// Desafio 6 finalizado com dicas da Pessoa Estudante Rafael Victor Guimarães Dos Santos
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(mouse - cat1); // O math.abs vai ser como módulo na matemática, se recebermos um valor negativo ele fica positivo
+  let distance2 = Math.abs(mouse - cat2);
+
+  if (distance1 > distance2) {
+    return "cat2";
+  }
+  else if (distance2 > distance1){
+    return "cat1";
+  }
+  else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
