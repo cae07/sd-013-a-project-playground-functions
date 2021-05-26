@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(techs, nome) {
-  let techsListAll = techs.sort ()
+  let techsListAll = techs.sort();
   let techList1 = {
     tech: techsListAll[0],
     name: nome,
@@ -21,19 +21,19 @@ function techList(techs, nome) {
     tech: techsListAll[4],
     name: nome,
   };
-  if (techsListAll.length === 0){
-    return 'Vazio!'
+  if (techsListAll.length === 0) {
+    return 'Vazio!';
   }
   return [techList1, techList2, techList3, techList4, techList5];
 }
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-  if (numeros.length != 11) {
+  if (numeros.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index in numeros) {
-    if (numeros[index] < 0 || numeros[index] > 9){
+    if (numeros[index] < 0 || numeros[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -43,25 +43,25 @@ function generatePhoneNumber(numeros) {
     numeroRepetido = numeros[index2];
     for (let index3 in numeros) {
       if (numeros[index3] === numeroRepetido) {
-      contNumero += 1;
+        contNumero += 1;
       }
     }
     if (contNumero >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  } 
-  let mask = '(##) #####-####'
+  }
+  let mask = '(##) #####-####';
   let novoNum = '';
   let posicao = 0;
-  for (let i = 0; i < mask.length; i+= 1) {
-    if(mask[i] == '#') {
+  for (let i = 0; i < mask.length; i += 1) {
+    if (mask[i] === '#') {
       novoNum += numeros[posicao];
       posicao += 1;
     }
     else {
-        novoNum += mask[i]
-      }
-    }  
+      novoNum += mask[i];
+    }
+  }
   return novoNum;
 }
 
@@ -71,24 +71,26 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
   else if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
-   return false;
+    return false;
   }
-  return true
+  return true;
 }
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
+// https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
 function hydrate(drinks) {
   let numbers = drinks.match(/\d+/g).map(Number);
   let cupsTotal = numbers.reduce((accum, curr) => accum + curr);
   let unity = 'copos';
   if (cupsTotal === 1) {
-    unity = 'copo'
+    unity = 'copo';
   };
 
   return cupsTotal + ' ' + unity + ' ' + 'de água';
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
