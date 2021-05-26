@@ -2,9 +2,8 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -40,10 +39,9 @@ function footballPoints(wins, ties) {
 
   let res = pontoVitoria + pontoEmpate;
 
-  return res
+  return res;
   // receber numero de vitorias com nome wins
   // receber numero de empates com nome ties
-
 }
 
 // Desafio realizado com ajuda do seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
@@ -52,17 +50,17 @@ function footballPoints(wins, ties) {
 function highestCount(parametro) {
   let contador = 0;
   let maiorNumero = parametro[0];
-  
-  for (let indice = 0; indice < parametro.length; indice += 1){
-    if (parametro[indice] > maiorNumero){
+
+  for (let indice = 0; indice < parametro.length; indice += 1) {
+    if (parametro[indice] > maiorNumero) {
       maiorNumero = parametro[indice];
     }
   }
-    for (let index = 0; index < parametro.length; index += 1) {
-      if (parametro[index] == maiorNumero) {
-        contador += 1;
-      }
+  for (let index = 0; index < parametro.length; index += 1) {
+    if (parametro[index] === maiorNumero) {
+      contador += 1;
     }
+  }
   return contador;
   // Deverá retornar a quantidade de vezes que o numero se repete
 }
@@ -73,30 +71,24 @@ function highestCount(parametro) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < (Math.abs(mouse - cat2))) {
     return 'cat1';
-  }
-  else if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))){
+  } if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))) {
     return 'cat2';
   }
-  else {
-    return 'os gatos trombam e o rato foge'
-  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
   let retornaString = [];
   for (let index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] % 3 === 0 && numeros[index] % 5 != 0) {
-      retornaString.push('fizz')
-    }
-    else if (numeros[index] % 5 === 0 && numeros[index] % 3 != 0) {
-      retornaString.push('buzz')
-    }
-    else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      retornaString.push('fizzBuzz')
-    }
-    else {
-      retornaString.push('bug!')
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
+      retornaString.push('fizz');
+    } else if (numeros[index] % 5 === 0 && numeros[index] % 3 !== 0) {
+      retornaString.push('buzz');
+    } else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      retornaString.push('fizzBuzz');
+    } else {
+      retornaString.push('bug!');
     }
   }
   return retornaString;
