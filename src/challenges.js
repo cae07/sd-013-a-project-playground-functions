@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highest = Math.max.apply(null, numbers);
+  let highest = Math.max(...numbers);
   let count = 0;
   for (const key in numbers) {
     if (highest === numbers[key]) {
@@ -45,11 +45,8 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
-  if (distCat1 > distCat2) {
-    return 'cat2';
-  } else if (distCat2 > distCat1) {
-    return 'cat1';
-  }
+  if (distCat1 > distCat2) return 'cat2';
+  else if (distCat2 > distCat1) return 'cat1';
   return 'os gatos trombam e o rato foge';
 }
 
@@ -63,7 +60,7 @@ function fizzBuzz(numbers) {
       phrase.push('buzz');
     } else if ((numbers[key] % 1) === 0 && (numbers[key] % 3) === 0) {
       phrase.push('fizz');
-    } else {// ((numbers[key] / 3) != 0 || (numbers[key] / 5) != 0)
+    } else { // ((numbers[key] / 3) != 0 || (numbers[key] / 5) != 0)
       phrase.push('bug!');
     }
   }
@@ -74,18 +71,42 @@ function fizzBuzz(numbers) {
 function encode(vowel) {
   let sentence = [];
   for (const key in vowel) {
-    if (vowel[key] === 'a') {
+    sentence.push(vowel[key]);
+    if (sentence[key] === 'a') {
       sentence[key] = 1;
-    } else if (vowel[key] === 'i') {
+    } else if (sentence[key] === 'e') {
+      sentence[key] = 2;
+    } else if (sentence[key] === 'i') {
       sentence[key] = 3;
+    } else if (sentence[key] === 'o') {
+      sentence[key] = 4;
+    } else if (sentence[key] === 'u') {
+      sentence[key] = 5;
     }
   }
-  return sentence;
+  return sentence.join('');
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there'))
+
+function decode(vowel) {
+  let sentence = [];
+  for (const key in vowel) {
+    sentence.push(vowel[key]);
+    if (sentence[key] == 1) {
+      sentence[key] = 'a';
+    } else if (sentence[key] == 2) {
+      sentence[key] = 'e';
+    } else if (sentence[key] == 3) {
+      sentence[key] = 'i';
+    } else if (sentence[key] == 4) {
+      sentence[key] = 'o';
+    } else if (sentence[key] == 5) {
+    sentence[key] = 'u';
+    }
+  }
+  return sentence.join('');
 }
-console.log(encode('hi there'));
+console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
