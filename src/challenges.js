@@ -45,71 +45,51 @@ function highestCount(arr) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge';
-  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return 'cat1';
-  } else {
-    return 'cat2';
   }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let strArray = [];
-
-  for (let key in arr) {
-    if (arr[key] % 3 === 0 && arr[key] % 5 === 0) {
-      strArray.push('fizzBuzz');
-    } else if (arr[key] % 3 === 0) {
-      strArray.push('fizz');
-    } else if (arr[key] % 5 === 0) {
-      strArray.push('buzz');
-    } else {
-      strArray.push('bug!');
+  /*
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  */
+  let mapArr = arr.map((x) => {
+    if (x % (3 * 5) === 0) {
+      return 'fizzBuzz';
     }
-  }
-
-  return strArray;
+    if (x % 3 === 0) {
+      return 'fizz';
+    }
+    if (x % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
+  return mapArr;
 }
 
 // Desafio 9
 function encode(string) {
+  /*
+  https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+  https://www.w3schools.com/jsref/jsref_replace.asp
+  */
+  let strOut = '';
   let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
-  let strArray = string.split('');
-  let strOut = '';
-
-  for (let key in code) {
-    for (let key2 in strArray) {
-      if (strArray[key2] === key) {
-        strArray[key2] = code[key];
-      }
-    }
-  }
-
-  for (let key in strArray) {
-    strOut += strArray[key];
-  }
-
+  strOut = string.replace(/(?:a|e|i|o|u)/g, (matched) => code[matched]);
   return strOut;
 }
 function decode(string) {
-  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-
-  let strArray = string.split('');
   let strOut = '';
+  let code = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
-  for (let key in code) {
-    for (let key2 in strArray) {
-      if (strArray[key2] == code[key]) {
-        strArray[key2] = key;
-      }
-    }
-  }
-
-  for (let key in strArray) {
-    strOut += strArray[key];
-  }
-
+  strOut = string.replace(/(?:1|2|3|4|5)/g, (matched) => code[matched]);
   return strOut;
 }
 
