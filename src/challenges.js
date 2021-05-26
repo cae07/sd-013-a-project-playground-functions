@@ -9,7 +9,6 @@ function compareTrue(num1, num2) {
   }
   return false;
 }
-
 console.log(compareTrue(1, 0));
 // Desafio 2 - calcula a área de um triangulo!
 function calcArea(base, height) {
@@ -49,15 +48,15 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 < mouse - cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
   }
-  if (mouse - cat1 > mouse - cat2) {
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(15, 6, 7));
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -83,3 +82,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(Math.abs(-1));
