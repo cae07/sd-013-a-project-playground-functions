@@ -1,11 +1,8 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  
   if (value1 === true && value2 === true) {
     return true;
-
   } else {
-
     return false;
   }
 };
@@ -33,7 +30,7 @@ function footballPoints(wins, ties) {
 
   return resultado;
 }
-console.log(footballPoints(14, 8));
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
