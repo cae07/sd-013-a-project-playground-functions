@@ -1,7 +1,26 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+
+function techList(array3, name) {
+  let info = {
+    tech: "",
+    name: name,
+  }
+  for(let i = 0; i <= array3.length; i += 1){
+   
+    if(i)
+
+  }
+
+
+
+
+
+
+
+  return info;
 }
+
+console.log(techList("HTML, CSS, JAVASCRIPT, JAVA, C++", "Icaro"));
 
 // Desafio 11
 function generatePhoneNumber() {
