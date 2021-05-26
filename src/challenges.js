@@ -50,14 +50,18 @@ function highestCount(numeros) {
 };
 
 // Desafio 7
-// consultar math.abs
+// Referencia: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
-  if ((mouse - cat1) < (mouse - cat2)) {
+  function diferenca (a, b) {
+    return Math.abs(a - b);
+  }
+  
+  if (diferenca(mouse, cat1) < diferenca(mouse, cat2)) {
     return `cat1`;
-  } else if ((mouse - cat1) > (mouse - cat2)) {
+  } else if (diferenca(mouse, cat1) > diferenca(mouse, cat2)) {
     return `cat2`;
-  } else if ((mouse - cat1) == (mouse - cat2)) {
-    return `os gatos trombam e o rato foge`
+  } else if (diferenca(mouse, cat1) == diferenca(mouse, cat2)) {
+    return `os gatos trombam e o rato foge`;
   };
 };
 
