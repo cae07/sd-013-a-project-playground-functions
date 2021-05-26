@@ -7,33 +7,31 @@ function techList(tech, name) {
   let allTechs = [];
 
   for (let index in tech){
-    if (tech.length == 0) {
-      return 'Vazio!';
-    } else {
-      let objeto = {
+    let objeto = {
         tech: tech[index],
         name: name,
       }
-    }
-
     allTechs.push(objeto);
+    }
+
+  if (tech.length == 0) {
+    return 'Vazio!';
+  } else {
+    return allTechs.sort(function(a, b) {
+      let techA = a.tech.toLowerCase();
+      let techB = b.tech.toLowerCase();
+  
+      if (techA < techB) {
+        return -1;
+      }
+      if (techA > techB) {
+        return 1;
+      }
+      return 0;
+    });
   }
-
-  return allTechs.sort(function(a, b) {
-    let techA = a.tech.toLowerCase();
-    let techB = b.tech.toLowerCase();
-
-    if (techA < techB) {
-      return -1;
-    }
-    if (techA > techB) {
-      return 1;
-    }
-
-    return 0;
-  });
 }
-console.log(techList([], 'Lucas'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
