@@ -58,9 +58,20 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse,cat1,cat2) {
+  let gatoMaisProximo = "";
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  if (distanciaCat1 < distanciaCat2) {
+    return gatoMaisProximo = "cat1"
+  } else if (distanciaCat1 > distanciaCat2) {
+    return gatoMaisProximo = "cat2"
+  } else {
+    return gatoMaisProximo = "os gatos trombam e o rato foge"
+  }
+  }
+      console.log(catAndMouse(1,0,2))
+
 
 // Desafio 8
 function fizzBuzz() {
