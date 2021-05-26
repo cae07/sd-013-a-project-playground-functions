@@ -54,21 +54,31 @@ function highestCount(array1) {
       maiorNumero = array1[i]
     }
   }
-  for(let j = 0; j <array1.length; j++) {
-    if(array1[j] === maiorNumero){
+  for (let j = 0; j < array1.length; j++) {
+    if (array1[j] === maiorNumero) {
       counter++
     }
   }
   return counter
 }
-  let totalSoma = highestCount(array1)
-  let totalSoma2 = highestCount(array2)
-  let totalSoma3 = highestCount(array3)
-  console.log(totalSoma, totalSoma2, totalSoma3)
-  // Desafio 7
-  function catAndMouse() {
-    // seu código aqui
+let totalSoma = highestCount(array1)
+let totalSoma2 = highestCount(array2)
+let totalSoma3 = highestCount(array3)
+console.log(totalSoma, totalSoma2, totalSoma3)
+//Bianca Caetano me ajudou!
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let gatoA = Math.abs(cat1 - mouse)
+  let gatoB = Math.abs(cat2 - mouse)
+
+  if( gatoA < gatoB){
+    return "cat1"
+  }else if (gatoB < gatoA){
+    return "cat2"
+  } else if ( gatoA === gatoB) {
+    return "os gatos trombam e o rato foge"
   }
+}
 
   // Desafio 8
   function fizzBuzz() {
