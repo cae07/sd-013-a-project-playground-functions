@@ -73,20 +73,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// A linha 79 utiliza-se de uma expressão tipo 'regexp' para extrair numeros de uma string.
+// Fora realizado consulta no stackoverflow - vide link abaixo:
+// Source: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
 function hydrate(myString) {
+  
   let arrNumbers = myString.match(/\d+/g).map(Number);
   let total = 0;
+  
   for (number of arrNumbers) {
-    total = total + number
+    total = total + number;
   }  
   if (total > 1) {
-    return `${total} copos de água`
+    return `${total} copos de água`;
   } else {
-    return `${total} copo de água`
+    return `${total} copo de água`;
   }
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
