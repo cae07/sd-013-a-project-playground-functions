@@ -71,13 +71,13 @@ function fizzBuzz(numeros) {
 
   for (let numero in numeros) {
     if ((numeros[numero] % 3 == 0) && (numeros[numero] % 5 == 0)) {
-      array += 'fizzBuzz';
+      array.push('fizzBuzz');
     } else if (numeros[numero] % 3 == 0) {
-      array += 'fizz';
+      array.push('fizz');
     } else if (numeros[numero] % 5 == 0) {
-      array += `buzz`;
+      array.push(`buzz`);
     } else {
-      array += 'bug!';
+      array.push('bug!');
     }
   }
   return array;
