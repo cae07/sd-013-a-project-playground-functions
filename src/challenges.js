@@ -113,16 +113,21 @@ function decode(stringCodificada) {
 // Desafio 10 
 function listTech (arrayTech ,name){
   let arrayObj = []
-  for(let i = 0; i < arrayTech.length; i += 1) {
-    let obj = {
-      tech : "",
-      name : name
-    }
-    obj.tech = arrayTech.sort()[i];
-    arrayObj.push(obj);
-  }return arrayObj
-}; console.log(listTech(["React", "Jest", "HTML", "CSS", "JavaScript"] ,
-"Lucas"))
+    for(let i = 0; i < arrayTech.length; i += 1) {
+      let obj = {
+        tech : "",
+        name : name
+      };
+      obj.tech = arrayTech.sort()[i];
+      arrayObj.push(obj);
+  }
+   if(arrayObj.length === 0) {
+    return "Vazio!";
+  } else {
+      return arrayObj;
+  }
+} 
+console.log(listTech(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,
