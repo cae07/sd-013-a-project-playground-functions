@@ -11,13 +11,13 @@ function calcArea(base, height) {
 };
 
 
-function splitSentence(go, trybe) {
-  return [];
+function splitSentence() {
+  return 
 }
-console.log(splitSentence('go', 'trybe'))
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length -1]}, ${array[0]}`;
 }
 
 // Desafio 5
