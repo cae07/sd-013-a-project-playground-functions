@@ -86,12 +86,25 @@ function fizzBuzz(a) {
     }
   }
   return result;
-};
+}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(a) {
+  let result;
+  let resultA;
+  let resultE;
+  let resultI;
+  let resultO;
+  let resultU;
+  resultA = a.replace(/a/g, 1);
+  resultE = resultA.replace(/e/g, 2);
+  resultI = resultE.replace(/i/g, 3);
+  resultO = resultI.replace(/o/g, 4);
+  resultU = resultO.replace(/u/g, 5);
+  result = a;
+  return resultU;
 }
+console.log(encode('cidade'));
 function decode() {
   // seu código aqui
 }
