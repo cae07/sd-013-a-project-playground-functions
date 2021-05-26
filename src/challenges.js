@@ -36,12 +36,11 @@ function highestCount(arrayNumbers) {
   let maior = arrayNumbers[0];
   let maiorRepete = 0;
   for (let pickedNumber of arrayNumbers) {
-    if (pickedNumber >= maior) {
+    if (pickedNumber > maior) {
+      maiorRepete = 0;
       maior = pickedNumber;
     }
-  }
-  for (let selectedNumber of arrayNumbers) {
-    if (selectedNumber == maior) {
+    if (pickedNumber === maior) {
       maiorRepete += 1;
     }
   }
