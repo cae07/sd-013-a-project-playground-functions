@@ -5,19 +5,19 @@
 
 
 function techList(array, name) {
-   if (array.length === 0 ) {
-     return 'Vazio!';
-   }
-   else {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  else {
     let sortArray = array.sort();
     let finalArray = [];
 
-    for(let key in sortArray) {
-      finalArray.push({tech: sortArray[key], name: name})
+    for (let key in sortArray) {
+      finalArray.push({ tech: sortArray[key], name: name })
     }
     return finalArray;
 
-   }
+  }
 
 }
 
@@ -30,8 +30,8 @@ function techList(array, name) {
 function verificaNumero(array) {
   let verificacao = true;
 
-  for(let i = 0; i < array.length; i += 1 ) {
-    if(array[i] > 9 || array[i] < 0) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9 || array[i] < 0) {
       verificacao = false;
     }
   }
@@ -46,12 +46,12 @@ function verificaRepeticoes(array) {
     let numeroAtual = array[index];
 
     for (let index2 in array) {
-      if(numeroAtual === array[index2]) {
+      if (numeroAtual === array[index2]) {
         repeticoes += 1;
       }
     }
 
-    if(repeticoes > maxRepeticoes) {
+    if (repeticoes > maxRepeticoes) {
       maxRepeticoes = repeticoes;
     }
     repeticoes = 0;
@@ -86,11 +86,11 @@ function formatNumber(array) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-   
+
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  else if (verificaNumero(numbers) === false || verificaRepeticoes(numbers)>= 3) {
+  else if (verificaNumero(numbers) === false || verificaRepeticoes(numbers) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   else {
@@ -102,10 +102,99 @@ function generatePhoneNumber(numbers) {
 
 
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+
+
+// function lineSmallerSum(array) {
+//   let firstcheck = true;
+//   let somaLinhas = 0;
+
+//   for (let index1 = 0; index1 < array.length; index1 += 1) {
+//     let linhaAtual = array[index1];
+
+//     for (let index2 = 0; index2 < array.length; index2 += 1) {
+//       if (index2 !== index1) {
+//         somaLinhas += array[index2];
+//       }
+//     }
+
+//     if (linhaAtual > somaLinhas) {
+//       firstcheck = false;
+//     }
+
+//     somaLinhas = 0;
+//   }
+
+//   return firstcheck;
+// }
+
+// lineSmaller(test);
+
+
+// Verificar se a medida de qualquer um dos lados seja maior que o valor absoluto da diferença entre os outros dois.
+// function lineBiggerDiference(array) {
+//   let secondcheck = true;
+//   let diferença = 0;
+
+//   for (let index1 = 0; index1 < array.length; index1 += 1) {
+//     let linhaAtual = array[index1];
+//     let outrasLinhas = [];
+//     let diferenca;
+
+//     for (let index2 = 0; index2 < array.length; index2 += 1) {
+//       if (index2 !== index1) {
+//         outrasLinhas.push(array[index2])
+//       }
+//     }
+
+//     diferenca = Math.abs(outrasLinhas[0] / outrasLinhas[1]);
+
+//     if (linhaAtual < diferenca) {
+//       secondcheck = false;
+//     }
+//     outrasLinhas = [];
+
+//   }
+
+//   console.log(secondcheck);
+// }
+
+
+
+
+// Verificar se a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
+function checkLine(a, b, c) {
+
+  if (a < ( b + c ) && a > Math.abs(b - c)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
+
+
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+
+  let check = true;
+  
+  let a = checkLine(lineA, lineB, lineC);
+  let b = checkLine(lineB, lineA, lineC);
+  let c = checkLine(lineC, lineB, lineA);
+
+  console.log(a, b,  c);
+
+  if( a === false || b === false || c === false) {
+    check = false;
+  }
+
+  return check;
+  
+}
+
+
 
 // Desafio 13
 function hydrate() {
