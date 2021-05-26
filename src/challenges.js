@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 
   return resultado;
 }
-console.log(footballPoints(3, 1));
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
