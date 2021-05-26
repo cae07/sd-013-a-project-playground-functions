@@ -12,12 +12,31 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
 return(base * height)/2;
 }
-console.log (calcArea (10, 50));
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+let array = []; 
+let string = '';
+if (frase.indexOf(' ') > -1){
+for (let index = 0; index < frase.length; index +=1) {
+ 
+ if (frase[index] !== ' ') {
+   string += frase[index];
+ } else {
+   array.push(string);
+   string = '';
+ } 
+} 
+array.push(string);
+  return array;
+} else {
+  array.push(frase);
+  return array;
 }
+
+}
+console.log(splitSentence ('go trybe'));
 
 // Desafio 4
 function concatName() {
