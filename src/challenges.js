@@ -81,12 +81,12 @@ function catAndMouse(mouse,cat1,cat2) {
   if ( distanciaCat1 < distanciaCat2 ) {
     return 'cat1';
   } else if ( distanciaCat2 < distanciaCat1 ) {
-    return 'cart2';
+    return 'cat2';
   } else if ( distanciaCat1 == distanciaCat2 ) {
     return 'os gatos trombam e o rato foge';
   }
 }
-
+console.log(catAndMouse(0,3,2));
 // Desafio 8
 function fizzBuzz() {
   
