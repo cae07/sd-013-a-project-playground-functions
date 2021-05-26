@@ -1,9 +1,5 @@
 // Desafio 10
 
-// let tecnologias = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// let name = "Julia";
-
-
 function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
@@ -18,13 +14,7 @@ function techList(array, name) {
     return finalArray;
 
   }
-
 }
-
-// techList(tecnologias, name);
-
-
-// let phoneNumber = [1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1];
 
 // Verifica se numero é menor que zero ou maior que nove
 function verificaNumero(array) {
@@ -60,7 +50,6 @@ function verificaRepeticoes(array) {
   return maxRepeticoes;
 }
 
-
 function formatNumber(array) {
   let region = `(${array[0]}${array[1]})`;
   let firstHalf = "";
@@ -82,8 +71,6 @@ function formatNumber(array) {
 
 // formatNumber(phoneNumber);
 
-
-
 // Desafio 11
 function generatePhoneNumber(numbers) {
 
@@ -97,74 +84,10 @@ function generatePhoneNumber(numbers) {
     return formatNumber(numbers);
   }
 }
-
 // generatePhoneNumber(phoneNumber);
 
-
-
-
-
-
-// function lineSmallerSum(array) {
-//   let firstcheck = true;
-//   let somaLinhas = 0;
-
-//   for (let index1 = 0; index1 < array.length; index1 += 1) {
-//     let linhaAtual = array[index1];
-
-//     for (let index2 = 0; index2 < array.length; index2 += 1) {
-//       if (index2 !== index1) {
-//         somaLinhas += array[index2];
-//       }
-//     }
-
-//     if (linhaAtual > somaLinhas) {
-//       firstcheck = false;
-//     }
-
-//     somaLinhas = 0;
-//   }
-
-//   return firstcheck;
-// }
-
-// lineSmaller(test);
-
-
-// Verificar se a medida de qualquer um dos lados seja maior que o valor absoluto da diferença entre os outros dois.
-// function lineBiggerDiference(array) {
-//   let secondcheck = true;
-//   let diferença = 0;
-
-//   for (let index1 = 0; index1 < array.length; index1 += 1) {
-//     let linhaAtual = array[index1];
-//     let outrasLinhas = [];
-//     let diferenca;
-
-//     for (let index2 = 0; index2 < array.length; index2 += 1) {
-//       if (index2 !== index1) {
-//         outrasLinhas.push(array[index2])
-//       }
-//     }
-
-//     diferenca = Math.abs(outrasLinhas[0] / outrasLinhas[1]);
-
-//     if (linhaAtual < diferenca) {
-//       secondcheck = false;
-//     }
-//     outrasLinhas = [];
-
-//   }
-
-//   console.log(secondcheck);
-// }
-
-
-
-
-// Verificar se a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
+// Verificar se a medida de qualquer de um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
 function checkLine(a, b, c) {
-
   if (a < ( b + c ) && a > Math.abs(b - c)) {
     return true;
   }
@@ -172,8 +95,6 @@ function checkLine(a, b, c) {
     return false;
   }
 }
-
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -189,17 +110,31 @@ function triangleCheck(lineA, lineB, lineC) {
   if( a === false || b === false || c === false) {
     check = false;
   }
-
-  return check;
-  
+  return check; 
 }
-
-
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+
+  let reg = /\d+/g;
+  let result = string.match(reg);
+  let numbers = result.map( el => parseInt(el));
+  let count = 0;
+
+  for (let index in numbers) {
+    count += numbers[index];
+  }
+
+  if (count === 1) {
+    return `${count} copo de água`;
+  }
+  else {
+    return `${count} copos de água`;
+  }
 }
+
+// hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
+
 
 module.exports = {
   generatePhoneNumber,
