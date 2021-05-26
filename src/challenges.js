@@ -88,7 +88,7 @@ let dist2 = cat2 - mouse;
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(0,-3,3));
+// console.log(catAndMouse(0,-3,3));
 
 
 // Desafio 8
@@ -113,17 +113,37 @@ function fizzBuzz(array2) {
 return array2;
 }
 
-console.log(fizzBuzz([9,5]));
+// console.log(fizzBuzz([9,5]));
 
 
 // Desafio 9
 
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(let x = 0; x <= string.length; x += 1){
+
+    string = string.replace('a', 1);
+    string = string.replace('e', 2);
+    string = string.replace('i', 3);
+    string = string.replace('o', 4);
+    string = string.replace('u', 5);
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("hi there!"));
+
+function decode(string2) { 
+  for(let x = 0; x <= string2.length; x += 1){
+    string2 = string2.replace( 1, 'a');
+    string2 = string2.replace( 2, 'e');
+    string2 = string2.replace( 3, 'i');
+    string2 = string2.replace( 4, 'o');
+    string2 = string2.replace( 5, 'u');
+  }
+  return string2;
 }
+
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
