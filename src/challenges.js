@@ -31,10 +31,16 @@ let trybe = concatName(['foguete', 'não', 'tem', 'ré']);
 let pirate = concatName(['captain', 'my', 'captain']);
 console.log(name, trybe, pirate)
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
-
+function footballPoints(wins, ties) {
+  let vitory = 3 * wins;
+  let empate = 1 * ties;
+  let result = vitory + empate;
+  return result
+  }
+let soma = footballPoints(14, 8)
+let soma2 = footballPoints(1, 2)
+let soma3 = footballPoints(0, 0)
+console.log(soma,soma2,soma3)
 // Desafio 6
 function highestCount() {
   // seu código aqui
