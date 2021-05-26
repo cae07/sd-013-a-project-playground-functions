@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 && value2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -24,24 +23,19 @@ function concatName(arr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let eachWin = 3;
-  let eachTie = 1;
+  const eachWin = 3;
+  const eachTie = 1;
+
   return wins * eachWin + ties * eachTie;
 }
 
 // Desafio 6
 function highestCount(arr) {
   let count = 0;
-  let highestNumber = arr[0];
+  const highestNumber = Math.max(...arr);
 
   for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] > highestNumber) {
-      highestNumber = arr[i];
-    }
-  }
-
-  for (let j = 0; j < arr.length; j += 1) {
-    if (arr[j] === highestNumber) {
+    if (arr[i] === highestNumber) {
       count += 1;
     }
   }
@@ -51,26 +45,34 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat2 < cat1 && cat2 >= mouse) {
+  const distanceCat1 = Math.abs(mouse - cat1);
+  const distanceCat2 = Math.abs(mouse - cat2);
+
+  if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } else if (cat1 < cat2 && cat1 >= mouse) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(4, 4, 4));
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let newArr = [];
+  const newArr = [];
 
   for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+    const value = arr[i];
+    const divisibleBy3 = value % 3 === 0;
+    const divisibleBy5 = value % 5 === 0;
+
+    if (divisibleBy3 && divisibleBy5) {
       newArr.push('fizzBuzz');
-    } else if (arr[i] % 3 === 0) {
+    } else if (divisibleBy3) {
       newArr.push('fizz');
-    } else if (arr[i] % 5 === 0) {
+    } else if (divisibleBy5) {
       newArr.push('buzz');
     } else {
       newArr.push('bug!');
