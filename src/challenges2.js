@@ -3,16 +3,15 @@ function techList(techsList, nome) {
   let techToNameLearn = [];
 
   for (let technology of techsList.sort()) {
-    techToNameLearn.push(
-      ({
-        tech: technology,
-        name: nome,
-      })
-    );
+    techToNameLearn.push({
+      tech: technology,
+      name: nome,
+    });
   }
   if (techsList.length > 0) {
     return techToNameLearn;
-  } return 'Vazio!';
+  }
+  return 'Vazio!';
 }
 
 // Desafio 11
@@ -41,7 +40,21 @@ function generatePhoneNumber(phoneNumbersArray) {
   for (let indexArray in phoneNumbersArray) {
     phoneObject[indexArray] = phoneNumbersArray[indexArray];
   }
-  let phoneNumber = '(' + phoneObject[0] + phoneObject[1] + ') ' + phoneObject[2] + phoneObject[3] + phoneObject[4] + phoneObject[5] + phoneObject[6] + '-' + phoneObject[7] + phoneObject[8] + phoneObject[9] + phoneObject[10];
+  let phoneNumber =
+    '(' +
+    phoneObject[0] +
+    phoneObject[1] +
+    ') ' +
+    phoneObject[2] +
+    phoneObject[3] +
+    phoneObject[4] +
+    phoneObject[5] +
+    phoneObject[6] +
+    '-' +
+    phoneObject[7] +
+    phoneObject[8] +
+    phoneObject[9] +
+    phoneObject[10];
   return phoneNumber;
 }
 
