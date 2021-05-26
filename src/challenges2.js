@@ -43,10 +43,9 @@ function generatePhoneNumber(numbers) {
 
   for (let index = 0; index < numbers.length; index += 1) {
     // dica do luiz furtado no Slack
-    // verifica o indice 1 pois com o newTelephone sendo pushado retorna algo como
-    // [0, 1], como o indice 1 bate, então é adicionado o ) após este indice, ficando [0, 1, ')']
-    // se não, no indice 6 (aonde tem a separação do traço -) é adicionado este traço
-    // após o indice 6
+    // verifica o indice 1, pois retorna algo como [0, 1], e como o indice 1 bate, então 
+    // é adicionado o ) após este indice, ficando [0, 1, ')']
+    // se não, no indice 6 (aonde tem a separação do traço -) é adicionado este traço após o indice 6
     if (index === 1) {
       numbers[index] += ') ';
     } else if (index === 6) {
@@ -60,8 +59,26 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let diferencaAB = Math.abs(lineA - lineB);
+  let diferencaBC = Math.abs(lineB - lineC);
+  let diferencaAC = Math.abs(lineA - lineC);
+
+  if (lineA > (lineB + lineC)) {
+    return false;
+  } else if (lineB > (lineA + lineC)) {
+    return false;
+  } else if (lineC > (lineA + lineB)) {
+    return false;
+  }
+
+  if (lineA < (lineB + lineC) && lineA > (diferencaBC)) {
+    return true;
+  } else if (lineB < (lineA + lineC) && lineB > (diferencaAC)) {
+    return true;
+  } else if (lineC < (lineA + lineB) && lineC > (diferencaAB)) {
+    return true;
+  }
 }
 
 // Desafio 13
