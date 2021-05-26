@@ -41,6 +41,7 @@ function footballPoints(wins ,ties) {
 // console.log(footballPoints(3 , 1));
 
 // Desafio 6
+
 function highestCount(ArrayN) {
 	// seu código aqui
 	let counter = 0;
@@ -57,22 +58,38 @@ function highestCount(ArrayN) {
 		if (ArrayN[i] == highestCounter) {
 			counter+=1;
 		}else {
-      continue
+			continue
 		};
-  } return counter;
+	} return counter;
 } 
  console.log(highestCount([-1,-2,-2]));
 
 
 // Desafio 7
-function catAndMouse() {
-	// seu código aqui
-}
+function catAndMouse(mouse,cat1,cat2) {
 
-// Desafio 8
-function fizzBuzz() {
-	// seu código aqui
 }
+// Desafio 8
+
+function fizzBuzz(array) {
+	let resposta = [];
+	for (let n = 0; n < array.length; n+=1) {
+		i = n
+	
+		let resultF = array[i]/3;
+		let resultB = array[i]/5;
+		
+		if ((Number.isInteger(resultF) == true) && (Number.isInteger(resultB) == true)) {
+			resposta .push ("fizzBuzz")
+				
+			}else if (Number.isInteger(resultB) == true) {
+				resposta .push("buzz")
+			}else if(Number.isInteger(resultF) == true) {
+				resposta .push("fizz")
+			}else { resposta .push ("bug!")}
+	}return resposta;
+}
+console.log(fizzBuzz([5,3,5,6,89]))
 
 // Desafio 9
 function encode() {
@@ -93,4 +110,4 @@ module.exports = {
 	footballPoints,
 	highestCount,
 	splitSentence,
-};
+}
