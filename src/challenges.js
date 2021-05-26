@@ -111,7 +111,7 @@ function decode(stringCodificada) {
 };
 
 // Desafio 10 
-function listTech (arrayTech ,name){
+function techList (arrayTech ,name){
   let arrayObj = []
     for(let i = 0; i < arrayTech.length; i += 1) {
       let obj = {
@@ -127,7 +127,7 @@ function listTech (arrayTech ,name){
       return arrayObj;
   }
 } 
-console.log(listTech(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,
