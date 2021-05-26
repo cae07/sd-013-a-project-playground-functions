@@ -2,7 +2,7 @@
 function techList() {
   msg = "Vazio!"
 
-  if (techList(myArray.length) == 0) {
+  if (myArray.length == 0) {
     return msg;    
   } else {
 
