@@ -24,7 +24,6 @@ function concatName(array) {
   let concat = array[array.length - 1] + ', ' + array[0];
   return concat;
 }
-console.log(concatName(['Rafael', 'Carlos', 'Araujo']));
 
 // Desafio 5
 function footballPoints() {
