@@ -1,12 +1,11 @@
 // Desafio 1
-function compareTrue (value1, value2) {
-  if ( value1 === true && value2 === true) {
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
-console.log(compareTrue(true,true));
+console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,7 +13,7 @@ function calcArea(base, height) {
   return area;
 }
 
-console.log(calcArea(51,1));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
@@ -28,35 +27,35 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let firstItem = array[0];
   let lastItem = array[array.length - 1];
-  let concatItens = lastItem + ", " + firstItem;
+  let concatItens = `${lastItem}, ${firstItem}`;
   return concatItens;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints(wins, ties) {
   let vitorias = wins * 3;
   let empates = ties * 1;
   let results = vitorias + empates;
   return results;
 }
 
-console.log(footballPoints(0,0));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 
 function highestCount(numeros) {
   let maiorValor = numeros[0];
   for (let indice in numeros) {
-    if (numeros[indice] > maiorValor){
+    if (numeros[indice] > maiorValor) {
       maiorValor = numeros[indice];
-    } 
+    }
   }
   let cont = 0;
-  for ( let indice in numeros) {
-    if ( numeros[indice] == maiorValor) {
-      cont ++;
+  for (let indice in numeros) {
+    if (numeros[indice] === maiorValor) {
+      cont += 1;
     }
   }
   return cont;
@@ -68,16 +67,14 @@ console.log(highestCount([-2, -2, -1]));
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = mouse - cat1;
   let d2 = mouse - cat2;
-  if ( Math.abs(d1) == Math.abs(d2) ) {
+  if (Math.abs(d1) === Math.abs(d2)) {
     return 'os gatos trombam e o rato foge';
-  } else if ( Math.abs(d1) < Math.abs(d2)) {
+  } if (Math.abs(d1) < Math.abs(d2)) {
     return 'cat1';
-  } else {
-    return 'cat2';
-  }
+  } return 'cat2';
 }
 
-console.log(catAndMouse(10,4,22));
+console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz() {
