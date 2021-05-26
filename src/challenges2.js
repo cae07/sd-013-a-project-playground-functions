@@ -52,14 +52,48 @@ function generatePhoneNumber(intArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+    let current,
+        next1,
+        next2,
+        n1,
+        n2;
+
+    for (let c = 0; c <= 2; i++) {
+        n1 = c + 1;
+        n2 = c + 2;
+        if (c === 2) {
+            n1 = 0;
+            n2 = 1;
+        } else if (c === 1) {
+            n1 = c + 1;
+            n2 = 0;
+        }
+
+        current = arguments[c];
+        next1 = arguments[n1];
+        next2 = arguments[n2];
+
+        return (current < (next1 + next2) && current > Math.abs(next1 - next2));
+    }
 }
+//console.log(triangleCheck(10, 14, 4));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+    /*
+    Source: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array
+    */
+    let numbers = str.match(/\d+/g).map(Number);
+    let cupsTotal = numbers.reduce((accum, curr) => accum + curr);
+    let un = 'copos';
+    if (cupsTotal === 1) un = 'copo';
+
+    return `${cupsTotal} ${un} de água`;
 }
+//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
