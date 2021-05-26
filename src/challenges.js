@@ -1,3 +1,7 @@
+function retornaMax(arr) {
+  return Math.max.apply(null, arr);
+}
+console.log(retornaMax([1, 222, 5, 9]));
 // Desafio 1 - se ambos os valores forem true...
 function compareTrue(num1, num2) {
   if (num1 === true && num2 === true) {
@@ -33,9 +37,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let contador = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === retornaMax(array)) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
