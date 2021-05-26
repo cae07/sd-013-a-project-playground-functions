@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  let concatStrings = stringsArray [stringsArray.length - 1] + ', ' + stringsArray[0];
+  let concatStrings = stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0];
   return concatStrings;
 }
 
@@ -38,9 +38,9 @@ function highestCount(arrayOfNumbers) {
 
   for (let i = 0; i < arrayOfNumbers.length; i += 1) {
     if (arrayOfNumbers[i] > biggerValue) {
-    biggerValue = arrayOfNumbers[i];
-  } else {
-    biggerValue = biggerValue;
+      biggerValue = arrayOfNumbers[i];
+    } else {
+      biggerValue = biggerValue;
     }
   }
   for (let iBig = 0; iBig < arrayOfNumbers.length; iBig += 1) {
@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat2 < 0) {
     distCat2 *= -1;
   }
-  if(distCat1 > distCat2) {
+  if (distCat1 > distCat2) {
     return 'cat2';
   } else if (distCat1 < distCat2) {
     return 'cat1';
@@ -71,8 +71,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(myArray) {
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (myArray[index] % 3 == 0 && myArray[index] % 5 == 0) {
+      myArray[index] = 'fizzBuzz';
+    }
+  }
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (myArray[index] % 3 == 0) {
+      myArray[index] = 'fizz';
+    }
+  }
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (myArray[index] % 5 == 0) {
+      myArray[index] = 'buzz';
+    }
+  }
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (myArray[index] % 3 != 0 && myArray[index] % 5 != 0) {
+      if (typeof myArray[index] === 'number') {
+        myArray[index] = 'bug!';
+      }
+    }
+  }
+  return myArray;
 }
 
 // Desafio 9
