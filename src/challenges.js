@@ -3,25 +3,25 @@ function compareTrue(num1, num2) {
   if (num1 && num2) {
     return true;
   }
-  else {
-    return false
-  }
 }
+console.log(compareTrue(2, 3));
 
 // Desafio 2 - calcula a área de um triangulo!
 function calcArea(base, height) {
-  const calc = (base * height) / 2
-  return calc
+  const calc = (base * height) / 2;
+  return calc;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  return splitedArray = frase.split(' ');
+  const splitedArray = frase.split(' ');
+  return splitedArray;
 }
-console.log(splitSentence('go trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let ultimo = nomes.length - 1;
+  return [nomes[0], nomes[ultimo]];
 }
 
 // Desafio 5
