@@ -14,21 +14,19 @@ function compareTrue(p1, p2)
 // Desafio 2
 function calcArea(base, height) 
 {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) 
 {
-  let array = string.split (' ');
-  return array;
+  return string.split (' ');
 }
 
-console.log (splitSentence('foguete'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) 
+{
+  return array [array.length-1] + ", " + array [0]; 
 }
 
 // Desafio 5
