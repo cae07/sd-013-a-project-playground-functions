@@ -1,8 +1,12 @@
 // Desafio 1 - se ambos os valores forem true...
 function compareTrue(num1, num2) {
-  if (num1 && num2);
-  return true;
+  if (num1 === true && num2 === true) {
+    return true;
+  }
+  return false;
 }
+
+console.log(compareTrue(1, 0));
 // Desafio 2 - calcula a área de um triangulo!
 function calcArea(base, height) {
   const calc = (base * height) / 2;
