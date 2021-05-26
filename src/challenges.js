@@ -80,40 +80,39 @@ function fizzBuzz(value) {
 // Desafio 9
 function encode(value) {
   let value2 = '';
+  let obj = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
 
-  for (let i in value) {
-    if (value[i] == 'a') {
-      value2 = value2 + '1';
-    } else if (value[i] === 'e') {
-      value2 += '2';
-    } else if (value[i] === 'i') {
-      value2 += '3';
-    } else if (value[i] === 'o') {
-      value2 += '4';
-    } else if (value[i] === 'u') {
-      value2 += '5';
+  for (let i of value) {
+    if (obj[i]) {
+      value2 += obj[i];
     } else {
-      value2 += value[i];
+      value2 += i;
     }
   }
   return value2;
 }
+
 function decode(value) {
   let value2 = '';
+  let obj = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  };
 
-  for (let i in value) {
-    if (value[i] === '1') {
-      value2 += 'a';
-    } else if (value[i] === '2') {
-      value2 += 'e';
-    } else if (value[i] === '3') {
-      value2 += 'i';
-    } else if (value[i] === '4') {
-      value2 += 'o';
-    } else if (value[i] === '5') {
-      value2 += 'u';
+  for (let i of value) {
+    if (obj[i]) {
+      value2 += obj[i];
     } else {
-      value2 += value[i];
+      value2 += i;
     }
   }
   return value2;
