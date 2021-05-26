@@ -1,7 +1,6 @@
-function footballPoints(wins, ties) {
- 
-  resultado = (wins * 3) + (ties * 1);
+function splitSentence(string) {
+   return string.split(" ",);
+   
 
-  return resultado;
 }
-console.log(footballPoints(14, 8));
+console.log(splitSentence('go trybe'))
