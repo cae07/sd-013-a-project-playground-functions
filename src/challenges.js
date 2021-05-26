@@ -52,21 +52,77 @@ function highestCount(array){
   }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2){
+  let distanciaCat1 = Math.abs(cat1-mouse);
+  let distanciaCat2 = Math.abs(cat2-mouse);
+
+  if (distanciaCat1 == distanciaCat2) {
+    return ('os gatos trombam e o rato foge');
+  } else if (distanciaCat1 > distanciaCat2) {
+      return ('cat2');
+    } else {
+        return('cat1');
+      }
+
+ 
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayfizzBuzz){
+  let retorno = [];
+  for(numero of arrayfizzBuzz){
+    if(numero % 3 == 0 && numero % 5 == 0){
+      retorno.push("fizzBuzz");
+    }else if(numero % 3 ==0){
+      retorno.push("fizz");
+    }else if(numero % 5 == 0){
+      retorno.push("buzz")
+    }else{
+      retorno.push("bug!");
+    }
+  }
+  return retorno;
 }
 
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeString){
+  let string = '';
+  for(let index = 0;index < encodeString.length; index +=1){
+    if(encodeString[index] == 'a'){
+      string = string + '1';
+      }else if(encodeString[index] == 'e'){
+        string = string + '2'
+        }else if(encodeString[index] == 'i'){
+          string = string + '3';
+          }else if(encodeString[index] == 'o'){
+            string = string + '4'
+            }else if(encodeString[index] == 'u'){
+              string = string + '5'
+              }else{
+                 string = string + encodeString[index];
+      }
+  }  
+  return (string)
 }
-function decode() {
-  // seu código aqui
+function decode(encodeString){
+  let string = '';
+  for (let index =0;index < encodeString.length; index +=1){
+    if(encodeString[index] == '1'){
+      string = string +'a';
+      }else if(encodeString[index] == '2'){
+        string = string +'e';
+        }else if(encodeString[index] == '3'){
+          string = string +'i';
+          }else if(encodeString[index] == '4'){
+            string = string +'o';
+            }else if(encodeString[index] == '5'){
+              string = string +'u'
+              }else{
+                string = string + encodeString[index];
+              }
+  }
+  return (string);
 }
 
 module.exports = {
