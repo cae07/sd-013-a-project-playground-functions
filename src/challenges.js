@@ -43,33 +43,20 @@ console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount(arrayNum) {
- let contador = 0;
-  for (let index = 0; index < arrayNum.length; index += 1) {
-    if( arrayNum > contador){
-      contador = arrayNum;
-    }
+ let maiorNum = arrayNum[0];
+ let contaVezes = 0;
     
-  } return contador;
+  for( index = 0; index < arrayNum.length; index += 1){   
+    if( arrayNum[index] > maiorNum ){
+      maiorNum = arrayNum[index];
+      contaVezes = 1;
+    } else if (arrayNum[index] == maiorNum){
+      contaVezes = contaVezes + 1;
+    }
+  }  return contaVezes; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-} 
+console.log(highestCount([-2,-2,-1,-1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
