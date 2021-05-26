@@ -85,12 +85,16 @@ function triangleCheck(lineA, lineB, lineC) {
   return true;
 }
 
-/*
-Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
- */
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+  let howManyIsNecessary = 0;
+  let extractedNumbers = string.replace(/\D/g, '').split('');
+  for (let i = 0; i < extractedNumbers.length; i += 1) {
+    let n = Number(extractedNumbers[i]);
+    howManyIsNecessary += n;
+  }
+  if (howManyIsNecessary === 1) return `${howManyIsNecessary} copo de água`;
+  return `${howManyIsNecessary} copos de água`;
 }
 
 module.exports = {
