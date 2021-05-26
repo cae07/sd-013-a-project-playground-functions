@@ -9,7 +9,7 @@ const {
 
 // Desafio 10
 function techList(techArray, name) {
-  let orderedTechs = techArray.sort().map((tech) => ({
+  let orderedTechs = [...techArray].sort().map((tech) => ({
     tech,
     name,
   }));
