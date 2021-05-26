@@ -23,7 +23,7 @@ function generatePhoneNumber(phoneNumbersArray) {
   }
   for (let comparaRepetido of phoneNumbersArray) {
     for (let repetidoComparar of phoneNumbersArray) {
-      if (repetidoComparar == comparaRepetido) {
+      if (repetidoComparar === comparaRepetido) {
         contaRepete += 1;
       }
       if (contaRepete >= 3) {
@@ -48,7 +48,9 @@ function generatePhoneNumber(phoneNumbersArray) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)
+    lineA < lineB + lineC && lineB < lineA + 
+    lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC)
+    && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)
   ) {
     return true;
   }

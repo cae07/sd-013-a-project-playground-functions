@@ -20,8 +20,7 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let newArray =
-    arrayStrings[arrayStrings.length - 1] + ',' + ' ' + arrayStrings[0];
+  let newArray = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
   return newArray;
 }
 
@@ -51,7 +50,6 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let mouseToCat1 = Math.abs(mouse - cat1);
   let mouseToCat2 = Math.abs(mouse - cat2);
-   
   if (mouseToCat1 < mouseToCat2) {
     return 'cat1';
   }
