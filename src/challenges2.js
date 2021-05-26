@@ -55,28 +55,47 @@ function generatePhoneNumber(arrayDeNumero) {
    return existe
   }
   
-  retorno = ""
+  let retorno = ""
 
-  if (tem11Numeros(arrayDeNumero) === true && existeNumeroMaiorQue9OuMenorQue0(arrayDeNumero) === false && existeNumeroRepetido3VezesOuMais (arrayDeNumero) === false ){
+  if (tem11Numeros(arrayDeNumero) === true && existeNumeroMaiorQue9OuMenorQue0(arrayDeNumero) === false && existeNumeroRepetido3VezesOuMais (arrayDeNumero) === false ) {
     retorno = `(${arrayDeNumero[0]}${arrayDeNumero[1]}) ${arrayDeNumero[2]}${arrayDeNumero[3]}${arrayDeNumero[4]}${arrayDeNumero[5]}${arrayDeNumero[6]}-${arrayDeNumero[7]}${arrayDeNumero[8]}${arrayDeNumero[9]}${arrayDeNumero[10]}`
-  } else if (tem11Numeros(arrayDeNumero) === true && existeNumeroMaiorQue9OuMenorQue0(arrayDeNumero) === true || existeNumeroRepetido3VezesOuMais (arrayDeNumero) === true ){
+  } else if (tem11Numeros(arrayDeNumero) === true && existeNumeroMaiorQue9OuMenorQue0(arrayDeNumero) === true || existeNumeroRepetido3VezesOuMais (arrayDeNumero) === true ) {
     retorno = 'não é possível gerar um número de telefone com esses valores'
   } else {
     retorno = "Array com tamanho incorreto."
   }
-  
   return retorno
 }
 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let possivel = false;
+  if(lineA + lineB > lineC && lineA + lineC > lineB && lineA < lineB + lineC) {
+    let absolutoAeB = Math.abs(lineA-lineB)
+    let absolutoBeC = Math.abs(lineB-lineC)
+    let absolutoCeA = Math.abs(lineC-lineA)
+    if(absolutoAeB < lineC && absolutoBeC < lineA && absolutoCeA < lineB){
+      possivel = true
+    }
+  }
+  return possivel
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+
+
+function hydrate(string) {
+  let numero = 0;
+  let cerveja = (string.match(/\d/g));
+  for (let i in cerveja) {
+    let adicionaNumero = parseInt(cerveja[i]);
+    numero += adicionaNumero;
+  }
+  if (numero === 1){
+    return `${numero} copo de água`
+  }else {
+  return `${numero} copos de água`;
+  }
 }
 
 module.exports = {
