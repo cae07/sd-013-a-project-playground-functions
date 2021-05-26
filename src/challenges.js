@@ -83,14 +83,54 @@ function fizzBuzz(listaNumero) {
   return listaFizzBuzz;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let letras = ['a', 'e', 'i', 'o', 'u'];
+  let numeros = ['1', '2', '3', '4', '5'];
+  let indexLetra;
+  let palavraEncode = '';
+
+  for (let index = 0; index < palavra.length; index += 1) {
+    for (let index2 = 0; index2 < letras.length; index2 += 1) {
+      if (palavra[index] === letras[index2]) {
+        indexLetra = index2;
+      }
+    }
+
+    if (palavra[index] !== letras[indexLetra]) {
+      palavraEncode += palavra[index];
+    }else{
+      palavraEncode += numeros[indexLetra];
+    }
+
+  }
+
+  return (palavraEncode);
 }
-function decode() {
-  // seu código aqui
+
+let palavraCodificada = encode("hi there!");
+
+function decode(palavra) {
+  let letras = ['a', 'e', 'i', 'o', 'u'];
+  let numeros = ['1', '2', '3', '4', '5'];
+  let indexNumero;
+  let palavraDecode = '';
+
+  for (let index = 0; index < palavra.length; index += 1) {
+    for (let index2 = 0; index2 < numeros.length; index2 += 1) {
+      if (palavra[index] === numeros[index2]) {
+        indexNumero = index2;
+      }
+    }
+
+    if (palavra[index] !== numeros[indexNumero]) {
+      palavraDecode += palavra[index];
+    } else {
+      palavraDecode += letras[indexNumero]
+    }
+  }
+
+  return palavraDecode;
 }
 
 module.exports = {
