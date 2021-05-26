@@ -82,8 +82,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 let phraseArray= [2, 15, 7, 9, 45];
 function fizzBuzz(phraseArray) {
-  
-
+  let somaTudo = []
+  for (let index = 0; index < phraseArray.length; index += 1) {
+    
+    if (phraseArray[index] % 5 === 0 && phraseArray[index] % 3 === 0) {
+      somaTudo.push("fizzBuzz");
+    } else if (phraseArray[index] % 5 === 0) {
+      somaTudo.push("buzz");
+    } else if (phraseArray[index] % 3 === 0) {
+      somaTudo.push("fizz");
+    } else {
+      somaTudo.push("bug!");
+    }
+    
+  }
+      return somaTudo
 }
 
 // Desafio 9
