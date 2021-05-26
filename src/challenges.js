@@ -47,13 +47,17 @@ function highestCount(array) {
   return contador;
 }
 
-console.log(highestCount([0, 0, 0]));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse - cat1 < mouse - cat2) {
+    return 'cat1';
+  }
+  if (mouse - cat1 > mouse - cat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
-
+console.log(catAndMouse(15, 6, 7));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
