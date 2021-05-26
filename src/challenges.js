@@ -103,16 +103,48 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-array = [9, 25];
-console.log(fizzBuzz(array));
+
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(phrase) {
+  let string = '';
+  for (let i = 0; i < phrase.length; i +=1) {
+    if (phrase[i] == 'a') {
+      string += '1';
+    } else if (phrase[i] == 'e') {
+      string += '2';  
+    } else if (phrase[i] == 'i') {
+      string += '3';  
+    } else if (phrase[i] == 'o') {
+      string += '4';  
+    } else if (phrase[i] == 'u') {
+      string += '5';  
+    } else {
+      string += phrase[i];
+    } 
+  }
+  return string;
 }
 
+function decode(phrase) {
+  let string = '';
+  for (let i = 0; i < phrase.length; i +=1) {
+    if (phrase[i] == '1') {
+      string += 'a';
+    } else if (phrase[i] == '2') {
+      string += 'e';  
+    } else if (phrase[i] == '3') {
+      string += 'i';  
+    } else if (phrase[i] == '4') {
+      string += 'o';  
+    } else if (phrase[i] == '5') {
+      string += 'u';  
+    } else {
+      string += phrase[i];
+    } 
+  }
+  return string;
+}
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
