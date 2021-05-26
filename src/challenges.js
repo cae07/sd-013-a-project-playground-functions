@@ -1,22 +1,39 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  
+function compareTrue(a, b) {
+  return a && b;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangle = (base * height) / 2;
+  return triangle;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let resultado = string.split(" ");
+  return resultado;
+  // let verificator = " ";
+  // let coma = ", ";
+  // let array = [];
+  // for (let index = 0; index < string.length; index += 1) {
+  //   if (string[index] === verificator) {
+  //     array.push(coma);
+  //   } else {
+  //     array.push(string[index]);
+  //   }
+  // }
+  // let array = string.split(" ");
+  // return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let arrayA = array[0];
+  let space = ", ";
+  let arrayB = array.pop()
+  let arrayC = arrayB.concat(space, arrayA);
+  return arrayC;
 }
 
 // Desafio 5
