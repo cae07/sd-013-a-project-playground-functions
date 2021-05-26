@@ -7,7 +7,7 @@ function compareTrue(x, y) {
 
 // Desafio 2
 function calcArea(base, height) {
-  var v = base * height 
+  let v = base * height 
   return v / 2
 }
 
@@ -32,8 +32,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(x) {
+  let y = x[0];
+  let z = 0
+
+  for (i = 0; i < x.length; i += 1) {
+    if (x[i] > y) {
+      y = x[i];
+    }
+  }
+  for (i =0; i < x.length; i += 1) {
+    if (y === x[i]) {
+      z += 1;
+    }
+  }
+
+  return z
 }
 
 // Desafio 7
