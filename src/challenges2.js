@@ -1,6 +1,5 @@
 // Desafio 10
 function techList(lista, name) {
-
   let objArr = [];
   let object = {};
 
@@ -26,13 +25,15 @@ function techList(lista, name) {
       return 0;
     }
   });
-
-return objArr;
+  
+  return objArr;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+
+
+
 }
 
 // Desafio 12

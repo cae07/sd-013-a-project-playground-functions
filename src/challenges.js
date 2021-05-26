@@ -1,50 +1,40 @@
 // Desafio 01
 function compareTrue(x, y) {
-
   if (x === true && y === true) {
     return true;
   } else {
     return false;
   }
-
 }
 
 // Desafio 2
 function calcArea(base, height) {
-
-  area = (base * height) / 2;
-
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  
   return str.split(' ');
 }
 
 // Desafio 4
 function concatName(arrStr) {
-
   let firstName = arrStr[0];
-  let lastIndex = arrStr.length -1;
+  let lastIndex = arrStr.length - 1;
   let lastName = arrStr[lastIndex];
-  
   return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-
   let totalPoints = 0;
   totalPoints = (wins * 3) + (ties * 1);
-
   return totalPoints;
 }
 
 // Desafio 6
 function highestCount(numbersArr) {
-
   let high = -999;
   let howManyHigh = [];
 
@@ -59,13 +49,11 @@ function highestCount(numbersArr) {
         howManyHigh.push(j);
       }
   }
-
-  return howManyHigh.length;
+return howManyHigh.length;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   let distanceCat1 = cat1 - mouse
   let distanceCat2 = cat2 - mouse
 
@@ -82,12 +70,10 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
-
 }
 
 // Desafio 8
 function fizzBuzz(arrNumb) {
-
   let arrResult = [];
 
   for (let i = 0; i < arrNumb.length; i += 1) {
@@ -101,19 +87,16 @@ function fizzBuzz(arrNumb) {
     } else {
       arrResult.push('bug!');
     }
-
   }
-return arrResult;
+  return arrResult;
 }
 
 // Desafio 9
 function encode(str) {
-
   let novaStr = '';
   let arrStr = str.split('');
   
   for (let i = 0; i < arrStr.length; i += 1) {
-    
     if (arrStr[i] === 'a') {
       arrStr[i] = 1;
       novaStr += arrStr[i];
@@ -132,19 +115,15 @@ function encode(str) {
     } else {
       novaStr += arrStr[i];
     }
-
   }
-
 return novaStr;
 }
 
 function decode(str) {
-  
   let novaStr = '';
   let arrStr = str.split('');
   
   for (let i = 0; i < arrStr.length; i += 1) {
-    
     if (arrStr[i] === '1') {
       arrStr[i] = 'a';
       novaStr += arrStr[i];
@@ -163,10 +142,8 @@ function decode(str) {
     } else {
       novaStr += arrStr[i];
     }
-
   }
-
-return novaStr;
+  return novaStr;
 }
 
 
