@@ -1,7 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  let res = true ? (param1 == true && param2 == true) : false;
-  return res;
+  if (param1 === true && param2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
