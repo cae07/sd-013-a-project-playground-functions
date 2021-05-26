@@ -28,7 +28,7 @@ function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length-1];
   let result = ultimo + ', '+ primeiro;
-  return result;
+  return result; 
 }
 console.log(concatName(['captain', 'my', 'captain']));
 
@@ -59,8 +59,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distGato1 = cat1 ;
-  let distGato2 = cat2 ;
+  let distGato1 = mouse - cat1 ;
+  let distGato2 = mouse - cat2 ;
     if( distGato1 < distGato2){
       return "cat1";
     } else if ( distGato2 < distGato1){
@@ -72,8 +72,8 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1,4,3));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNum) {
+  
 }
 
 // Desafio 9
