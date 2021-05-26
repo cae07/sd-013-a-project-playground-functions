@@ -1,26 +1,22 @@
 // Desafio 10
+// https://ricardo-reis.medium.com/operadores-l%C3%B3gicos-logical-operators-b0687819d1a5
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 function techList(array3, name) {
-  let info = {
-    tech: "",
-    name: name,
+  if(!array3.length) return 'Vazio!';
+  let info = [];
+  for (let i of array3) {
+    info.push ( {
+     tech: i,
+     name: name, 
+    });
   }
-  for(let i = 0; i <= array3.length; i += 1){
-   
-    if(i)
-
-  }
-
-
-
-
-
-
-
+  info.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
   return info;
 }
 
-console.log(techList("HTML, CSS, JAVASCRIPT, JAVA, C++", "Icaro"));
+console.log(techList("2", "Icaro"));
 
 // Desafio 11
 function generatePhoneNumber() {
