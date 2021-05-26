@@ -22,7 +22,9 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(array) {
-  console.log(array[array.length-1]+','+' '+ array[0])
+  let a = array[0];
+  let b = array[array.length-1]
+  return b +","+" " + a
 }
 
 // Desafio 5
@@ -64,13 +66,48 @@ function catAndMouse(mouse, cat1,cat2) {
 }     
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {  
+  for (let i=0;i<array.length;i+=1){
+    if (array[i]%3 ==0  && array[i]%5==0){
+        array[i] = 'fizzBuzz';
+    } else if (array[i]%3==0){
+        array[i] = 'fizz';
+    } else if (array[i]%5==0){
+        array[i] = 'buzz';
+    } else {
+        array[i] = 'bug!';
+    }  
+  }
+return array;
 }
+
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // Desafio 9
+function encode(str) {
+  for (let index = 0; index < str.length; index++) {
+       switch(str[index]){
+          case "a":
+              str[index]='1';
+              break;
+          case "e":
+              str[index]='2';
+              break;
+          case "i":
+              str[index]='3';
+              break;
+          case "o":
+              str[index]='4';
+              break;
+          case "u":
+              str[index]='5';
+              break;      
+       }
+  }
+return str;
+}
+console.log(encode("hi there!"));   
 }
 function decode() {
   // seu código aqui
