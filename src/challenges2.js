@@ -24,7 +24,7 @@ function techList(array, name) {
 // techList(tecnologias, name);
 
 
-let phoneNumber = [1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1];
+// let phoneNumber = [1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1];
 
 // Verifica se numero é menor que zero ou maior que nove
 function verificaNumero(array) {
