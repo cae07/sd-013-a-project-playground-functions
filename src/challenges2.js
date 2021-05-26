@@ -8,7 +8,7 @@ function techList(arrayTech, name) {
     }
   }
 
-  if (arrayTech == "") {
+  if (arrayTech === "") {
     return 'Vazio!'
   } else {
     return (arrayTech);
@@ -69,12 +69,26 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   };
 };
-console.log(Math.abs(-50));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBeverages) {
+  let quantidade = 0;
+  for (let i2 = 0; i2 < stringBeverages.length; i2 += 1) {
+    for (let i = 0; i < stringBeverages.length; i += 1) {
+      if (stringBeverages[i] == i2) {
+        quantidade += i2;
+      }
+    }
+  }
+  if (quantidade === 1) {
+    return quantidade + " copo de água";
+
+  } else {
+    return quantidade + " copos de água";
+  }
 }
+hydrate("1 cerveja");
+
 
 module.exports = {
   generatePhoneNumber,
