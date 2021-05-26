@@ -1,3 +1,5 @@
+const { add, subtract, descending } = require('./helpers.js');
+
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -20,21 +22,21 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return add(wins * 3, ties);
 }
 
 // Desafio 6
 function highestCount(numArray) {
   return [...numArray]
-    .sort((a, b) => b - a)
+    .sort(descending)
     .filter((n, idx, array) => n === array[0])
     .reduce((t) => t + 1, 0);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let d1 = Math.abs(mouse - cat1);
-  let d2 = Math.abs(mouse - cat2);
+  let d1 = Math.abs(subtract(mouse, cat1));
+  let d2 = Math.abs(subtract(mouse, cat2));
   return d1 === d2
     ? 'os gatos trombam e o rato foge'
     : `cat${d1 < d2 ? '1' : '2'}`;

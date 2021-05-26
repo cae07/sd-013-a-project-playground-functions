@@ -20,6 +20,10 @@ function higherThan(a) {
   };
 }
 
+function descending(a, b) {
+  return b - a;
+}
+
 function negative(a) {
   return a < 0;
 }
@@ -52,6 +56,7 @@ module.exports = {
   sumArray,
   subtractArray,
   higherThan,
+  descending,
   negative,
   anyNegative,
   anyHigherThanNine,
