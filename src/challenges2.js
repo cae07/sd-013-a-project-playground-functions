@@ -1,8 +1,8 @@
 // Desafio 10
-function techList() {
+function techList(myArray, nome) {
   msg = "Vazio!"
 
-  if (techList(myArray.length) == 0) {
+  if (myArray.length == 0) {
     return msg;    
   } else {
 
@@ -13,7 +13,7 @@ function techList() {
     for (let i = 0; i < ordem.length; i += 1) {
       obj = {
       tech: ordem[i],
-      name: name
+      name: nome
       };
       newArray.push(obj)
      };
