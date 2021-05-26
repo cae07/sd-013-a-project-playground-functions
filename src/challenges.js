@@ -14,14 +14,14 @@ function calcArea(base, height) {
   let area = base * height / 2;
   return area;
 }
-console.log(calcArea(51, 1))
+console.log(calcArea(51, 1));
 
 // Desafio 3 == OK, passou nos 3 testes
 function splitSentence(string) {
   string = string.split(' ');
   return string;
 }
-  console.log(splitSentence('go trybe'));
+console.log(splitSentence('go trybe'));
 
 // Desafio 4 == OK, passou nos 3 testes
 function concatName(array) {
@@ -39,11 +39,37 @@ function footballPoints(wins, ties) {
   let result = vitoria + empate;
   return result;
 }
-console.log(footballPoints(0,0))
+console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
- 
+function highestCount(arrayNum) {
+ let contador = 0;
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if( arrayNum > contador){
+      contador = arrayNum;
+    }
+    
+  } return contador;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
