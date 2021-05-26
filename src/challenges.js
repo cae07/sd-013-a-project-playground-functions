@@ -57,7 +57,6 @@ function highestCount(arrayNum) {
   return vezesMaior;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if(cat1 == cat2){
@@ -116,8 +115,6 @@ function encode(frase) {
  
 return resultado;
 }
-
-console.log(encode('hi there!'));
 
 function decode(frase) {
   for(let index = 0; index < frase.length; index +=1){
