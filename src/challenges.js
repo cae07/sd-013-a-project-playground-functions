@@ -99,6 +99,7 @@ function encode(stringTexto) {
   let trocaa5 = trocaa4.replace(/u/g,"5");
   return trocaa5;
     };
+    // A funcao usada nao foi apresentada no curso . Ao resolver esse desafio procurei algum comando que trocaria um caractere por outro . E encontrei nesse link https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=O%20m%C3%A9todo%20replace()%20percorre,feita%2C%20%C3%A9%20devolvida%20pelo%20m%C3%A9todo. e foi assim que resolvi essa questa.
 
 function decode(stringCodificada) {
   let novoTexto = stringCodificada;
