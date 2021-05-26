@@ -24,16 +24,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function maiorNumeroF(arrayNumero) {
-let maiorNumero = arrayNumero[0];
-for (let numeros of arrayNumero) {
-  if (numeros > maiorNumero) maiorNumero = numeros
-}
-return maiorNumero;
+  let maiorNumero = arrayNumero[0];
+  for (let numeros of arrayNumero) {
+    if (numeros > maiorNumero) maiorNumero = numeros;
+  }
+  return maiorNumero;
 }
 
 function highestCount(arrayNumero) {
   let contador = 0;
-  let maiorNumero = maiorNumeroF(arrayNumero)
+  let maiorNumero = maiorNumeroF(arrayNumero);
 
   for (let numeros of arrayNumero) {
     if (numeros === maiorNumero) contador += 1;
@@ -48,26 +48,57 @@ function catAndMouse(mouse, cat1, cat2) {
   let rgC2M = Math.abs((cat2 > mouse) ? (cat2 - mouse) : (mouse - cat2));
 
   if (rgC1M > rgC2M) {
-    ret = "cat2";
+    ret = 'cat2';
   } else if (rgC2M > rgC1M) {
-    ret = "cat1";
+    ret = 'cat1';
   } else {
-    ret = "os gatos trombam e o rato foge";
+    ret = 'os gatos trombam e o rato foge';
   }
   return ret;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function retornoFizzBuzz(value) {
+  let retorno = '';
+  retorno = value % 3 === 0 ? 'fizz' : retorno;
+  retorno = value % 5 === 0 ? 'buzz' : retorno;
+  retorno = (value % 3 === 0 && value % 5 === 0) ? 'fizzBuzz' : retorno;
+  return retorno;
+}
+
+function setFizzBuss(arrfizzBuzz) {
+  let arrRet = [];
+  let rtFB = '';
+  for (let index = 0; index < arrfizzBuzz.length; index += 1) {
+    rtFB = retornoFizzBuzz(arrfizzBuzz[index]);
+    arrRet.push(rtFB.length === 0 ? 'bug!' : rtFB);
+  }
+  return arrRet;
+}
+
+function fizzBuzz(arFiz) {
+  let arRet = setFizzBuss(arFiz);
+  return arRet;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let strReturn = '';
+  strReturn = str.split('a').join('1');
+  strReturn = strReturn.split('e').join('2');
+  strReturn = strReturn.split('i').join('3');
+  strReturn = strReturn.split('o').join('4');
+  strReturn = strReturn.split('u').join('5');
+  return strReturn;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let strReturn = '';
+  strReturn = str.split('1').join('a');
+  strReturn = strReturn.split('2').join('e');
+  strReturn = strReturn.split('3').join('i');
+  strReturn = strReturn.split('4').join('o');
+  strReturn = strReturn.split('5').join('u');
+  return strReturn;
 }
 
 module.exports = {
@@ -78,7 +109,10 @@ module.exports = {
   decode,
   encode,
   fizzBuzz,
+  setFizzBuss,
+  retornoFizzBuzz,
   footballPoints,
   highestCount,
+  maiorNumeroF,
   splitSentence,
 };
