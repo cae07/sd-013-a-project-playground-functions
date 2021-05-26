@@ -71,27 +71,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let gatoA = Math.abs(cat1 - mouse)
   let gatoB = Math.abs(cat2 - mouse)
 
-  if( gatoA < gatoB){
+  if ( gatoA < gatoB) {
     return "cat1"
-  }else if (gatoB < gatoA){
+  } else if (gatoB < gatoA) {
     return "cat2"
   } else if ( gatoA === gatoB) {
     return "os gatos trombam e o rato foge"
   }
 }
+// Desafio 8
+let phraseArray= [2, 15, 7, 9, 45];
+function fizzBuzz(phraseArray) {
+  
 
-  // Desafio 8
-  function fizzBuzz() {
-    // seu código aqui
-  }
+}
 
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
+// Desafio 9
+function encode() {
+// seu código aqui
+}
+function decode() {
+// seu código aqui
+}
 
   module.exports = {
     calcArea,
