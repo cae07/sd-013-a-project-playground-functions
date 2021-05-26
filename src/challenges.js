@@ -103,7 +103,6 @@ function decode(codedString) {
   let newStr = codedString.replace(/[12345]/g, (m) => uncode[m]);
   return newStr;
 }
-console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
