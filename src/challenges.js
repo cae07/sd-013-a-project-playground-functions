@@ -3,9 +3,8 @@ function compareTrue(num1, num2) {
   // seu código aqui
   if (num1 === true && num2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -20,13 +19,12 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4 
+// Desafio 4
 function concatName(arr) {
   // seu código aqui
   let first = arr[0];
-  let last = arr[arr.length -1];
-  let merge = last + ', ' + first;
-  return merge;
+  let last = arr[arr.length - 1];
+  return `${last},${first}`
 }
 
 // Desafio 5
@@ -38,8 +36,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arr) {
   // seu código aqui
+  let maior = 0;
+  let vezes = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] > maior) {
+    maior = arr[i];
+  }
+}
+  for (i = 0; i < arr.length; i += 1) {
+    if (arr[i] === maior) {
+    vezes++;
+}
+  }
+  return vezes;
 }
 
 // Desafio 7
