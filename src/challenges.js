@@ -46,15 +46,10 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 
 function highestCount(numeros) {
-  let maiorValor = numeros[0];
-  for (let indice in numeros) {
-    if (numeros[indice] > maiorValor) {
-      maiorValor = numeros[indice];
-    }
-  }
+  let maiorNumero = Math.max(...numeros);
   let cont = 0;
   for (let indice in numeros) {
-    if (numeros[indice] === maiorValor) {
+    if (maiorNumero === numeros[indice]) {
       cont += 1;
     }
   }
