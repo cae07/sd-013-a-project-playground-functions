@@ -1,6 +1,7 @@
 const {
+  add,
+  subtract,
   sumArray,
-  subtractArray,
   anyNegative,
   anyHigherThanNine,
   anyOverThree,
@@ -37,19 +38,14 @@ function generatePhoneNumber(digitsArray) {
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  const sides = [a, b, c];
-
-  for (let i = 0; i < sides.length; i += 1) {
-    const otherSides = [];
-    for (let j = 0; j < sides.length; j += 1) {
-      if (i !== j) otherSides.push(sides[j]);
-    }
-
-    let sum = sumArray(otherSides);
-    let diff = Math.abs(subtractArray(otherSides));
-
-    return sides[i] < sum && sides[i] > diff;
+  for (let i = 0; i < 3; i += 1) {
+    const sides = [a, b, c];
+    const side = sides.splice(i, 1)[0];
+    const sum = add(sides[0], sides[1]);
+    const diff = Math.abs(subtract(sides[0], sides[1]));
+    if (side < sum && side > diff) return true;
   }
+  return false;
 }
 
 // Desafio 13
