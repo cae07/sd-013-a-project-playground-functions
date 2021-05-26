@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  return b === true && a === true;
+  return b && a;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -18,18 +18,43 @@ function concatName(meuArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return Number(wins) && Number(ties) && ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function maiorNumeroF(arrayNumero) {
+let maiorNumero = arrayNumero[0];
+for (let numeros of arrayNumero) {
+  if (numeros > maiorNumero) maiorNumero = numeros
+}
+return maiorNumero;
+}
+
+function highestCount(arrayNumero) {
+  let contador = 0;
+  let maiorNumero = maiorNumeroF(arrayNumero)
+
+  for (let numeros of arrayNumero) {
+    if (numeros === maiorNumero) contador += 1;
+  }
+  return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let ret = '';
+  let rgC1M = Math.abs((cat1 > mouse) ? (cat1 - mouse) : (mouse - cat1));
+  let rgC2M = Math.abs((cat2 > mouse) ? (cat2 - mouse) : (mouse - cat2));
+
+  if (rgC1M > rgC2M) {
+    ret = "cat2";
+  } else if (rgC2M > rgC1M) {
+    ret = "cat1";
+  } else {
+    ret = "os gatos trombam e o rato foge";
+  }
+  return ret;
 }
 
 // Desafio 8
