@@ -80,9 +80,33 @@ function fizzBuzz(list) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(name) {
+  let newstring = ''
+  let list = name.split('')  
+
+  for (let index = 0; index < name.length; index += 1) {
+    if(list[index] == "a"){
+      list[index] = 1;
+      newstring = newstring + list[index];
+    }else if(list[index] == "e"){
+      list[index] = 2;
+      newstring = newstring + list[index];
+    }else if(list[index] == "i"){
+      list[index] = "3";
+      newstring = newstring + list[index];
+    }else if(list[index] == "o"){
+      list[index] = "4";
+      newstring = newstring + list[index];
+    }else if(list[index] == "u"){
+      list[index] = "5";
+      newstring = newstring + list[index];
+    }else{
+      newstring = newstring + list[index];
+    }
+  }return newstring;
 }
+console.log(encode("hi there"))
+
 function decode() {
   // seu código aqui
 }
