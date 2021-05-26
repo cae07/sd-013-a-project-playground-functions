@@ -1,7 +1,7 @@
 function footballPoints(wins, ties) {
-  // seu código aqui
-  resultado = (wins * 14) + (ties * 8);
+ 
+  resultado = (wins * 3) + (ties * 1);
 
   return resultado;
 }
-console.log(footballPoints(3, 1));
+console.log(footballPoints(14, 8));
