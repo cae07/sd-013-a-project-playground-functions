@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  phrase = phrase.split(" ");
+  phrase = phrase.split(' ');
   return phrase;
 }
 
@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2 *= (-1);
   }
   if (cat1 === cat2) {
-    result = "os gatos trombam e o rato foge";
+    result = 'os gatos trombam e o rato foge';
   } else if (cat1 > cat2) {
-    result = "cat2";
+    result = 'cat2';
   } else if (cat2 > cat1) {
-    result = "cat1";
+    result = 'cat1';
   }
   return result;
 }
@@ -74,13 +74,13 @@ function fizzBuzz(arrayNumber) {
   let result = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (arrayNumber[index] % 3 !== 0 && arrayNumber[index] % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else {
-      result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
