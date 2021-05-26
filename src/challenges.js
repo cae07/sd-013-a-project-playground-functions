@@ -51,22 +51,25 @@ function highestCount(num) {
   return repetNum;
 }
 
-// Desafio 7 - In Review
+// Desafio 7 - ok
 function catAndMouse(mouse, cat1, cat2) {
   let dCat1 = Math.abs(cat1 - mouse);
   let dcat2 = Math.abs(cat2 - mouse);
+  let msg;
   
   if (dCat1 < dcat2) {
-    console.log('cat1');
+    msg = 'cat1';
   } else if (dCat1 > dcat2) {
-    console.log('cat2');
+    msg = 'cat2';
   } else {
-    console.log('os gatos trombam e o rato foge');
+    msg = 'os gatos trombam e o rato foge';
   }
+  return msg;
   
 }
+//console.log(catAndMouse(0, 2, 1))
 
-// Desafio 8 - ok
+// Desafio 8 - ok // erro na função split
 function fizzBuzz(arr) {
   let aux = arr.split(',');
   let auxNum;
@@ -94,7 +97,6 @@ function fizzBuzz(arr) {
   return aux ;
 }
 
-//console.log(fizzBuzz('2, 15, 7, 9, 45'));
 
 // Desafio 9
 function encode() {
