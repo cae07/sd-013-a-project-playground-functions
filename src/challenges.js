@@ -55,16 +55,16 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1position = Math.abs(cat1 - mouse);
   let cat2position = Math.abs(cat2 - mouse);
-  
+
   if (cat1position < cat2position) {
     return 'cat1';
-   }
+  }
   else if (cat1position === cat2position) {
     return 'os gatos trombam e o rato foge';
-   }
+  }
   else {
     return 'cat2';
-   }
+  }
 }
 
 // Desafio 8
@@ -72,38 +72,37 @@ function fizzBuzz(string) {
   for (let index in string) {
     if (string[index] % 5 === 0 && string[index] % 3 === 0) {
       string[index] = 'fizzBuzz';
-     }
-    else if (string [index] % 5 === 0) {
+    }
+    else if (string[index] % 5 === 0) {
       string[index] = 'buzz';
-     }
+    }
     else if (string[index] % 3 === 0) {
       string[index] = 'fizz';
-     }
+    }
     else {
       string[index] = 'bug!';
-     }
+    }
   }
   return string;
 }
 
 // Desafio 9
 function encode(stringcod) {
-  stringcod = stringcod.replace(/a/g,"1");
-  stringcod = stringcod.replace(/e/g,"2");
-  stringcod = stringcod.replace(/i/g,"3");
-  stringcod = stringcod.replace(/o/g,"4");
-  stringcod = stringcod.replace(/u/g,"5");
+  stringcod = stringcod.replace(/a/g, '1');
+  stringcod = stringcod.replace(/e/g, '2');
+  stringcod = stringcod.replace(/i/g, '3');
+  stringcod = stringcod.replace(/o/g, '4');
+  stringcod = stringcod.replace(/u/g, '5');
   return stringcod;
 }
 function decode(stringcod) {
-  stringcod = stringcod.replace(/1/g,"a");
-  stringcod = stringcod.replace(/2/g,"e");
-  stringcod = stringcod.replace(/3/g,"i");
-  stringcod = stringcod.replace(/4/g,"o");
-  stringcod = stringcod.replace(/5/g,"u");
+  stringcod = stringcod.replace(/1/g, 'a');
+  stringcod = stringcod.replace(/2/g, 'e');
+  stringcod = stringcod.replace(/3/g, 'i');
+  stringcod = stringcod.replace(/4/g, 'o');
+  stringcod = stringcod.replace(/5/g, 'u');
   return stringcod; 
 }
-console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,

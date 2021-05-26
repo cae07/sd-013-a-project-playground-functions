@@ -38,33 +38,33 @@ function generatePhoneNumber(numeros) {
   let numeroRepetido = 0;
   for (let index2 in numeros) {
     numeroRepetido = numeros[index2];
-  
-    for (let index3 = 0; index3 < numeros.length; index3 += 1) {
-      if (numeros[index3] === numeroRepetido) {
-        contNumero += 1;
-      }
-    }
-    if (contNumero >= 3) {
-      return 'não é possivel gerar um número de telefone com esses valores';
-    }  
-    let mask = '(##)#####-####'
-    let novoNum = '';
-    let posicao = 0;
-    for (let i = 0; i < mask.length; i+= 1) {
-      if(mask[i] == '#') {
-         novoNum += numeros[posicao];
-         posicao += 1;
-      }
-      else {
-        {
-          novoNum += mask[i]
-        }
-      }
-    }
-    return novoNum;
   }
+  for (let index3 = 0; index3 < numeros.length; index3 += 1) {
+    if (numeros[index3] === numeroRepetido) {
+      contNumero += 1;
+      }
+    }     
+  console.log(contNumero);
+  if (contNumero >= 3) {
+    return 'não é possivel gerar um número de telefone com esses valores';
+  } 
+  let mask = '(##) #####-####'
+  let novoNum = '';
+  let posicao = 0;
+  for (let i = 0; i < mask.length; i+= 1) {
+    if(mask[i] == '#') {
+      novoNum += numeros[posicao];
+      posicao += 1;
+    }
+    else {
+      {
+        novoNum += mask[i]
+      }
+    }    
+  }
+  return novoNum;  
 }
-
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,2]))
 
 // Desafio 12
 function triangleCheck() {
