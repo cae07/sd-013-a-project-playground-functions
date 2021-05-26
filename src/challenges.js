@@ -40,7 +40,6 @@ function highestCount(x) {
     }
   }
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
