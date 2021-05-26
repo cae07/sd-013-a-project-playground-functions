@@ -67,14 +67,39 @@ function highestCount(parametro) {
   // Deverá retornar a quantidade de vezes que o numero se repete
 }
 
+// Desafio 7 feito com ajuda do link: https://developer.cdn.mozilla.net/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < (Math.abs(mouse - cat2))) {
+    return 'cat1';
+  }
+  else if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))){
+    return 'cat2';
+  }
+  else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let retornaString = [];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 != 0) {
+      retornaString.push('fizz')
+    }
+    else if (numeros[index] % 5 === 0 && numeros[index] % 3 != 0) {
+      retornaString.push('buzz')
+    }
+    else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      retornaString.push('fizzBuzz')
+    }
+    else {
+      retornaString.push('bug!')
+    }
+  }
+  return retornaString;
 }
 
 // Desafio 9
