@@ -107,9 +107,33 @@ function encode(name) {
 }
 console.log(encode("hi there"))
 
-function decode() {
-  // seu código aqui
+function decode(name) {
+  let newstring = ''
+  let list = name.split('')  
+
+  for (let index = 0; index < name.length; index += 1) {
+    if(list[index] == "1"){
+      list[index] = "a";
+      newstring = newstring + list[index];
+    }else if(list[index] == "2"){
+      list[index] = "e";
+      newstring = newstring + list[index];
+    }else if(list[index] == "3"){
+      list[index] = "i";
+      newstring = newstring + list[index];
+    }else if(list[index] == "4"){
+      list[index] = "o";
+      newstring = newstring + list[index];
+    }else if(list[index] == "5"){
+      list[index] = "u";
+      newstring = newstring + list[index];
+    }else{
+      newstring = newstring + list[index];
+    }
+  }return newstring;
 }
+console.log(decode("h3 th2r2!"))
+
 
 module.exports = {
   calcArea,
