@@ -84,30 +84,7 @@ return array;
 
 // Desafio 9
 function encode() {
-  // Desafio 9
-function encode(str) {
-  for (let index = 0; index < str.length; index++) {
-       switch(str[index]){
-          case "a":
-              str[index]='1';
-              break;
-          case "e":
-              str[index]='2';
-              break;
-          case "i":
-              str[index]='3';
-              break;
-          case "o":
-              str[index]='4';
-              break;
-          case "u":
-              str[index]='5';
-              break;      
-       }
-  }
-return str;
-}
-console.log(encode("hi there!"));   
+   
 }
 function decode() {
   // seu código aqui
