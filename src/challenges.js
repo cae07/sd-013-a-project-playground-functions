@@ -94,12 +94,45 @@ function fizzBuzz(numeros) {
   return retornaString;
 }
 
+// Feito com ajuda do Rogério P. da Silva. O cara é bom!
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codifica) {
+  let recebeNumero = '';
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let key of codifica) {
+    if (code[key]) {
+      recebeNumero += code[key];
+    } else {
+      recebeNumero += key;
+    }
+  }
+  return recebeNumero;
 }
-function decode() {
-  // seu código aqui
+function decode(decodifica) {
+  let recebeNumero = '';
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let key of decodifica) {
+    if (code[key]) {
+      recebeNumero += code[key];
+    } else {
+      recebeNumero += key;
+    }
+  }
+  return recebeNumero;
 }
 
 module.exports = {
