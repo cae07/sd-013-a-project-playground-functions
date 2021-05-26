@@ -43,8 +43,8 @@ function highestCount(value) {
       number = value[index];
     }
   }
-  for (let count = 0; count < array.length; count += 1) {
-    if (array[count] === number) {
+  for (let count = 0; count < value.length; count += 1) {
+    if (value[count] === number) {
       highNumber += 1;
     }
   }
@@ -52,46 +52,48 @@ function highestCount(value) {
 }
 
 // // Desafio 7
-// function catAndMouse(mouse, cat1, cat2) {
-//   let result = 0;
-//   if (mouse - cat1 > mouse - cat2) {
-//     return 'cat1';
-//   }
-//   if (mouse - cat1 < mouse - cat2) {
-//     return 'cat2';
-//   } 
-//   if ((mouse - cat2) < 0) {
-//     result = mouse - cat2 * (-1);
-//   }
-//   if (result === mouse - cat1) {
-//     return 'os gatos trombam e o rato foge';
-//   }
-// }
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = cat1 - mouse;
+  let distCat2 = cat2 - mouse;
+  if (distCat1 < 0) {
+    distCat1 = -1 * distCat1; 
+  }
+  if (distCat2 < 0) {
+    distCat2 = -1 * distCat2;
+  }
+  if (distCat1 < distCat2) {
+    return 'cat1';
+  }
+  if (distCat1 > distCat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge'
+}
 
 // Desafio 8
-// function fizzBuzz(array) {
-//   let result = [''];
-//   for (let index = 0; index < array.length; index += 1) {
-//     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-//       result = result + 'fizzBuzz';
-//     }
-//     else if (array[index] % 3 === 0) {
-//       result = result + 'fizz';
-//     }
-//     else if (array[index] % 5 === 0) {
-//       result = result + 'buzz';
-//     }
-//     result = result + 'bug!'
-//   }
-//   return result;
-// }
+function fizzBuzz(array) {
+  let result = [''];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      result = result + 'fizzBuzz';
+    }
+    else if (array[index] % 3 === 0) {
+      result = result + 'fizz';
+    }
+    else if (array[index] % 5 === 0) {
+      result = result + 'buzz';
+    }
+    result = result + 'bug!'
+  }
+  return result;
+}
 
 
 
-// // Desafio 9
+// Desafio 9
 function encode(string) {
   let separa = string.split('');
-  let code = '';
+  let code = ' ';
   for (let index = 0; index < string.length; index += 1) {
     if (separa[index] === 'a') {
       code = code + 1;
@@ -109,7 +111,6 @@ function encode(string) {
   }
   return code;
 }
-console.log(encode('aeiou'));
 function decode() {
   // seu código aqui
 }
