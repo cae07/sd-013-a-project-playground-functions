@@ -57,11 +57,18 @@ function generatePhoneNumber(myArray) {
   return res;  
 }
 
-console.log(generatePhoneNumber(vetor));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+
+  if(lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineB + lineA){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
