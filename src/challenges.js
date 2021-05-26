@@ -18,19 +18,27 @@ function splitSentence(string) {
   }
 
 // Desafio 4
-function concatName(array) {
-  let primeiroItem = array[0];
-  let ultimoItem = array[array.lenght - 1];
-    return (ultimoItem + " " + primeiroItem)
+function concatName(names) {
+  let x = names [names.lenght -1];
+  let y = names [0];
+  return `${x}, ${y}`
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let gamesWins = wins * 3;
+  let gamesTies = ties * 1;
+  return gamesWins + gamesTies
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(x) {
+  var y = x.sort()
+  let resu = []
+  for (i = 0; i < x.length; i =+ 1) {
+    if (y[i] === i[i]) {
+      resu.push (i[i])
+    }
+  }
 }
 
 // Desafio 7
