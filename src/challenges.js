@@ -169,42 +169,6 @@ function decode(str) {
 return novaStr;
 }
 
-// Desafio 10
-// TERMINAR DEPOIS
-function techList(lista, name) {
-
-  let objArr = [];
-  let object = {};
-
-  for (let i = 0; i < lista.length; i += 1) {
-    object = {
-      tech: lista[i],
-      name: name
-    };
-    objArr.push(object);
-  }
-
-  if (objArr === []) {
-    return 'Vazio!'
-  }
-
-  objArr.sort(function (x, y) {
-    
-    if (x.tech > y.tech) {
-      return 1;
-    } else if ( y.tech > x.tech) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
-
-return objArr;
-let x = ['React', 'Python', 'SQL'];
-console.log(techList(x, 'Gus'));
-}
-
-
 
 module.exports = {
   calcArea,
