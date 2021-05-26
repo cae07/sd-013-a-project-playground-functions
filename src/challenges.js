@@ -80,7 +80,7 @@ function fizzBuzz(arrayFizzBuzz) {
 // Desafio 9
 function encode(stringEncode) {
   let encodeString = '';
-  let encode = {
+  let encodeO = {
     a: '1',
     e: '2',
     i: '3',
@@ -88,10 +88,10 @@ function encode(stringEncode) {
     u: '5',
   };
   for (let indexE = 0; indexE < stringEncode.length; indexE += 1) {
-    if (encode[stringEncode[indexE]] === undefined) {
+    if (encodeO[stringEncode[indexE]] === undefined) {
       encodeString += stringEncode[indexE];
     } else {
-      encodeString += encode[stringEncode[indexE]];
+      encodeString += encodeO[stringEncode[indexE]];
     }
   }
   return encodeString;
@@ -99,7 +99,7 @@ function encode(stringEncode) {
 
 function decode(stringDecode) {
   let decodeString = '';
-  let decode = {
+  let decodeO = {
     1: 'a',
     2: 'e',
     3: 'i',
@@ -107,10 +107,10 @@ function decode(stringDecode) {
     5: 'u',
   };
   for (let indexD = 0; indexD < stringDecode.length; indexD += 1) {
-    if (decode[stringDecode[indexD]] === undefined) {
+    if (decodeO[stringDecode[indexD]] === undefined) {
       decodeString += stringDecode[indexD];
     } else {
-      decodeString += decode[stringDecode[indexD]];
+      decodeString += decodeO[stringDecode[indexD]];
     }
   }
   return decodeString;
