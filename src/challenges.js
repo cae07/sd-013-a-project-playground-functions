@@ -40,12 +40,12 @@ function highestCount(numeros) {
    }
   }for(i=0;i<numeros.length;i+=1){
      if(maior===numeros[i]){
-       contador+=1
+       contador+=1;
      }
    }return contador;
  }
 
-// Desafio 7
+// Desafio 7//math.abs foi uma dica do plantão para retornar valores inteiros
 function catAndMouse(mouse,cat1,cat2) {
   let distcat1= Math.abs(mouse-cat1);
   let distcat2=Math.abs(mouse-cat2);
@@ -59,16 +59,42 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  novoarray=[];//como é um novo array preciso criar um array vazio e ir add.
+  for(const key in numeros){
+    if(numeros[key]%3===0 && numeros[key]%5===0){//igual a 0 para ter certeza que é divisivel.para o resto ser 0.
+    novoarray.push ('fizzBuzz');
+  }else if(numeros[key]%5===0){
+    novoarray.push ('buzz');
+  }else if(numeros[key]%3===0){
+    novoarray.push ('fizz');
+  }else{
+    novoarray.push ('bug!');
+  }
+}
+  return novoarray;
 }
 
+
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+//consultei https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+function encode(string) {
+  string=string.replace(/a/gi, '1');//g vem de global e i de ignore-ignora difer de maiuscula e minuscula
+  string=string.replace(/e/gi, '2');
+  string=string.replace(/i/gi, '3');
+  string=string.replace(/o/gi, '4');
+  string=string.replace(/u/gi, '5');
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  string=string.replace(/1/gi, 'a');
+  string=string.replace(/2/gi, 'e');
+  string=string.replace(/3/gi, 'i');
+  string=string.replace(/4/gi, 'o');
+  string=string.replace(/5/gi, 'u');
+  return string;
 }
 
 module.exports = {
