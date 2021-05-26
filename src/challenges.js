@@ -110,24 +110,6 @@ function decode(stringCodificada) {
   return troca5;
 };
 
-// Desafio 10 
-function techList (arrayTech ,name){
-  let arrayObj = []
-    for(let i = 0; i < arrayTech.length; i += 1) {
-      let obj = {
-        tech : "",
-        name : name
-      };
-      obj.tech = arrayTech.sort()[i];
-      arrayObj.push(obj);
-  }
-   if(arrayObj.length === 0) {
-    return "Vazio!";
-  } else {
-      return arrayObj;
-  }
-} 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,
