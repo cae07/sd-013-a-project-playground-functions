@@ -80,36 +80,42 @@ function fizzBuzz(arrayFizzBuzz) {
 // Desafio 9
 function encode(stringEncode) {
   let encodeString = '';
-  let code = {
+  let encode = {
     a: '1',
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
+    u: '5',
   };
   for (let indexE = 0; indexE < stringEncode.length; indexE += 1) {
-    if (code[stringEncode[indexE]] === undefined) {
+    if (encode[stringEncode[indexE]] === undefined) {
       encodeString += stringEncode[indexE];
     } else {
-      encodeString += code[stringEncode[indexE]];
+      encodeString += encode[stringEncode[indexE]];
     }
-    // for (let key in code) {
-    //   if (key == stringEncode[indexE]) {
-    //     encodeString += code[stringEncode[indexE]];
-    //     break;
-    //   };
-    // } if (stringEncode[indexE] === ' ') {
-    //   encodeString += ' ';
-    // } else {
-    //   encodeString += stringEncode[indexE];
-    // }
   }
   return encodeString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let decodeString = '';
+  let decode = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let indexD = 0; indexD < stringDecode.length; indexD += 1) {
+    if (decode[stringDecode[indexD]] === undefined) {
+      decodeString += stringDecode[indexD];
+    } else {
+      decodeString += decode[stringDecode[indexD]];
+    }
+  }
+  return decodeString;
 }
+console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
@@ -123,5 +129,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
