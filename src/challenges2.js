@@ -1,3 +1,11 @@
+const {
+  sumArray,
+  subtractArray,
+  anyNegative,
+  anyHigherThanNine,
+  anyOverThree,
+} = require('./helpers.js');
+
 // Desafio 10
 function techList(techArray, name) {
   let orderedTechs = techArray.sort().map((tech) => ({
@@ -9,62 +17,32 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(digitsArray) {
-  if (digitsArray.length == 11) {
+  if (digitsArray.length === 11) {
     if (
       !anyOverThree(digitsArray) &&
       !anyNegative(digitsArray) &&
       !anyHigherThanNine(digitsArray)
     ) {
-      let template = '(areaCode) exchangeCode-lineNumber';
-      template = template.replace('areaCode', digitsArray.slice(0, 2).join(''));
-      template = template.replace(
-        'exchangeCode',
-        digitsArray.slice(2, 7).join('')
-      );
-      template = template.replace(
-        'lineNumber',
-        digitsArray.slice(7, 11).join('')
-      );
+      let template = '(area) exchange-line';
+      template = template.replace('area', digitsArray.slice(0, 2).join(''));
+      template = template.replace('exchange', digitsArray.slice(2, 7).join(''));
+      template = template.replace('line', digitsArray.slice(7, 11).join(''));
       return template;
     }
 
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return 'Array com tamanho incorreto.';
-
-  // ************************************
-
-  function anyNegative(array) {
-    return array.some(negative);
-  }
-
-  function anyHigherThanNine(array) {
-    return array.some(higherThan(9));
-  }
-
-  function anyOverThree(array) {
-    for (let i = 0; i < array.length; i++) {
-      let counter = 1;
-      for (let j = 0; j < array.length; j++) {
-        if (array[j] == array[i]) {
-          counter++;
-          if (counter > 3) return true;
-        }
-      }
-    }
-
-    return false;
-  }
 }
 
 // Desafio 12
 function triangleCheck(a, b, c) {
   const sides = [a, b, c];
 
-  for (let i = 0; i < sides.length; i++) {
+  for (let i = 0; i < sides.length; i += 1) {
     const otherSides = [];
-    for (let j = 0; j < sides.length; j++) {
-      i !== j && otherSides.push(sides[j]);
+    for (let j = 0; j < sides.length; j += 1) {
+      if (i !== j) otherSides.push(sides[j]);
     }
 
     let sum = sumArray(otherSides);
@@ -91,31 +69,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-// *********************
-
-function add(a, b) {
-  return a + b;
-}
-
-function subtract(a, b) {
-  return a - b;
-}
-
-function sumArray(array) {
-  return array.reduce(add);
-}
-
-function subtractArray(array) {
-  return array.reduce(subtract);
-}
-
-function higherThan(a) {
-  return function (b) {
-    return b > a;
-  };
-}
-
-function negative(a) {
-  return a < 0;
-}

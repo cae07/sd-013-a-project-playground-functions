@@ -27,15 +27,15 @@ function footballPoints(wins, ties) {
 function highestCount(numArray) {
   return [...numArray]
     .sort((a, b) => b - a)
-    .filter((n, idx, array) => n == array[0])
-    .reduce((t) => ++t, 0);
+    .filter((n, idx, array) => n === array[0])
+    .reduce((t) => t + 1, 0);
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let d1 = Math.abs(mouse - cat1),
-    d2 = Math.abs(mouse - cat2);
-  return d1 == d2
+  let d1 = Math.abs(mouse - cat1);
+  let d2 = Math.abs(mouse - cat2);
+  return d1 === d2
     ? 'os gatos trombam e o rato foge'
     : `cat${d1 < d2 ? '1' : '2'}`;
 }
@@ -43,16 +43,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numArray) {
   return numArray.map((n) => {
-    if (n % 3 == 0) {
-      if (n % 5 == 0) {
+    if (n % 3 === 0) {
+      if (n % 5 === 0) {
         return 'fizzBuzz';
       }
       return 'fizz';
-    } else if (n % 5 == 0) {
-      return 'buzz';
-    } else {
-      return 'bug!';
     }
+
+    if (n % 5 === 0) {
+      return 'buzz';
+    }
+
+    return 'bug!';
   });
 
   // **********************
@@ -75,9 +77,7 @@ function decode(string) {
 
   return string
     .split('')
-    .map((c) => {
-      return Number(c) ? vowels[c - 1] : c;
-    })
+    .map((c) => (Number(c) ? vowels[c - 1] : c))
     .join('');
 }
 
