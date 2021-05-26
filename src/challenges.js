@@ -30,31 +30,60 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let vitoria = 3;
   let empate = 1;
-
   return wins * vitoria + ties * empate;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1 = mouse - cat1;
+  let mouseCat2 = mouse - cat2;
+  let cat;
+
+  if (mouseCat1 < 0) {
+    mouseCat1 *= -1;
+  } else if (mouseCat2 < 0) {
+    mouseCat2 *= -1;
+  }
+
+  if (mouseCat1 < mouseCat2) {
+    cat = 'cat1';
+  } else if (mouseCat2 < mouseCat1) {
+    cat = 'cat2';
+  } else {
+    cat = 'os gatos trombam e o rato foge';
+  }
+  return cat;
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  // seu código
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string2) {
+  string2 = string2.replace(/a/g, '1');
+  string2 = string2.replace(/e/g, '2');
+  string2 = string2.replace(/i/g, '3');
+  string2 = string2.replace(/o/g, '4');
+  string2 = string2.replace(/u/g, '5');
+  return string2;
+  // Precisamos utilizar o 'g' após a barra devido ser a flag "Global"
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
+  return string;
+  // Precisamos utilizar o 'g' após a barra devido ser a flag "Global"
 }
 
 module.exports = {
