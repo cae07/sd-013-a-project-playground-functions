@@ -52,7 +52,9 @@ function highestCount(numeros) {
   let maiorNumero = numeros[0];
 
   for (const numero of numeros) {
-    if (maiorNumero < numero) { maiorNumero = numero; }
+    if (maiorNumero < numero) {
+      maiorNumero = numero;
+    }
   }
 
   return quantidadeDeOcorrencias(numeros, maiorNumero);
@@ -60,7 +62,7 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let vencedor;
+  let vencedor = 0;
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     vencedor = 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
