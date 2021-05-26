@@ -43,33 +43,27 @@ console.log(footballPoints(0,0))
 
 // Desafio 6
 function highestCount() {
-  /* let vezesAparece = 1;
-
-  for(let index = 0; index < array.length; index += 1){
-    if(array[index]>contador){
-    contador = array[index]
-  }else if(
-    array[index] = contador ;
-    vezeAparece = vezesAparece + 1;
-    )
-  }
-  return vezesAparece;
-} 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) */
+ 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distGato1 = mouse - cat1 ;
-  let distGato2 = mouse - cat2 ;
-    if( distGato1 < distGato2){
+  let distGato1 = cat1 - mouse ;
+    if (distGato1 < 0 ){
+      distGato1 == (distGato1 * -1);
+    }
+  let distGato2 = cat2 - mouse ;
+  if (distGato2 < 0) {
+    distGato2 == (distGato2 * -1);
+  }
+
+if( distGato1 < distGato2){
       return "cat1";
     } else if ( distGato2 < distGato1){
       return "cat2";
     } else if ( distGato2 == distGato1){
       return "os gatos trombam e o rato foge"
     } 
-}
-console.log(catAndMouse(1,4,3));
+}console.log(catAndMouse(10,4,22));
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
