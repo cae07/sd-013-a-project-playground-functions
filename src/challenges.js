@@ -64,7 +64,7 @@ function highestCount(array1) {
 
   return value;
 }
-console.log(highestCount([-2,-2,-1]));
+// console.log(highestCount([-2,-2,-1]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -91,9 +91,29 @@ console.log(catAndMouse(5,-3,12));
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array2) {
+let text =[];
+  for(let i = 0; i < array2.length; i += 1){
+    if((array2[i] % 3) == 0 && (array2[i] % 5) != 0){
+      text= text + "fizz";
+    }
+    else if((array2[i] % 5) == 0 && (array2[i] % 3) != 0){
+      text= text + "buzz";
+    }
+    else if((array2[i] % 3) == 0 && (array2[i] % 5) == 0){
+      text= text + "fizzBuzz";
+    }
+
+    else{
+      text= text + "bug!";
+    }
+    
+  }
+return text;
 }
+
+console.log(fizzBuzz([3,15,3,3]));
+
 
 // Desafio 9
 function encode() {
