@@ -42,21 +42,92 @@ function highestCount(numArray) {
   return (numArray.length);
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  d1 = Math.abs(mouse - cat1);
+  d2 = Math.abs(mouse - cat2);
+  if(d1 > d2){
+    return ("cat2");
+  }
+  else if ( d1 == d2){
+    return("os gatos trombam e o rato foge");
+  }
+  return ("cat1");
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numArray) {
+  var num;
+  var fizzBuzzArray = new Array();
+  for(let i=0; i < numArray.length ; i++){
+    num = numArray[i];
+    if((num%3 == 0) && (num%5 == 0)){
+      fizzBuzzArray.push("fizzBuzz");
+    }
+    else if (num%3 == 0){
+      fizzBuzzArray.push("fizz");
+    }
+    else if (num%5 == 0){
+      fizzBuzzArray.push("buzz");
+    }
+    else {
+      fizzBuzzArray.push("bug!")
+    }
+  }
+  return fizzBuzzArray;
+}
+// Desafio 9
+function encode(fraseToEncode) {
+  var frase = fraseToEncode;
+  for(let i=0;i<frase.length;i++){
+    //console.log(frase[i],i,frase.length);
+      switch(frase[i]){
+
+        case "a":
+          frase = frase.replace('a','1');
+          break;
+        case "e":
+          frase = frase.replace('e','2');
+          break;
+        case "i":
+          frase = frase.replace('i','3');
+          break;
+        case "o":
+          frase = frase.replace('o','4');
+          break;
+        case "u":
+          frase = frase.replace('u','5');
+          break;
+      }
+  }
+  return frase;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+//console.log(encode("frase"));
+function decode(fraseToDecode) {
+  var frase = fraseToDecode;
+  for(let i=0;i<frase.length;i++){
+    //console.log(frase[i],i,frase.length);
+      switch(frase[i]){
+
+        case "1":
+          frase = frase.replace('1','a');
+          break;
+        case "2":
+          frase = frase.replace('2','e');
+          break;
+        case "3":
+          frase = frase.replace('3','i');
+          break;
+        case "4":
+          frase = frase.replace('4','o');
+          break;
+        case "5":
+          frase = frase.replace('5','u');
+          break;
+      }
+  }
+  return frase;
 }
 
 module.exports = {
