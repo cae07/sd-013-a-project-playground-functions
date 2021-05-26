@@ -1,11 +1,9 @@
 // Desafio 1 - se ambos os valores forem true...
 function compareTrue(num1, num2) {
   if (num1 && num2) {
-    return true;
-  }
+  
+  return true;
 }
-console.log(compareTrue(2, 3));
-
 // Desafio 2 - calcula a área de um triangulo!
 function calcArea(base, height) {
   const calc = (base * height) / 2;
@@ -21,8 +19,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nomes) {
   let ultimo = nomes.length - 1;
-  return [nomes[0], nomes[ultimo]];
+  let lastOne = [nomes[ultimo], nomes[0]].join(', ')
+  return lastOne.toString(lastOne);
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
@@ -63,4 +63,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
