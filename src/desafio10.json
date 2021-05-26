@@ -1,0 +1,13 @@
+function listTech (arrayTech ,name){
+  let obj = {
+    tech : "",
+    name : name
+  }
+  let arrayObj = []
+  for(let i = 0; i < arrayTech.length; i += 1) {
+    obj.tech = arrayTech[i];
+    arrayObj.push(obj);
+    console.log(arrayObj)
+  }return arrayObj
+}; console.log(listTech(["React", "Jest", "HTML", "CSS", "JavaScript"] ,
+"Lucas"))

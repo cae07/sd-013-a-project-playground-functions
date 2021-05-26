@@ -1,16 +1,16 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true){
+  if (bool1 === true && bool2 === true) {
     return true;
   }
   else {
-    return false;
+    return false
   }
 };
 
 // Desafio 2
-function calcArea(base , height) {
-  let area = (base*height)/2;
+function calcArea(base, height) {
+  let area = (base * height) / 2;
   return area;
 };
 
@@ -97,24 +97,6 @@ function encode(stringTexto) {
   let trocaa3 = trocaa2.replace(/i/g,"3");
   let trocaa4 = trocaa3.replace(/o/g,"4");
   let trocaa5 = trocaa4.replace(/u/g,"5");
-  // for(let i = 0; i < stringTexto.length; i += 1){
-  //   if(stringTexto[i] === "a"){
-  //     novoTexto.replace("a","1")
-  //     console.log(novoTexto)
-  //   };
-  //   if(stringTexto[i] === "e"){
-  //     novoTexto.replace("i","2")
-  //     console.log(novoTexto)
-  //   };    
-  //   if(stringTexto[i] === "i"){
-  //     novoTexto.replace("i","3")
-  //   };
-  //   if(stringTexto[i] === "o"){
-  //     novoTexto.replace("o","4")
-  //   };   
-  //   if(stringTexto[i] === "u"){
-  //     novoTexto.replace("u","5")
-  //     console.log(novoTexto) 
   return trocaa5;
     };
 
@@ -127,6 +109,20 @@ function decode(stringCodificada) {
   let troca5 = troca4.replace(/5/g,"u");
   return troca5;
 };
+
+// Desafio 10 
+function listTech (arrayTech ,name){
+  let arrayObj = []
+  for(let i = 0; i < arrayTech.length; i += 1) {
+    let obj = {
+      tech : "",
+      name : name
+    }
+    obj.tech = arrayTech.sort()[i];
+    arrayObj.push(obj);
+  }return arrayObj
+}; console.log(listTech(["React", "Jest", "HTML", "CSS", "JavaScript"] ,
+"Lucas"))
 
 module.exports = {
   calcArea,
