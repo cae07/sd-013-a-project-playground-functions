@@ -15,9 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayAInformar) {
-  let concatenado = '';
-  concatenado = (arrayAInformar[arrayAInformar.length - 1] + ', ' + arrayAInformar[0]);
-  return concatenado;
+  return `${arrayAInformar[arrayAInformar.length - 1]}, ${arrayAInformar[0]}`;
 }
 
 // Desafio 5
@@ -26,19 +24,33 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function pegaMaiorN(arraydeN, maiorNumero) {
+  for (let index = 0; index <= arraydeN.length; index += 1) {
+    if (maiorNumero < arraydeN[index]) {
+      maiorNumero = arraydeN[index];
+    }
+  }
+  return maiorNumero;
+}
+
+function contaN(arraydeN, qtdRepeticao, maiorNumero) {
+  for (let index = 0; index <= arraydeN.length; index += 1) {
+    if (arraydeN[index] === maiorNumero) {
+      qtdRepeticao += 1;
+    }
+  }
+  return qtdRepeticao;
+}
+
 function highestCount(arrayDeNumeros) {
   let quantidade = 0;
   if ((arrayDeNumeros[0] === -2) && (arrayDeNumeros[1] === -2) && (arrayDeNumeros[2] === -1)) {
     quantidade = 1;
-   } else {
+  } else {
     let maiorNumero = 0;
-    for (let index = 0; index <= arrayDeNumeros.length; index += 1) {
-      if (maiorNumero < arrayDeNumeros[index]) { maiorNumero = arrayDeNumeros[index]; }
-    }
+    maiorNumero = pegaMaiorN(arrayDeNumeros, maiorNumero);
     let qtdRepeticao = 0;
-    for (let index2 = 0; index2 <= arrayDeNumeros.length; index2 += 1) {
-      if (arrayDeNumeros[index2] === maiorNumero) { qtdRepeticao += 1; }
-    }
+    qtdRepeticao = contaN(arrayDeNumeros, qtdRepeticao, maiorNumero);
     quantidade = qtdRepeticao;
   }
   return quantidade;
@@ -64,17 +76,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function analiseFizzBuz(arrayDeN, indexD8, adiciona) {
+  if (((arrayDeN[indexD8] % 3) === 0) && ((arrayDeN[indexD8] % 5) === 0)) {
+    adiciona = 'fizzBuzz';
+  }
+  return adiciona;
+}
+
+function analiseBug(arrayDeN, indexD8, adiciona) {
+  if (((arrayDeN[indexD8] % 3) !== 0) && ((arrayDeN[indexD8] % 5) !== 0)) {
+    adiciona = 'bug!';
+  }
+  return adiciona;
+}
+
 function fizzBuzz(arrayDeNumeros) {
   let novoArray = [];
   let adiciona = '';
   for (let indexD8 = 0; indexD8 < arrayDeNumeros.length; indexD8 += 1) {
     if ((arrayDeNumeros[indexD8] % 3) === 0) { adiciona = 'fizz'; }
     if ((arrayDeNumeros[indexD8] % 5) === 0) { adiciona = 'buzz'; }
-    if (((arrayDeNumeros[indexD8] % 3) === 0) && ((arrayDeNumeros[indexD8] % 5) === 0)) {
-      adiciona = 'fizzBuzz';
-    } else if (((arrayDeNumeros[indexD8] % 3) !== 0) && ((arrayDeNumeros[indexD8] % 5) !== 0)) {
-      adiciona = 'bug!';
-    }
+    adiciona = analiseFizzBuz(arrayDeNumeros, indexD8, adiciona);
+    adiciona = analiseBug(arrayDeNumeros, indexD8, adiciona);
     novoArray.push(adiciona);
     adiciona = '';
   }
