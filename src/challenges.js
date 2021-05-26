@@ -13,9 +13,34 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  frase += ' ';
+  let listaPalavra = [];
+  let indexEspacos = [];
+  let novaListaPalavra = [];
+  let palavra = '';
+
+  for (let index = 0; index < frase.length; index += 1) {
+    palavra += frase[index];
+
+    if (frase[index] === ' ') {
+      indexEspacos.push(index);
+      listaPalavra.push(palavra);
+      palavra = '';
+    }else{
+      listaPalavra.push(palavra);
+    }
+  }
+
+  for (let index = 0; index < indexEspacos.length; index += 1) {
+    let novoIndex = indexEspacos[index] - 1;
+    novaListaPalavra.push(listaPalavra[novoIndex]);
+  }
+
+  return novaListaPalavra;
 }
+
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName(lista) {
