@@ -38,11 +38,11 @@ function highestCount(value) {
   let higherNumber = value[0];
   let cont = 0;
 
-  for (let index = 0; index < value.length; index += 1) {
-    if (higherNumber < value[index]) {
-      higherNumber = value[index];
+  for (let i = 0; i < value.length; i += 1) {
+    if (higherNumber < value[i]) {
+      higherNumber = value[i];
       cont = 1;
-    } else if (value[index] === higherNumber) {
+    } else if (value[i] === higherNumber) {
       cont += 1;
     }
   }
@@ -61,6 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Matheus Duarte Me ajudou, merece beijo tbm <3.
 function fizzBuzz(value) {
   let arr = [];
 
@@ -78,6 +79,7 @@ function fizzBuzz(value) {
 }
 
 // Desafio 9
+// Rogério P. da Silva Me ajudou, merece um beijo <3.
 function encode(value) {
   let value2 = '';
   let obj = {
@@ -85,7 +87,7 @@ function encode(value) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
 
   for (let i of value) {
@@ -105,7 +107,7 @@ function decode(value) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
 
   for (let i of value) {
