@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 && valor2 == true){
+  if(valor1 && valor2 === true){
     return true;
   } else{
     return false;
@@ -15,7 +15,7 @@ function calcArea(base, height) {
 console.log(calcArea(51,1))
 // Desafio 3
 function splitSentence(myString) {
-let array= myString.split(/[\s,]+/);  
+let array = myString.split(/[\s,]+/);  
 return array;
 }
 let myString = "foguete"
@@ -38,24 +38,33 @@ console.log(footballPoints(1 ,2))
 function highestCount(array) {
   let maior = array[0]; 
   let count = 0;
-  for(let index = 0; index < array.length;index+=1){
+  for (let index = 0; index < array.length;index+=1){
     if (array[index] > maior ){
      maior = array[index];
    }
 }
-for(let index2 =0; index2 < array.length; index2 += 1){
- if(array[index2] == maior)
+for (let index2 =0; index2 < array.length; index2 += 1){
+ if (array[index2] == maior)
  count+=1;
 }
-return count
+return count;
   
 }
-console.log(highestCount([0, 0, 0]))
+console.log(highestCount([0, 0, 0]));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let vencedor;
+if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+  vencedor = "cat2";
+} else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+  vencedor ="cat1";
 }
-
+ else {
+  vencedor = "os gatos trombam e o rato foge";
+}
+return vencedor
+}
+console.log(catAndMouse(0,3,3))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
