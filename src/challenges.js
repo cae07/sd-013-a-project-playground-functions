@@ -1,6 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(p1,p2) 
+{
+    if (p1 === true && p2 === true)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
 }
 
 // Desafio 2
@@ -35,8 +43,7 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
-  
+  // seu código aqui  
 }
 
 // Desafio 9
