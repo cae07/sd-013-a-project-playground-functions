@@ -1,53 +1,58 @@
 // Desafio 10
-function techList(tech, nome) {
-
-  let techlist1 = {
-    tech1: tech[0],
+function techList(techs, nome) {
+ 
+  let techsListAll = techs.sort ()
+  let techList1 = {
+    tech: techsListAll[0],
     name: nome,  
   };
-  let techlist2 = {
-    tech2: tech[1],
+  let techList2 = {
+    tech: techsListAll[1],
     name: nome,
   };
-  let techlist3 = {
-    tech2: tech[2],
+  let techList3 = {
+    tech: techsListAll[2],
     name: nome,
   };
-  let techlist4 = {
-    tech2: tech[3],
+  let techList4 = {
+    tech: techsListAll[3],
     name: nome,
   };
-  let techlist5 = {
-    tech2: tech[4],
+  let techList5 = {
+    tech: techsListAll[4],
     name: nome,
   };
-  return [techlist1, techlist2, techlist3, techlist3, techlist5];
+  if (techsListAll.length === 0){
+    return 'Vazio!'
+  }
+  return [techList1, techList2, techList3, techList4, techList5];
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
+
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
   if (numeros.length != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   for (let index in numeros) {
     if (numeros[index] < 0 || numeros[index] > 9){
-      return 'não é possivel gerar um número de telefone com esses valores';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let contNumero = 0;
   let numeroRepetido = 0;
   for (let index2 in numeros) {
+    let contNumero = 0;
     numeroRepetido = numeros[index2];
-  }
-  for (let index3 = 0; index3 < numeros.length; index3 += 1) {
-    if (numeros[index3] === numeroRepetido) {
+    for (let index3 in numeros) {
+      if (numeros[index3] === numeroRepetido) {
       contNumero += 1;
       }
-    }     
-  console.log(contNumero);
-  if (contNumero >= 3) {
-    return 'não é possivel gerar um número de telefone com esses valores';
-  } 
+    }
+    if (contNumero >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } 
+  }  
   let mask = '(##) #####-####'
   let novoNum = '';
   let posicao = 0;
@@ -57,14 +62,13 @@ function generatePhoneNumber(numeros) {
       posicao += 1;
     }
     else {
-      {
         novoNum += mask[i]
       }
     }    
-  }
+  
   return novoNum;  
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,2]))
+console.log(generatePhoneNumber([1,2,2,4,5,5,7,8,9,0,1]))
 
 // Desafio 12
 function triangleCheck() {
