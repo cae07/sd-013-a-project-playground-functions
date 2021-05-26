@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } //else {
+  }
   return false;
-  //};
 }
 
 // Desafio 2
@@ -39,7 +38,6 @@ function highestCount(array) {
       hightNumber = array[index];
     }
   }
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === hightNumber) {
       count += 1;
