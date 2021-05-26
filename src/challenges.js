@@ -19,13 +19,16 @@ function calcArea(base, height) {
 function splitSentence(string) {
   // seu código aqui
   // Tive ideia a partir deste site https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
-  //o metodo split separa minha cadeia de caracteres em um array a partir de um separador como parametro(no caso o espaço entre cada palavra).
+  //o metodo split separa minha cadeia de caracteres em um array a partir de um separador como parametro(no caso o espaço entre cada palavra)
   return string.split(" ")
 }
 
 // Desafio 4
-function concatName() {
+
+function concatName(array) {
   // seu código aqui
+  let conctArray = array[array.length-1] + ", " + array[0];
+  return conctArray;
 }
 
 // Desafio 5
