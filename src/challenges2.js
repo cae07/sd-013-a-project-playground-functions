@@ -111,9 +111,9 @@ function hydrate(string) {
     soma += numeros[index13];
   }
   if (soma > 1) {
-    recomendacao = `${soma}, copos de água`;
+    recomendacao = `${soma} copos de água`;
   } else {
-    recomendacao = `${soma} + copo de água`;
+    recomendacao = `${soma} copo de água`;
   }
   return recomendacao;
 }
