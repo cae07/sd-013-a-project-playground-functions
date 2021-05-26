@@ -46,19 +46,30 @@ function generatePhoneNumber(arrayPhoneNumber) {
     if (phoneNumber.length == 10) {
       phoneNumber += "-";
     }
-
     phoneNumber += arrayPhoneNumber[i3];
-
   }
   return phoneNumber;
-
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, -9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA > lineB + lineC) || (lineB > lineA + lineC) || (lineC > lineB + lineA)) {
+    return false;
+  };
+  if ((lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) || (lineC < Math.abs(lineB - lineA))) {
+    return false;
+  };
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    return true
+  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - LineC))) {
+    return true;
+  } else if ((lineC < lineB + lineA) && (liceC > Math.abs(lineA - lineB))) {
+    return true;
+  } else {
+    return false;
+  };
+};
+console.log(Math.abs(-50));
 
 // Desafio 13
 function hydrate() {
