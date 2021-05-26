@@ -72,49 +72,50 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [''];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result = result + 'fizzBuzz';
+  let result = [' , '];
+  for (let counter = 0; counter < array.length; counter += 1) {
+    if (array[counter] % 3 === 0 && array[counter] % 5 === 1) {
+      result.push = result + 'fizz';
     }
-    else if (array[index] % 3 === 0) {
-      result = result + 'fizz';
+    if (array[counter] % 3 === 1 && array[counter] % 5 === 0) {
+      result.push = result + 'buzz';
     }
-    else if (array[index] % 5 === 0) {
-      result = result + 'buzz';
+    if (array[counter] % 3 === 0 && array[counter] % 5 === 0) {
+      result.push = result + 'fizzBuzz';
     }
-    result = result + 'bug!'
+    result.push = result + 'bug!';
   }
   return result;
 }
 
-
-
 // Desafio 9
 function encode(string) {
   let separa = string.split('');
-  let code = ' ';
+  let code = [ ];
   for (let index = 0; index < string.length; index += 1) {
     if (separa[index] === 'a') {
       code = code + 1;
     }
     else if (separa[index] === 'e') {
-      code = code + 2;
+      code.push = code + 2;
     }
     else if (separa[index] === 'i') {
-      code = code + 3;
+      code.push = code + 3;
     }
     else if (separa[index] === 'o') {
-      code = code + 4;
+      code.push = code + 4;
     }
-    code = code + 5;
+    else if (separa[index] === 'u') {
+    code.push = code + 5;
+    }
+    code.push = separa[index];
   }
   return code;
 }
+console.log(encode('hello'))
 function decode() {
   // seu código aqui
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
