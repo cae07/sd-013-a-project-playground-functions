@@ -57,17 +57,14 @@ function fizzBuzz(arr) {
   let strArray = [];
 
   for (let key in arr) {
-    if (arr[key] % 3 == 0 && arr[key] % 5 == 0) {
-      strArray.push('fizzBuzz')
-    }
-    else if (arr[key] % 3 == 0) {
-      strArray.push('fizz')
-    }
-    else if (arr[key] % 5 == 0) {
-      strArray.push('buzz')
-    }
-    else {
-      strArray.push('bug!')
+    if (arr[key] % 3 === 0 && arr[key] % 5 === 0) {
+      strArray.push('fizzBuzz');
+    } else if (arr[key] % 3 === 0) {
+      strArray.push('fizz');
+    } else if (arr[key] % 5 === 0) {
+      strArray.push('buzz');
+    } else {
+      strArray.push('bug!');
     }
   }
 
@@ -76,20 +73,14 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(string) {
-  let code = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
-  }
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   let strArray = string.split('');
   let strOut = '';
 
   for (let key in code) {
     for (let key2 in strArray) {
-      if (strArray[key2] == key) {
+      if (strArray[key2] === key) {
         strArray[key2] = code[key];
       }
     }
@@ -102,13 +93,7 @@ function encode(string) {
   return strOut;
 }
 function decode(string) {
-  let code = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
-  }
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   let strArray = string.split('');
   let strOut = '';
