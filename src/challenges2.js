@@ -1,10 +1,9 @@
 // Desafio 10
 function techList(techs, nome) {
- 
   let techsListAll = techs.sort ()
   let techList1 = {
     tech: techsListAll[0],
-    name: nome,  
+    name: nome,
   };
   let techList2 = {
     tech: techsListAll[1],
@@ -27,8 +26,6 @@ function techList(techs, nome) {
   }
   return [techList1, techList2, techList3, techList4, techList5];
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
-
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
@@ -51,8 +48,8 @@ function generatePhoneNumber(numeros) {
     }
     if (contNumero >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } 
-  }  
+    }
+  } 
   let mask = '(##) #####-####'
   let novoNum = '';
   let posicao = 0;
@@ -64,21 +61,34 @@ function generatePhoneNumber(numeros) {
     else {
         novoNum += mask[i]
       }
-    }    
-  
-  return novoNum;  
+    }  
+  return novoNum;
 }
-console.log(generatePhoneNumber([1,2,2,4,5,5,7,8,9,0,1]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineB + lineA)) {
+    return false;
+  }
+  else if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
+   return false;
+  }
+  return true
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numbers = drinks.match(/\d+/g).map(Number);
+  let cupsTotal = numbers.reduce((accum, curr) => accum + curr);
+  let unity = 'copos';
+  if (cupsTotal === 1) {
+    unity = 'copo'
+  };
+
+  return cupsTotal + ' ' + unity + ' ' + 'de água';
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
