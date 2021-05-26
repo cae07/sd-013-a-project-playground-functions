@@ -1,26 +1,27 @@
 // Desafio 1
 function compareTrue(input1, input2) {
-  if(input1 === true && input2 === true){
-    return true
-  } 
-  else{
-    return false
+  if (input1 === true && input2 === true) {
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height / 2
-  return area 
+  let area = (base * height) / 2;
+
+  return area;
 }
 
 // Desafio 3
 function splitSentence(inputToSplit) {
+  return inputToSplit.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(inputConcat) {
+  let concated = [inputConcat.slice(-1)] + [', '] + [inputConcat.slice(0, 1)];
+  return concated;
 }
 
 // Desafio 5
