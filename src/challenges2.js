@@ -82,8 +82,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // vi o padrão do regex e como aplica-lo aqui: https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+  let regexPattern = /\d+/g;
+  let getNumbers = string.match(regexPattern);
+  let count = 0;
+
+  for (let index in getNumbers) {
+    count += Number(getNumbers[index]);
+  }
+
+  if (count === 1) {
+    return `${count} copo de água`;
+  } else {
+    return `${count} copos de água`;
+  }
 }
 
 module.exports = {
