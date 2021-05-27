@@ -80,7 +80,7 @@ let sum = 0;
   for (let i = 0; i < phrase.length; i += 1) {
     letraAtual = phrase[i];
     numero = parseInt(letraAtual);
-    if (numero >=0 && letraAtual <= 9) {
+    if (numero >=0 && numero <= 9) {
        sum = sum + numero
     }
   }
