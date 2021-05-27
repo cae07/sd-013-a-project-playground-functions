@@ -17,17 +17,49 @@ function techList(array,name) {
     newArray.push(newObject);
   }
   if (newArray == '') {
-    return "vazio";
+    return "vazio!";
   } else {
     return newArray;
   }
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let repeat = 0;
+  let phone = '';
+  for (let i = 0; i < array.length; i += 1 ) {
+    if (array.length !== 11) {
+      return "Array com tamanho incorreto.";
+    } else if ((array[i] < 0) || ((array[i] > 9) )){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    for (let v = 0; v < array.length; v += 1) {
+      if (array[i] == array[v]) {
+        repeat += 1;
+      } else {
+        repeat = 1;
+      }
+    }
+    if (repeat >= 3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    if (i < 1) {
+      phone += '(' + array[i];   // (1
+    } else if (i > 0 && i < 2) {
+      phone += array[i] + ')';  // (12)
+    } else if (i > 1 && i < 7) {
+      phone += array[i];        // (12)34567
+    } else if (i >= 7) {
+      if (i > 6 && i < 8) {
+        phone += '-';           // (12)34567-
+      }
+      phone += array[i];  // (12)34567-8901
+    }
+  }
+  return phone;
 }
-
+let numero = ['1','2','3','4','5','6','7','8','9','0','1'];
+console.log(generatePhoneNumber(numero));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
