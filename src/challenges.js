@@ -74,14 +74,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(value) {
   let result = [];
   for (let counter = 0; counter < value.length; counter += 1) {
-      if (value[counter] % 3 === 0 && value[counter] % 5 === 0) {
-        result.push('fizzBuzz');
-      }
-      else if (value[counter] % 3 === 0) {
-        result.push('fizz');
-      }
-      else if (value[counter] % 5 === 0) {
-        result.push('buzz');    
+    if (value[counter] % 3 === 0 && value[counter] % 5 === 0) {
+      result.push('fizzBuzz');
+    }
+    else if (value[counter] % 3 === 0) {
+      result.push('fizz');
+    }
+    else if (value[counter] % 5 === 0) {
+      result.push('buzz');    
     } else {
       result.push('bug!');
     }
@@ -95,28 +95,39 @@ function encode(string) {
   let code = '';
   for (let index = 0; index < string.length; index += 1) {
     if (separa[index] === 'a') {
-      code = code + 1;
-    }
-    else if (separa[index] === 'e') {
-      code = code + 2;
-    }
-    else if (separa[index] === 'i') {
-      code = code + 3;
-    }
-    else if (separa[index] === 'o') {
-      code = code + 4;
-    }
-    else if (separa[index] === 'u') {
-    code = code + 5;
+      code += 1;
+    } else if (separa[index] === 'e') {
+      code += 2;
+    } else if (separa[index] === 'i') {
+      code += 3;
+    } else if (separa[index] === 'o') {
+      code += 4;
+    } else if (separa[index] === 'u') {
+      code += 5;
     } else {
-     code = code + separa[index];
+      code += separa[index];
     }
   }
   return code;
 }
-
-function decode() {
-  // seu código aqui
+function decode(code) {
+  let decodeCode = '';
+  for (let index = 0; index < code.length; index += 1) {
+    if (code[index] === '1') {
+      decodeCode += 'a';
+    } else if (code[index] === '2') {
+      decodeCode += 'e';
+    } else if (code[index] === '3') {
+      decodeCode += 'i';
+    } else if (code[index] === '4') {
+      decodeCode += 'o';
+    } else if (code[index] === '5') {
+      decodeCode += 'u';
+    } else {
+      decodeCode += code[index];
+    }
+  }
+  return decodeCode;
 }
 module.exports = {
   calcArea,
