@@ -20,6 +20,10 @@ function higherThan(a) {
   };
 }
 
+function ascending(a, b) {
+  return a - b;
+}
+
 function descending(a, b) {
   return b - a;
 }
@@ -37,17 +41,20 @@ function anyHigherThanNine(array) {
 }
 
 function anyOverThree(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    let counter = 1;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[j] === array[i]) {
-        counter += 1;
-        if (counter > 3) return true;
-      }
+  let sorted = array.slice(0).sort(ascending);
+  let currNum = sorted[0];
+  let counter = 1;
+
+  for (let i = 1; counter < 3 && i < sorted.length; i += 1) {
+    if (sorted[i] !== currNum) {
+      currNum = sorted[i];
+      counter = 1;
+    } else {
+      counter += 1;
     }
   }
 
-  return false;
+  return counter >= 3;
 }
 
 module.exports = {

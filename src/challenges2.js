@@ -20,9 +20,9 @@ function techList(techArray, name) {
 function generatePhoneNumber(digitsArray) {
   if (digitsArray.length === 11) {
     if (
-      !anyOverThree(digitsArray) &&
       !anyNegative(digitsArray) &&
-      !anyHigherThanNine(digitsArray)
+      !anyHigherThanNine(digitsArray) &&
+      !anyOverThree(digitsArray)
     ) {
       let template = '(area) exchange-line';
       template = template.replace('area', digitsArray.slice(0, 2).join(''));
