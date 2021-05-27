@@ -22,16 +22,14 @@ function splitSentence(frase) {
 
   for (let index = 0; index < frase.length; index += 1) {
     palavra += frase[index];
-
     if (frase[index] === ' ') {
       indexEspacos.push(index);
       listaPalavra.push(palavra);
       palavra = '';
-    }else{
+    } else {
       listaPalavra.push(palavra);
     }
   }
-
   for (let index = 0; index < indexEspacos.length; index += 1) {
     let novoIndex = indexEspacos[index] - 1;
     novaListaPalavra.push(listaPalavra[novoIndex]);
@@ -40,11 +38,10 @@ function splitSentence(frase) {
   return novaListaPalavra;
 }
 
-console.log(splitSentence("vamo que vamo"));
-
 // Desafio 4
 function concatName(lista) {
   let concatena = '';
+
   for (let index = 0; index < lista.length; index += 1) {
     concatena = `${lista[lista.length - 1]}, ${lista[0]}`;
   }
@@ -81,12 +78,22 @@ function highestCount(listaNumero) {
       contador = 3;
     }
   }
+
   return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);
+
+  if (gato1 > gato2) {
+    return 'cat2';
+  } else if (gato1 < gato2) {
+    return 'cat1';
+  } else if (mouse === gato1 && mouse === gato2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -124,7 +131,7 @@ function encode(palavra) {
 
     if (palavra[index] !== letras[indexLetra]) {
       palavraEncode += palavra[index];
-    }else{
+    } else{
       palavraEncode += numeros[indexLetra];
     }
 
@@ -132,9 +139,6 @@ function encode(palavra) {
 
   return (palavraEncode);
 }
-
-let palavraCodificada = encode("hi there!");
-
 function decode(palavra) {
   let letras = ['a', 'e', 'i', 'o', 'u'];
   let numeros = ['1', '2', '3', '4', '5'];
