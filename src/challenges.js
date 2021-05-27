@@ -13,7 +13,9 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3
+// Desafio 3 
+//Referência: O que é JAVASCRIPT SPLIT? Como usar essa função? https://www.youtube.com/watch?v=O2OZir_ba1I
+
 function splitSentence(string) {
   let charact = string.split(' ');
   return charact;
@@ -21,17 +23,32 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return (arrayString[arrayString.length - 1] + ', ' + arrayString[0]);
+  let conca = (arrayString[arrayString.length - 1] + ', ' + arrayString[0]);
+  return conca;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  let pontuacao = (wins * 3) + ties;
+  return pontuacao;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNum) {
+  let maiorNum = arrayNum[0];
+  let total = 0;
+
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] > maiorNum){
+    maiorNum = arrayNum[index];
+    }
+  }
+  for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
+    if (arrayNum[index2] === maiorNum) {
+      total += 1;
+    }
+  }
+  return total;
 }
 
 // Desafio 7
