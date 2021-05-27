@@ -127,16 +127,16 @@ function encode(phrase) {
 
 function decode(phrase) {
   let string = '';
-  for (let i = 0; i < phrase.length; i +=1) {
+  for (let i = 0; i < phrase.length; i += 1) {
     if (phrase[i] == '1') {
       string += 'a';
-    } else if (phrase[i] == '2') {
+    } else if (phrase[i] === '2') {
       string += 'e';  
-    } else if (phrase[i] == '3') {
+    } else if (phrase[i] === '3') {
       string += 'i';  
-    } else if (phrase[i] == '4') {
+    } else if (phrase[i] === '4') {
       string += 'o';  
-    } else if (phrase[i] == '5') {
+    } else if (phrase[i] === '5') {
       string += 'u';  
     } else {
       string += phrase[i];
@@ -144,7 +144,7 @@ function decode(phrase) {
   }
   return string;
 }
-console.log(decode('h3 th2r2!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
