@@ -53,22 +53,27 @@ function highestCount(vetor) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distcat1 = cat1 - mouse;
-  let distcat2 = cat2 - mouse;
-  
-  if(distcat1 < distcat2 && distcat1 >= mouse) {
-  	return 'cat1'
-  }
-  else if(distcat2 < distcat1 && distcat2 >= mouse) {
-  	return 'cat2'
-  }
-  else {
-  	return 'os gatos trombam e o rato foge'
-  } 
+
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numes) {
+  let palavras = [];
+  
+  for(let c = 0; c < numes.length; c += 1) {
+    if(numes[c] % 3 == 0 && numes[c] % 5 == 0) {
+      palavras.push('fizzBuzz')
+      
+    } else if(numes[c] % 5 == 0) {
+      palavras.push('buzz');
+      
+    } else if ( (numes[c] % 3 == 0) ) {
+      palavras.push('fizz');
+      
+    } else {
+      palavras.push('bug!');
+    }
+  }
+  return palavras;
 }
 
 // Desafio 9
