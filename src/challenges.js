@@ -24,14 +24,14 @@ function concatName(arr) {
   // seu código aqui
   let first = arr[0];
   let last = arr[arr.length - 1];
-  return `${last},${first}`
+  let merge = last + ', ' + first;
+  return merge;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  
-  let points= wins * 3 + ties * 1;
+  let points = wins * 3 + ties * 1;
   return points;
 }
 
@@ -46,7 +46,7 @@ function highestCount(arr) {
     maior = arr[i];
   }
 }
-  for (i = 0; i < arr.length; i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] === maior) {
     vezes++;
 }
