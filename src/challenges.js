@@ -31,9 +31,9 @@ function concatName(nomes) {
   let result = last + ", "+ first;
   return result;
 }
-console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
-console.log(concatName('foguete', 'não', 'tem', 'ré'));
-console.log(concatName('captain', 'my', 'captain'));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -74,9 +74,9 @@ function catAndMouse(mouse,cat1,cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-catAndMouse(5,2,3)
-catAndMouse(20,16,8)
-catAndMouse(9,6,6)
+catAndMouse(5,2,3);
+catAndMouse(20,16,8);
+catAndMouse(9,6,6);
 
 // Desafio 8
 function fizzBuzz(nums) {
