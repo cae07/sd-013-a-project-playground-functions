@@ -31,14 +31,14 @@ console.log(splitSentence("Vamo que vamo go Trybe"));
 // Desafio 4
 function concatName(...nomes) {
   let first = nomes[0];
-  let last = nomes[nomes.length - 1]
+  let last = nomes[nomes.length -1]
   let join = last + ", "+ first;
   return join;
 }
 
 console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 console.log(concatName('foguete', 'não', 'tem', 'ré'));
-console.log(concatName('captain', 'my', 'captain','captain', 'my', 'captain'));
+console.log(concatName('captain', 'my', 'captain'));
 
 function footballPoints(wins,ties) {
   vitoria = wins * 3;
@@ -50,11 +50,26 @@ console.log(footballPoints(1,2));
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(...nums) {
+  let maior = [];
+  let count = 0;
+  for(let i = 0; i < nums.length; i += 1) {
+    if(nums[i] >= maior) {
+      maior = nums[i];
+    }
+  }
+
+  for(let j = 0; j < nums.length; j += 1) {
+    if(maior == nums[j]) {
+      count++;
+    }
+  }
   
+  return count;
 }
-
-
+console.log(highestCount(9, 1, 2, 3, 9, 5, 7))
+console.log(highestCount(0, 4, 4, 4, 9, 2, 1));
+console.log(highestCount(0, 0, 0));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
