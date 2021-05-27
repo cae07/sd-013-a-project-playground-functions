@@ -2,9 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -15,14 +14,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let result = [];
-  result = string.split(" ");
+  result = string.split(' ');
   return result;
 }
 
 // Desafio 4
 function concatName(array) {
   let guarda = array;
-  return (guarda[guarda.length - 1]) + ", " + guarda[0];
+  return (guarda[guarda.length - 1]) + ', ' + guarda[0];
 }
 
 // Desafio 5
@@ -44,7 +43,7 @@ function highestCount(array) {
   }
   for (let i2 = 0; i2 < guarda.length; i2 += 1) {
     if (maior === guarda[i2]) {
-      count = count + 1;
+      count += +1;
     }
   }
   return count;
@@ -56,33 +55,26 @@ function catAndMouse(mouse, cat1, cat2) {
   let disCat2 = Math.abs(mouse - cat2);
 
   if (disCat1 < disCat2) {
-    return "cat1";
+    return 'cat1';
   }
-  else if (disCat1 === disCat2) {
-    return "os gatos trombam e o rato foge";
+  if (disCat1 === disCat2) {
+    return 'os gatos trombam e o rato foge';
   }
-  else {
-    return "cat2";
-  }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let guarda = array;
   let string = [];
 
-  for (let i = 0; i < guarda.length; i += 1) {
-
-    if ((guarda[i] % 3 === 0) && (guarda[i] % 5 === 0)) {
+  for (let i = 0; i < array.length; i += 1) {
+    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       string.push('fizzBuzz');
-    }
-    else if ((guarda[i] % 3 === 0)) {
+    } else if ((array[i] % 3 === 0)) {
       string.push('fizz');
-    }
-    else if ((guarda[i] % 5 === 0)) {
+    } else if ((array[i] % 5 === 0)) {
       string.push('buzz');
-    }
-    else {
+    } else {
       string.push('bug!');
     }
   }
@@ -95,23 +87,23 @@ function encode(string) {
 
   for (let i = 0; i < word.length; i += 1) {
     switch (word[i]) {
-      case 'a':
-        word[i] = 1;
-        break;
-      case 'e':
-        word[i] = 2;
-        break;
-      case 'i':
-        word[i] = 3;
-        break;
-      case 'o':
-        word[i] = 4;
-        break;
-      case 'u':
-        word[i] = 5;
-        break;
-      default:
-        break;
+    case 'a':
+      word[i] = 1;
+      break;
+    case 'e':
+      word[i] = 2;
+      break;
+    case 'i':
+      word[i] = 3;
+      break;
+    case 'o':
+      word[i] = 4;
+      break;
+    case 'u':
+      word[i] = 5;
+      break;
+    default:
+      break;
     }
   }
 
@@ -123,23 +115,23 @@ function decode(string) {
 
   for (let i = 0; i < word.length; i += 1) {
     switch (word[i]) {
-      case '1':
-        word[i] = 'a';
-        break;
-      case '2':
-        word[i] = 'e';
-        break;
-      case '3':
-        word[i] = 'i';
-        break;
-      case '4':
-        word[i] = 'o';
-        break;
-      case '5':
-        word[i] = 'u';
-        break;
-      default:
-        break;
+    case '1':
+      word[i] = 'a';
+      break;
+    case '2':
+      word[i] = 'e';
+      break;
+    case '3':
+      word[i] = 'i';
+      break;
+    case '4':
+      word[i] = 'o';
+      break;
+    case '5':
+      word[i] = 'u';
+      break;
+    default:
+      break;
     }
   }
 
