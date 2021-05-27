@@ -7,30 +7,30 @@ function compareTrue(a, b){
     return false;
   }
 }
+
 // Desafio 2
 function calcArea(base, height){
   // seu código aqui
-  
-
-  return (base * height) /2;
-  
+    return (base * height) /2;
 }
-console.log(calcArea())
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(param) {
+ let result = param.split(" ");
+ return result;
 }
-
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
+console.log(footballPoints())
 
 // Desafio 6
 function highestCount() {
