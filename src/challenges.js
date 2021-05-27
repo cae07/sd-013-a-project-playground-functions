@@ -59,26 +59,26 @@ function catAndMouse(mouse, cat1, cat2) {
   cat2 = Math.abs(mouse - cat2);
 
   if (cat1 < cat2) {
-    return "cat1"
-  } else if (cat2 < cat1) {
-    return "cat2"
-  } else if (cat1 == cat2) {
+    return 'cat1';
+  }
+  if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
-  };
+  }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arrayFizzBuzz) {
   let arrayVault = [];
   for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
-    if (arrayFizzBuzz[i] % 3 == 0 && arrayFizzBuzz[i] % 5 == 0) {
-      arrayVault.push("fizzBuzz");
-    } else if (arrayFizzBuzz[i] % 3 == 0) {
-      arrayVault.push("fizz");
-    } else if (arrayFizzBuzz[i] % 5 == 0) {
-      arrayVault.push("buzz");
+    if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
+      arrayVault.push('fizzBuzz');
+    } else if (arrayFizzBuzz[i] % 3 === 0) {
+      arrayVault.push('fizz');
+    } else if (arrayFizzBuzz[i] % 5 === 0) {
+      arrayVault.push('buzz');
     } else {
-      arrayVault.push("bug!");
+      arrayVault.push('bug!');
     }
   }
   return arrayVault;
@@ -86,18 +86,11 @@ function fizzBuzz(arrayFizzBuzz) {
 
 // Desafio 9
 function encode(stringEncode) {
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let letter = "";
-
+  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let letter = '';
   for (let i = 0; i < stringEncode.length; i += 1) {
     for (let key in code) {
-      if (stringEncode[i] == key) {
+      if (stringEncode[i] === key) {
         letter += code[key];
       }
     }
@@ -108,20 +101,12 @@ function encode(stringEncode) {
   return letter;
 }
 
-
 function decode(stringDecode) {
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let letter = "";
-
+  let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let letter = '';
   for (let i = 0; i < stringDecode.length; i += 1) {
-    for (const key in code) {
-      if (stringDecode[i] == code[key]) {
+    for (let key in code) {
+      if (stringDecode[i] === code[key]) {
         letter += key;
       }
     }
@@ -131,7 +116,6 @@ function decode(stringDecode) {
   }
   return letter;
 }
-
 
 module.exports = {
   calcArea,
