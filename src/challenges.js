@@ -37,13 +37,27 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = 3 * wins;
+  let tiesPoints = ties;
+  let totalPoints = 0;
+    totalPoints = winsPoints + tiesPoints;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberList) {
+  let highestNumber = Math.max(numberList);
+  let repeatedNumber = 0;
+  let ignoredNumbers = 0;
+  for (let counter = 0; counter <= numberList.length; counter += 1) {
+      if (numberList[counter] != highestNumber) {
+        ignoredNumbers = ignoredNumbers + 1;
+      } else {
+        let repeatedNumber = repeatedNumber + 1;
+      }
+  } return repeatedNumber;
+  //number list (o maior) é igual o highest number ? se sim, repeated number recebe 1 de valor.
 }
 
 // Desafio 7
