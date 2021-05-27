@@ -1,21 +1,18 @@
 // Desafio 10
 function techList(tech, name) {
- newtech= tech.sort();
- let lista=[];
- for(let [key] in newtech){
-    if(tech.length!==0){
-     lista.push({
-       tech: newtech[key],
-       name,
-     });
-    return lista;
-  }else{
+  if (tech.length === 0) {
     return 'Vazio!';
   }
+  let newtech = tech.sort(); //ordena em ordem alfabetica
+  let lista = [];
+  for (let i = 0; i < newtech.length; i += 1) {
+    lista.push({
+      tech: newtech[i], //passa indice por indice
+      name,
+    });
+  }
+  return lista;
 }
-}  
-  
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
