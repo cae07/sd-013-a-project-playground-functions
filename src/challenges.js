@@ -3,7 +3,7 @@ function compareTrue(pass1, pass2) {
   if (pass1 === true && pass2 === true) {
     return true;
   }
-    return false
+  return false;
 }
 
 // Desafio 2
@@ -12,14 +12,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  let result = text.split(' ');
+function splitSentence(text) {
+  let result = text.split("");
   return result;
 }
 
 // Desafio 4
 function concatName(name) {
-  let completname = name[name.length-1] + "," + " " + name [0];
+  let completname = '${name[name.length - 1]} ${name[0]}';
   return completname;
 }
 
