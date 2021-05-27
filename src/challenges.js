@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
   if (distCat1 < 0) {
-    distCat1 = -1 * distCat1; 
+    distCat1 = -1 * distCat1;
   }
   if (distCat2 < 0) {
     distCat2 = -1 * distCat2;
@@ -67,23 +67,24 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distCat1 > distCat2) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato foge'
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let result = [' , '];
-  for (let counter = 0; counter < array.length; counter += 1) {
-    if (array[counter] % 3 === 0 && array[counter] % 5 === 1) {
-      result.push = result + 'fizz';
+function fizzBuzz(value) {
+  let result = [];
+  for (let counter = 0; counter < value.length; counter += 1) {
+      if (value[counter] % 3 === 0 && value[counter] % 5 === 0) {
+        result.push('fizzBuzz');
+      }
+      else if (value[counter] % 3 === 0) {
+        result.push('fizz');
+      }
+      else if (value[counter] % 5 === 0) {
+        result.push('buzz');    
+    } else {
+      result.push('bug!');
     }
-    if (array[counter] % 3 === 1 && array[counter] % 5 === 0) {
-      result.push = result + 'buzz';
-    }
-    if (array[counter] % 3 === 0 && array[counter] % 5 === 0) {
-      result.push = result + 'fizzBuzz';
-    }
-    result.push = result + 'bug!';
   }
   return result;
 }
@@ -91,28 +92,29 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let separa = string.split('');
-  let code = [ ];
+  let code = '';
   for (let index = 0; index < string.length; index += 1) {
     if (separa[index] === 'a') {
       code = code + 1;
     }
     else if (separa[index] === 'e') {
-      code.push = code + 2;
+      code = code + 2;
     }
     else if (separa[index] === 'i') {
-      code.push = code + 3;
+      code = code + 3;
     }
     else if (separa[index] === 'o') {
-      code.push = code + 4;
+      code = code + 4;
     }
     else if (separa[index] === 'u') {
-    code.push = code + 5;
+    code = code + 5;
+    } else {
+     code = code + separa[index];
     }
-    code.push = separa[index];
   }
   return code;
 }
-console.log(encode('hello'))
+
 function decode() {
   // seu código aqui
 }
