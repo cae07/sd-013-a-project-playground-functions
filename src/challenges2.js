@@ -27,21 +27,20 @@ function techList(array,name) {
 function generatePhoneNumber(array) {
   let repeat = 0;
   let phone = '';
+  let condition = '';
   for (let i = 0; i < array.length; i += 1 ) {
     if (array.length !== 11) {
-      return "Array com tamanho incorreto.";
+      condition = "Array com tamanho incorreto.";
     } else if ((array[i] < 0) || ((array[i] > 9) )){
-      return "não é possível gerar um número de telefone com esses valores";
+      condition = "não é possível gerar um número de telefone com esses valores";
     }
     for (let v = 0; v < array.length; v += 1) {
       if (array[i] == array[v]) {
         repeat += 1;
-      } else {
-        repeat = 1;
       }
     }
     if (repeat >= 3) {
-      return "não é possível gerar um número de telefone com esses valores"
+      condition = "não é possível gerar um número de telefone com esses valores"
     }
     if (i < 1) {
       phone += '(' + array[i];   // (1
@@ -56,7 +55,12 @@ function generatePhoneNumber(array) {
       phone += array[i];  // (12)34567-8901
     }
   }
-  return phone;
+  repeat = 0;
+  if (condition) {
+    return condition;
+  } else {
+    return phone;
+  }
 }
 
 // Desafio 12
