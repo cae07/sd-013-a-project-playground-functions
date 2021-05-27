@@ -7,9 +7,6 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-console.log(compareTrue(true, true));
-
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
@@ -18,13 +15,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let split = sentence.split('');
-  
+  let splitS = sentence.split(' ');
+  return splitS;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let retorno = nomes[nomes.length-1] + ', ' + nomes[0];
+  return retorno;
 }
 
 // Desafio 5
