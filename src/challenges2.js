@@ -15,32 +15,61 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arrNumber) {
+function checkArr(arrNumber) {
+  if (arrNumber.length !== 11) {
+    return true;
+  }
+}
+
+function checkArr2(arrNumber) {
+  for (let i of arrNumber) {
+    if (arrNumber[i] < 0 || arrNumber[i] > 9) {
+      return true;
+    }
+  }
+}
+
+function checkArr3(arrNumber, number) {
   let cont = 0;
 
-  if (arrNumber.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  for (let i of arrNumber) {
-    for (let p of arrNumber) {
-      if (p === i) {
-        cont += 1;
-      }
-      if (cont >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
-    cont = 0;
-    if (arrNumber[i] < 0 || arrNumber[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+  for (let i in arrNumber) {
+    if (arrNumber[i] === number) {
+      cont += 1;
     }
   }
+  return cont;
+}
+
+function checkArr4(arrNumber) {
+  for (let i in arrNumber) {
+    let repeat = checkArr3(arrNumber, arrNumber[i]);
+    if (repeat >= 3) {
+      return true;
+    }
+  }
+}
+
+function montaTel(arrNumber) {
   let OarrNumber = arrNumber.join('');
   let DDD = OarrNumber.slice(0, 2);
   let prefix = OarrNumber.slice(2, 7);
   let sufix = OarrNumber.slice(7, 11);
   let phoneNumber = `(${DDD}) ${prefix}-${sufix}`;
   return phoneNumber;
+}
+
+function generatePhoneNumber(arrNumber) {
+  if (checkArr(arrNumber)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (checkArr2(arrNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (checkArr4(arrNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return montaTel(arrNumber);
 }
 
 // Desafio 12
