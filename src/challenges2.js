@@ -41,7 +41,7 @@ function checkArr3(arrNumber, number) {
 }
 
 function checkArr4(arrNumber) {
-  for (let i in arrNumber) {
+  for (let i = 0; i < arrNumber.length; i += 1) {
     let repeat = checkArr3(arrNumber, arrNumber[i]);
     if (repeat >= 3) {
       return true;
@@ -74,10 +74,14 @@ function generatePhoneNumber(arrNumber) {
 
 // Desafio 12
 function triangleCheck(linhaA, linhaB, linhaC) {
-  let cond1 = linhaA < linhaB + linhaC && linhaA > Math.abs(linhaB - linhaC);
-  let cond2 = linhaB < linhaA + linhaC && linhaB > Math.abs(linhaA - linhaC);
-  let cond3 = linhaC < linhaA + linhaB && linhaC > Math.abs(linhaA - linhaB);
-  return cond1 && cond2 && cond3;
+  if (
+    linhaA > Math.abs(linhaB - linhaC)
+    && linhaB > Math.abs(linhaA - linhaC)
+    && linhaC > Math.abs(linhaA - linhaB)
+  ) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
