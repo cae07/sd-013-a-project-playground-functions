@@ -6,11 +6,10 @@ function compareTrue(value1, value2) {
   return false;
 }
 // Desafio 2
-function calcArea(base, heigth) { 
+function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
 let value = calcArea(10, 50);
-
 console.log(value);
 
 // Desafio 3
