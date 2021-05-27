@@ -91,12 +91,35 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let newString = 'hi there!';
+
+function encode(string) {
+  let newArray = string.split('');  
+  let vogais = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+
+  
+
+  for (index in vogais) {
+    if (index === newArray.index) {
+      newArray.index = index;
+    }
+  }
+  return newArray;
 }
+
+console.log(encode(newString));
+
 function decode() {
   // seu código aqui
 }
+
+console.log(enconde(newString), decode(newString));
 
 module.exports = {
   calcArea,
