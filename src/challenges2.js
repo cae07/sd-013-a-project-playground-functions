@@ -15,21 +15,28 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
-}
+function generatePhoneNumber() {}
 
 // Desafio 12
 function triangleCheck(linhaA, linhaB, linhaC) {
-  let cond1 = (linhaA < (linhaB + linhaC)) && (linhaA > Math.abs(linhaB - linhaC));
-  let cond2 = (linhaB < (linhaA + linhaC)) && (linhaB > Math.abs(linhaA - linhaC));
-  let cond3 = (linhaC < (linhaA + linhaB)) && (linhaC > Math.abs(linhaA - linhaB));
+  let cond1 = linhaA < linhaB + linhaC && linhaA > Math.abs(linhaB - linhaC);
+  let cond2 = linhaB < linhaA + linhaC && linhaB > Math.abs(linhaA - linhaC);
+  let cond3 = linhaC < linhaA + linhaB && linhaC > Math.abs(linhaA - linhaB);
   return cond1 && cond2 && cond3;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  let num = string.match(regex);
+  let aguaCopo = 0;
+  for (let i = 0; i < num.length; i += 1) {
+    aguaCopo += parseInt(num[i], 10);
+  }
+  if (aguaCopo === 1) {
+    return `${aguaCopo} copo de água`;
+  }
+  return `${aguaCopo} copos de água`;
 }
 
 module.exports = {
