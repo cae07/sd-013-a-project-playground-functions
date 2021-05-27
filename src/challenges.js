@@ -11,7 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let resultado = string.split(" ");
+  let resultado = string.split(' ');
   return resultado;
   // let verificator = " ";
   // let coma = ", ";
@@ -30,8 +30,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let arrayA = array[0];
-  let space = ", ";
-  let arrayB = array.pop()
+  let space = ', ';
+  let arrayB = array.pop();
   let arrayC = arrayB.concat(space, arrayA);
   return arrayC;
 }
@@ -41,23 +41,19 @@ function footballPoints(wins, ties) {
   let winsPoints = 3 * wins;
   let tiesPoints = ties;
   let totalPoints = 0;
-    totalPoints = winsPoints + tiesPoints;
+  totalPoints = winsPoints + tiesPoints;
   return totalPoints;
 }
 
 // Desafio 6
 function highestCount(numberList) {
-  let highestNumber = Math.max(numberList);
-  let repeatedNumber = 0;
-  let ignoredNumbers = 0;
-  for (let counter = 0; counter <= numberList.length; counter += 1) {
-      if (numberList[counter] != highestNumber) {
-        ignoredNumbers = ignoredNumbers + 1;
-      } else {
-        let repeatedNumber = repeatedNumber + 1;
-      }
-  } return repeatedNumber;
-  //number list (o maior) é igual o highest number ? se sim, repeated number recebe 1 de valor.
+  let highestNumber = Math.max(...numberList);
+  let repeticao = 0;
+  for (let number of numberList) {
+    if (number === highestNumber) {
+      repeticao += 1;
+    }
+  } return repeticao;
 }
 
 // Desafio 7
