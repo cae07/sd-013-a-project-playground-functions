@@ -5,11 +5,10 @@ function compareTrue(value1, value2) {
   }
   return false;
 }
-
-console.log(compareTrue(true, true));
+console.log(compareTrue(true, true);
 // Desafio 2
 function calcArea(base, heigth) { 
-    return (base * heigth) / 2;
+  return (base * heigth) / 2;
 }
 let value = calcArea(10, 50);
 console.log(value);
@@ -19,8 +18,7 @@ function splitSentence(string1) {
   let result = string1.split(' ');
   return result;
 }
-
-console.log(splitSetence('Go Trybe'));
+console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName() {
