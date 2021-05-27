@@ -20,7 +20,7 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let newArray = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
+  let newArray = `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
   return newArray;
 }
 
@@ -60,18 +60,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Consegui refatorar este código conversando com meu amigo Silvio
 function fizzBuzz(arrayDeNumeros) {
   let fizzBuzzArray = [];
 
-  for (let pegaNumero of arrayDeNumeros) {
-    if (pegaNumero % 3 === 0 && pegaNumero % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (pegaNumero % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (pegaNumero % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push('bug!');
+  for (let i = 0; i < arrayDeNumeros.length; i += 1) {
+    fizzBuzzArray[i] = 'bug!';
+    if (arrayDeNumeros[i] % 15 === 0) {
+      fizzBuzzArray[i] = 'fizzBuzz';
+    } else if (arrayDeNumeros[i] % 5 === 0) {
+      fizzBuzzArray[i] = 'buzz';
+    } else if (arrayDeNumeros[i] % 3 === 0) {
+      fizzBuzzArray[i] = 'fizz';
     }
   }
   return fizzBuzzArray;
