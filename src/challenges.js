@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 == true && valor2 == true){
+  if (valor1 === true && valor2 === true) {
     return true;
   } else {
     return false;
@@ -9,23 +9,21 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
- let area= (base*height) /2;
+ let area = (base*height) /2;
  return area;
 }
  
 // Desafio 3
 function splitSentence(frase) {
-  let resultado= frase.split(" ");
+  let resultado = frase.split(" ");
   return resultado;
 }
 
-
 // Desafio 4
 function concatName(cores) {
-  let palavras= cores[cores.length-1] + ', ' + cores[0];
+  let palavras = cores[cores.length-1] + ', ' + cores[0];
   return palavras;
 }
-
 
 // Desafio 5
 function footballPoints() {
