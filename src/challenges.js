@@ -1,17 +1,11 @@
 // Desafio 1
 function compareTrue(p1, p2) {
-
-  if (p1==true && p2==true){
-    return (true);
-  }
-  else {
-    return (false);
-  }
+  return p1 && p2;
 }
 // Desafio 2
 function calcArea(base, height) {
-  let area= (base*height)/2;
-  return (area);
+  let area = (base * height) / 2;
+  return area;
 }
 calcArea(10, 50);
 calcArea(5, 2);
@@ -19,7 +13,7 @@ calcArea(51, 1);
 
 // Desafio 3
 function splitSentence(sentence) {
-  let fraseSeparada = sentence.split (' ');
+  let fraseSeparada = sentence.split(' ');
   return fraseSeparada;
 }
 splitSentence('go Trybe');
