@@ -25,8 +25,6 @@ function splitSentence(param1) {
 }
 
 // Desafio 4
-let arrayNomes = ['captain', 'my', 'captain'];
-
 function concatName(array) {
   let resultado = `${array[array.length - 1]}, ${array[0]}`;
 
@@ -41,8 +39,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = arrayTest[0];
+  let counter = 0;
+
+  for (let index = 0; index < arrayTest.length; index += 1) {
+    if (arrayTest[index] > maiorNumero) {
+      maiorNumero = arrayTest[index];
+      counter = 1;
+    } else if (arrayTest[index] === maiorNumero) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
