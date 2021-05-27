@@ -1,15 +1,18 @@
 // Desafio 10
-function techList(arrayTec, name) {
-  let techname =[];
-  for(let index = 0; index < arrayTec.length; index +=1){
-    techname  = {
+function techList(arrayTec, nome) {
+  let techname = new Array(arrayTec.length); 
+  for(let index = 0; index < techname.length; index +=1){
+    techname[index] = {
       tech: arrayTec[index],
-      name: name
+      name: nome,
     }
-    return techname;
   }
   
-  
+  for(let index = 0; index < techname.length; index +=1){
+    
+
+  }
+  console.log(techname);
   
 }
 
