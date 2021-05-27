@@ -53,7 +53,7 @@ function highestCount(vetor) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
+  
 }
 // Desafio 8
 function fizzBuzz(numes) {
@@ -78,10 +78,51 @@ function fizzBuzz(numes) {
 
 // Desafio 9
 function encode(palavra) {
-
+  let nomeModificado = '';
+	let vogais = ['a', 'e', 'i', 'o', 'u']
+  
+  for (let n = 0; n < palavra.length; n += 1) {
+  	if (palavra[n] === vogais) {
+    	nomeModificado += palavra[n]
+    } else if (palavra[n] === 'a') {
+    	nomeModificado += palavra[n].replace('a', 1)
+    } else if (palavra[n] === 'e') {
+    	nomeModificado += palavra[n].replace('e', 2)
+    } else if (palavra[n] === 'i') {
+    	nomeModificado += palavra[n].replace('i', 3)
+    } else if (palavra[n] == 'o') {
+    	nomeModificado += palavra[n].replace('o', 4)
+    } else if (palavra[n] == 'u') {
+    	nomeModificado += palavra[n].replace('u', 5)
+    } else {
+    	nomeModificado += palavra[n]
+    }
+  }
+  return nomeModificado
 }
-function decode() {
-  // seu código aqui
+function decode(palaNume) {
+  let nomeModificado1 = '';
+	let numeros = [1, 2, 3, 4, 5]
+  
+  for (let n = 0; n < palaNume.length; n += 1) {
+  	if (palaNume[n] === numeros) {
+    	nomeModificado1 += palaNume[n]
+    } else if (palaNume[n] === '1') {
+    	nomeModificado1 += palaNume[n].replace(1, 'a')
+    } else if (palaNume[n] === '2') {
+    	nomeModificado1 += palaNume[n].replace(2, 'e')
+    } else if (palaNume[n] === '3') {
+    	nomeModificado1 += palaNume[n].replace(3, 'i')
+    } else if (palaNume[n] == '4') {
+    	nomeModificado1 += palaNume[n].replace(4, 'o')
+    } else if (palaNume[n] == '5') {
+    	nomeModificado1 += palaNume[n].replace(5, 'u')
+    } else {
+    	nomeModificado1 += palaNume[n]
+    }
+  }
+
+  return nomeModificado1
 }
 
 module.exports = {
