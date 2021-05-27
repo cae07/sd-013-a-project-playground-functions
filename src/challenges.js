@@ -1,29 +1,29 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 == true) {
-    return true;
-  }
-  else{
-    return false;
-  }
+  if ( valor1 && valor2 == true ) {
+  return true;
+}
+ else{
+  return false;
+}
+
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  
-  return frase.split(" ");
-  
+  return frase.split();
 }
 
 // Desafio 4
 function concatName(conjunto) {
- 
-  let array = conjunto[conjunto.length-1]+", " + conjunto[0] ;
+
+  let array = conjunto[conjunto.length-1]+", "+conjunto[0];
 
   return array;
 
@@ -38,28 +38,26 @@ console.log(footballPoints(0,0));
 // Desafio 6
 function highestCount(numeros) {
   let maiorNumber = numeros[0];
-  let cont =0;
-  
-  for(let i=0 ; i<numeros.length ; i+=1 ){
+  let cont = 0;
 
-    if(numeros[i] > maiorNumber ){
+  for (let i = 0; i < numeros.length; i += 1) {
+
+    if (numeros[i] > maiorNumber) {
       maiorNumber = numeros[i];
-      cont=1;
-    }
-    else if(maiorNumber === numeros[i]){
-      cont +=1;
-
-  }  
+      cont = 1;
+    }   
+    else if (maiorNumber === numeros[i]) {
+   cont += 1;
+ }  
 }
   return cont;
-
 }
 
-
 // Desafio 7
+// eslint-disable-next-line complexity
 function catAndMouse(num1,num2,num3) {
-  // funcão q funciona - > Math.abs 
-  
+// funcão q funciona - > Math.abs 
+
   let dist1 = num2 - num1;
   let dist2 = num3 - num1;
   if(dist1 <0){
@@ -82,7 +80,7 @@ function catAndMouse(num1,num2,num3) {
 
 function fizzBuzz(stringer) {
   let array=[];
-  for(i=0 ; i<stringer.length; i+=1){
+  for(let i=0 ; i<stringer.length; i+=1){
       if(stringer[i]%3==0 && stringer[i]%5==0){
        array.push("fizzBuzz");
       }
@@ -100,11 +98,57 @@ function fizzBuzz(stringer) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode ( mensagem ) {
+    let codigo ="";
+
+  for(let i=0;i<mensagem.length;i+=1){
+      if(mensagem[i] === "a"){
+        codigo += 1;
+      }
+     else if(mensagem[i] === "e"){
+        codigo += 2;
+      }
+      else if(mensagem[i] === "i"){
+        codigo += 3;
+      }
+      else if(mensagem[i] === "o"){
+        codigo += 4;
+      }
+      else if(mensagem[i] === "u"){
+        codigo += 5;
+      }
+      else{
+        codigo += mensagem[i];
+      }
+  }
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+  console.log(encode("hello"));
+
+function decode(codigo) {
+  let palavra ="";
+
+  for (let i=0; i<codigo.length; i += 1) {
+    if(codigo[i] == 1){
+      palavra += "a";
+    }
+    else if(codigo[i] == 2){
+      palavra += "e";
+    }
+    else if(codigo[i] == 3){
+      palavra += "i";
+    }
+    else if(codigo[i] == 4){
+      palavra += "o";
+    }
+    else if(codigo[i] == 5){
+      palavra += "u";
+    }
+    else{
+      palavra += codigo[i];
+    } 
+  }
+return palavra;  
 }
 
 module.exports = {
