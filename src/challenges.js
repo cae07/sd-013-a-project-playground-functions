@@ -26,10 +26,10 @@ function concatName(string) {
   let ultimoItem = 0;
   let primeiroItem = 0;
 
-  primeiroItem = string[primeiroItem]
-  ultimoItem = string[string.lenght-1]
+  ultimoItem = string[primeiroItem]
+  primeiroItem = string[string.length - 1];
 
-  return primeiroItem + ultimoItem;
+  return primeiroItem+"," +" " +ultimoItem;
 }
 
 // Desafio 5
@@ -80,37 +80,72 @@ else if((mouse + cat2 === mouse + cat1) || (mouse + cat1 === mouse + cat2) ) {
 
 // Desafio 8
 function fizzBuzz(value1) {
-  let fizz = "fizz";
-  let buzz = "buzz";
-  let bug = "bug!";
-  let fizzbuz1 = "fizzBuzz"
-  let caixa;;
-  for (let index in value1){
-    if (value1[index]% 3 == 0) {
-      caixa += fizz.splitSentence();
+  let fizz = " fizz ";
+  let buzz = " buzz ";
+  let bug = " bug! ";
+  let fizzbuz1 = " fizzBuzz "
+  let caixa= [];
+    for (let index in value1){
+    if (value1[index]% 3 == 0 && value1[index]%!3 ==! 0) {
+      caixa.push("fizz");
       
     }
-    else if (value1[index]% 5 == 0){
-      caixa += buzz.splitSentence();
+    else if (value1[index]% 5 == 0 && value1[index]%!5 ==! 0){
+      caixa.push("buzz");
       
     }
     else if ((value1[index]% 3 == 0) && (value1[index]% 5 == 0)) {
-      caixa += fizzbuz1.splitSentence();
+      caixa.push("fizzBuzz");
       
     }
     else if ((value1[index]% 3 ==! 0) && (value1[index]% 5 ==! 0)) {
-      caixa += bug.splitSentence();
+      caixa.push("bug!");
       
   }
-  return value1=caixa;
+  
 }
+return caixa;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+    let tamanho = string.length;
+     for (let key = 0; key > string.length; key +=1){
+     if (string.substring(key,key+1) === "a") {
+       string.length[key] = 1;       
+     }
+    else if (string.substring(key,key+1) === "e") {
+      string.length[key] = 2;
+    }
+    else if (string.substring(key,key+1) ==="i") {
+      string.length[key] = 3;
+    }
+    else if (string.substring(key,key+1) === "o") {
+      string.length[key] = 4;
+    }
+    else if (string.substring(key,key+1) === "u") {
+      string.length[key] = 5;
+    }
+    return string;
+  }
+  }
+function decode(string2) {
+  for (let key in string2.length)
+  if (string2.length == "1") {
+    string2.length[key] = "a";       
+  }
+ else if (string2.length == "2") {
+   string2.length[key] = "b";
+ }
+ else if (string2.length == "3") {
+   string2.length[key] = "i";
+ }
+ else if (string2.length == "4") {
+   string2.length[key] = "o";
+ }
+ else if (string2.length == "5") {
+   string2.length[key] = "u";
+ }
+return string2;
 }
 
 
