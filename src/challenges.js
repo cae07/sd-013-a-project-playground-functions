@@ -65,13 +65,13 @@ function highestCount(parametro) {
   // Deverá retornar a quantidade de vezes que o numero se repete
 }
 
-// Desafio 7 feito com ajuda do link: https://developer.cdn.mozilla.net/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Desafio 7 feito com ajuda do Silvio e do link: https://developer.cdn.mozilla.net/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < (Math.abs(mouse - cat2))) {
     return 'cat1';
-  } if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))) {
+  } else if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
