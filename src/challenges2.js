@@ -33,25 +33,21 @@ function checaNumeros(phoneNumbersArray) {
   }
 }
 
-function contaRepeticao (phoneNumbersArray) {
+function contaRepeticao (phoneNumbersArray, numeroDoPhoneNumbersArray) {
   let repetiu = 0;
-  let arrayRepeticao = [];
-
-  for (let comparaRepetido of phoneNumbersArray) {
-    for (let repetidoComparar of phoneNumbersArray) {
-      if (repetidoComparar === comparaRepetido) {
+ 
+  for (let comparaRepetido in phoneNumbersArray) {
+    if (numeroDoPhoneNumbersArray === phoneNumbersArray[comparaRepetido]) {
         repetiu += 1;
         }
       }
-      arrayRepeticao.push(repetiu);
-      repetiu = 0
-    }
-    return arrayRepeticao;
+      return repetiu;
 }
 
 function verificaRepeticao (phoneNumbersArray) {
-  for (let index of contaRepeticao(phoneNumbersArray)) {
-    if (index >= 3) {
+  for (let index in phoneNumbersArray) {
+    let repete = contaRepeticao(phoneNumbersArray, phoneNumbersArray[index]);
+    if (repete >=3) {
       return true;
     }
   }
