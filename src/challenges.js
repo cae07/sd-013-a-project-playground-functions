@@ -2,9 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 console.log(compareTrue(true, true));
 // Desafio 2
@@ -18,12 +17,12 @@ function splitSentence(myString) {
   let array = myString.split(/[\s,]+/);
   return array;
 }
-let myString = "foguete";
+let myString = 'foguete';
 console.log(splitSentence(myString));
 
 // Desafio 4
 function concatName(array) {
-  let soma = array[array.length - 1] + ", " + array[0];
+  let soma = `${array[array.length - 1]}, ${array[0]}`;
   return soma;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -44,23 +43,22 @@ function highestCount(array) {
     }
   }
   for (let index2 = 0; index2 < array.length; index2 += 1) {
-    if ( array[index2] == maior){
+    if (array[index2] == maior) {
       count += 1;
     }
   }
   return count;
-
 }
 console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let vencedor;
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    vencedor = "cat2";
+    vencedor = 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    vencedor = "cat1";
+    vencedor = 'cat1';
   } else {
-    vencedor = "os gatos trombam e o rato foge";
+    vencedor = 'os gatos trombam e o rato foge';
   }
   return vencedor;
 }
@@ -70,13 +68,13 @@ function fizzBuzz(rogerio) {
   let myString = [];
   for (let index = 0; index < rogerio.length; index += 1) {
     if (rogerio[index] % 3 == 0 && rogerio[index] % 5 == 0) {
-      myString.push("fizzBuzz");
+      myString.push('fizzBuzz');
     } else if (rogerio[index] % 3 == 0) {
-      myString.push("fizz");
+      myString.push('fizz');
     } else if (rogerio[index] % 5 == 0) {
-      myString.push("buzz");
+      myString.push('buzz');
     } else {
-      myString.push("bug!");
+      myString.push('bug!');
     }
   }
   return myString;
@@ -85,13 +83,13 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Ajuda do Josue Lobo e Rogério P. da Silva
 // Desafio 9
 function encode(value) {
-  let value2 = "";
+  let value2 = '';
   let obj = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   for (let i of value) {
     if (obj[i]) {
@@ -101,16 +99,16 @@ function encode(value) {
     }
   }
   return value2;
-};
+}
 
 function decode(value) {
-  let value2 = ""
+  let value2 = '';
   let obj = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u".
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   for (let i of value) {
     if (obj[i]) {
