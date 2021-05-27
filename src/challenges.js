@@ -7,24 +7,23 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-console.log(compareTrue(true, true))
-
 // Desafio 2
 function calcArea(base, height) {
  let area= (base*height) /2;
  return area;
 }
  
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(cores) {
+  let palavras= cores[cores.length-1] + ', ' + cores[0];
+  return palavras;
 }
+
 
 // Desafio 5
 function footballPoints() {
