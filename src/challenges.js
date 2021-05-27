@@ -7,22 +7,22 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-//console.log(compareTrue(false, true));
+// console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-//console.log(calcArea(10, 50));
+// console.log(calcArea(10, 50));
 
 // Desafio 3
 // Desafio realizado com a ajuda do estudante Erick Santos :D
 function splitSentence(texto) {
-  return texto.split(" ");
+  return texto.split(' ');
 }
 
-//console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('vamo que vamo'));
 
 // console.log("Ja, que, line".split(","))
 
@@ -33,12 +33,15 @@ function concatName(array) {
   return text;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+  return points;
 }
+
+// console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
