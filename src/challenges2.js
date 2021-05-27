@@ -6,80 +6,50 @@ function techList(arrTech, strName) {
     return 'Vazio!';
   }
   // order arrTech
-  let aux = '';
-  for (let i = arrTech.length - 1; i >= 0; i -= 1) {
-    for (let j = 0; j < i; j += 1) {
-      if (arrTech[j] > arrTech[j + 1]) {
-        aux = arrTech[j];
-        arrTech[j] = arrTech[j + 1];
-        arrTech[j + 1] = aux;
-      }
-    }
-  }
+  arrTech.sort();
 
   for (let i = 0; i < arrTech.length; i += 1) {
     arrObj.push({ tech: '', name: strName });
+    arrObj[i].tech = arrTech[i];
   }
-
-  for (let key in arrTech) {
-    arrObj[key].tech = arrTech[key];
-  }
-
   return arrObj;
 }
 
 // Desafio 11
+/*
+https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
+Documentação utilizada para criação da constante
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+*/
 function generatePhoneNumber(arr) {
-  /*
-  Documentação utilizada para criação da constante
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-  */
   const invalid = (element) => element < 0 || element > 9 === true;
   let strOut = '';
-
-  // Checkar se algum elemento repete mais que 3x
   let count = [];
-  const bigger3 = (element) => element >= 3 === true;
+  const bigger3 = (element) => element >= 3 === true; // Checkar se algum elemento repete mais que 3x
 
   for (let i = 0; i < arr.length; i += 1) {
-    count.push(0);
-    for (let j = 0; j < arr.length; j += 1) {
-      if (arr[i] === arr[j]) {
-        count[i] += 1;
-      }
-    }
+    count.push(arr.filter((x) => x === arr[i]).length);
   }
-
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (arr.some(invalid) || count.some(bigger3)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    for (let i = 0; i < 11; i += 1) {
-      arr[i] = arr[i].toString();
-    }
-    for (let i = 0; i < 11; i += 1) {
-      if (i === 0) {
-        strOut = `(${arr[i]}`;
-      } else if (i === 1) {
-        strOut = `${strOut}${arr[i]}) `;
-      } else if (i === 6) {
-        strOut = `${strOut}${arr[i]}-`;
-      } else {
-        strOut = `${strOut}${arr[i]}`;
-      }
-    }
   }
+  if (arr.some(invalid) || count.some(bigger3)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  strOut = `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}`;
+  strOut = `${strOut}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+
   return strOut;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check1 = lineA + lineB > lineC && lineC > Math.abs(lineA - lineB);
-  let check2 = lineA + lineC > lineB && lineB > Math.abs(lineA - lineC);
-  let check3 = lineB + lineC > lineA && lineA > Math.abs(lineB - lineC);
+  let check = (2 * lineA) + (2 * lineB) + (2 * lineC) > lineC + lineB + lineA;
+  let check1 = lineC > Math.abs(lineA - lineB);
+  let check2 = lineB > Math.abs(lineA - lineC);
+  let check3 = lineA > Math.abs(lineB - lineC);
 
-  return check1 && check2 && check3;
+  return check && check1 && check2 && check3;
 }
 
 // Desafio 13
