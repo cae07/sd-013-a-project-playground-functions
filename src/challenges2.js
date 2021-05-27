@@ -17,7 +17,7 @@ function techList(array,name) {
     newArray.push(newObject);
   }
   if (newArray == '') {
-    return "vazio!";
+    return "Vazio!";
   } else {
     return newArray;
   }
@@ -46,7 +46,7 @@ function generatePhoneNumber(array) {
     if (i < 1) {
       phone += '(' + array[i];   // (1
     } else if (i > 0 && i < 2) {
-      phone += array[i] + ')';  // (12)
+      phone += array[i] + ') ';  // (12)
     } else if (i > 1 && i < 7) {
       phone += array[i];        // (12)34567
     } else if (i >= 7) {
@@ -58,8 +58,7 @@ function generatePhoneNumber(array) {
   }
   return phone;
 }
-let numero = ['1','2','3','4','5','6','7','8','9','0','1'];
-console.log(generatePhoneNumber(numero));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
