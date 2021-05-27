@@ -72,8 +72,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    let resultado = 'bug!';
+
+    if (array[index] % 15 === 0) { // o valor 15 é o mínimo múltiplo comum de 3 e 5.//
+      resultado = 'fizzBuzz';
+    } else if (array[index] % 5 === 0) {
+      resultado = 'buzz';
+    } else if (array[index] % 3 === 0) {
+      resultado = 'fizz';
+    }
+    newArray.push(resultado);
+  }
+  return newArray;
 }
 
 // Desafio 9
