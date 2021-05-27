@@ -5,7 +5,6 @@ function compareTrue(x,y) {
   } else {
     return false;
   }
-  
 }
 console.log(compareTrue(true,false));
 
@@ -47,11 +46,12 @@ console.log(footballPoints(1,2));
 console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount(...nums) {
+function highestCount(nums) {
+ 
   let maior = [];
   let count = 0;
   for(let i = 0; i < nums.length; i += 1) {
-    if(nums[i] >= maior) {
+    if(nums[i] > maior) {
       maior = nums[i];
     }
   }
@@ -64,9 +64,9 @@ function highestCount(...nums) {
   
   return count;
 }
-console.log(highestCount(9, 1, 2, 3, 9, 5, 7))
-console.log(highestCount(0, 4, 4, 4, 9, 2, 1));
-console.log(highestCount(0, 0, 0));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
