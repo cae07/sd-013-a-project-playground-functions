@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(pass1, pass2) {
-  if (pass1 == true && pass2 == true) {
+  if (pass1 === true && pass2 === true) {
     return true;
-  } else 
-    return false;
+  }
+    return false
 }
 
 // Desafio 2
@@ -13,17 +13,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let result = text.split(' ');
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let completname = name[name.length-1] + "," + " " + name [0];
+  return completname;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) +  ties;
+  return points;
 }
 
 // Desafio 6
