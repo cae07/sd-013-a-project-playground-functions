@@ -31,20 +31,21 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(numeros) {
- let maior=numeros[0];
- let contador=0;
- for(i=0;i<numeros.length;i+=1){
-   if(numeros[i]>maior){
-     maior=numeros[i]
-   }
-  }for(i=0;i<numeros.length;i+=1){
-     if(maior===numeros[i]){
-       contador+=1;
-     }
-   }return contador;
- }
+function highestCount(array) {//ajuda do sumoyama
+  let contar = 0;
+  let maior= array[0];
 
+  for (let index = 0; index < array.length; index += 1) {
+    if ( array[index]>maior) {//aqui ve se o indice corrente é maior que a variavel maior
+      maior= array[index];//maior passa a ser o indice corrente
+      contar = 0;//reinicia a contagem para onde começou 
+    }
+    if (maior === array[index]) {//checagem para ver se maior é igual a outros indices do array
+      contar += 1;
+    }
+  }
+  return contar;
+}
 // Desafio 7//math.abs foi uma dica do plantão para retornar valores inteiros
 function catAndMouse(mouse,cat1,cat2) {
   let distcat1= Math.abs(mouse-cat1);
