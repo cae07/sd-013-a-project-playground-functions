@@ -1,23 +1,25 @@
 // Desafio 10
 function techList(arrayTec, nome) {
-  let techname = new Array(arrayTec.length); 
-  for(let index = 0; index < techname.length; index +=1){
-    techname[index] = {
+  let techname = new Array(arrayTec.length);
+  if(arrayTec.length === 0){
+    techname = 'Vazio!';
+  }else{
+      for(let index = 0; index < techname.length; index +=1){
+      techname[index] = {
       tech: arrayTec[index],
       name: nome,
     }
   }
-  
-  for(let index = 0; index < techname.length; index +=1){
-    
-
-  }
-  console.log(techname);
-  
+  techname.sort(function(a,b){
+    if(a.tech < b.tech){
+      return -1;
+    } else {
+      return true;
+    }
+  });
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
+  return techname;  
+}
 // Desafio 11
 function generatePhoneNumber(arrayNum) {
   if(arrayNum.length != 11){
