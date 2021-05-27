@@ -1,23 +1,28 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ((param1 == true) && (param2 == true)){
+  if ((param1 === true) && (param2 === true)) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
+  // eslint-disable-next-line no-func-assign
   calcArea = (base * height) / 2;
   return calcArea;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  for (word in string){
-    splitSentence = string.split(" ");
+  // eslint-disable-next-line guard-for-in
+  // eslint-disable-next-line no-undef
+  // eslint-disable-next-line guard-for-in
+  // eslint-disable-next-line no-empty-pattern
+  // eslint-disable-next-line guard-for-in
+  for (let {} in string) {
+    // eslint-disable-next-line no-func-assign
+    splitSentence = string.split(' ');
   }
   return splitSentence;
 }
@@ -25,7 +30,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   for (let index = 0; index < array.length; index += 1) {
-    concatName = (array[array.length - 1] + ", " + array[0])
+    // eslint-disable-next-line no-func-assign
+    concatName = (`${array[array.length - 1]}, ${array[0]}`);
   }
   return concatName;
 }
@@ -38,7 +44,7 @@ function footballPoints(wins, ties) {
   let numberWins = wins * winsPoint;
   let numberTies = ties * tiesPoint;
 
-return numberWins + numberTies;
+  return numberWins + numberTies;
 }
 
 // Desafio 5 realizado com as dicas do Instrutor Fernando Soares
@@ -48,13 +54,13 @@ function highestCount(array) {
   let highestNumber = array[0];
   let count = 0;
 
-  for (let index = 0; index < array.length; index +=1) {
-    if (highestNumber < array[index]){
-    highestNumber = array[index];
+  for (let index = 0; index < array.length; index += 1) {
+    if (highestNumber < array[index]) {
+      highestNumber = array[index];
     }
   }
-  for (let index2 = 0; index2 < array.length; index2 +=1) {
-    if (array[index2] == highestNumber) {
+  for (let index2 = 0; index2 < array.length; index2 += 1) {
+    if (array[index2] === highestNumber) {
       count += 1;
     }
   }
@@ -69,19 +75,31 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = Math.abs(mouse - cat2);
 
   if (distance1 > distance2) {
-    return "cat2";
+    return 'cat2';
   }
-  else if (distance2 > distance1){
-    return "cat1";
+  if (distance2 > distance1) {
+    return 'cat1';
   }
-  else {
-    return "os gatos trombam e o rato foge";
-  }
+  return 'os gatos trombam e o rato foge';
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let novoArray = [];
+
+  for (let index of array) {
+    let retorno = 'bug!';
+    if (index % 15 === 0) {
+      retorno = 'fizzBuzz';
+    } else if (index % 3 === 0) {
+      retorno = 'fizz';
+    } else if (index % 5 === 0) {
+      retorno = 'buzz';
+    }
+    novoArray.push(retorno);
+  }
+  return novoArray;
 }
 
 // Desafio 9
