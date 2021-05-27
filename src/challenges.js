@@ -25,7 +25,7 @@ function splitSentence(digite) {
 console.log(splitSentence("Vamo que vamo go Trybe"));
 
 // Desafio 4
-function concatName(...nomes) {
+function concatName(nomes) {
   let first = nomes[0];
   let last = nomes[nomes.length -1]
   let result = last + ", "+ first;
