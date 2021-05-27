@@ -57,14 +57,13 @@ function generatePhoneNumber(array) {
     }
   }
   
-  if (condition != '') {
+  if (condition !== '') {
     return condition;
   } else {
     return phone;
   }
 }
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(numeros));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
