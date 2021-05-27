@@ -98,12 +98,70 @@ function fizzBuzz(myArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(myString) {
+  let newArray = myString.split('');
+  let newString = '';
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 'a') {
+      newArray[index] = 1;
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 'e') {
+      newArray[index] = 2;
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 'i') {
+      newArray[index] = 3;
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 'o') {
+      newArray[index] = 4;
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 'u') {
+      newArray[index] = 5;
+    }
+  }
+  newString = newArray.join('');
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(myString) {
+  let newArray = myString.split('');
+  let newString = '';
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 1) {
+      newArray[index] = 'a';
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 2) {
+      newArray[index] = 'e';
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 3) {
+      newArray[index] = 'i';
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 4) {
+      newArray[index] = 'o';
+    }
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (newArray[index] == 5) {
+      newArray[index] = 'u';
+    }
+  }
+  newString = newArray.join('');
+  return newString;
 }
+console.log(decode('12345'));
 
 module.exports = {
   calcArea,
