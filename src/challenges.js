@@ -19,14 +19,19 @@ function splitSentence(str) {
   return finalStr;
 }
 
-// Desafio 4 - In Review
+// Desafio 4 // erro na function .split
 function concatName(name) {
-  let sapareteName = name.split(",")
-  let firstName = sapareteName[0];
-  let lastName = sapareteName[sapareteName.length - 1];
-  let resultName = lastName + ', ' + firstName 
-  return resultName;
+
+  /*
+    Preciso de uma forma da função receber todos os parametros
+  */
+
+  let firstName = auxName[0];
+  let lastName = auxName[auxName.length - 1];
+  let finalName = lastName + ' ' + firstName;
+  return auxName;
 }
+
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
@@ -34,8 +39,12 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6  - In Review
+// Desafio 6  // erro na function .split
 function highestCount(num) {
+
+   /*
+    Preciso de uma forma da função receber todos os parametros
+  */
   
   let iNum = num.split(',');
   let numMaior =  Math.max(parseInt(iNum));
@@ -69,8 +78,11 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 //console.log(catAndMouse(0, 2, 1))
 
-// Desafio 8 - ok // erro na função split
+// Desafio 8 - ok // erro na função .split
 function fizzBuzz(arr) {
+  /*
+    Preciso de uma forma da função receber todos os parametros
+  */
   let aux = arr.split(',');
   let auxNum;
   for (let i = 0 ; i < aux.length ; i++) {
@@ -93,17 +105,60 @@ function fizzBuzz(arr) {
       aux[i] = 'bug!';
     }
   }
-  
+ 
   return aux ;
 }
 
+// Desafio 9 
+function encode(str) {
+  let auxStr = str.split('');
+  for (let i = 0 ; i < auxStr.length ; i++) {
+    if (auxStr[i] == 'a') {
+      auxStr[i] = '1';
+    }
+    if (auxStr[i] == 'e') {
+      auxStr[i] = '2';
+    }
+    if (auxStr[i] == 'i') {
+      auxStr[i] = '3';
+    }
+    if (auxStr[i] == 'o') {
+      auxStr[i] = '4';
+    }
+    if (auxStr[i] == 'u') {
+      auxStr[i] = '5';
+    }
+  }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+  auxStr = auxStr.toString();
+  auxStr = auxStr.replace(/,/g, "");
+  return auxStr;
+
+} // /encode ----
+
+function decode(str) {
+  let strDecode = encode(str);
+  strDecode = strDecode.split('');
+  for (let i = 0 ; i < strDecode.length ; i++) {
+    if (strDecode[i] == '1') {
+      strDecode[i] = 'a';
+    }
+    if (strDecode[i] == '2') {
+      strDecode[i] = 'e';
+    }
+    if (strDecode[i] == '3') {
+      strDecode[i] = 'i';
+    }
+    if (strDecode[i] == '4') {
+      strDecode[i] = 'o';
+    }
+    if (strDecode[i] == '5') {
+      strDecode[i] = 'u';
+    }
+  }
+  strDecode = strDecode.toString();
+  strDecode = strDecode.replace(/,/g, "");
+  return strDecode;
 }
 
 module.exports = {
