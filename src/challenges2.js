@@ -19,13 +19,13 @@ function techList(techsList, nome) {
 let mensagemImpossivel = 'não é possível gerar um número de telefone com esses valores';
 let mensagemTamanho = 'Array com tamanho incorreto.';
 
-function checaTamanho (phoneNumbersArray) {
+function checaTamanho(phoneNumbersArray) {
   if (phoneNumbersArray.length !== 11) {
     return true;
   }
 }
 
-function checaNumeros (phoneNumbersArray) {
+function checaNumeros(phoneNumbersArray) {
   for (let digito of phoneNumbersArray) {
     if (digito < 0 || digito > 9) {
       return true;
@@ -35,17 +35,25 @@ function checaNumeros (phoneNumbersArray) {
 
 function contaRepeticao (phoneNumbersArray) {
   let repetiu = 0;
+  let arrayRepeticao = [];
 
   for (let comparaRepetido of phoneNumbersArray) {
     for (let repetidoComparar of phoneNumbersArray) {
       if (repetidoComparar === comparaRepetido) {
         repetiu += 1;
+        }
       }
-      if (repetiu >= 3) {
-        return true;
-      }
+      arrayRepeticao.push(repetiu);
+      repetiu = 0
     }
-    repetiu = 0
+    return arrayRepeticao;
+}
+
+function verificaRepeticao (phoneNumbersArray) {
+  for (let index of contaRepeticao(phoneNumbersArray)) {
+    if (index >= 3) {
+      return true;
+    }
   }
 }
 
@@ -62,7 +70,7 @@ function generatePhoneNumber(phoneNumbersArray) {
   return mensagemTamanho;
  } if (checaNumeros(phoneNumbersArray)) {
   return mensagemImpossivel;
- } if (contaRepeticao(phoneNumbersArray)) {
+ } if (verificaRepeticao(phoneNumbersArray)) {
   return mensagemImpossivel;
  } 
   return mountPhone(phoneNumbersArray);
