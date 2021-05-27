@@ -59,8 +59,20 @@ return '(' + dddok + ')' + ' ' + telBloco1ok + '-' + telBloco2ok;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+let check = false;
+  if (Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) &&
+    (Math.abs(lineB) < (Math.abs(lineA) + Math.abs(lineC)) &&
+    (Math.abs(lineC) < (Math.abs(lineB) + Math.abs(lineA)) &&
+    ((Math.abs(lineA) - (Math.abs(lineB)) < Math.abs(lineA)) &&
+    ((Math.abs(lineA) - (Math.abs(lineC)) < Math.abs(lineA)) &&
+    ((Math.abs(lineB) - (Math.abs(lineA)) < Math.abs(lineB)) &&
+    ((Math.abs(lineB) - (Math.abs(lineC)) < Math.abs(lineB)) &&
+    ((Math.abs(lineC) - (Math.abs(lineA)) < Math.abs(lineC)) &&
+    ((Math.abs(lineC) - (Math.abs(lineB)) < Math.abs(lineC))))))))))) {
+    check = true;
+  }
+return check;
 }
 
 // Desafio 13
