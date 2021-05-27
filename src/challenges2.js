@@ -22,8 +22,7 @@ function techList(techNames, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
-  arrayCheck(arrayNumber);
-
+  return arrayCheck(arrayNumber);
 }
 function arrayCheck (arrayCheck) {
   let count = 0;
@@ -45,7 +44,7 @@ function arrayCheck (arrayCheck) {
     count = 0;
   }
 }
-console.log(generatePhoneNumber([1, 1, 1, 4, 5, 6, 7, 8, 9, 10, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1],));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
