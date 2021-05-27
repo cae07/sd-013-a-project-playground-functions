@@ -46,8 +46,8 @@ function highestCount(arr) {
     maior = arr[i];
   }
 }
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] === maior) {
+  for (let f = 0; f < arr.length; f += 1) {
+    if (arr[f] === maior) {
     vezes++;
 }
   }
