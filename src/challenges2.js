@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(array) {
+function techList(array,name) {
   // seu código aqui
 let objeto = [];
 array.sort()
 for(index = 0; index < array.length; index ++){
    
   objeto.push({
-  name: "Lucas",
+  name: name,
   tech: array[index]
 }); 
 }if(objeto > [{}]){
