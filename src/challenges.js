@@ -101,11 +101,44 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
-function decode() {
+  // transformar a, e, i , o, u em numeros 1, 2, 3, 4, 5 respectivamente
+  for(let index = 0; index < string.length; index ++){
+    if(string[index] === "a"){
+      string = string.replace(string[index], "1");
+    }else if(string[index] === "e"){
+       string = string.replace(string[index], "2");
+    }else if(string[index] ==="i"){
+      string = string.replace(string[index], "3");
+    }else if(string[index] === "o"){
+      string = string.replace(string[index], "4");
+    }else if(string[index] === "u"){
+      string = string.replace(string[index], "5");
+    }
+  }
+  return string;
+  
+}//console.log(encode(string));
+
+
+function decode(string) {
   // seu código aqui
+  //fazer somente o inverso
+  for(let index = 0; index < string.length; index ++){
+    if(string[index] === "1"){
+      string = string.replace(string[index], "a");
+    }else if(string[index] === "2"){
+       string= string.replace(string[index], "e");
+    }else if(string[index] ==="3"){
+      string = string.replace(string[index], "i");
+    }else if(string[index] === "4"){
+      string = string.replace(string[index], "o");
+    }else if(string[index] === "5"){
+      string = string.replace(string[index], "u");
+    }
+  }
+  return string;
 }
 
 module.exports = {
