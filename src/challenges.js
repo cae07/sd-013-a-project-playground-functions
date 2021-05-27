@@ -61,19 +61,65 @@ function catAndMouse(distGato1, distGato2) {
   }else if(distGato1===distGato2) {
     return "os gatos trombam e o rato foge";
   } 
-}
+} 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+ let arrayNovo=[]
+  for(let i=0; i < array.length; i+=1){
+   if (array[i] % 15 === 0){
+   arrayNovo[i] = "fizzBuzz";}
+   else if (array[i] % 3 === 0){
+     arrayNovo[i] =  "fizz";
+   } else if (array[i] % 5 === 0){
+    arrayNovo[i] = "buzz";
+   } else {
+     arrayNovo[i] = "bug!";
+   }
+ } return arrayNovo;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+let palavra = string
+let outraPalavra =""
+  for (let index = 0; index < palavra.length; index++) {
+    if(palavra[index] === "a"){
+      outraPalavra = outraPalavra + "1";
+    }else if(palavra[index] === "e") {
+      outraPalavra = outraPalavra + "2";
+    }else if(palavra[index] === "i" ){
+      outraPalavra = outraPalavra + "3";    
+    }else if(palavra[index] === "o"){
+      outraPalavra = outraPalavra + "4";
+    }else if(palavra[index] === "u"){
+      outraPalavra = outraPalavra + "5";
+    }else{
+      outraPalavra = outraPalavra + palavra[index]
+    }
+    
+  } return outraPalavra
+ 
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let palavra=string
+  outraPalavra=""
+  for (let index = 0; index < palavra.length; index++) {
+    if(palavra[index] === "1"){
+      outraPalavra = outraPalavra + "a";
+    }else if(palavra[index] === "2") {
+      outraPalavra = outraPalavra + "e";
+    }else if(palavra[index] === "3" ){
+      outraPalavra = outraPalavra + "i";    
+    }else if(palavra[index] === "4"){
+      outraPalavra = outraPalavra + "o";
+    }else if(palavra[index] === "5"){
+      outraPalavra = outraPalavra + "u";
+    }else{
+      outraPalavra = outraPalavra + palavra[index]
+    }
+    
+  } return outraPalavra
 }
 
 module.exports = {
