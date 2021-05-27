@@ -65,7 +65,7 @@ function fizzBuzz(array) {
   // eslint-disable-next-line no-undef
   for (i in array) {
     // eslint-disable-next-line no-undef
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) list[i] = 'BuzzFizz';
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) list[i] = 'fizzBuzz';
     // eslint-disable-next-line no-undef
     else if (array[i] % 3 === 0) list[i] = 'fizz';
     // eslint-disable-next-line no-undef
@@ -75,7 +75,7 @@ function fizzBuzz(array) {
   }
   return list;
 }
-console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
