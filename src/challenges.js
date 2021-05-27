@@ -133,14 +133,41 @@ function fizzBuzz(entrada) {
 
 };
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(entrada) {
+
+  let a = entrada;
+  for (let i = 0; i < a.length; i+= 1) {
+
+    let b = a.replace("a", "1");
+    let c = b.replace("e", "2");
+    let d = c.replace("i", "3");
+    let e = d.replace("o", "4");
+    let f = e.replace("u", "5");
+    a = f;
+
+  };
+
+  return a;
+
+};
+
+function decode(entrada) {
+
+  let a = entrada;
+  for (let i = 0; i < a.length; i+= 1) {
+
+    let b = a.replace("1", "a");
+    let c = b.replace("2", "e");
+    let d = c.replace("3", "i");
+    let e = d.replace("4", "o");
+    let f = e.replace("5", "u");
+    a = f;
+
+  };
+  
+  return a;
+
 }
 
 module.exports = {
