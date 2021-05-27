@@ -7,33 +7,33 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-console.log(compareTrue(false, true));
+//console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(10, 50));
+//console.log(calcArea(10, 50));
 
 // Desafio 3
-//Desafio realizado com a ajuda do estudante Erick Santos :D
+// Desafio realizado com a ajuda do estudante Erick Santos :D
 function splitSentence(texto) {
   return texto.split(" ");
 }
 
-console.log(splitSentence('vamo que vamo'));
+//console.log(splitSentence('vamo que vamo'));
 
 // console.log("Ja, que, line".split(","))
 
 // Desafio 4
+// Desafio realizado com a ajuda da estudante Luiza Antiques :D
 function concatName(array) {
-  let text = array[array.length - 1] + " , " + array[0];
+  let text = `${array[array.length - 1]}, ${array[0]}`;
   return text;
 }
-  
-console.log(concatName(['Diego', 'Jaqueline', 'Mel', 'Verusca']))
 
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
