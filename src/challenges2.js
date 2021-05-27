@@ -15,34 +15,57 @@ function techList(techsList, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumbersArray) {
-  let phoneObject = {};
-  let contaRepete = 0;
-  if (phoneNumbersArray.length < 11 || phoneNumbersArray.length > 11) {
-    return 'Array com tamanho incorreto.';
+
+let mensagemImpossivel = 'não é possível gerar um número de telefone com esses valores';
+let mensagemTamanho = 'Array com tamanho incorreto.';
+
+function checaTamanho (phoneNumbersArray) {
+  if (phoneNumbersArray.length !== 11) {
+    return true;
   }
+}
+
+function checaNumeros (phoneNumbersArray) {
+  for (let digito of phoneNumbersArray) {
+    if (digito < 0 || digito > 9) {
+      return true;
+    }
+  }
+}
+
+function contaRepeticao (phoneNumbersArray) {
+  let repetiu = 0;
+
   for (let comparaRepetido of phoneNumbersArray) {
     for (let repetidoComparar of phoneNumbersArray) {
       if (repetidoComparar === comparaRepetido) {
-        contaRepete += 1;
+        repetiu += 1;
       }
-      if (contaRepete >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
+      if (repetiu >= 3) {
+        return true;
       }
     }
-    contaRepete = 0;
+    repetiu = 0
   }
-  for (let pegaNum of phoneNumbersArray) {
-    if (pegaNum < 0 || pegaNum > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-  for (let indexArray in phoneNumbersArray) {
-    phoneObject[indexArray] = phoneNumbersArray[indexArray];
-  }
-  let phoneNumber =
-    '(' + phoneObject[0] + phoneObject[1] + ') ' + phoneObject[2] + phoneObject[3] + phoneObject[4] + phoneObject[5] + phoneObject[6] + '-' + phoneObject[7] + phoneObject[8] + phoneObject[9] + phoneObject[10];
-  return phoneNumber;
+}
+
+function mountPhone (phoneNumbersArray) {
+  phoneNumberString = phoneNumbersArray.join('');
+  let ddd = phoneNumberString.slice(0, 2);
+  let prefixo = phoneNumberString.slice(2, 7);
+  let sufixo = phoneNumberString.slice(7, 11);
+  return `(${ddd}) ${prefixo}-${sufixo}`;
+}
+
+function generatePhoneNumber(phoneNumbersArray) {
+ if (checaTamanho(phoneNumbersArray)) {
+  return mensagemTamanho;
+ } if (checaNumeros(phoneNumbersArray)) {
+  return mensagemImpossivel;
+ } if (contaRepeticao(phoneNumbersArray)) {
+  return mensagemImpossivel;
+ } 
+  return mountPhone(phoneNumbersArray);
 }
 
 // Desafio 12
