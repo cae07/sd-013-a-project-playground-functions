@@ -75,13 +75,13 @@ function catAndMouse(mouse,cat1,cat2) {
     console.log("cat2");
   } else if( cat1 < cat2 ){
     console.log("cat1")
-  } else {
+  } else if(cat1 == mouse && cat2 == mouse){
     console.log('os gatos trombam e o rato foge');
   }
 }
 catAndMouse(0,3,2)
 catAndMouse(0,6,12)
-catAndMouse(0,6,6)
+catAndMouse(6,6,6)
 
 // Desafio 8
 function fizzBuzz() {
