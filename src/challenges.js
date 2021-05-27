@@ -47,9 +47,41 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function checkFizz(n) {
+  return n % 3 === 0 && n % 5 !== 0;
+}
+
+function checkBuzz(n) {
+  return n % 5 === 0 && n % 3 !== 0;
+}
+
+function checkFizzBuzz(n) {
+  return n % 3 === 0 && n % 5 === 0;
+}
+
+function checkBug(n) {
+  return n % 3 !== 0 && n % 5 !== 0;
+}
+
+function makeChecks(n, res) {
+  if (checkFizz(n)) {
+    res.push('fizz');
+  } else if (checkBuzz(n)) {
+    res.push('buzz');
+  } else if (checkFizzBuzz(n)) {
+    res.push('fizzBuzz');
+  } else if (checkBug(n)) {
+    res.push('bug!');
+  }
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let res = [];
+  for (let number of numbers) {
+    makeChecks(number, res);
+  }
+  return res;
 }
 
 // Desafio 9
