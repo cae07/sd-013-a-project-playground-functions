@@ -53,8 +53,14 @@ for (let i = 0; i<= array.length; i +=1){
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(distGato1, distGato2) {
+  if(distGato1<distGato2){
+    return "cat1";
+  }else if(distGato2<distGato1){
+    return "cat2";
+  }else if(distGato1===distGato2) {
+    return "os gatos trombam e o rato foge";
+  } 
 }
 
 // Desafio 8
