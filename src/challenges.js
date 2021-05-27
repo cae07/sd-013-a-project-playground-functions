@@ -79,7 +79,7 @@ catAndMouse(0,6,12)
 catAndMouse(2,6,6)
 
 // Desafio 8
-function fizzBuzz(...nums) {
+function fizzBuzz(nums) {
   let aux = [];
   for(let i = 0; i < nums.length; i += 1) {
     if( (nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
@@ -96,9 +96,9 @@ function fizzBuzz(...nums) {
   return aux;
 }
 
-console.log(fizzBuzz(2, 15, 7, 9, 45));
-console.log(fizzBuzz(7, 9));
-console.log(fizzBuzz(9, 25));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
