@@ -56,10 +56,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
   if (distCat1 < 0) {
-    distCat1 = -1 * distCat1;
+    distCat1 *= -1;
   }
   if (distCat2 < 0) {
-    distCat2 = -1 * distCat2;
+    distCat2 *= -1 ;
   }
   if (distCat1 < distCat2) {
     return 'cat1';
@@ -81,7 +81,7 @@ function fizzBuzz(value) {
       result.push('fizz');
     }
     else if (value[counter] % 5 === 0) {
-      result.push('buzz');    
+      result.push('buzz');
     } else {
       result.push('bug!');
     }
@@ -110,6 +110,7 @@ function encode(string) {
   }
   return code;
 }
+(console.log(encode('os alemaes sao foda')))
 function decode(code) {
   let decodeCode = '';
   for (let index = 0; index < code.length; index += 1) {
@@ -129,6 +130,7 @@ function decode(code) {
   }
   return decodeCode;
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
