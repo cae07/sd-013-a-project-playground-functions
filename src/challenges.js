@@ -51,8 +51,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  
 
-  for (let i = 1; i <= [array.length]; i++){
+  for (let i = 1; i <= array.length; i++){
     if(i % 3 === 0 && i % 5 === 0){
       console.log("fizzBuzz");
     } else if(i % 3 === 0){
@@ -62,9 +63,9 @@ function fizzBuzz(array) {
     } else {
       console.log("bug!");
     }
-  } return i;
+  } return array;
 }
-//console.log(fizzBuzz([2,15,7,9,45]));
+console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode() {
