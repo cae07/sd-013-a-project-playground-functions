@@ -60,16 +60,44 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(num) {
   // seu código aqui
+  let array = [];
+  for (let n of num){
+  if(n % 3 === 0 && n % 5 === 0) {
+    array.push ('fizzBuzz');
+  }else if (n % 3 === 0) {
+    array.push ('fizz');
+  }else if (n % 5 === 0) {
+    array.push ('buzz');
+  }else {
+    array.push ('bug!');
+  }
+}
+  return array;
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
+
+  return string;
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
+  string = string.replace(/1/gi, 'a');
+  string = string.replace(/2/gi, 'e');
+  string = string.replace(/3/gi, 'i');
+  string = string.replace(/4/gi, 'o');
+  string = string.replace(/5/gi, 'u');
+
+  return string;
 }
 
 module.exports = {
