@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(arrayTest) {
   let maiorNumero = arrayTest[0];
   let counter = 0;
 
@@ -55,16 +55,18 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, mouse, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let gato1Pegou = 'cat1';
   let gato2Pegou = 'cat2';
   let ratoFugiu = 'os gatos trombam e o rato foge';
 
   if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
     return gato1Pegou;
-  } else if ((Math.abs(cat2 - mouse)) < (Math.abs(cat1 - mouse))) {
+  }
+  if ((Math.abs(cat2 - mouse)) < (Math.abs(cat1 - mouse))) {
     return gato2Pegou;
-  } else {
+  }
+  if ((Math.abs(cat2 - mouse)) === (Math.abs(cat1 - mouse))) {
     return ratoFugiu;
   }
 }
