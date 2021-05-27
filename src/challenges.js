@@ -33,10 +33,18 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  if(Math.abs(cat1 - mouse) < (Math.abs(cat2 - mouse))) {
+    console.log("cat1");
+  } else if(Math.abs(cat1 - mouse) > (Math.abs(cat2 - mouse))) {
+    console.log("cat2");
+  } else {
+    console.log("os gatos trombam e o rato foge");
+  }
+  
 }
 
+catAndMouse(3, 4, 2);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
