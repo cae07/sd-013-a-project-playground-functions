@@ -51,19 +51,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  
+  let num = [];
 
-  for (let i = 1; i <= array.length; i++){
-    if(i % 3 === 0 && i % 5 === 0){
-      console.log("fizzBuzz");
-    } else if(i % 3 === 0){
-      console.log("fizz");
-    } else if(i % 5 === 0){
-      console.log("buzz");
+  for (let i = 0; i < array.length; i++){
+    if(array[i] % 3 === 0 && array[i] % 5 === 0){
+      num[i] = "fizzBuzz";
+    } else if(array[i] % 3 === 0){
+      num[i] = "fizz";
+    } else if(array[i] % 5 === 0){
+      num[i] = "buzz";
     } else {
-      console.log("bug!");
+      num[i] = "bug!";
     }
-  } return array;
+  } return num;
 }
 console.log(fizzBuzz([2,15,7,9,45]));
 
