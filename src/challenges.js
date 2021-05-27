@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
+// Desafio 8 ---consertar algo aqui... código funciona mas não.
 
 // eslint-disable-next-line complexity
 function fizzBuzz(array) {
@@ -75,15 +75,43 @@ function fizzBuzz(array) {
   }
   return list;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
 
+// Desafio 9
+function encode(texto) {
+  // a -> 1
+  // e -> 2
+  // i -> 3
+  // o -> 4
+  // u -> 5
+  for (let i = 0; i < texto.length; i += 1) {
+    texto = texto
+      .replace('e', '2')
+      .replace('a', '1')
+      .replace('i', '3')
+      .replace('o', '4')
+      .replace('u', '5');
+  }
+  return texto;
+}
+console.log(encode('hi there!'));
+
+function decode(texto) {
+  // a -> 1
+  // e -> 2
+  // i -> 3
+  // o -> 4
+  // u -> 5
+  for (let i = 0; i < texto.length; i += 1) {
+    texto = texto
+      .replace('1', 'a')
+      .replace('2', 'e')
+      .replace('3', 'i')
+      .replace('4', 'o')
+      .replace('5', 'u');
+  }
+  return texto;
+}
+console.log(decode(encode('hi there!')));
 module.exports = {
   calcArea,
   catAndMouse,
