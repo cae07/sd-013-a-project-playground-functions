@@ -67,11 +67,11 @@ console.log(highestCount([0, 0, 0]));
 function catAndMouse(mouse,cat1,cat2) {
 
   if( (cat1 > cat2) && (cat1 < mouse) && (cat2 < mouse) ) {
-    console.log("cat2");
+    return "cat2";
   } else if( (cat1 < cat2) && (cat1 < mouse) && (cat2 < mouse) ){
-    console.log("cat1")
+    return "cat1";
   } else if(cat1 == cat2){
-    console.log('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
   }
 }
 catAndMouse(0,3,2)
