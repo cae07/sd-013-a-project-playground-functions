@@ -58,8 +58,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let array = [];
+  for (let i = 0; i < arrayDeNumeros.length; i += 1) {
+    const numeroAtual = arrayDeNumeros[i];
+    const divisivelPor3 = numeroAtual % 3 === 0;
+    const divisivelPor5 = numeroAtual % 5 === 0;
+    if (divisivelPor3 && divisivelPor5) {
+      array.push('fizzBuzz');
+    } else if (divisivelPor3) {
+      array.push('fizz');
+    } else if (divisivelPor5) {
+      array.push('buzz');
+    } else {
+      array.push('bug!');
+    }
+  }
+  return array;
 }
 
 // Desafio 9
