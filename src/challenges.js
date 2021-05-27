@@ -2,15 +2,16 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
+  } 
+  else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
- let area = (base*height) /2;
- return area;
+  let area = (base * height) / 2;
+  return area;
 }
  
 // Desafio 3
@@ -21,13 +22,13 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(cores) {
-  let palavras = cores[cores.length-1] + ', ' + cores[0];
+  let palavras = cores[cores.length -1] + ', ' + cores[0];
   return palavras;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins*3) + (ties*1);
+  let pontos = (wins * 3) + (ties * 1);
   return pontos;
 }
 
