@@ -76,12 +76,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
   //== if para saber se é divisivel por 3
   //== if para saber se é divisivel por 5
   //if para saber se é divisivel por 5 e por 3
   //else se nenhum dos ocorrer
+  let array2 = [];
+  for(let i of array){
+    if(i % 3 === 0 && i % 5 === 0){
+       array2.push("fizzBuzz");
+    }else if(i % 5 == 0){
+        array2.push("buzz")
+      
+    }else if(i % 3 == 0){
+        array2.push("fizz")
+      
+    }else if(i % 3 !== 0 && i % 5 !== 0){
+        array2.push("bug!")
+      }
+    
+  }
+  return array2;
 }
 
 // Desafio 9
