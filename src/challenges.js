@@ -33,12 +33,11 @@ function concatName(array) {
   return resultado;
 }
 
-console.log(concatName(arrayNomes));
-
 // Desafio 5
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + (ties * 1);
 
-function footballPoints() {
-  // seu código aqui
+  return pontos;
 }
 
 // Desafio 6
