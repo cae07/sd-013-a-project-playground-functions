@@ -36,13 +36,13 @@ function highestCount(array) {
   let maiorValor = array[0];
   let vezesNumero = 0;
 
-  for(let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (maiorValor < array[i] ) {
       maiorValor = array[i]
     }
   }
 
-  for(let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (maiorValor === array[i] ) {
        vezesNumero += 1
     }
@@ -52,7 +52,21 @@ function highestCount(array) {
   
 // Desafio 
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+
+  if (distanciaCat1 > distanciaCat2){
+    return "cat2";
+  }
+
+  if (distanciaCat2 > distanciaCat1){
+    return "cat1";
+  }
+
+  if (distanciaCat2 === distanciaCat1){
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
