@@ -101,8 +101,6 @@ function fizzBuzz(array) {
   }
   return (answer)
 }
-
-
 // Desafio 9
 function encode(phrase) {
   let string = '';
@@ -125,7 +123,6 @@ function encode(phrase) {
 
   return (string)
 }
-
 function decode(phrase) {
   let string = '';
 
@@ -146,8 +143,6 @@ function decode(phrase) {
   }
   return (string)
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
