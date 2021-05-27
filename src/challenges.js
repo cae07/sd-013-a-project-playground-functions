@@ -84,7 +84,7 @@ function fizzBuzz(array) {
   //else se nenhum dos ocorrer
   let array2 = [];
   for(let i of array){
-    if(i % 3 === 0 && i % 5 === 0){
+    if(i % 3 == 0 && i % 5 == 0){
        array2.push("fizzBuzz");
     }else if(i % 5 == 0){
         array2.push("buzz")
