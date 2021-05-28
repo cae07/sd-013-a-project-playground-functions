@@ -18,13 +18,15 @@ function techList(array, name) {
       name: name,
       }) 
     }
-    // return objectList.sort(comparar);} //ordena os itens do array
-  
     if(objectList.length !== 0){
     return objectList.sort(comparar);
     } else if (objectList.length === 0){
     return 'Vazio!'}
 }
+// let teste = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let nome = "Ricardo";
+// console.log(techList(teste, nome));
+
 
 // Desafio 11 - função de Número de Telefone
 function generatePhoneNumber(array) {
@@ -58,7 +60,7 @@ let telBloco2ok = telBloco2.join('');
 return '(' + dddok + ')' + ' ' + telBloco1ok + '-' + telBloco2ok;
 }
 
-// Desafio 12
+// Desafio 12 - função de Condição de existência de um triângulo
 function triangleCheck(lineA, lineB, lineC) {
 let check = false;
   if (Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) &&
@@ -75,10 +77,32 @@ let check = false;
 return check;
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 - função de boas vindas ao Bar da Trybe!
+function somaNumeros (string) {
+let array = string.split(' ');
+let newArray = [];
+let soma = 0;
+  for (let index = 0; index < array.length; index += 1) {
+      newArray.push(parseInt(array[index]));
+  }
+  for (let index = 0; index < newArray.length; index += 1) {
+    if (isNaN(newArray[index]) === false){
+      soma += newArray[index];
+      }
+  }
+return soma;
 }
+
+function hydrate(string) {
+  let result = somaNumeros(string);
+  if(result === 1) {
+  return result + " copo de água";
+  }else { 
+  return result + " copos de água";}
+}
+let stringTest = "2 cerveja";
+console.log(hydrate(stringTest));
+
 
 module.exports = {
   generatePhoneNumber,
