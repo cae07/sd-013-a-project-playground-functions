@@ -36,9 +36,11 @@ return array;
 console.log(splitSentence ('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+return `${nomes[nomes.length - 1]}, ${nomes[0]}`;
 }
+let listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(listaDeNomes));
 
 // Desafio 5
 function footballPoints() {
