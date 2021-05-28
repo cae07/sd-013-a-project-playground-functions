@@ -17,9 +17,9 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(names) {
-  let x = names[names.lenght - 1];
-  let y = names[0];
-  return `${x},',', ${y}`;
+  let ultimo = names[names.length - 1];
+  let primeiro = names[0];
+  return `${ultimo}, ${primeiro}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -28,16 +28,15 @@ function footballPoints(wins, ties) {
   return gamesWins + gamesTies;
 }
 // Desafio 6
-function highestCount(x) { // 1- encontrar o maior valor do array; 2- contar quantas vezes ele se repete
-  let y = x.sort();
-  let resu = [];
-  for (let i = 0; i < x.length; i += 1) {
-    if (y[i] === i[i]) {
-      resu.push(i[i]);
+function highestCount(meuArray) { // 1- encontrar o maior valor do array; 2- contar quantas vezes ele se repete
+  let maior = 0;
+  for (let i = 0; i < meuArray.length; i++) {
+      if (meuArray[i] > maior) {
+      maior = meuArray[i];
     }
   }
-  return resu;
 }
+console.log(meuArray(11,12,11,4,5,6,8,));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -66,5 +65,4 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-};
+  splitSentence,}
