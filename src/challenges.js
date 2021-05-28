@@ -15,12 +15,11 @@ function splitSentence(string) {
   let array = string.split(' ');
   return array;
 }
-
 // Desafio 4
 function concatName(names) {
   let x = names[names.lenght - 1];
   let y = names[0];
-  return `${x}, ${y}`;
+  return `${x},',', ${y}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -28,9 +27,8 @@ function footballPoints(wins, ties) {
   let gamesTies = ties * 1;
   return gamesWins + gamesTies;
 }
-
 // Desafio 6
-function highestCount(x) {
+function highestCount(x) { // 1- encontrar o maior valor do array; 2- contar quantas vezes ele se repete
   let y = x.sort();
   let resu = [];
   for (let i = 0; i < x.length; i += 1) {
