@@ -9,8 +9,8 @@ function techList(techArray = Array, nome) {
   if (techArray.length >= 5) {
     // eslint-disable-next-line guard-for-in
     for (let i in techArray) {
-      let tech = { name: nome,
-        tech: techArray[i] };
+      let tech = { tech: techArray[i],
+        name: nome };
       itens.push(tech);
     }
     // else if (techArray === 0) {
@@ -18,7 +18,7 @@ function techList(techArray = Array, nome) {
     return itens;
   }
 }
-console.log(techList(['java', 'python'], 'breno'));
+console.log(techList(['java', 'python', 'javascript', 'feijao', 'arroz'], 'breno'));
 // Desafio 11
 function generatePhoneNumber() {
   
