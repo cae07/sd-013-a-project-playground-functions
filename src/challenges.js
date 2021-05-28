@@ -44,9 +44,22 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio realizado com a ajuda da monitora Bianca Caetano e da estudante Débora Teodorico :D
+function highestCount(array) {
+  let maiorNum = array[0];
+  let numMaiorRepete = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorNum) {
+      numMaiorRepete = 0;
+      maiorNum = array[index];
+    }
+    if (maiorNum === array[index]) {
+      numMaiorRepete += 1;
+    }
+  }
+  return numMaiorRepete;
 }
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
