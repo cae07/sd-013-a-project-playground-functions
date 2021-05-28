@@ -16,6 +16,8 @@ function techList(tech, name) {
 // Desafio 11
 /* Ao ir no plantão do zezé ele sugeriu fazer dois for no nuemro repetido, daí funciona assim:
 array[0,1,2,3,4,5,6,]
+//pego todos os elementos e comparo com o que esta na mão do Zezé.A primeira tem de esperar a segunda fazer todas as voltas para mudar de indice.
+// no exemplo o eu sou o primeiro for Aline valho indice=0, o zezé é o segundo for ele vai percorrer todos os índices,daí depois disso eu mudo para indice 1 o zeze percorre todos os indices 
 vai pegar o primeiro numero que é 0 e comparar com todos os numeros do array, depois segundo numero e comparar com todos os numeros do array*/
 function generatePhoneNumber(numeros) {
   if (numeros.length !== 11) {
@@ -45,8 +47,16 @@ let telefone=("("+ numeros[0]+numeros[1] +") " + numeros[2]+numeros[3]+numeros[4
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB, lineC) {
+ if(lineA< (lineB+lineC) && lineA>Math.abs(lineB-lineC)){
+   return true;
+ }if(lineB<(lineA+lineC) && lineB>Math.abs(lineA-lineC)){
+   return true;
+ }if (lineC<(lineA+lineB) && lineC>Math.abs(lineA-lineB)){
+   return true;
+ }else{
+   return false;
+ }
 }
 
 // Desafio 13
@@ -57,6 +67,6 @@ function hydrate() {
 module.exports = {
   generatePhoneNumber,
   techList,
-  hydrate,
+  hydrate, 
   triangleCheck,
 };

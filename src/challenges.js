@@ -36,8 +36,8 @@ function highestCount(array) {//ajuda do sumoyama
   let maior= array[0];
 
   for (let index = 0; index < array.length; index += 1) {
-    if ( array[index]>maior) {//aqui ve se o indice corrente é maior que a variavel maior
-      maior= array[index];//maior passa a ser o indice corrente
+    if ( array[index]>maior) {//[5,1,9,3]-5>5, não, 1>5 não, 9>5 sim!!! 3>5não.
+      maior= array[index];//maior passa a ser o indice 3, o maior deixa de ser array[0], passa a ser array[3]
       contar = 0;//reinicia a contagem para onde começou 
     }
     if (maior === array[index]) {//checagem para ver se maior é igual a outros indices do array
@@ -46,7 +46,7 @@ function highestCount(array) {//ajuda do sumoyama
   }
   return contar;
 }
-// Desafio 7//math.abs foi uma dica do plantão para retornar valores inteiros
+// Desafio 7//math.abs foi uma dica do plantão do sumoyama para retornar valores inteiros
 function catAndMouse(mouse,cat1,cat2) {
   let distcat1= Math.abs(mouse-cat1);
   let distcat2=Math.abs(mouse-cat2);
