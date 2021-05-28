@@ -13,8 +13,8 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3 
-//Referência: O que é JAVASCRIPT SPLIT? Como usar essa função? https://www.youtube.com/watch?v=O2OZir_ba1I
+// Desafio 3
+// Referência: O que é JAVASCRIPT SPLIT? Como usar essa função? https://www.youtube.com/watch?v=O2OZir_ba1I
 
 function splitSentence(string) {
   let charact = string.split(' ');
@@ -39,8 +39,8 @@ function highestCount(arrayNum) {
   let total = 0;
 
   for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] > maiorNum){
-    maiorNum = arrayNum[index];
+    if (arrayNum[index] > maiorNum) {
+      maiorNum = arrayNum[index];
     }
   }
   for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
@@ -52,8 +52,18 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+function catAndMouse(mouse, cat1, cat2) {  
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+  
+  if (distancia1 < distancia2) {
+    return 'cat1';
+  } else if (distancia2 < distancia1) {
+    return 'cat2';
+  } else if (distancia1 === distancia2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
