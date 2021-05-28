@@ -7,6 +7,9 @@ function techList(techArray, nome) {
         tech: techArray[i] };
       itens.push(tech);
     }
+    else {
+      return 'Vazio!';
+    }
   }
   return itens;
 }
