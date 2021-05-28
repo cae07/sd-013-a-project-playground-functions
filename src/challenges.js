@@ -75,6 +75,7 @@ function fizzBuzz(array) {
   }
   return list;
 }
+console.log(fizzBuzz([2, 3, 5, 15]));
 
 // Desafio 9
 function encode(texto) {
@@ -125,4 +126,3 @@ module.exports = {
   splitSentence,
 };
 
-console.log(Math.abs(-1));
