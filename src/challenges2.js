@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(techArray = Array, nome) {
+  techArray.sort();
   let itens = [];
   // eslint-disable-next-line guard-for-in
   if (techArray.length <= 3) {
