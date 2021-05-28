@@ -107,7 +107,7 @@ function decode(vowel) {
 }
 
 // Desafio 10
-function tecnologyList(techList, name) {
+function splitSentence(techList, name) {
   let orderedList = techList.sort();
   let obj = {tech: '', name: ''};
   let lista = [];
@@ -115,7 +115,6 @@ function tecnologyList(techList, name) {
     lista.push(obj.tech = orderedList[k],obj.name = name);
   } return lista;
 }
-console.log(tecnologyList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber (numbers) {
@@ -141,7 +140,7 @@ function generatePhoneNumber (numbers) {
    else {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-}
+}}
 console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
 
 module.exports = {
@@ -155,4 +154,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
