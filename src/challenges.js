@@ -15,15 +15,16 @@ function calcArea(base, height) {
 // Desafio 3: Crie uma função que divida a frase
 function splitSentence(string) {
   return string.split(" ", 3);
-} // console.log(splitSentence("foguete"));
+}
+// console.log(splitSentence("foguete"));
 
 // Desafio 4: Crie uma função que usa concatenação de strings
 function concatName(arrayDeString) {
-  let priPosicao = arrayDeString[0];
-  let ultPosicao = arrayDeString[arrayDeString.length -1];
-  return "'" + ultPosicao + ', ' + priPosicao + "'";
-};
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+  let priPosicao = arrayDeString[0] + "'";
+  let ultPosicao = "'" + arrayDeString[arrayDeString.length - 1] + ', ';
+  return ultPosicao + priPosicao;
+}
+ //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5: Crie uma função que calcule a quantidade de pontos no futebol
 function footballPoints(wins, ties) {
