@@ -1,4 +1,5 @@
 // Desafio 10
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 function techList(arrayTech, name) {
   arrayTech.sort();
   let nome = name;
