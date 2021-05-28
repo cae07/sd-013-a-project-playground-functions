@@ -70,10 +70,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
 
+  for(let i = 0; i < array.length; i += 1){
+
+    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      return ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] ;
+    }
+
+    else if(array[i] % 3 == 0) {
+      return ['bug!', 'fizz'];
+    }
+
+    else if (array[i] % 5 == 0){
+      return ['fizz', 'buzz'] ;
+    }
+
+  }
+   
+}
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -93,4 +108,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
