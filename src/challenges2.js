@@ -29,7 +29,7 @@ function generatePhoneNumber(array) {
   let phone = '';
   let condition = '';
   for (let i = 0; i < array.length; i += 1 ) {
-    if (array.length !== 11) {
+    if (array.length < 11 || array.length > 11) {
       condition = "Array com tamanho incorreto.";
     } else if ((array[i] < 0) || ((array[i] > 9) )){
       condition = "não é possível gerar um número de telefone com esses valores";
