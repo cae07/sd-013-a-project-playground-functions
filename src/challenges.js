@@ -33,7 +33,7 @@ return array;
 }
 
 }
-console.log(splitSentence ('trybe'));
+console.log(splitSentence ('go trybe'));
 
 // Desafio 4
 function concatName() {
