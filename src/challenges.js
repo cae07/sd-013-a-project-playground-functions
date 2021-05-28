@@ -116,9 +116,9 @@ function decode(array) {
       descriptografando = descriptografando + array[i];
     }
   }
+  // Créditos ao Josué Lobo que me ajudou nesse desafio! http://github.com/RoyMusthang
   return descriptografando;
 }
-console.log(decode("h3 th2r2!"));
 module.exports = {
   calcArea,
   catAndMouse,
