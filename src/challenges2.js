@@ -68,13 +68,18 @@ function generatePhoneNumber(array) {
     return condition;
   }
 }
-let teste = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10];
-console.log(generatePhoneNumber(teste));
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
 
+// Desafio 12
+function triangleCheck(lineA,lineB,lineC) {
+  if (lineA < ( lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB)) {
+    if ((Math.abs(lineA - lineB) < lineC) || (Math.abs(lineB - lineC) < lineA) || (Math.abs(lineC - lineA) < lineB)) {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
+console.log(triangleCheck(10,14,8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
