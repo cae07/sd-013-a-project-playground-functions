@@ -70,10 +70,23 @@ function arrayCheck (arrayCheck) {
   }
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1],));
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (checkParam(lineA, lineB, lineC) === true && checkParam(lineB, lineA, lineC) === true && checkParam(lineC, lineA, lineB) === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+function checkParam (param1, param2, param3) {
+  if (param1 < (param2 + param3) && param1 > Math.abs((param2 - param3))) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
