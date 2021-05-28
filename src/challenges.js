@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6  
+// Desafio 6 - ok
 function highestCount(num) {
   let arrNum = [];
   for (let i = 0 ; i < num.length ; i++) {
@@ -53,8 +53,6 @@ function highestCount(num) {
   return arrNum.length
 }
 
-//highestCount([0, 4, 4, 4, 9, 2, 1])
-
 // Desafio 7 - ok
 function catAndMouse(mouse, cat1, cat2) {
   let dCat1 = Math.abs(cat1 - mouse);
@@ -71,40 +69,30 @@ function catAndMouse(mouse, cat1, cat2) {
   return msg;
   
 }
-//console.log(catAndMouse(0, 2, 1))
 
-// Desafio 8 - ok // erro na função .split
+// Desafio 8 - ok
 function fizzBuzz(arr) {
-  /*
-    Preciso de uma forma da função receber todos os parametros
-  */
-  let aux = arr.split(',');
   let auxNum;
-  for (let i = 0 ; i < aux.length ; i++) {
-    auxNum = parseInt(aux[i])
+  for (let i = 0 ; i < arr.length ; i++) {
+    auxNum = parseInt(arr[i])
     if ((auxNum % 3 == 0) || (auxNum % 5 == 0) ) {
-
       if (auxNum % 3 == 0) {
-        aux[i] = 'fizz';
+        arr[i] = 'fizz';
       }
-
       if (auxNum % 5 == 0) {
-        aux[i] = 'buzz';
+        arr[i] = 'buzz';
       }
-
       if ((auxNum % 3 == 0) && (auxNum % 5 == 0) ) {
-        aux[i] = 'fizzBuzz';
+        arr[i] = 'fizzBuzz';
       }
-
     } else  {
-      aux[i] = 'bug!';
+      arr[i] = 'bug!';
     }
   }
- 
-  return aux ;
+  return arr ;
 }
 
-// Desafio 9 
+// Desafio 9 - ok
 function encode(str) {
   let auxStr = str.split('');
   for (let i = 0 ; i < auxStr.length ; i++) {
