@@ -1,21 +1,22 @@
 // Desafio 10
 function techList(tech, name) {
   let vazio = "Vazio!"
+  tech = tech.sort();
   if (tech == 0) {
     return vazio;
     
   }
     for (let key in tech){
   tech[key] = {
-    tecnologia: tech[key],
-    nome: name,   
+    tech: tech[key],
+    name: name,   
   
   
   }
   
 
 }
-  return tech.sort();
+  return tech;
   }
   let array = ["React", "Jest", "HTML", "CSS", "JavaScript"]
 

@@ -39,58 +39,68 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(param1) {
-    let contN = 0;
-    let contRepetidoMaior = 0;
-    let contRepetidoMaior2 = 0;
-    for (let indice in param1) {
-    if (param1[indice] >= param1[contN+1]){
-    contRepetidoMaior ++;
+    let numeroMaior = param1[0];
+    let contador = 0;
+    let contador2 = 0;
+
+    for (let indice = 0; indice < param1.length; indice +=1) {
+    if (param1[indice] > numeroMaior){
+        numeroMaior = param1[indice]
+       
+        
+    }
     
-    }
-    if (param1[contN+1]>=param1[indice]) {
-      contRepetidoMaior2 ++;
-    }
-    if (contRepetidoMaior2 >= contRepetidoMaior ){
-      return contRepetidoMaior2;
-    }
-    else {
-      return contRepetidoMaior;
-    }
-  }
-}
+        for (let indice = 0; indice < param1.length; indice +=1){
+          contador2 = 1;
+          if (numeroMaior === param1[indice]) {
+              contador +=1;
+              if (contador == 2){
+                contador = contador2;
+              }
+            return contador2;
+          }
+        else {
+          contador1;
+        }
+      } 
+        }
     
-    
+      }
   
-  
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+
+
+  [1, 9, 2, 3, 9, 5, 7]
+    
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let string = "os gatos trombam e o rato foge";
- if (mouse + cat1 < mouse + cat2) {
+ if (Math.abs(mouse - cat1) < Math(mouse - cat2)) {
    return 'cat1';   
  }
- else if (mouse + cat2 < mouse + cat1) {
+ else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
    return 'cat2'; 
  }
-else if((mouse + cat2 === mouse + cat1) || (mouse + cat1 === mouse + cat2) ) {
-  return string;
+else if (Math.abs(cat1 - mouse)  === Math.abs(cat2 - mouse) ) {
+  return "os gatos trombam e o rato foge";
 }
 }
 
 // Desafio 8
 function fizzBuzz(value1) {
-  let fizz = " fizz ";
+  let fizz = " fizz";
   let buzz = " buzz ";
-  let bug = " bug! ";
-  let fizzbuz1 = " fizzBuzz "
+  let bug = " bug!";
+  let fizzbuz1 = "fizzBuzz "
   let caixa= [];
     for (let index in value1){
-    if (value1[index]% 3 == 0 && value1[index]%!3 ==! 0) {
+    if (value1[index]% 3 == 0 && value1[index]%5 !== 0) {
       caixa.push("fizz");
       
     }
-    else if (value1[index]% 5 == 0 && value1[index]%!5 ==! 0){
+    else if (value1[index]% 5 == 0 && value1[index]%3 !== 0){
       caixa.push("buzz");
       
     }
@@ -98,7 +108,7 @@ function fizzBuzz(value1) {
       caixa.push("fizzBuzz");
       
     }
-    else if ((value1[index]% 3 ==! 0) && (value1[index]% 5 ==! 0)) {
+    else if ((value1[index]% 3 !== 0) && (value1[index]% 5 !== 0)) {
       caixa.push("bug!");
       
   }
@@ -108,45 +118,50 @@ return caixa;
 }
 // Desafio 9
 function encode(string) {
-    let tamanho = string.length;
-     for (let key = 0; key > string.length; key +=1){
-     if (string.substring(key,key+1) === "a") {
-       string.length[key] = 1;       
+    let mostrar = string.split('');
+
+     for (let key = 0; key < mostrar.length; key +=1){
+     if (mostrar[key] === "a") {
+       mostrar[key] = 1;       
      }
-    else if (string.substring(key,key+1) === "e") {
-      string.length[key] = 2;
+    else if (mostrar[key] === "e") {
+      mostrar[key] = 2;
     }
-    else if (string.substring(key,key+1) ==="i") {
-      string.length[key] = 3;
+    else if (mostrar[key] ==="i") {
+      mostrar[key] = 3;
     }
-    else if (string.substring(key,key+1) === "o") {
-      string.length[key] = 4;
+    else if (mostrar[key] === "o") {
+      mostrar[key] = 4;
     }
-    else if (string.substring(key,key+1) === "u") {
-      string.length[key] = 5;
+    else if (mostrar[key] ==="u") {
+      mostrar[key] = 5;
     }
-    return string;
+    return mostrar.join('');
   }
+  
   }
 function decode(string2) {
-  for (let key in string2.length)
-  if (string2.length == "1") {
-    string2.length[key] = "a";       
+  let mostrar2 = string2.split('');
+  for(let key = 0; key < mostrar2.length; key +=1){
+  if (mostrar2[key] == "1") {
+    mostrar2[key] = "a";       
   }
- else if (string2.length == "2") {
-   string2.length[key] = "b";
+ else if (mostrar2[key] == "2") {
+  mostrar2[key] = "e"; 
  }
- else if (string2.length == "3") {
-   string2.length[key] = "i";
+ else if (mostrar2[key] == "3") {
+  mostrar2[key] = "i"; 
  }
- else if (string2.length == "4") {
-   string2.length[key] = "o";
+ else if (mostrar2[key] == "4") {
+  mostrar2[key] = "o"; 
  }
- else if (string2.length == "5") {
-   string2.length[key] = "u";
+ else if (mostrar2[key] == "5") {
+  mostrar2[key] = "u"; 
  }
-return string2;
+return mostrar2.join('');
+  }
 }
+
 
 
 
