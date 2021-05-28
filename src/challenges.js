@@ -78,15 +78,47 @@ function fizzBuzz(numeros) {
   }
   return array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
 
+// Desafio 9
+function encode(array) {
+  let criptografado = "";
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === 'a') {
+      criptografado = criptografado + '1';
+    } else if (array[i] === 'e') {
+      criptografado = criptografado + '2';
+    } else if (array[i] === 'i') {
+      criptografado = criptografado + '3';
+    } else if (array[i] === 'o') {
+      criptografado = criptografado + '4';
+    } else if (array[i] === 'u') {
+      criptografado = criptografado + '5';
+    } else {
+      criptografado = criptografado + array[i];
+    }
+  }
+  return criptografado;
+}
+function decode(array) {
+  let descriptografando = "";
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === '1') {
+      descriptografando = descriptografando + 'a';
+    } else if (array[i] === '2') {
+      descriptografando = descriptografando + 'e';
+    } else if (array[i] === '3') {
+      descriptografando = descriptografando + 'i';
+    } else if (array[i] === '4') {
+      descriptografando = descriptografando + 'o';
+    } else if (array[i] === '5') {
+      descriptografando = descriptografando + 'u';
+    } else {
+      descriptografando = descriptografando + array[i];
+    }
+  }
+  return descriptografando;
+}
+console.log(decode("h3 th2r2!"));
 module.exports = {
   calcArea,
   catAndMouse,
