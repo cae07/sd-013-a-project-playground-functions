@@ -58,8 +58,17 @@ function highestCount(numeroMaior) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui -- dica:olhar o Math.abs()
+function catAndMouse(mouse, cat1, cat2) {
+  let caso1 = Math.abs(mouse - cat1);
+  let caso2 = Math.abs(mouse - cat2);
+  if(caso1 < caso2){
+    var resultado = "cat1";
+  }else if(caso2 < caso1){
+    var resultado = "cat2";
+  }else if(caso1 === caso2){
+    var resultado = "os gatos trombam e o rato foge";
+  }
+  return resultado;
 }
 
 // Desafio 8
