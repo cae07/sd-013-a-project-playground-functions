@@ -67,8 +67,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Referência: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
+function fizzBuzz(arrayNum) {
+  let arrayDiv = [];
+
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
+      arrayDiv.push('fizzBuzz')
+    } else if (arrayNum[index] % 3 === 0) {
+      arrayDiv.push('fizz')
+    } else if (arrayNum[index] % 5 === 0) {
+      arrayDiv.push('buzz')
+    } else {
+      arrayDiv.push('bug!')
+    }
+  }
+  return arrayDiv;
 }
 
 // Desafio 9
