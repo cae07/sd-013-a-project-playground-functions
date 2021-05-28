@@ -15,7 +15,7 @@ function calcArea(base, height) {
 function splitSentence(phrases) {
   let array = [];
   let palavra = '';
-  for (let i = 0; i < phrases.length; i += 1 ) {
+  for (let i = 0; i < phrases.length; i += 1) {
     if (phrases[i] !== ' ') {
       palavra += phrases[i];
     } else {
@@ -42,11 +42,10 @@ function highestCount(array) {
   let higherNumber = -1;
   let greaterNumberCounts = 0;
   for(let i = 0; i < array.length - 1; i += 1) {
-    if (array[i] >= array[i + 1]) {
-      if (array[i] !== higherNumber) {
+    if ((array[i] >= array[i + 1]) && (array[i] !== higherNumber)) {
         higherNumber = array[i];
         greaterNumberCounts = 1;
-      } else {
+      if (array[i] === higherNumber) {
         greaterNumberCounts += 1;
         if ( higherNumber === array[array.length - 1]) {
           greaterNumberCounts += 1;
@@ -63,12 +62,12 @@ function catAndMouse(mouse,cat1,cat2) {
   distanciaCat2 = 0;
   if (mouse > cat1) {
      distanciaCat1 = mouse - cat1;
-  } else if (mouse < cat1) {
+  } else {
      distanciaCat1 = cat1 - mouse;
   }
   if (mouse > cat2) {
     distanciaCat2 = mouse - cat2;
-  } else if (mouse < cat2) {
+  } else {
      distanciaCat2 = cat2 - mouse;
   }
   if ( distanciaCat1 < distanciaCat2 ) {
