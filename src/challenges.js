@@ -1,7 +1,7 @@
 // Desafio 1: Crie uma função usando o operador &&
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
-    return true;
+  return true;
   } else {
   return false;
   }
@@ -20,8 +20,8 @@ function splitSentence(string) {
 
 // Desafio 4: Crie uma função que usa concatenação de strings
 function concatName(arrayDeString) {
-  let priPosicao = arrayDeString[0] + "'";
-  let ultPosicao = "'" + arrayDeString[arrayDeString.length - 1] + ', ';
+  let priPosicao = arrayDeString[0];
+  let ultPosicao = arrayDeString[arrayDeString.length - 1] + ', ';
   return ultPosicao + priPosicao;
 }
  //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -40,15 +40,15 @@ function highestCount(array) {
   return Math.max.apply(null, array)
 }     console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));*/
 
-function highestCount(arrayN){
+function highestCount(arrayN) {
   let numeroMaior = arrayN[0];
   let repetNum = 0;
-  for (let indice = 0; indice < arrayN.length; indice += 1){
+  for (let indice = 0; indice < arrayN.length; indice += 1) {
     if (arrayN[indice] > numeroMaior) {
     numeroMaior = arrayN[indice];
     }
   }
-  for (let indice2 = 0; indice2 < arrayN.length; indice2 += 1){
+  for (let indice2 = 0; indice2 < arrayN.length; indice2 += 1) {
     if (numeroMaior === arrayN[indice2]){
     repetNum += 1;
     }
@@ -58,40 +58,38 @@ function highestCount(arrayN){
 // console.log(highestCount([0, 0, 0]));
 
 // Desafio 7: Crie uma função de Caça ao Rato
-function catAndMouse(cat1, cat2, mouse) {
-    let dist1 = Math.abs(mouse - cat1)   //O "Math.abs" (math é o objeto e abs o método usado)retorna o valor absoluto de um numero, no caso da função aqui vai transformar um numero negativo em positivo.
-    let dist2 = Math.abs(mouse - cat2)
+function catAndMouse(mouse, cat1, cat2 ) {
+  let dist1 = Math.abs(mouse - cat1)   //O "Math.abs" (math é o objeto e abs o método usado)retorna o valor absoluto de um numero, no caso da função aqui vai transformar um numero negativo em positivo.
+  let dist2 = Math.abs(mouse - cat2)
   if (dist1 < dist2) {
       return 'cat1'
   } else if (dist2 < dist1) {
       return 'cat2'
   } else if (dist1 == dist2) {
-    return 'os gatos trombam e o gato foge'
-    }
-};    console.log(catAndMouse(6, 12, 0));
+    return 'os gatos trombam e o rato foge'
+  }
+};
+// console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8: Crie uma função FizzBuzz
 //mod (%); se o resto é diferente de zero, vai indicar que o numero do array não é divisível por 3 e nem por 5.
 //
 function fizzBuzz(array) {
-  let num1 = 3;
-  let num2 = 5;
   let arrayStr = [];
-
   for (let index = 0; index < array.length; index += 1) {
-    if (index % num1 == 0 && index % num2 == 0) {
-        arrayStr.push('fizzBuzz');
-    } else if (index % num1 == 0) {
+    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+      arrayStr.push('fizzBuzz');
+    } else if (array[index] % 3 == 0) {
       arrayStr.push('fizz');
-    } else if (index % num2 == 0) {
+    } else if (array[index] % 5 == 0) {
       arrayStr.push('buzz');
-    } else if (index % num1 !== 0 && index % num2 !== 0){
+    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
       arrayStr.push('bug!');
     }
   }
   return arrayStr;
-};
-    console.log(fizzBuzz([2, 15, 7, 9, 45]));
+}
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9: Crie uma função que Codifique e Decodifique
 function encode() {
