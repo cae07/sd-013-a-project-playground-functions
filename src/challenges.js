@@ -36,27 +36,26 @@ function footballPoints(wins, ties) {
  Math.max(array) irá buscar o maior numero do array.
  NaN se o parâmetro for menor que 1
  O apply funciona como se você tivesse passado os valores do array como parâmetros da função max, e equivaleria a se digitar Math.max(0,12,13,2.... O primeiro parâmetro equivale ao escopo a ser usado na função, e neste caso, como é indiferente, passamos null, que representa o escopo global.
-function highestCount(arrayN) {
-  return Math.max.apply(null, arrayN);
-}     console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); */
+function highestCount(array) {
+  return Math.max.apply(null, array)
+}     console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));*/
 
-function highestCount(arrayN) {
-    let numeroMaior = arrayN[0];
-    let repetNum = 0;
-
-  for (let indice = 0; indice < arrayN.length; indice += 1) {
-      if (arrayN[indice] > numeroMaior);
-      numeroMaior = arrayN[indice];
+function highestCount(arrayN){
+  let numeroMaior = arrayN[0];
+  let repetNum = 0;
+  for (let indice = 0; indice < arrayN.length; indice += 1){
+    if (arrayN[indice] > numeroMaior) {
+    numeroMaior = arrayN[indice];
     }
-  for (let indice2 = 0; indice2 < arrayN.length; indice2 += 1) {
-     if (numeroMaior == arrayN[indice2]) {
-      repetNum = repetNum + 1;
-     }
-   }
-   return repetNum;
   }
-  console.log(highestCount([9, 9, 1, 2, 3, 9, 5, 7]));
-
+  for (let indice2 = 0; indice2 < arrayN.length; indice2 += 1){
+    if (numeroMaior === arrayN[indice2]){
+    repetNum += 1;
+    }
+  }
+  return repetNum;
+}
+// console.log(highestCount([0, 0, 0]));
 
 // Desafio 7: Crie uma função de Caça ao Rato
 function catAndMouse(cat1, cat2, mouse) {
