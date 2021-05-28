@@ -18,11 +18,12 @@ function splitSentence(string) {
 } // console.log(splitSentence("foguete"));
 
 // Desafio 4: Crie uma função que usa concatenação de strings
-function concatName(array) {
-  let priPosicao = array[0]+ "'";
-  let ultPosicao = "'" + array [array.length -1];
-  return ultPosicao + ', ' + priPosicao;
-}  //console.log(concatName(['capitão', 'meu', 'capitão']));
+function concatName(arrayDeString) {
+  let priPosicao = arrayDeString[0];
+  let ultPosicao = arrayDeString[arrayDeString.length -1];
+  return "'" + ultPosicao + ', ' + priPosicao + "'";
+};
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5: Crie uma função que calcule a quantidade de pontos no futebol
 function footballPoints(wins, ties) {
@@ -93,7 +94,7 @@ function fizzBuzz(array) {
     console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9: Crie uma função que Codifique e Decodifique
-function encode(string) {
+function encode() {
 
 }
 function decode() {
