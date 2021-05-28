@@ -13,7 +13,7 @@ function calcArea(base, height) {
 };
 
 // Desafio 3
-// Referência utilizada: https://www.w3schools.com/jsref/jsref_split.asp
+// Referência: https://www.w3schools.com/jsref/jsref_split.asp
 function splitSentence(frase) {
   for (let palavra in frase) {
     palavra = frase.split(' ');
@@ -22,7 +22,7 @@ function splitSentence(frase) {
 };
 
 // Desafio 4
-// Referência utilizada: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+// Referência: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
 function concatName(stringArray) {
   return `${stringArray[stringArray.length -1]}, ${stringArray[0]}`;
 };
@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 };
 
 // Desafio 6
-// Referencia para Math: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// Referência para Math: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 function highestCount(numeros) {
   let maior = numeros.reduce(function(a, b) {
@@ -50,7 +50,7 @@ function highestCount(numeros) {
 };
 
 // Desafio 7
-// Referencia: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   function diferenca (a, b) {
     return Math.abs(a - b);
@@ -66,6 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 };
 
 // Desafio 8
+// Referência: https://www.w3schools.com/js/js_array_methods.asp
 function fizzBuzz(numeros) {
   let array = [];
 
@@ -78,18 +79,26 @@ function fizzBuzz(numeros) {
       array.push(`buzz`);
     } else {
       array.push('bug!');
-    }
-  }
+    };
+  };
   return array;
-}
+};
 
 // Desafio 9
-function encode() {
+// Referência: https://www.w3schools.com/js/js_string_methods.asp
+function encode(string) {
+  for (letra in string) {
+  let encode = 
+  string.replace(/a/g, "1");
+  string.replace(/e/g, "2");
+  string.replace(/i/g, "3");
+  string.replace(/o/g, "4");
+  string.replace(/u/g, "5");
+  }
+};
+function decode(string) {
   // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+};
 
 module.exports = {
   calcArea,
