@@ -37,20 +37,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6  
 function highestCount(num) {
-  
-  let numMaior =  Math.max(parseInt(num));
-  //let repetNum = 0;
-  //let qtddNum = num.length;
-
-  /* for (let i = 0 ; i < qtddNum ; i++) {
-    if (numMaior == num[i] ) {
-      repetNum += 1;
+  let arrNum = [];
+  for (let i = 0 ; i < num.length ; i++) {
+    let numAtual = parseInt(num[i]);
+    for (let j = 0 ; j < num.length ; j++) {
+      let auxNumAtual = parseInt(num[j]);
+      if (auxNumAtual > numAtual) {
+        numAtual = auxNumAtual
+      }
     }
-  } */
-
-  return numMaior;
+    if (numAtual == num[i]) {
+      arrNum.push(numAtual)
+    }
+  }
+  return arrNum.length
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
+
+//highestCount([0, 4, 4, 4, 9, 2, 1])
 
 // Desafio 7 - ok
 function catAndMouse(mouse, cat1, cat2) {
