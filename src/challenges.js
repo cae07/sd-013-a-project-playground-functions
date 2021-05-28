@@ -1,15 +1,17 @@
 // Desafio 1 - ok
 function compareTrue(value1, value2) {
-  if (value1 == true && value2 == true) {
-    return true;
+  let compare;
+  if (value1 === true && value2 === true) {
+    compare = true;
   } else {
-    return false;
+    compare = false;
   }
+  return compare;
 }
 
 // Desafio 2 - ok
 function calcArea(base, height) {
-  let area = (base * height) / 2;
+  let area = (base * height)/2;
   return area;
 }
 
@@ -19,19 +21,13 @@ function splitSentence(str) {
   return finalStr;
 }
 
-// Desafio 4 // erro na function .split
+// Desafio 4 - ok
 function concatName(name) {
-
-  /*
-    Preciso de uma forma da função receber todos os parametros
-  */
-
-  let firstName = auxName[0];
-  let lastName = auxName[auxName.length - 1];
-  let finalName = lastName + ' ' + firstName;
-  return auxName;
+  let firstName = name[0];
+  let lastName = name[name.length - 1];
+  let finalName = lastName + ', ' + firstName;
+  return finalName;
 }
-
 
 // Desafio 5 - ok
 function footballPoints(wins, ties) {
@@ -39,26 +35,22 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6  // erro na function .split
+// Desafio 6  
 function highestCount(num) {
-
-   /*
-    Preciso de uma forma da função receber todos os parametros
-  */
   
-  let iNum = num.split(',');
-  let numMaior =  Math.max(parseInt(iNum));
-  let repetNum = 0;
-  let qtddNum = num.length;
+  let numMaior =  Math.max(parseInt(num));
+  //let repetNum = 0;
+  //let qtddNum = num.length;
 
-  for (let i = 0 ; i < qtddNum ; i++) {
+  /* for (let i = 0 ; i < qtddNum ; i++) {
     if (numMaior == num[i] ) {
       repetNum += 1;
     }
-  }
+  } */
 
-  return repetNum;
+  return numMaior;
 }
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
 
 // Desafio 7 - ok
 function catAndMouse(mouse, cat1, cat2) {
