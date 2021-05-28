@@ -57,10 +57,10 @@ function generatePhoneNumber(array) {
     }
   }
   
-  if (condition !== '') {
-    return condition;
-  } else {
+  if (condition == '') {
     return phone;
+  } else {
+    return condition;
   }
 }
 
