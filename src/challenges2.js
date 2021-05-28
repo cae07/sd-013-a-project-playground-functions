@@ -22,9 +22,22 @@ let lista = techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Gustavo');
 console.log(lista);
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let phoneNumber = []
+  let contador = 0 ;
+  
+ for(let count = 0; count < numbers.length; count +=1){
+  
+  if(numbers.length != 11){
+    return "Array com tamanho incorreto."
+   } else if ((count < 0) || (count > 9)){
+    return "não é possível gerar um número de telefone com esses valores"
+   } else{
+     return 
+
+   
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -51,4 +64,4 @@ module.exports = {
   techList,
   hydrate,
   triangleCheck,
-};
+}
