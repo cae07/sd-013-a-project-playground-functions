@@ -22,7 +22,32 @@ function techList(techNames, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
-  return arrayCheck(arrayNumber);
+  let check = arrayCheck(arrayNumber);
+  let number = [];
+  if (check != undefined) {
+    return check;
+  }
+  for (let index = 0; index < 2; index += 1) {
+    if (index == 0) {
+      let parenthesesR = '(';
+      number.push(parenthesesR + arrayNumber[index]);
+    } else if (index == 1) {
+      let parenthesesL = ')';
+      number.push(arrayNumber[index] + parenthesesL);
+    }
+  }
+  for (let index = 2; index < arrayNumber.length; index += 1) {
+    if (index == 2) {
+      let space = ' ';
+      number.push(space + arrayNumber[index]);
+    } else if (index == 7) {
+      let dash = '-';
+      number.push(dash + arrayNumber[index]);
+    } else {
+      number.push(arrayNumber[index]);
+    }
+  }
+  return number.join('');
 }
 function arrayCheck (arrayCheck) {
   let count = 0;
