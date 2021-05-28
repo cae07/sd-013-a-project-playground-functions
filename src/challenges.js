@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
 }
-console.log(footballPoints())
+
 
 // Desafio 6
 function highestCount(numbers) {
@@ -54,9 +54,36 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1 ,cat2) {
   // seu código aqui
+  let localRato = Math.abs(mouse);
+  let localGato1 = Math.abs(cat1);
+  let localGato2 = Math.abs(cat2);
+  
+  if (localRato - localGato1 === localGato2 - localRato){
+    return "os gatos trombam e o rato foge"
+  }else if (localGato2 - localRato > localGato1 - localRato){
+    return "cat1"
+  }else if (localGato1 - localRato > localGato2 - localRato){
+    return "cat2" 
+  }
 }
+
+
+
+/*
+rato p1
+        result 1-0 =1
+cat1 p0
+
+rato p1
+        result 2-1 =1
+cat2 p2
+
+
+
+*/ 
+
 
 // Desafio 8
 function fizzBuzz() {
