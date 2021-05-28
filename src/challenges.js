@@ -69,7 +69,7 @@ function fizzBuzz(array) {
     // eslint-disable-next-line no-undef
     else if (array[i] % 3 === 0) list[i] = 'fizz';
     // eslint-disable-next-line no-undef
-    else if (array[i] % 5 === 0) list[i] = 'Buzz';
+    else if (array[i] % 5 === 0) list[i] = 'buzz';
     // eslint-disable-next-line no-undef
     else list[i] = 'bug!';
   }
