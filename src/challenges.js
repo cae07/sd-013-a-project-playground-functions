@@ -86,11 +86,25 @@ function fizzBuzz(arrayNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace === Dica do Lucas
+// Referência:  que é JavaScript REPLACE? https://www.youtube.com/watch?v=UShV_TFxs_A
+function encode(stringNum) {
+  stringNum = stringNum.replace(/a/gi, '1');
+  stringNum = stringNum.replace(/e/gi, '2');
+  stringNum = stringNum.replace(/i/gi, '3');
+  stringNum = stringNum.replace(/o/gi, '4');
+  stringNum = stringNum.replace(/u/gi, '5');
+
+  return stringNum;
 }
-function decode() {
-  // seu código aqui
+function decode(stringVog) {
+  stringVog = stringVog.replace(/1/gi, 'a');
+  stringVog = stringVog.replace(/2/gi, 'e');
+  stringVog = stringVog.replace(/3/gi, 'i');
+  stringVog = stringVog.replace(/4/gi, 'o');
+  stringVog = stringVog.replace(/5/gi, 'u');
+
+  return stringVog;
 }
 
 module.exports = {
