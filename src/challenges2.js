@@ -79,12 +79,23 @@ function triangleCheck(lineA,lineB,lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10,14,8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(order) {
+  let orderBar = 0;
+  let number = order.match(/\d/g).join('');
+  for (i = 0; i < number.length; i += 1) {
+    orderBar += parseInt(number[i]);
+  }
+  return `${orderBar} copos de água`;
+}
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+/* 
+Match p/ busca números (\d); 
+(flag g) faz com que não pare no primeiro encontrado; 
+join('') junta os valores do array para string;
+parseInt retorna para número inteiro para cálculos;
+*/
 module.exports = {
   generatePhoneNumber,
   techList,
