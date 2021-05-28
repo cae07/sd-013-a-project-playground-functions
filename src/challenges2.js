@@ -71,15 +71,15 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
-  if (lineA < ( lineB + lineC) || lineB < (lineA + lineC) || lineC < (lineA + lineB)) {
+  if (lineA > ( lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+    return false;
+  } else {
     if ((Math.abs(lineA - lineB) < lineC) || (Math.abs(lineB - lineC) < lineA) || (Math.abs(lineC - lineA) < lineB)) {
       return true;
     }
-  } else {
-    return false;
   }
 }
-
+console.log(triangleCheck(6,2,2));
 // Desafio 13
 function hydrate(order) {
   let orderBar = 0;
@@ -87,7 +87,11 @@ function hydrate(order) {
   for (i = 0; i < number.length; i += 1) {
     orderBar += parseInt(number[i]);
   }
-  return `${orderBar} copos de água`;
+  if (orderBar > 1) {
+    return `${orderBar} copos de água`;
+  } else {
+    return `${orderBar} copo de água`;
+  }
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 /* 
