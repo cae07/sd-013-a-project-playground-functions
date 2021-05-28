@@ -39,34 +39,65 @@ function generatePhoneNumber(numeros) {
     }
     if (contNumero >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-}
+    }
   }
-let telefone=("("+ numeros[0]+numeros[1] +") " + numeros[2]+numeros[3]+numeros[4]+numeros[5]+ numeros[6]+"-"+ numeros[7] + numeros[8]+ numeros[9]+ numeros[10]);
+  let telefone =
+    '(' +
+    numeros[0] +
+    numeros[1] +
+    ') ' +
+    numeros[2] +
+    numeros[3] +
+    numeros[4] +
+    numeros[5] +
+    numeros[6] +
+    '-' +
+    numeros[7] +
+    numeros[8] +
+    numeros[9] +
+    numeros[10];
   return telefone;
 }
 
-
 // Desafio 12
-function triangleCheck(lineA,lineB, lineC) {
- if(lineA< (lineB+lineC) && lineA>Math.abs(lineB-lineC)){
-   return true;
- }if(lineB<(lineA+lineC) && lineB>Math.abs(lineA-lineC)){
-   return true;
- }if (lineC<(lineA+lineB) && lineC>Math.abs(lineA-lineB)){
-   return true;
- }else{
-   return false;
- }
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+//aqui tive ajuda da Oryange Strifezze através do Projeto amigas T criado pela Carol Silva
+//fonte:https://www.w3schools.com/jsref/jsref_obj_regexp.asp aqui vi que o regex para chamar ele precisa por /  /
+//daí no próprio site tem o d de dígito o + para pegar mais de um, e o g de global.
+//O método match() retorna uma correspondência entre uma string com uma expressão regular
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+//criei uma variavel soma para somar os numeros, depois um if para vir copo de água ou copos de água.
+function hydrate(string) {
+  const reg = /\d+/g;
+  const resultado = string.match(reg);
+  let soma = 0;
+  for (let index = 0; index < resultado.length; index += 1) {
+    soma += Number(resultado[index]);
+  }
+  if (soma === 1) {
+    return '1 copo de água';
+  } else {
+    return soma + ' copos de água';
+  }
 }
 
 module.exports = {
   generatePhoneNumber,
   techList,
-  hydrate, 
+  hydrate,
   triangleCheck,
 };
