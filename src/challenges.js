@@ -4,10 +4,8 @@ function compareTrue(value1, value2) {
     return true;
   } else {
     return false;
-  }
-    
+  }    
 }
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base*height)/2;
@@ -83,13 +81,57 @@ return array;
 
 
 // Desafio 9
-function encode() {
-   
+function encode(str) {
+  let strEncode = "";
+  for (let i = 0; i < str.length; i++) {
+    switch(str[i]){
+      case "a":
+        strEncode += "1";
+        break;
+      case "e":
+        strEncode += "2";
+        break;
+      case "i":
+          strEncode += "3";
+          break;
+      case "o":
+          strEncode += "4";
+          break;    
+      case "u":
+          strEncode += "5";
+          break; 
+      default:
+        strEncode += str[i];
+    }  
+  }
+  return strEncode; 
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let strDecode = "";
+  for (let i = 0; i < str.length; i++) {
+    switch(str[i]){
+      case "1":
+        strDecode += "a";
+        break;
+      case "2":
+        strDecode += "e";
+        break;
+      case "3":
+          strDecode += "i";
+          break;
+      case "4":
+          strDecode += "o";
+          break;    
+      case "5":
+          strDecode += "u";
+          break; 
+      default:
+        strDecode += str[i];
+    }  
+  }
+  return strDecode; 
 }
-
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
