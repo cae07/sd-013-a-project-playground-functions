@@ -1,15 +1,14 @@
 // Desafio 1
 function compareTrue(boo1, boo2) {
-  if (boo1 === true && boo2 === true){
+  if (boo1 == true && boo2 == true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2 ;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -48,7 +47,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let higherNumber = -1;
   let greaterNumberCounts = 0;
-  for(i = 0; i < array.length - 1; i += 1) {
+  for(let i = 0; i < array.length - 1; i += 1) {
     if (array[i] >= array[i + 1]) {
       if (array[i] !== higherNumber) {
         higherNumber = array[i];
