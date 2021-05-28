@@ -25,16 +25,15 @@ function concatName(palavra) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins;
+  let points = [wins, ties];
   let total = 0;
 
-  switch (points) {
-  case wins:
-    total += 3 * wins;
-    break;
-  default:
-    total += 1 * ties;
-    break;
+  for (let n in points) {
+    if (points[n] === wins) {
+      total += 3 * wins;
+    } else {
+      total += 1 * ties;
+    }
   }
   return total;
 }
@@ -58,13 +57,15 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(numes) {
   let palavras = [];
+  let numeDivi3 = 3;
+  let numeDivi5 = 5;
 
   for (let c = 0; c < numes.length; c += 1) {
-    if (numes[c] % 3 === 0 && numes[c] % 5 === 0) {
+    if (numes[c] % numeDivi3 === 0 && numes[c] % numeDivi5 === 0) {
       palavras.push('fizzBuzz');
-    } else if (numes[c] % 5 === 0) {
+    } else if (numes[c] % numeDivi5 === 0) {
       palavras.push('buzz');
-    } else if (numes[c] % 3 === 0) {
+    } else if (numes[c] % numeDivi3 === 0) {
       palavras.push('fizz');
     } else {
       palavras.push('bug!');
