@@ -86,7 +86,6 @@ function encode(vowel) {
   }
   return sentence.join('');
 }
-console.log(encode('hi there'))
 
 function decode(vowel) {
   let sentence = [];
@@ -106,7 +105,44 @@ function decode(vowel) {
   }
   return sentence.join('');
 }
-console.log(decode('h3 th2r2'));
+
+// Desafio 10
+function tecnologyList(techList, name) {
+  let orderedList = techList.sort();
+  let obj = {tech: '', name: ''};
+  let lista = [];
+  for (const k in orderedList) {
+    lista.push(obj.tech = orderedList[k],obj.name = name);
+  } return lista;
+}
+console.log(tecnologyList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+
+// Desafio 11
+function generatePhoneNumber (numbers) {
+  function phoneNumbers (numbers) {
+    let phoneNumber = [];
+    if (numbers.length === 11) {
+    phoneNumber[0] = '(';
+    phoneNumber[1] = numbers[0];
+    phoneNumber[2] = numbers[1];
+    phoneNumber[3] = ')';
+    phoneNumber[4] = ' ';
+    phoneNumber[5] = numbers[2];
+    phoneNumber[6] = numbers[3];
+    phoneNumber[7] = numbers[4];
+    phoneNumber[8] = numbers[5];
+    phoneNumber[9] = numbers[6];
+    phoneNumber[10] = '-';
+    phoneNumber[11] = numbers[7];
+    phoneNumber[12] = numbers[8];
+    phoneNumber[13] = numbers[9];
+    phoneNumber[14] = numbers[10];
+   return `${phoneNumber.join('')}`;}
+   else {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+}
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
 
 module.exports = {
   calcArea,
