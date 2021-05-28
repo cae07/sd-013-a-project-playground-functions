@@ -52,38 +52,39 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   var distanciaCat1 = (cat1 - mouse);
   var distanciaCat2 = (cat2 - mouse);
-  console.log("dcat1:", distanciaCat1)
-  console.log("dcat2:", distanciaCat2)
   var string = "";
   if (distanciaCat1 < 0) {
     distanciaCat1 = (distanciaCat1 * -1);
-    console.log("dcat1 que era negativo, agora é:", distanciaCat1)
   } else if (distanciaCat2 < 0) {
     distanciaCat2 = (distanciaCat2 * -1)
-    console.log("dcat2 que era negativo, agora é:", distanciaCat2)
   }
-
   if (distanciaCat1 < distanciaCat2) {
-    console.log("dcat1:", distanciaCat1)
-    console.log("dcat2:", distanciaCat2)
-    console.log("cat 1 pegou")
     return string = "cat1";
   } else if (distanciaCat1 > distanciaCat2) {
-    console.log("dcat1:", distanciaCat1)
-    console.log("dcat2:", distanciaCat2)
-    console.log("cat 2 pegou")
     return string = "cat2";
   } else {
-    console.log("dcat1:", distanciaCat1)
-    console.log("dcat2:", distanciaCat2)
-    console.log("os gatos trombam e o rato foge")
     return string = "os gatos trombam e o rato foge";
   }
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+//Desafio 8
+function fizzBuzz(array) {
+  var arrayFizzBuzz = [];
+  for (i=0;i<array.length; i++){
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      console.log(array[i], "é divisivel por 3")
+      arrayFizzBuzz.push("fizz");
+    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+      console.log(array[i], "é divisivel por 5")
+      arrayFizzBuzz.push("buzz");
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      console.log(array[i], "é divisível por 3 e 5")
+      arrayFizzBuzz.push("fizzBuzz");
+    } else {
+      arrayFizzBuzz.push("bug!");
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
