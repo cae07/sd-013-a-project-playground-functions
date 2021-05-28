@@ -3,7 +3,7 @@ function techList(techArray = Array, nome) {
   let itens = [];
   // eslint-disable-next-line guard-for-in
   if (techArray.length <= 3) {
-    return 'vazio!';
+    return 'Vazio!';
   }
   // eslint-disable-next-line guard-for-in
   if (techArray.length >= 5) {
