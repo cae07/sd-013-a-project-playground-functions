@@ -21,7 +21,7 @@ splitSentence('vamo que vamo');
 splitSentence('foguete');
 
 // Desafio 4
-function concatName(arg = []) {
+function concatName(arg) {
   let string = arg;
   let primeiroItem = string[0];
   let ultimoItem = string[string.length - 1];
@@ -44,9 +44,23 @@ footballPoints(1, 2);
 footballPoints(0, 0);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(nums) {
+  let maiorNum = nums[0];
+  let cont = 0;
+  for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] > maiorNum) {
+      maiorNum = nums[i];
+      cont = 0;
+    }
+    if (nums[i] === maiorNum) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
+highestCount([9, 1, 2, 3, 9, 5, 7]);
+highestCount([0, 4, 4, 4, 9, 2, 1]);
+highestCount([0, 0, 0]);
 
 // Desafio 7
 function catAndMouse() {
