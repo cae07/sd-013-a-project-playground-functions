@@ -98,13 +98,46 @@ function fizzBuzz(numbersArray) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 8
+// Resolvido com a ajuda do Silvio Fabian da Turma 13 - Tribo A
+function encode(str) {
+  let vocals = {
+    a: /a/gi,
+    e: /e/gi,
+    i: /i/gi,
+    o: /o/gi,
+    u: /u/gi
+  };
+  let coding = str;
+  coding = coding.replace(vocals.a, 1);
+  coding = coding.replace(vocals.e, 2);
+  coding = coding.replace(vocals.i, 3);
+  coding = coding.replace(vocals.o, 4);
+  coding = coding.replace(vocals.u, 5);
+  return coding;
+  }
+
+console.log(encode('hi there!'));
+
+function decode(strNum) {
+  let numbers = {
+    a1: /1/gi,
+    e1: /2/gi,
+    i1: /3/gi,
+    o1: /4/gi,
+    u1: /5/gi
+  };
+
+  let decoding = strNum;
+  decoding = decoding.replace(numbers.a1, 'a');
+  decoding = decoding.replace(numbers.e1, 'e');
+  decoding = decoding.replace(numbers.i1, 'i');
+  decoding = decoding.replace(numbers.o1, 'o');
+  decoding = decoding.replace(numbers.u1, 'u');
+
+  return decoding;
 }
-function decode() {
-  // seu código aqui
-}
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
