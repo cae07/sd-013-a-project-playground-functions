@@ -90,7 +90,6 @@ function fizzBuzz(a) {
 
 // Desafio 9
 function encode(a) {
-  let result;
   let resultA;
   let resultE;
   let resultI;
@@ -101,12 +100,10 @@ function encode(a) {
   resultI = resultE.replace(/i/g, 3);
   resultO = resultI.replace(/o/g, 4);
   resultU = resultO.replace(/u/g, 5);
-  result = a;
   return resultU;
 }
 
 function decode(a) {
-  let result;
   let resultA;
   let resultE;
   let resultI;
@@ -117,7 +114,6 @@ function decode(a) {
   resultI = resultE.replace(/3/g, 'i');
   resultO = resultI.replace(/4/g, 'o');
   resultU = resultO.replace(/5/g, 'u');
-  result = a;
   return resultU;
 }
 
