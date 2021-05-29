@@ -13,33 +13,16 @@ function splitSentence(string) {
   return (string.split(' '));
 }
 
-  // let array = [];             // array vazia, criada para receber as palavras dividas pelo espaço da string original. Vai receber via .push.
-  // let letter = "";            //variável vazia, que vai receber as letras da string, para serem jogadas no array.
-
-  // for (let index = 0; index < string.length; index += 1) {
-  //   if ((string[index] != " ") && (index != string.length - 1)) {
-  //     letter = letter + string[index];
-  //   } else if (index == string.length - 1) {
-  //       letter = letter + string[index];
-  //       array.push(letter);
-  //     } else {    
-  //         array.push(letter);
-  //         letter = "";
-  //       } 
-  // }
-  // return (array);
-
-
 // Desafio 4
 function concatName(arrayString) {
   let stringReturn = '';
+  const commaSpace = ', ';
 
   for (let index = arrayString.length - 1; index >= 0; index -= 1) {
     if (index === arrayString.length - 1) {
-      stringReturn = arrayString[index] + ', ';
-    } 
-    else if (index == 0) {
-      stringReturn = stringReturn + arrayString[index];
+      stringReturn = arrayString[index] + commaSpace;
+    } else if (index === 0) {
+      stringReturn += stringReturn + arrayString[index];
     }
   }
   return (stringReturn);
@@ -56,15 +39,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  let maxNumber = arrayNumbers[0];
+  const maxNumber = Math.max(...arrayNumbers);
   let timesItAppears = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] > maxNumber) {
-      maxNumber = arrayNumbers[index];
-    }
-  }
   for (let secondIndex = 0; secondIndex < arrayNumbers.length; secondIndex += 1) {
-    if (arrayNumbers[secondIndex] == maxNumber) {
+    if (arrayNumbers[secondIndex] === maxNumber) {
       timesItAppears += 1;
     }
   }
