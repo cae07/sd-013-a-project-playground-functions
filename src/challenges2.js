@@ -23,9 +23,9 @@ function techList(arrayOfItems, name) {
   if (emptyArray) {
     result = 'Vazio!';
   } else {
-    for (let index = 0; index < arrayOfItems.length; index += 1) {
+    for (let value of arrayOfItems) {
       let listTech = {
-        tech: arrayOfItems[index],
+        tech: value,
         name,
       };
       arrayOfObjects.push(listTech);
