@@ -123,16 +123,15 @@ function decode(frase) {
   let numero = [1,2,3,4,5];
 
   for(let i = 0; i < frase.length; i += 1) {
-    for(let j = 0; j <  numero.length; j += 1) {
-      if(frase[i] == letra[j]) {
-        frase = frase.replace(frase[i],letra[j]);
-        
+    for(let j = 0; j < numero.length; j += 1) {
+      if(frase[i] == numero[j]) {
+        frase = frase.replace(frase[i],letra[j]);        
       }
     }
   }
   return frase;
 }
-console.log(decode('Hello My Friend'))
+console.log(decode('H2ll4 My Fr32nd'));
 
 module.exports = {
   calcArea,
