@@ -2,7 +2,7 @@
 function techList(array, name) {
   let orderedArray = array.sort();
   let emptyArray = [];
-  
+
   if (array.length === 0) {
     return ('Vazio!')
   }
@@ -13,10 +13,8 @@ function techList(array, name) {
   return (emptyArray);
 } // Exercício realizado com a ajuda do estudante Erick Santos
 
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
 }
 
 // Desafio 12
