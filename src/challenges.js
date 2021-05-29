@@ -63,9 +63,22 @@ highestCount([0, 4, 4, 4, 9, 2, 1]);
 highestCount([0, 0, 0]);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let felinoVencedor = 0;
+  let dMouseCat1 = Math.abs(cat1 - mouse);
+  let dMouseCat2 = Math.abs(cat2 - mouse);
+  if (dMouseCat1 > dMouseCat2) {
+    felinoVencedor = 'cat2';
+  } else if (dMouseCat1 < dMouseCat2) {
+    felinoVencedor = 'cat1';
+  } else if (dMouseCat1 === dMouseCat2) {
+    felinoVencedor = 'os gatos trombam e o rato foge';
+  }
+  return felinoVencedor;
 }
+catAndMouse(0, 3, 2);
+catAndMouse(10, 4, 22);
+catAndMouse(1, 0, 2);
 
 // Desafio 8
 function fizzBuzz() {
