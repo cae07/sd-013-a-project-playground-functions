@@ -16,13 +16,14 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayString) {
   let stringReturn = '';
-  const commaSpace = ', ';
 
   for (let index = arrayString.length - 1; index >= 0; index -= 1) {
-    if (index === arrayString.length - 1) {
-      stringReturn = arrayString[index] + commaSpace;
-    } else if (index === 0) {
-      stringReturn += stringReturn + arrayString[index];
+    if (index == arrayString.length - 1) {
+      stringReturn = arrayString [index] + ", ";
+    } 
+    // senão se index=0, ou seja, primeira posição do array
+    else if (index === 0) {
+      stringReturn = stringReturn + arrayString[index];
     }
   }
   return (stringReturn);
