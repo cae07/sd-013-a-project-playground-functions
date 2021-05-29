@@ -14,13 +14,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(declaration) {
+  return declaration.length > 0 ? declaration.split(' ') : 'String Vazia!!!';
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+function concatName(meuArray) {
+  return meuArray.length >= 1 && `${meuArray[meuArray.length - 1]}, ${meuArray[0]}`;
 }
 
 // Desafio 5
