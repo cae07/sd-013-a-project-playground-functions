@@ -1,9 +1,9 @@
 // Desafio 10
 function techList(array, name) {
-  let object = {}; 
-  object.tech = array; 
+  let object = {};
+  object.tech = array;
   object.name = name;
-  let assistant = 0; 
+  let assistant = 0;
   let newArray = [];
   for (let r = 0; r < object.tech.length; r += 1 ) {
     for (let i = 0; i < object.tech.length - 1; i += 1) {
@@ -32,12 +32,12 @@ function generatePhoneNumber(array) {
   let phone = '';
   let condition = '';
   if (array.length < 11 || array.length > 11) {
-    condition = "Array com tamanho incorreto.";
+    condition = 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1 ) {
     if ((array[i] < 0) || ((array[i] > 9) )){
       if (condition == '') {
-        condition = "não é possível gerar um número de telefone com esses valores"
+        condition = 'não é possível gerar um número de telefone com esses valores';
       }
     }
     for (let v = 0; v < array.length; v += 1) {
@@ -45,26 +45,26 @@ function generatePhoneNumber(array) {
         repeat += 1;
         if (repeat >= 3) {
           if (condition == '') {
-            condition = "não é possível gerar um número de telefone com esses valores";
+            condition = 'não é possível gerar um número de telefone com esses valores';
           }
         }
       }
     }
     repeat = 0;
     if (i < 1) {
-      phone += '(' + array[i];   // (1
+      phone += '(' + array[i];
     } else if (i > 0 && i < 2) {
-      phone += array[i] + ') ';  // (12)
+      phone += array[i] + ') ';
     } else if (i > 1 && i < 7) {
-      phone += array[i];        // (12)34567
+      phone += array[i];
     } else if (i >= 7) {
       if (i > 6 && i < 8) {
-        phone += '-';           // (12)34567-
+        phone += '-';
       }
-      phone += array[i];  // (12)34567-8901
+      phone += array[i];
     }
   }
-  
+
   if (condition == '') {
     return phone;
   } else {
@@ -73,8 +73,8 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
-  if (lineA > ( lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
     return false;
   } else {
     if ((Math.abs(lineA - lineB) < lineC) || (Math.abs(lineB - lineC) < lineA) || (Math.abs(lineC - lineA) < lineB)) {
@@ -82,12 +82,12 @@ function triangleCheck(lineA,lineB,lineC) {
     }
   }
 }
-console.log(triangleCheck(6,2,2));
+
 // Desafio 13
 function hydrate(order) {
   let orderBar = 0;
   let number = order.match(/\d/g).join('');
-  for (i = 0; i < number.length; i += 1) {
+  for (let i = 0; i < number.length; i += 1) {
     orderBar += parseInt(number[i]);
   }
   if (orderBar > 1) {
@@ -97,9 +97,9 @@ function hydrate(order) {
   }
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-/* 
-Match p/ busca números (\d); 
-(flag g) faz com que não pare no primeiro encontrado; 
+/*
+Match p/ busca números (\d);
+(flag g) faz com que não pare no primeiro encontrado;
 join('') junta os valores do array para string;
 parseInt retorna para número inteiro para cálculos;
 */
