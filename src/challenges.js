@@ -1,4 +1,5 @@
 // Desafio 1
+
 function compareTrue(p1, p2) {
   if (p1 && p2) {
     return true;
@@ -8,12 +9,14 @@ function compareTrue(p1, p2) {
 };
 
 // Desafio 2
+
 function calcArea(base, height) {
   return (base * height) / 2;
 };
 
 // Desafio 3
 // Referência: https://www.w3schools.com/jsref/jsref_split.asp
+
 function splitSentence(frase) {
   for (let palavra in frase) {
     palavra = frase.split(' ');
@@ -23,11 +26,13 @@ function splitSentence(frase) {
 
 // Desafio 4
 // Referência: https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+
 function concatName(stringArray) {
   return `${stringArray[stringArray.length -1]}, ${stringArray[0]}`;
 };
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 };
@@ -51,6 +56,7 @@ function highestCount(numeros) {
 
 // Desafio 7
 // Referência: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
 function catAndMouse(mouse, cat1, cat2) {
   function diferenca (a, b) {
     return Math.abs(a - b);
@@ -67,6 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 // Referência: https://www.w3schools.com/js/js_array_methods.asp
+
 function fizzBuzz(numeros) {
   let array = [];
 
@@ -85,7 +92,8 @@ function fizzBuzz(numeros) {
 };
 
 // Desafio 9
-// Referência: https://www.w3schools.com/js/js_string_methods.asp
+// Referência: https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
+
 function encode(string) {
   string = string.replace(/a/g, "1");
   string = string.replace(/e/g, "2");
@@ -95,8 +103,6 @@ function encode(string) {
 
   return string; 
 };
-
-encode('teste');
 
 function decode(string) {
   string = string.replace(/1/g, "a");
