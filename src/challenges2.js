@@ -6,7 +6,7 @@ function techList(nomesTech, nome) {
       return 'Vazio!';
     } else {
     for (let i in nomeTech){
-      tech.push({tech: nomeTech[i], name: nome })
+      tech.push({tech: nomeTech[i], name: nome });
     }};
     return tech;
 };
@@ -17,9 +17,12 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB-lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineA-lineB)) {
+    return true;
+  };
+  return false;
+};
 
 // Desafio 13
 function hydrate() {
