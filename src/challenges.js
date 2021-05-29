@@ -1,36 +1,69 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  // seu código aqui
+function compareTrue(x, y) {
+  if (x === true && y === true){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+    let area = base * height /2
+  return area
 }
+ 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(splitfrase){
+    let frase = splitfrase.split(` `);
+  return frase
+      splitArray(`Go Trybe!`)
+      splitArray(`Vamo que vamo!`)
+      splitArray(`Foguete!`)
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concatString){
+  let newArray = (concatString[concatString.length -1] + ", " + concatString[0])
+  return newArray
+
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties){
+  return (wins * 3) + (ties * 1)
 }
 
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(counter) {
+let count = 0;
+let maximum = Math.max.apply(undefined, counter)
+for (let number of counter){
+  if (number === maximum){
+    count += 1;
+  }
+}
+return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+    let gato01 = Math.abs(mouse - cat1);
+    let gato02 = Math.abs(mouse - cat2);
+    let gatoProx = "";
+
+if(gato01 < gato02){
+  return gatoProx = `cat1`;
+}
+else if(gato01 > gato02) {
+  return gatoProx = `cat2`;
+}
+else {
+  return gatoProx = "os gatos trombam e o rato foge"
+}
 }
 
 // Desafio 8
