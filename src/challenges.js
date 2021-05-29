@@ -20,9 +20,11 @@ function splitSentence(string1) {
 console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
-function concatName(String) {
-  return `${string[string.length -1]}, ${string[0]}`
+function concatName(array) {
+  let bothNames = `${array[array.length -1]}, ${array[0]}`;
+  return bothNames;
 }
+console.log(concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints(wins,ties) {
   let winsPoints = 3;
@@ -31,13 +33,28 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(list) {
+  let timesRepeat = 0;
+  let biggestNumber = arrayFirstBigger(list);
+  for (let index = 0; index < list.length; index += 1) {
+    if (biggestNumber === list[index]) {
+
+    }
+  }
+  return timesRepeat;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);
+  if (gato1 < gato2) {
+    return 'cat1';
+  }
+  if (gato2 < gato1) {
+    return 'cat2'
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
