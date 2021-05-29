@@ -4,8 +4,7 @@ function techList(array, name) {
   object.tech = array;
   object.name = name;
   let assistant = 0;
-  
-  newObject = {};
+  let newArray = [];
   for (let r = 0; r < object.tech.length; r += 1 ) {
     for (let i = 0; i < object.tech.length - 1; i += 1) {
       if (object.tech[i] > object.tech[i + 1]) {
@@ -15,16 +14,17 @@ function techList(array, name) {
       }
     }
   }
-  for (let i = 0; i < object.tech.length; i += 1) { 
-    let newArray = [];
+  for (let i = 0; i < object.tech.length; i += 1) {
+    newObject = {}; 
     newObject.tech = object.tech[i];
     newObject.name = object.name;
     newArray.push(newObject);
   }
   if (newArray === '') {
     return 'Vazio!';
+  } else {
+    return newArray;
   }
-  return newArray;
 }
 
 // Desafio 11
