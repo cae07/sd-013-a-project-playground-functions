@@ -28,13 +28,15 @@ function footballPoints(wins, ties) {
   return gamesWins + gamesTies;
 }
 // Desafio 6
-function highestCount(meuArray) { // 1- encontrar o maior valor do array; 2- contar quantas vezes ele se repete
-  let maior = 0;
-  for (let i = 0; i < meuArray.length; maior += i) {
-    if (meuArray[i] > maior) {
-      maior = meuArray[i];
+function highestCount(x) { 
+  let y = x[0];
+  let resu = Math.max.apply(null, x);
+
+  for (let i = 0; i < x.lenght; i += 1) {
+    if (x[i] > y) {
+      resu = x[i];
     }
-  } return maior;
+  }
 }
 // Desafio 7
 function catAndMouse() {
@@ -47,8 +49,17 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+  let numero = [1, 2, 3, 4, 5];
+  for (let i = 0; i < frase.length; i += 1) {
+    for (let j = 0; j < letra.length; j += 1) {
+      if (frase[i] === letra[j]) {
+        frase = frase.replace(frase[i], numero[j]);
+    }
+   }
+  }
+  return frase;
 }
 function decode() {
   // seu código aqui
