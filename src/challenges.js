@@ -10,7 +10,7 @@ function compareTrue(valueA, valueB) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -28,26 +28,85 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersA) {
+  let highestNumber = Math.max.apply(null, numbersA);
+  let highestNumberRepeat = 0;
+  for (let count = 0; count < numbersA.length; count++) {
+    if (highestNumber == numbersA[count]) {
+      highestNumberRepeat++;
+    }
+  }
+  return highestNumberRepeat;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let catPos1 = Math.abs(mouse - cat1);
+  let catPos2 = Math.abs(mouse -cat2);
+  if (catPos1 < catPos2) {
+    return "cat1";
+  } else if (catPos2 < catPos1) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBug = [];
+  for (let count = 0; count < numbers.length; count++) {
+    if (numbers[count] % 3 == 0) {
+      fizzBug.push("fizz");     
+    } else if (numbers[count] % 5 == 0) {
+      fizzBug.push("buzz");    
+    } else {
+      fizzBug.push("bug!");
+    }
+    return fizzBug;
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let word = '';
+  let strA = '';
+  for (let count = 0; count < phrase.length; count++) {
+    word = phrase[count];
+    if (word.includes('a')) {
+       word = '1';
+    } else if (word.includes('e')) {
+       word = '2';
+    } else if (word.includes('i')) {
+       word = '3';
+    } else if (word.includes('o')) {
+        word = '4';
+    } else if (word.includes('u')) {
+        word = '5';      
+    }
+    strA += word;
+  }
+    return strA;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let word = '';
+  let strA = '';
+  for (let count = 0; count < phrase.length; count++) {
+    word = phrase[count];
+    if (word.includes('1')) {
+       word = 'a';
+    } else if (word.includes('2')) {
+       word = 'e';
+    } else if (word.includes('3')) {
+       word = 'i';
+    } else if (word.includes('4')) {
+        word = 'o';
+    } else if (word.includes('5')) {
+        word = 'u';      
+    }
+    strA += word;
+  }
+    return strA;
 }
 
 module.exports = {
