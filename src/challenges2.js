@@ -1,7 +1,10 @@
 // Desafio 10
-function techList(array,name) {
-  let object = {}; object.tech = array; object.name = name;
-  let assistant = 0; let newArray = [];
+function techList(array, name) {
+  let object = {}; 
+  object.tech = array; 
+  object.name = name;
+  let assistant = 0; 
+  let newArray = [];
   for (let r = 0; r < object.tech.length; r += 1 ) {
     for (let i = 0; i < object.tech.length-1; i += 1) {
       if (object.tech[i] > object.tech[i + 1]) {

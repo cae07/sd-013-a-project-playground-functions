@@ -45,11 +45,10 @@ function highestCount(array) {
     if ((array[i] >= array[i + 1]) && (array[i] !== higherNumber)) {
         higherNumber = array[i];
         greaterNumberCounts = 1;
-      if (array[i] === higherNumber) {
+    } else if ((array[i] >= array[i + 1]) && (array[i] === higherNumber)) {
+      greaterNumberCounts += 1;
+      if ( higherNumber === array[array.length - 1]) {
         greaterNumberCounts += 1;
-        if ( higherNumber === array[array.length - 1]) {
-          greaterNumberCounts += 1;
-        }
       }
     }
   }
@@ -57,24 +56,25 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  distanciaCat1 = 0;
-  distanciaCat2 = 0;
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = 0;
+  let distanciaCat2 = 0;
   if (mouse > cat1) {
-     distanciaCat1 = mouse - cat1;
+    distanciaCat1 = mouse - cat1;
   } else {
-     distanciaCat1 = cat1 - mouse;
+    distanciaCat1 = cat1 - mouse;
   }
   if (mouse > cat2) {
     distanciaCat2 = mouse - cat2;
   } else {
-     distanciaCat2 = cat2 - mouse;
+    distanciaCat2 = cat2 - mouse;
   }
   if ( distanciaCat1 < distanciaCat2 ) {
     return 'cat1';
   } else if ( distanciaCat2 < distanciaCat1 ) {
     return 'cat2';
-  } else if ( distanciaCat1 == distanciaCat2 ) {
+  } else if ( distanciaCat1 === distanciaCat2 ) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -83,11 +83,11 @@ function catAndMouse(mouse,cat1,cat2) {
 function fizzBuzz(array) {
   let newArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] % 3 == 0) && (array[i] % 5 == 0)) {
+    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       newArray.push('fizzBuzz');
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       newArray.push('buzz');
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       newArray.push('fizz');
     } else if ((array[i] % 3 !== 0) && (array[i] % 5 !== 0)) {
       newArray.push('bug!');
@@ -99,16 +99,16 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(phrase) {
   let string = '';
-  for (let i = 0; i < phrase.length; i +=1) {
-    if (phrase[i] == 'a') {
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === 'a') {
       string += '1';
-    } else if (phrase[i] == 'e') {
+    } else if (phrase[i] === 'e') {
       string += '2';  
     } else if (phrase[i] == 'i') {
       string += '3';  
-    } else if (phrase[i] == 'o') {
+    } else if (phrase[i] === 'o') {
       string += '4';  
-    } else if (phrase[i] == 'u') {
+    } else if (phrase[i] === 'u') {
       string += '5';  
     } else {
       string += phrase[i];
