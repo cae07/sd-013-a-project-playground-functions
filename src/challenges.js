@@ -30,13 +30,12 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(meuArray) { // 1- encontrar o maior valor do array; 2- contar quantas vezes ele se repete
   let maior = 0;
-  for (let i = 0; i < meuArray.length; i++) {
-      if (meuArray[i] > maior) {
+  for (let i = 0; i < meuArray.length; maior += i) {
+    if (meuArray[i] > maior) {
       maior = meuArray[i];
     }
-  }
+  } return maior;
 }
-console.log(meuArray(11,12,11,4,5,6,8,));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -65,4 +64,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,}
+  splitSentence,
+};
