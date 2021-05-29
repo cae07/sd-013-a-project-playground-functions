@@ -67,9 +67,26 @@ else {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+    let divisionArray = [];
+
+for(let index = 0; index < array.length; index += 1)
+    if(array[index] % 3 == 0 && array[index] % 5 == 0){
+      divisionArray.push(`fizzBuzz`);
+  }
+    else if(array[index] % 3 == 0){
+      divisionArray.push(`fizz`);
 }
+    else if(array[index] % 5 == 0){
+      divisionArray.push(`buzz`);
+      }
+    else{
+      divisionArray.push(`bug!`)
+    }
+    return divisionArray
+  }
+
+ 
 
 // Desafio 9
 function encode() {
