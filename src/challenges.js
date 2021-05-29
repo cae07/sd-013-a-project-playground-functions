@@ -10,22 +10,25 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = [];             // array vazia, criada para receber as palavras dividas pelo espaço da string original. Vai receber via .push.
-  let letter = "";            //variável vazia, que vai receber as letras da string, para serem jogadas no array.
-
-  for (let index = 0; index < string.length; index += 1) {
-    if ((string[index] != " ") && (index != string.length - 1)) {
-      letter = letter + string[index];
-    } else if (index == string.length - 1) {
-        letter = letter + string[index];
-        array.push(letter);
-      } else {    
-          array.push(letter);
-          letter = "";
-        } 
-  }
-  return (array);
+  return (string.split(' '));
 }
+
+  // let array = [];             // array vazia, criada para receber as palavras dividas pelo espaço da string original. Vai receber via .push.
+  // let letter = "";            //variável vazia, que vai receber as letras da string, para serem jogadas no array.
+
+  // for (let index = 0; index < string.length; index += 1) {
+  //   if ((string[index] != " ") && (index != string.length - 1)) {
+  //     letter = letter + string[index];
+  //   } else if (index == string.length - 1) {
+  //       letter = letter + string[index];
+  //       array.push(letter);
+  //     } else {    
+  //         array.push(letter);
+  //         letter = "";
+  //       } 
+  // }
+  // return (array);
+
 
 // Desafio 4
 function concatName(arrayString) {
