@@ -102,11 +102,37 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(frase) {
+  let letra = ['a','e','i','o','u'];
+  let numero = [1,2,3,4,5];
+
+  for(let i = 0; i < frase.length; i += 1) {
+    for(let j = 0; j <  letra.length; j += 1) {
+      if(frase[i] == letra[j]) {
+        frase = frase.replace(frase[i],numero[j]);
+        
+      }
+    }
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('Hello My Friend'))
+
+function decode(frase) {
+  let letra = ['a','e','i','o','u'];
+  let numero = [1,2,3,4,5];
+
+  for(let i = 0; i < frase.length; i += 1) {
+    for(let j = 0; j <  numero.length; j += 1) {
+      if(frase[i] == letra[j]) {
+        frase = frase.replace(frase[i],letra[j]);
+        
+      }
+    }
+  }
+  return frase;
 }
+console.log(decode('Hello My Friend'))
 
 module.exports = {
   calcArea,
