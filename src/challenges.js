@@ -68,19 +68,19 @@ function highestCount(arrayNumeros) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let resultado = '';
-  if (cat1 > cat2 && cat1 < mouse) {
-    resultado = 'cat1';
-    return resultado;
-  } if (cat2 > cat1 && cat2 < mouse) {
+  let distance1 = Math.abs((cat1 > mouse) ? (cat1 - mouse) : (mouse - cat1));
+  let distance2 = Math.abs((cat2 > mouse) ? (cat2 - mouse) : (mouse - cat2));
+  if (distance1 > distance2) {
     resultado = 'cat2';
     return resultado;
-  } if (cat1 === cat2) {
+  } if (distance1 < distance2) {
+    resultado = 'cat1';
+    return resultado;
+  } if (distance1 === distance2) {
     resultado = 'os gatos trombam e o rato foge';
     return resultado;
   }
 }
-
-console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
