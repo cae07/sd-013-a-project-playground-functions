@@ -44,15 +44,33 @@ function generatePhoneNumber(numero) {
   return formatN.replace(/(\d{2})(\d{5})(\d{4})/,"($1) $2-$3")
 }
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let absA = Math.abs(lineA)
+  let absB = Math.abs(lineB)
+  let absC = Math.abs(lineC)
+  if(absA + absB < absC || absC + absB < absA || absC + absA < absB){
+    return false
+  }
+  else{
+    return true
+  }
 }
-
 // Desafio 13
-function hydrate() {
+function hydrate(texto) {
   // seu código aqui
+  let num = null;
+  let resul = null;
+  num = texto.match(/\d+/g)
+  for(let i =0;i<num.length; i+=1){
+    resul += parseInt(num[i])
+  }
+  if(resul <= 1){
+    return `${resul} copo de água`
+  }else{
+  return `${resul} copos de água`
+  }
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
