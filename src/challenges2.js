@@ -1,17 +1,15 @@
 // Desafio 10
-// const techName = 'tech';
-// const nome = 'name';
-// let chaveTech = {};
+
 // let objectArray = [];
 
-// for (let index = 0; index < techs.length; index += 1) {
-//   chaveTech[techName] = techs[index];
-//   chaveTech[nome] = name;
-
-//   objectArray.push(chaveTech);
+// for (let key of techs) {
+//   objectArray.push({
+//     tech: key,
+//     name: name,
+//   });
 // }
 
-function techList(techs, name) {
+function techList(techs, nome) {
   if (techs.length === 0) {
     let resultado = 'Vazio!';
     return resultado;
@@ -20,10 +18,10 @@ function techList(techs, name) {
   techs.sort();
   let objectArray = [];
 
-  for (let key of techs) {
+  for (let index = 0; index < techs.length; index += 1) {
     objectArray.push({
-      tech: key,
-      name: name,
+      tech: techs[index],
+      name: nome,
     });
   }
 
