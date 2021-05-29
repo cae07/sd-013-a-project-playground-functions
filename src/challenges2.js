@@ -29,7 +29,7 @@ function generatePhoneNumber(numeros) {
     }
   }
   let numeroRepetido = 0;
-  for (let i in numeros) {
+  for (let i = 0; i < numeros.length; i += 1) {
     let contNumero = 0;
     numeroRepetido = numeros[i];
     for (let i2 in numeros) {
@@ -41,20 +41,7 @@ function generatePhoneNumber(numeros) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let telefone = `(${
-    numeros[0]
-  }${numeros[1]
-  }) ${
-    numeros[2]
-  }${numeros[3]
-  }${numeros[4]
-  }${numeros[5]
-  }${numeros[6]
-  }-${
-    numeros[7]
-  }${numeros[8]
-  }${numeros[9]
-  }${numeros[10]}`;
+  let telefone = `(${numeros[0]}${numeros[1]}) ${numeros[2]}${numeros[3]}${numeros[4]}${numeros[5]}${numeros[6]}-${numeros[7]}${numeros[8]}${numeros[9]}${numeros[10]}`;
   return telefone;
 }
 

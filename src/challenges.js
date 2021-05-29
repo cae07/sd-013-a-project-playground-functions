@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let novoarray = []; // como é um novo array preciso criar um array vazio e ir add.
   for (const key in numeros) {
-    if (numeros[key] % 3 === 0 && numeros[key] % 5 === 0) {
+    if (numeros[key] % 15 === 0) {
       // igual a 0 para ter certeza que é divisivel.para o resto ser 0.
       novoarray.push('fizzBuzz');
     } else if (numeros[key] % 5 === 0) {
