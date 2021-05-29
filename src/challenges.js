@@ -1,41 +1,39 @@
- // Desafio 1
+// Desafio 1
 function compareTrue(p1, p2) {
   if (p1 == true && p2 == true) {
-  return true;
-  } else {
-  return false;
+    return true;
   }
+  return false;
 }
 // console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  if (base >= 5 && height >= 2){
-    return (base * height) / 2
-    } else if (base >= 10 && height >= 50) {
-      return (base * height) / 2
-    } else if (base >= 51 && height >= 1){
-      return (base * height) / 2
-    }
+  if (base >= 5 && height >= 2) {
+    return (base * height) / 2;
+  } if (base >= 10 && height >= 50) {
+    return (base * height) / 2;
+  } if (base >= 51 && height >= 1) {
+    return (base * height) / 2;
   }
-//console.log(calcArea);
+}
+// console.log(calcArea);
 
 // Desafio 3
-function splitSentence(string){
+function splitSentence(string) {
   let array = [];
-  for(i = 0; i <string.length; i += 1) {
-    return string.split(" ") //tags: " ", " ", "", etc
+  for (i = 0; i < string.length; i += 1) {
+    return string.split(' '); // tags: " ", " ", "", etc
   }
 }
 // console.log(splitSentence("foguete não tem ré"))
 
-
 // Desafio 4
 function concatName(array) {
-//o índice do primeiro item é 0, e do último é índice - 1
-let primeiroItem = array[0];
-let ultimoItem = array[array.length - 1];
-  return ultimoItem + "," + " " + primeiroItem
+// o índice do primeiro item é 0, e do último é índice - 1
+  let primeiroItem = array[0];
+  let ultimoItem = array[array.length - 1];
+  return `${ultimoItem},` + ` ${primeiroItem}`;
 }
 // console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]))
 
@@ -80,4 +78,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
