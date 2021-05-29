@@ -23,15 +23,16 @@ function splitSentence(word) {
 // Desafio 4
 function concatName(nome) {
   let concatVar = nome[nome.length-1];
-  concatVar += ', ' + nome[0];
-  
+  concatVar += ', ' + nome[0]; 
   return concatVar
 }
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties;
+  return winsPoints + tiesPoints
 }
 
 // Desafio 6
