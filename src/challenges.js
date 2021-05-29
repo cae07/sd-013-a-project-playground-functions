@@ -23,8 +23,8 @@ console.log(splitSentence('O bicho tá pegando"'));
 
 // Desafio 4
 function concatName(nome) {
-let resultado = `${nome[nome.length - 1]}, ${nome[0]}`;
-//let resultado = nome[nome.length -1] + ' ,' + nome[0];
+  let resultado = `${nome[nome.length - 1]}, ${nome[0]}`;
+  // let resultado = nome[nome.length -1] + ', ' + nome[0];
   return resultado;
 }
 console.log(concatName(['Fulano', 'Beltrano', 'Cicrano', 'De tal']));
@@ -37,14 +37,36 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(5, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+  let maiorNum = array[0];
+    let numMaiorRepete = 0;
+    for (let index = 0; index < array.length; index += 1) {
+      if (array[index] > maiorNum) {
+        numMaiorRepete = 0;
+        maiorNum = array[index];
+      }
+      if (maiorNum === array[index]) {
+        numMaiorRepete += 1;
+      }
+    }
+    return numMaiorRepete;
+  }
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+    distanciaCat1 = Math.abs(cat1 - mouse)
+    distanciaCat2 = Math.abs(cat2 - mouse)
+  
+    if(distanciaCat1 < distanciaCat2) {
+      return  'cat1';
+    } else if (distanciaCat1 > distanciaCat2) {
+       return 'cat2';
+    } else{
+      return 'os gatos trombam e o rato foge'
+    }
+  }
+    console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {
