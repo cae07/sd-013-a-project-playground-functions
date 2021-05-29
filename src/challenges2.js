@@ -1,30 +1,17 @@
-/* eslint-disable max-len */
-/* eslint-disable sonarjs/no-duplicated-branches */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable complexity */
 // Desafio 10
-function techList() {
+function techList(arrayTecnologias, name) {
   // seu código aqui
-  let arrayTecnologias = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-  let name = 'Lucas';
   let resultado = {};
-  for (let key in arrayTecnologias) {
-    resultado += [{
-      name: name,
-      tech: arrayTecnologias[key]
-    }]
-  }
   return resultado;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayNumeros) {
   // seu código aqui
-  let arrayNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
   let resultado = '';
   let auxiliar = 0;
   if (arrayNumeros.length !== 11) {
-    resultado = 'Array com tamanho incorreto';
+    resultado = 'Array com tamanho incorreto.';
   }
   if (resultado === '') {
     for (let index = 0; index < arrayNumeros.length; index += 1) {
@@ -48,11 +35,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let lineA = 6;
-  let lineB = 2;
-  let lineC = 2;
   let resultado = false;
   if (lineA < lineB + lineC && lineA > lineA - Math.abs(lineB + lineC) && lineB < lineA + lineC && lineB > lineB - Math.abs(lineA + lineC) && lineC < lineA + lineB && lineC > lineC - Math.abs(lineA + lineB)) {
     resultado = true;
@@ -61,15 +45,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(stringRecebida) {
   // seu código aqui
-  let stringRecebida = '2 cerveja, 5 doses de tequila';
-  let resultado = stringRecebida.match(/\d/g);
-  resultado = resultado.join('');
+  let auxiliarResultado = stringRecebida.match(/\d/g);
+  auxiliarResultado = auxiliarResultado.join('');
+  let auxiliarResultado1 = auxiliarResultado;
+  let resultado = 0;
+  for (let index = 0; index < auxiliarResultado1.length; index += 1) {
+    resultado += parseInt(auxiliarResultado1[index], 10);
+  }
   if (resultado === 1) {
     resultado += ' copo de água';
+  } else if (resultado > 1) {
+    resultado += ' copos de água';
   }
-  resultado += ' copos de água';
   return resultado;
 }
 
