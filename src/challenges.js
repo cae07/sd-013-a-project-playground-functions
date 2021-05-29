@@ -1,3 +1,5 @@
+const { techList } = require("./challenges2");
+
 // Desafio 1
 function compareTrue(n1, n2) {
   if (n1 === true && n2 === true ) {
@@ -23,15 +25,13 @@ function splitSentence(frase) {
 function concatName(array) {
   let concat = array[array.length - 1] + ', ' + array[0];
   return concat;
-}
+};
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
-
-
-
+function footballPoints(wins, ties) {
+  let totalPontos = wins * 3;
+  return totalPontos + ties;
+};
 
 
 
