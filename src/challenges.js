@@ -91,35 +91,25 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-let newString = 'hi there!';
-
+// Ajuda do Leonardo Santos - Turma 13 - Tribo A
 function encode(string) {
-  let newArray = string.split('');  
-  let vogais = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
+  string = string.replace(/a/g, "1");
+  string = string.replace(/e/g, "2");
+  string = string.replace(/i/g, "3");
+  string = string.replace(/o/g, "4");
+  string = string.replace(/u/g, "5");
 
-  
-
-  for (index in vogais) {
-    if (index === newArray.index) {
-      newArray.index = index;
-    }
-  }
-  return newArray;
+  return string;
 }
+function decode(string) {
+  string = string.replace(/1/g, "a");
+  string = string.replace(/2/g, "e");
+  string = string.replace(/3/g, "i");
+  string = string.replace(/4/g, "o");
+  string = string.replace(/5/g, "u");
 
-console.log(encode(newString));
-
-function decode() {
-  // seu código aqui
+  return string;
 }
-
-console.log(enconde(newString), decode(newString));
 
 module.exports = {
   calcArea,
