@@ -1,27 +1,19 @@
 // Desafio 1
-let num1 = 6
-let num2 = 4
-
-
-function compareTrue( num1, num2) {
-if (num1 > num2 && num2 < 10){
-  console.log('true');
+function compareTrue (valor1, valor2) {
+if (valor1 === true && valor2 === true){
+  return true;
 }
   else {
-    console.log ('false');
+    return false;
   }
 }
-compareTrue (num1, num2);
 
 // Desafio 2
-let base =
-let altura=
-function calcArea() {
-  returne (base * altura) /2;
+function calcArea(base, altura) {
+ return (base * altura) /2;
   }
-  console.log (calcArea (base, altura);
-
-// Desafio 3
+  
+ //Desafio 3
 function splitSentence() {
   // seu código aqui
 }
@@ -32,8 +24,8 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+    return ((wins * 3) + ties)
 }
 
 // Desafio 6
