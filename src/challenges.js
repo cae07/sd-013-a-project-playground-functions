@@ -18,11 +18,16 @@ function splitSentence(word) {
   let arrayWord = word.split(' ');
   return arrayWord
 }
-console.log(splitSentence("go Trybe"))
+
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  let concatVar = nome[nome.length-1];
+  concatVar += ', ' + nome[0];
+  
+  return concatVar
 }
+
 
 // Desafio 5
 function footballPoints() {
