@@ -104,9 +104,21 @@ function encode(a) {
   result = a;
   return resultU;
 }
-console.log(encode('cidade'));
-function decode() {
-  // seu código aqui
+
+function decode(a) {
+  let result;
+  let resultA;
+  let resultE;
+  let resultI;
+  let resultO;
+  let resultU;
+  resultA = a.replace(/1/g, 'a');
+  resultE = resultA.replace(/2/g, 'e');
+  resultI = resultE.replace(/3/g, 'i');
+  resultO = resultI.replace(/4/g, 'o');
+  resultU = resultO.replace(/5/g, 'u');
+  result = a;
+  return resultU;
 }
 
 module.exports = {
