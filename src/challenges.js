@@ -99,7 +99,7 @@ function fizzBuzz(numbersArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 8
-// Resolvido com a ajuda do Silvio Fabian da Turma 13 - Tribo A
+// Resolvido com a ajuda do Silvio Fabian e Matheus Duarte, ambos alunos da Turma 13 - Tribo A
 function encode(str) {
   let vocals = {
     a: /a/gi,

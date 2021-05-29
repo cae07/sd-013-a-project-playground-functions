@@ -1,7 +1,22 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+// Resolvido com a ajuda do aluno Matheus Duarte da Turma 13- Tribo A
+function techList(arrayTech, nome) {
+  let techsToLearn = [];
+
+  for (let techName of arrayTech.sort()) {
+    techsToLearn.push( {
+      tech: techName,
+      name: nome,
+    });
+  }
+  if (arrayTech.length > 0) {
+    return techsToLearn;
+  } else {
+    return 'Vazio!'
+  }
 }
+
+console.log(techList(['React', 'JS', 'CSS']))
 
 // Desafio 11
 function generatePhoneNumber() {
