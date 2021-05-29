@@ -1,14 +1,25 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+let num1 = 6
+let num2 = 4
 
-  
+
+function compareTrue( num1, num2) {
+if (num1 > num2 && num2 < 10){
+  console.log('true');
 }
+  else {
+    console.log ('false');
+  }
+}
+compareTrue (num1, num2);
 
 // Desafio 2
+let base =
+let altura=
 function calcArea() {
-  // seu código aqui
-}
+  returne (base * altura) /2;
+  }
+  console.log (calcArea (base, altura);
 
 // Desafio 3
 function splitSentence() {
