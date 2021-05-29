@@ -6,7 +6,7 @@ function techList(technology,name) {
 
   for(let i = 0; i < technology.length; i += 1) { 
    
-    if(technology[i] == null){
+    if((technology[i] == " ") || (technology[i] == null || (technology[i] == undefined))){
       return 'Vazio!';
     } else {
       array.push(
