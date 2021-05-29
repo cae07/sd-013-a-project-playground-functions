@@ -12,6 +12,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+//fonte https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
@@ -58,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
+// Desafio 8//Ajuda de Olávio Timóteo
 function fizzBuzz(numeros) {
   let novoarray = []; // como é um novo array preciso criar um array vazio e ir add.
   for (const key in numeros) {
