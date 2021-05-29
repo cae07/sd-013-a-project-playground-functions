@@ -2,9 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // console.log(compareTrue(false, true));
@@ -22,7 +21,7 @@ function splitSentence(texto) {
   return texto.split(' ');
 }
 
-console.log(splitSentence('vamo que vamo'));
+// console.log(splitSentence('vamo que vamo'));
 
 // console.log("Ja, que, line".split(","))
 
@@ -59,12 +58,23 @@ function highestCount(array) {
   }
   return numMaiorRepete;
 }
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  let resultado;
+  if (distanciaCat1 < distanciaCat2) {
+    resultado = 'cat1';
+  } else if (distanciaCat1 > distanciaCat2) {
+    resultado = 'cat2';
+  } else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return resultado;
 }
+console.log(catAndMouse(0, -1, 1));
 
 // Desafio 8
 function fizzBuzz() {
