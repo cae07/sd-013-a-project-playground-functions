@@ -41,13 +41,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let higherNumber = -1;
   let greaterNumberCounts = 0;
-  for(let i = 0; i < array.length - 1; i += 1) {
+  for (let i = 0; i < array.length - 1; i += 1) {
     if ((array[i] >= array[i + 1]) && (array[i] !== higherNumber)) {
-        higherNumber = array[i];
-        greaterNumberCounts = 1;
+      higherNumber = array[i];
+      greaterNumberCounts = 1;
     } else if ((array[i] >= array[i + 1]) && (array[i] === higherNumber)) {
       greaterNumberCounts += 1;
-      if ( higherNumber === array[array.length - 1]) {
+      if (higherNumber === array[array.length - 1]) {
         greaterNumberCounts += 1;
       }
     }
@@ -70,11 +70,11 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     distanciaCat2 = cat2 - mouse;
   }
-  if ( distanciaCat1 < distanciaCat2 ) {
+  if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if ( distanciaCat2 < distanciaCat1 ) {
+  } else if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
-  } else if ( distanciaCat1 === distanciaCat2 ) {
+  } else if (distanciaCat1 === distanciaCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -103,16 +103,16 @@ function encode(phrase) {
     if (phrase[i] === 'a') {
       string += '1';
     } else if (phrase[i] === 'e') {
-      string += '2';  
+      string += '2';
     } else if (phrase[i] == 'i') {
-      string += '3';  
+      string += '3';
     } else if (phrase[i] === 'o') {
-      string += '4';  
+      string += '4';
     } else if (phrase[i] === 'u') {
-      string += '5';  
+      string += '5';
     } else {
       string += phrase[i];
-    } 
+    }
   }
   return string;
 }
@@ -120,19 +120,19 @@ function encode(phrase) {
 function decode(phrase) {
   let string = '';
   for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase[i] == '1') {
+    if (phrase[i] === '1') {
       string += 'a';
     } else if (phrase[i] === '2') {
-      string += 'e';  
+      string += 'e';
     } else if (phrase[i] === '3') {
-      string += 'i';  
+      string += 'i';
     } else if (phrase[i] === '4') {
-      string += 'o';  
+      string += 'o';
     } else if (phrase[i] === '5') {
-      string += 'u';  
+      string += 'u';
     } else {
       string += phrase[i];
-    } 
+    }
   }
   return string;
 }
