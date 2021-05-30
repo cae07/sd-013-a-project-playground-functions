@@ -26,8 +26,33 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// referencia sobre a função filter https://qastack.com.br/programming/5667888/counting-the-occurrences-frequency-of-array-elements
+function numberValidation(numbers) {
+  let result = true;
+  for (let i = 0; i < numbers.length; i += 1) {
+    let count = numbers.filter((x) => x === i);
+    if (count.length >= 3) { result = false; break; }
+  }
+
+  return result;
+}
+
+function generatePhoneNumber(numbers) {
+  let n = numbers;
+  let ddd = `(${n[0]}${n[1]})`;
+  let phoneNumber = `${ddd} ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+
+  if (numberValidation(n) === false) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (n.filter((x) => x > 9).length > 0 || n.filter((x) => x < 0).length > 0) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (n.length !== 11) {
+    phoneNumber = 'Array com tamanho incorreto.';
+  }
+
+  return phoneNumber;
 }
 
 // Desafio 12
