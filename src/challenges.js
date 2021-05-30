@@ -2,11 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  } else if (param1 && param2 === false) {
-    return false;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
