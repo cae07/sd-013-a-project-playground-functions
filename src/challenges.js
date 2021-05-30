@@ -44,7 +44,7 @@ function footballPoints(wins, ties) {
   // receber numero de empates com nome ties
 }
 
-// Desafio realizado com ajuda do Matheus Duarte e Vitor seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
+// Desafio realizado com ajuda do Matheus Duarte e Victor Baptista seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
 
 // Desafio 6
 function highestCount(parametro) {
@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
+// Desafio 8 refatorado com ajuda do Matheus Duarte
 function fizzBuzz(numeros) {
   let retornaString = [];
   for (let index = 0; index < numeros.length; index += 1) {
