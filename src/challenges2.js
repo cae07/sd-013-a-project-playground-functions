@@ -47,10 +47,20 @@ function generatePhoneNumber(numbers) {
 }
 console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function lados(a,b,c) {
+  if ((a > (b + c)) || (b > (a + c)) || c > (a + b)) {
+    return false;
+  } else if ((a < Math.abs((b - c))) || (b < Math.abs((a - c))) || Math.abs((c < (b - a)))) {
+    return false;
+  } else if (((a < (b + c)) && a > Math.abs((b - c)))  || ((b < (a + c)) && (b > Math.abs((a - c)))) || (c < (a + b)) && (c < Math.abs((b - a)))) {
+    return true;
+  }
 }
+// Desafio 12
+function triangleCheck(lineA,lineB,lineC) {
+ return lados(lineA,lineB,lineC); 
+}
+console.log((triangleCheck(10, 14, 8)));
 
 // Desafio 13
 function hydrate() {
