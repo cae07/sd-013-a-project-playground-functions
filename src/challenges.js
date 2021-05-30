@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(x, y) {
-  if( (x === true) && (y === true)) {
+  if ( (x === true) && (y === true)) {
     return true;
   } else {
     return false;
@@ -9,13 +9,13 @@ function compareTrue(x, y) {
 console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea(base,heigh) {
+function calcArea(base, heigh) {
   let area = (base * heigh) / 2;
   return area;
 }
-console.log(calcArea(10,50));
-console.log(calcArea(5,2));
-console.log(calcArea(51,1));
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(digite) {
@@ -41,9 +41,9 @@ function footballPoints(wins, ties) {
   
   return vitoria + ties;
 }
-console.log(footballPoints(14,8));
-console.log(footballPoints(1,2));
-console.log(footballPoints(0,0));
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(nums) {
@@ -66,14 +66,13 @@ console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  if( (cat1 - mouse) > (cat2 - mouse)){
+  if ( (cat1 - mouse) > (cat2 - mouse)){
     return "cat2";
-  }  else if ( (mouse - cat1) == (cat2 - mouse) ){
+  } else if ( (mouse - cat1) == (cat2 - mouse) ){
       return "os gatos trombam e o rato foge";
   } else  if ( (cat1 - mouse) < (cat2 - mouse)) {
-    return "cat1";
+      return "cat1";
   } 
-  
 }
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(10, 4, 22));
@@ -82,10 +81,10 @@ console.log(catAndMouse(5, 4, 6));
 // Desafio 8
 function fizzBuzz(nums) {
   let aux = [];
-  for(let i = 0; i < nums.length; i += 1) {
-    if( (nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
+  for (let i = 0; i < nums.length; i += 1) {
+    if ( (nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
       aux.push('fizzBuzz')
-    } else if(nums[i] % 5 == 0) {
+    } else if (nums[i] % 5 == 0) {
       aux.push('buzz');
     } else if ( (nums[i] % 3 == 0) ) {
       aux.push('fizz');
@@ -107,7 +106,7 @@ function encode(frase) {
   for(let i = 0; i < frase.length; i += 1) {
     for(let j = 0; j <  letra.length; j += 1) {
       if(frase[i] == letra[j]) {
-        frase = frase.replace(frase[i],numero[j]);
+        frase = frase.replace(frase[i], numero[j]);
         
       }
     }
@@ -117,12 +116,11 @@ function encode(frase) {
 console.log(encode('Hello My Friend'))
 
 function decode(frase) {
-  let letra = ['a','e','i','o','u'];
+  let letra = ['a', 'e', 'i', 'o', 'u'];
   let numero = [1,2,3,4,5];
-
-  for(let i = 0; i < frase.length; i += 1) {
-    for(let j = 0; j < numero.length; j += 1) {
-      if(frase[i] == numero[j]) {
+  for (let i = 0; i < frase.length; i += 1) {
+    for (let j = 0; j < numero.length; j += 1) {
+      if (frase[i] == numero[j]) {
         frase = frase.replace(frase[i],letra[j]);        
       }
     }
