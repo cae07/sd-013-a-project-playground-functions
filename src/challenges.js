@@ -32,8 +32,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function  (numeros) {
-  let arrayNumeros = numeros[0];
+function highestCount (numeros) {
+  let arrayNumeros = numeros;
   let contador = [0];
   for (let arrayNumeros = 0; arrayNumeros < numeros.length; index++) {
     if (numeros > arrayNumeros) {
@@ -57,8 +57,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeroInt) {
+  let numeral = [];
+
+  for (let novoNumero of numeroInt) {
+    if (novoNumero %3 === 0 && novoNumero %5 === 0) {
+      numeral.push("fizzBuzz");
+    }
+    else if (novoNumero %3 === 0) {
+      numeral.push("fizz");
+    }
+    else if (novoNumero %5 === 0 ) {
+      numeral.push("buzz");
+    } else {
+      numeral.push("bug!");
+    }
+  }
+  return numeral;
 }
 
 // Desafio 9
