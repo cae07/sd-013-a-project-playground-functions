@@ -70,42 +70,27 @@ function fizzBuzz(Array) {
   return newArray
 }
 // Desafio 9
-function encode(encodeString) {
-  let splitedString = encodeString.split('');
-  for (let index = 0; index < splitedString.length; index += 1) {
-    if (splitedString[index] === 'a') {
-      splitedString[index] = 1;
-    } else if (splitedString[index] === 'e') {
-      splitedString[index] = 2;
-    } else if (splitedString[index] === '1') {
-      splitedString[index] = 3;
-    } else if (splitedString[index] === 'o') {
-      splitedString[index] = 4;
-    } else if (splitedString[índex] === 'u') {
-      splitedString[index] = 5;
-    } else {}
+function encode(phrase) {
+  for (let letter = 0; letter < phrase.length; letter += 1) {
+    phrase = phrase.replace('a', '1');
+    phrase = phrase.replace ('e', '2');
+    phrase = phrase.replace ('i', '3');
+    phrase = phrase.replace ('o', '4');
+    phrase = phrase.replace ('u', '5');
   }
-  return splitedString.join('');
+  return (phrase);
 }
-function decode(string) {
-  let newString = string.split('');
-  for (let index = 0; index < string.length; index += 1){
-    if (string[index] = '1'){
-      newString[index] = 'a';
-    } else if (string[index] === '2'){
-      newString[index] = 'e';
-    } else if (string[index] === '3'){
-      newString[index] = 'i';
-    } else if(string[index] === '4'){
-      newString [index] = 'o';
-    } else if (string[index] === '5'){
-      newString (string[index] = 'u');
-    } else {
-      newString[index] = string[index];
-    }
+function decode(phrase) {
+  for (let letter = 0; letter < phrase.length; letter += 1) {
+    phrase = phrase.replace('1', 'a');
+    phrase = phrase.replace('2', 'e');
+    phrase = phrase.replace('3', 'i');
+    phrase = phrase.replace('4', 'o');
+    phrase = phrase.replace('5', 'u');
   }
-  return newString.join('');
+  return (phrase);
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
