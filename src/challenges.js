@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
+  if (valor1 && valor2 ) {
     return true;
   } else {
     return false;
   }
 }
-console.log(compareTrue(false, false))
+console.log(compareTrue("1", "false"))
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
@@ -100,13 +100,48 @@ function fizzBuzz(phraseArray) {
 }
 
 // Desafio 9
-function encode() {
-// seu código aqui
-}
-function decode() {
-// seu código aqui
-}
 
+function encode(name) {
+let saida = ""
+let obje = {
+  "a": 1,
+  "e": 2,
+  "i": 3,
+  "o": 4,
+  "u": 5
+}
+  for (let i = 0; i < name.length; i++) {
+     if(obje[name[i]]){
+      saida += obje[name[i]]
+     } else {
+       saida += name[i]
+     }
+    }
+    return saida
+}
+console.log(encode("Hello! hello!"))
+
+function decode(name) {
+
+let saida = ""
+let obje = {
+  1: "a",
+  2: "e",
+  3: "i",
+  4: "o",
+  5: "u"
+}  
+    for (const chaveValor of name) {
+      if(obje[chaveValor]){
+        saida = saida + obje[chaveValor]
+      } else {
+        saida = saida + chaveValor
+      }
+    }
+      
+    return saida
+}
+ console.log(decode("H2ll4!"))
   module.exports = {
     calcArea,
     catAndMouse,
