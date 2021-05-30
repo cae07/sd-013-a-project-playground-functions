@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nome) {
   if (tech.length === 0) {
     return 'Vazio!';
   }
@@ -8,7 +8,7 @@ function techList(tech, name) {
   for (let i = 0; i < newtech.length; i += 1) {
     lista.push({
       tech: newtech[i], // passa indice por indice
-      name,
+      name:nome,
     });
   }
   return lista;
