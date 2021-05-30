@@ -93,10 +93,35 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-
+function encode(vowels) {
+  let arrayAux = '';
+  for(let letter of vowels){
+    if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+      switch(letter){
+        case 'a':
+          arrayAux += '1';
+          break;
+        case 'e':
+          arrayAux += '2';
+          break;
+        case 'i':
+          arrayAux += '3';
+          break;  
+        case 'o':
+          arrayAux += '4';
+          break;
+        case 'u':
+          arrayAux += '5';
+          break;        
+      } 
+    }else{
+      arrayAux += letter;
+    }
+  }
+  console.log(arrayAux);
+  return arrayAux
 }
-
+encode("hi there!");
 function decode() {
   // seu código aqui
 }
