@@ -33,7 +33,8 @@ function generatePhoneNumber(array) {
       contator = 0;
       if (array[i] < 0 || array[i] > 9) {
         return valoreInvalidos;
-      } else if (array[i] === array[j]) {
+      }
+      if (array[i] === array[j]) {
         contator += 1;
       }
     }
