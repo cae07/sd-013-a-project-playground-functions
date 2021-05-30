@@ -87,12 +87,58 @@ function fizzBuzz(numeroInt) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  let codifique = "";
+  
+  for ( let index of letras) {
+    if (index === 'a') {
+      codifique += 1;
+    }
+    else if (index === 'e') {
+      codifique += 2;
+    }
+    else if (index === 'i') {
+      codifique += 3;
+    }
+    else if (index === 'o') {
+      codifique += 4;
+    }
+    else if (index === 'u') {
+      codifique += 5;
+    }
+    else {
+      codifique += index;
+    }
+    
+  }
+  return codifique;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(numeros) {
+ let decodifique = '';
+
+  for (let index of numeros) {
+    if (index === '1') {
+      decodifique += 'a';
+    }
+    else if (index === '2') {
+      decodifique += 'e';
+    }
+    else if (index === '3') {
+      decodifique += 'i';
+    }
+    else if (index === '4') {
+      decodifique += 'o';
+    }
+    else if (index === '5') {
+      decodifique += 'u';
+    }
+    else {
+      decodifique += index;
+    }
+  }
+ return decodifique;
+};
 
 module.exports = {
   calcArea,
