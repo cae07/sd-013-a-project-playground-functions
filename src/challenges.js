@@ -61,6 +61,7 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
+// Desafio realizado com a ajuda dos estudantes Walace, Jéssica, Luiza e Fabíola :D
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
@@ -77,9 +78,25 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(0, -1, 1));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// realizado com a ajuda dos alunos Walace, Luiza, Josué e Rogério :D
+// eslint-disable-next-line complexity
+function fizzBuzz(array) {
+  let resultado = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+      resultado.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+  return resultado;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
