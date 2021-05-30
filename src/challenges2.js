@@ -44,9 +44,23 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  //Usado como referência para o exercício: https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript, http://www.regular-expressions.info/javascript.html
+  let onlyNumbers = string.replace(/[^1-9]/g,''), sum = 0, waterGlasses = ``;
+
+  for(let index of onlyNumbers){
+    sum += parseInt(index);
+  }
+
+  if (sum === 1) {
+    waterGlasses = `${sum} copo de água`
+  } else {
+    waterGlasses = `${sum} copos de água`;
+  }
+  return waterGlasses;
 }
+
+hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")
 
 module.exports = {
   generatePhoneNumber,
