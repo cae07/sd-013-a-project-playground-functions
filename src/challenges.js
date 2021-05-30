@@ -42,7 +42,7 @@ function highestCount(arrayNumbers) {
 
   for (let index = 0; index < arrayNumbers.length; index +=1) {
     if (arrayNumbers[index] === maiorNumero) {
-      repeticao = 1
+      repeticao += 1
     }
   }
   return repeticao;
