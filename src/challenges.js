@@ -44,8 +44,8 @@ function highestCount(arrNumbers) {
   // seu código aqui
   let sum = 0;
   let biggerNumber = Math.max(...arrNumbers)
-  for(let i = 0; i <= arrNumbers.length; i++) {
-      if(biggerNumber === arrNumbers[i]){
+  for(let index = 0; index <= arrNumbers.length; index += 1) {
+      if(biggerNumber === arrNumbers[index]){
         sum += 1;
     }
   }return sum;
@@ -75,29 +75,49 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrNumbers) {
   // seu código aqui
   let text = [];
-  for(let i = 0; i < arrNumbers.length; i++) {
+  for(let index = 0; index < arrNumbers.length; index += 1) {
 
-    if(arrNumbers[i] % 5 === 0 && arrNumbers[i] % 3 === 0) {
+    if(arrNumbers[index] % 5 === 0 && arrNumbers[index] % 3 === 0) {
       text.push('fizzBuzz');
     }
-    else if(arrNumbers[i] % 3 === 0) {
+    else if(arrNumbers[index] % 3 === 0) {
       text.push('fizz');
     }
-    else if(arrNumbers[i] % 5 === 0) {
+    else if(arrNumbers[index] % 5 === 0) {
       text.push('buzz');
     }else {
       text.push('bug!');
     }
   }return text;
-}fizzBuzz([2, 15, 7, 9, 45])
+}
 
 // Desafio 9
-function encode() {
+function encode(encode) {
   // seu código aqui
+  let stringEncode1 = encode;
+  for(let index = 0; index < encode.length; index += 1){
+    let stringEncode = ["a", "e", "i", "o", "u"];
+    let numberEnconde = ["1", "2", "3", "4", "5"];
+
+    for(let index1 = 0; index1 < stringEncode.length; index1 += 1){
+      stringEncode1 = stringEncode1.replace(stringEncode[index1], numberEnconde[index1]);
+    }
+  }return stringEncode1;
 }
-function decode() {
+
+function decode(decode) {
   // seu código aqui
+  let stringDecoded1 = decode;
+  for(let index = 0; index < decode.length; index += 1){
+    let stringEncode = ["a", "e", "i", "o", "u"];
+    let numberEnconde = ["1", "2", "3", "4", "5"];
+
+    for(let index1 = 0; index1 < stringEncode.length; index1 += 1){
+      stringDecoded1 = stringDecoded1.replace(numberEnconde[index1], stringEncode[index1]);
+    }
+  }return stringDecoded1;
 }
+
 
 module.exports = {
   calcArea,
