@@ -39,7 +39,7 @@ function highestCount(arrayNumbers) {
       maiorNumero = arrayNumbers[index];
     }
   }
-  
+
   for (let index = 0; index < arrayNumbers.length; index +=1) {
     if (arrayNumbers[index] === maiorNumero) {
       repeticao = 1
@@ -95,7 +95,7 @@ function encode(string) {
   return splitStringArray.join('');
 }
 function decode(code) {
-  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5 'u'};
+  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'};
   let decoded = '';
   for (let symbol in code) {
     if(numbers[code[symbol]]) {
