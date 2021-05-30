@@ -40,8 +40,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrey) {
+ let nome = []
+ for (index= 0; index < arrey.length; index += 1){
+    if ( arrey [index] % 3 === 0 && arrey [index] % 5 === 0){
+    nome.push("fizzBuzz");
+  } 
+    else  if ( arrey [index] % 3 === 0){
+   nome.push("fizz"); 
+   }
+    else if ( arrey [index] % 5 === 0) {
+     nome.push("buzz");
+   }
+    else {
+    nome.push("bug!");
+   }
+  }
+    return nome;
 }
 
 // Desafio 9
