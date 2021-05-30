@@ -34,20 +34,18 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(listNumbers) {
-  let high = 0;
-  let count = 0;
-  for (let index = 0; index <listNumbers.length; index += 1) {
-    if(listNumbers[index] > high) {
-      high = listNumbers[index];
-    }
-    if (listNumbers[index] === high) { 
-      count += 1;
-    }
-    return count;
-  }
+function highestCount(arrayNumbers) {
+  let higherNUmber = Math.max.apply(null, arrayNumbers);
+  let numberNumbers = 0;
 
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (higherNUmber === arrayNumbers[i]) {
+      numberNumbers += 1;
+    }
   }
+  return numberNumbers;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let gato1 = Math.abs(mouse - cat1);
@@ -78,11 +76,34 @@ function fizzBuzz(returnDeArray) {
   return fizzBuzzArray;
 } 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let splitStringArray = string.split ('');
+  for(let index in splitStringArray) {
+    if (splitStringArray[index] === 'a') {
+      splitStringArray[index] = 1;
+    } else if (splitStringArray[index] === 'e') {
+      splitStringArray[index] = 2;
+    } else if (splitStringArray[index] === '1') {
+      splitStringArray[index] = 3;
+    } else if (splitStringArray[index] === 'o') {
+      splitStringArray[index] = 4;
+    } else if (splitStringArray[index] === 'u') {
+      splitStringArray[index] = 5;
+    }
+  }
+  return splitStringArray.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(code) {
+  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5 'u'};
+  let decoded = '';
+  for (let symbol in code) {
+    if(numbers[code[symbol]]) {
+      decoded += numbers[code[symbol]];
+    } else {
+      decoded += code[symbol];
+    }
+  }
+  return decoded;
 }
 
 module.exports = {
