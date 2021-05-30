@@ -39,9 +39,33 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumCheck = triangleSum(lineA, lineB, lineC), diffCheck = triangleDiff(lineA, lineB, lineC);
+
+  if (sumCheck === true && diffCheck === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+function triangleSum(a, b, c) {
+  if (a > (b + c) || b > (a + c) || c > (a + b)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function triangleDiff(a, b, c) {
+  if(a < (Math.abs(b-c)) || b < (Math.abs(a-c) || c < (Math.abs(a-b)))) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+triangleCheck(10, 1, 8)
 
 // Desafio 13
 function hydrate(string) {
