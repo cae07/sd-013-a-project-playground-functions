@@ -53,31 +53,21 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
-function numMult3Mult5(numMult3Mult5) {
-  let num = numMult3Mult5;
-  let out = '';
-  if (num % 3 === 0) {
-    if (num % 5 === 0) {
+function fizzBuzz(Array) {
+  let result = [];
+  for(index in Array) {
+    if(Array[index] % 3 == 0 && Array[index] % 5 == 0) {
+      result.push('fizzBuzz');
+    } else if (Array[index] % 3 == 0) {
+      result.push('fizz');
+    } else if (Array[index] % 5 == 0) {
+      result.push('buzz');
     } else {
-      out = 'fizz';
-    }
-  } else {
-    out = 'buzz';
-  }
-  return out;
-}
-
-function fizzBuzz(arrayFizzBuzz) {
-  let arrayReturn = [];
-  for (let indArrayFizzBuzz = 0; indArrayFizzBuzz < arrayFizzBuzz.length; indArrayFizzBuzz += 1) {
-    if (arrayFizzBuzz[indArrayFizzBuzz] % 3 === 0 || arrayFizzBuzz[indArrayFizzBuzz] % 5 === 0) {
-      arrayReturn[indArrayFizzBuzz] = numMult3Mult5(arrayFizzBuzz[indArrayFizzBuzz]);
-    } else {
-      arrayReturn[indArrayFizzBuzz] = 'bug';
-    }
-  }
-  return arrayReturn;
-}
+      result.push('bug!');
+    };
+  };
+  return result;
+};
 // Desafio 9
 function encode(phrase) {
   for (let letter = 0; letter < phrase.length; letter += 1) {
