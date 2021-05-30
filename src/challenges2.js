@@ -14,23 +14,23 @@ function techList(techs, nome) {
   } else {
     return "Vazio!";
   }
-}  
-  // Desafio 11
-  function generatePhoneNumber(arrayNumber) {
-  }
-  // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
+}
+// Desafio 11
+function generatePhoneNumber(arrayNumber) {
+}
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
 
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
-  }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
-  module.exports = {
-    generatePhoneNumber,
-    techList,
-    hydrate,
-    triangleCheck,
-  };
+module.exports = {
+  generatePhoneNumber,
+  techList,
+  hydrate,
+  triangleCheck,
+};
