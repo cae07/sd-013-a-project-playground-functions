@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = 0;
   let distanceCat2 = 0;
 
-  if(modCat1 > modMouse){
+  if(modCat1 > modMouse){// 30 - 40 = -10
     distanceCat1 = modCat1 - modMouse;
   } else {
     distanceCat1 = modMouse - modCat1;
