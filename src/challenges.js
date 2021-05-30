@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
     distCat1 *= -1;
   }
   if (distCat2 < 0) {
-    distCat2 *= -1 ;
+    distCat2 *= -1;
   }
   if (distCat1 < distCat2) {
     return 'cat1';
@@ -110,7 +110,6 @@ function encode(string) {
   }
   return code;
 }
-(console.log(encode('os alemaes sao foda')))
 function decode(code) {
   let decodeCode = '';
   for (let index = 0; index < code.length; index += 1) {
