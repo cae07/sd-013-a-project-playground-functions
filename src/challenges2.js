@@ -1,24 +1,18 @@
 // Desafio 10
 function techList(array, name) {
+  let array0rdenado = array.sort();
+  let array0bjetos = [];
   if (array.length === 0) {
     return 'vazio';
+  } else {
+    for(let index in array0rdenado){
+      array0bjetos.push({
+        tech: array0rdenado[index],
+        name: name
+      } );
+    }
+    return array0bjetos;
   }
-  let arrayTech = [];
-  array.sort();
-  for (let index = 0; index < array.length; index += 1) {
-    let learningTech = {
-      tech: array[index],
-      name,
-    };
-    arrayTech.push(learningTech);
-
-  }
-  return arrayTech.sort();
-}
-console.log(techList([], 'Lucas'));
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
 }
 
 // Desafio 12
