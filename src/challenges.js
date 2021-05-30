@@ -41,11 +41,10 @@ function concatName(nomes) {
 return `${nomes[nomes.length - 1]}, ${nomes[0]}`;
 }
 let listadeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(listadeNomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
