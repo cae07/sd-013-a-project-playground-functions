@@ -8,7 +8,7 @@ function techList(tech, nome) {
   for (let i = 0; i < newtech.length; i += 1) {
     lista.push({
       tech: newtech[i], // passa indice por indice
-      name:nome,
+      name: nome,
     });
   }
   return lista;
