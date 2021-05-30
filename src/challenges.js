@@ -34,6 +34,8 @@ function footballPoints(wins, ties) {
 };
 
 // Desafio 6
+// Com suporte de Luiza Antiques e Josué Lobo
+
 function highestCount(array) {
   let maior = array[0];
   let cont = 0;
@@ -50,28 +52,43 @@ function highestCount(array) {
   }
   return cont;
 };
-//Com suporte de Luiza Antiques e Josué Lobo
 
 // Desafio 7
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
 function catAndMouse(mouse, cat1, cat2) {
-  
-}
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
+  let finalResult; 
 
+  if (dist1 < dist2) {
+    finalResult = 'cat1'
 
+  } else if (dist1 > dist2) {
+    finalResult = 'cat2'
 
-
-
-
-
-
-
-
-
+  } else {
+    finalResult = "os gatos trombam e o rato foge"
+  };
+  return finalResult;
+};
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 9
 function encode() {
