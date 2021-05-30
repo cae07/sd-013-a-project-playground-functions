@@ -51,8 +51,17 @@ function highestCount(vetor) {
   return cont;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distcat1 = mouse - cat1;
+  distcat2 = mouse - cat2;
+
+  if (distcat1 > distcat2 && cat1 > mouse) {
+    return 'cat1';
+  } else if (distcat2 > distcat1 && cat2 > mouse) {
+    return 'cat2';
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 // Desafio 8
 function fizzBuzz(numes) {
