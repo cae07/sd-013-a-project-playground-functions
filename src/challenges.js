@@ -12,7 +12,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-//fonte https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+// fonte https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
@@ -53,7 +53,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let distcat2 = Math.abs(mouse - cat2);
   if (distcat1 < distcat2) {
     return 'cat1';
-  } if (distcat2 < distcat1) {
+  }
+  if (distcat2 < distcat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
