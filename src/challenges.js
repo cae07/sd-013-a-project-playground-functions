@@ -118,12 +118,37 @@ function encode(vowels) {
       arrayAux += letter;
     }
   }
-  console.log(arrayAux);
+  
   return arrayAux
 }
-encode("hi there!");
-function decode() {
-  // seu código aqui
+
+function decode(vowels) {
+  let arrayAux = '';
+  for(let letter of vowels){
+    if(letter == '1' || letter == '2' || letter == '3' || letter == '4' || letter == '5'){
+      switch(letter){
+        case '1':
+          arrayAux += 'a';
+          break;
+        case '2':
+          arrayAux += 'e';
+          break;
+        case '3':
+          arrayAux += 'i';
+          break;  
+        case '4':
+          arrayAux += 'o';
+          break;
+        case '5':
+          arrayAux += 'u';
+          break;        
+      } 
+    }else{
+      arrayAux += letter;
+    }
+  }
+  
+  return arrayAux
 }
 
 module.exports = {
