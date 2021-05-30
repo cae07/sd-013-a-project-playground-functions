@@ -1,31 +1,32 @@
 // Desafio 1
-function compareTrue (valor1, valor2) {
-if (valor1 === true && valor2 === true){
-  return true;
-}
-  else {
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
+    return true;
+   }
+    else {
     return false;
-  }
+   }
 }
 
 // Desafio 2
 function calcArea(base, altura) {
- return (base * altura) /2;
-  }
-  
- //Desafio 3
-function splitSentence() {
-  // seu código aqui
+  return (base * altura) / 2;
+}
+ 
+// Desafio 3
+function splitSentence(gildo) {
+  return gildo.split (" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(shakespeare) {
+  return shakespeare.split [shakespeare.lenght -1]
+  + "," + shakespeare.split [0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-    return ((wins * 3) + ties)
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
