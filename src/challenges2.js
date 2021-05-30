@@ -1,5 +1,7 @@
 // Desafio 10
 // Resolvido com a ajuda do aluno Matheus Duarte da Turma 13- Tribo A
+// Sort https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// Diferença do for of e for in https://pt.stackoverflow.com/questions/90352/qual-%C3%A9-a-diferen%C3%A7a-entre-o-for-of-e-o-for-in
 function techList(arrayTech, nome) {
   let techsToLearn = [];
 
@@ -24,6 +26,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
+// Math.abs https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
   if (
     lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)
