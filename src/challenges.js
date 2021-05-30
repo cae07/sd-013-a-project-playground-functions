@@ -54,36 +54,35 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(numberArray) {
-  let output = [];
-  for (let i = 0; i < numberArray.length; 1 += 1) {
+  let output = []
+  for (let i = 0; i < numberArray.length; i += 1) {
     if (numberArray[i] % 3 === 0 && numberArray[i] % 5 === 0) {
       output.push('fizzBuzz');
     } else if (numberArray[i] % 5 === 0) {
       output.push('buzz');
     } else if (numberArray[i] % 3 === 0) {
       output.push('fizz')
-    }
+    } else {output.push('bug'); }
   }
+  return output;
 }
 // Desafio 9
-function encode(string) {
-  let newString = string.split('');
-  for (let index = 0; index < string.length; index += 1){
-    if (string[index] === 'a'){
-      newString[index] = '1';
-    } else if (string[index] === 'e'){
-      newString[index] = '2';
-    } else if(string[index] === 'i'){
-      newString[index] = '3';
-    } else if (string[index] === 'o'){
-      newString[index] = '4';
-    } else if (string[index] === 'u'){
-      newString[index] = '5';
-    }else {
-      newString[index] = string[index];
-    }
+function encode(encodeString) {
+  let splitedString = encodeString.split('');
+  for (let index = 0; index < splitedString.length; index += 1) {
+    if (splitedString[index] === 'a') {
+      splitedString[index] = 1;
+    } else if (splitedString[index] === 'e') {
+      splitedString[index] = 2;
+    } else if (splitedString[index] === '1') {
+      splitedString[index] = 3;
+    } else if (splitedString[index] === 'o') {
+      splitedString[index] = 4;
+    } else if (splitedString[índex] === 'u') {
+      splitedString[index] = 5;
+    } else {}
   }
-  return newString.join('');
+  return splitedString.join('');
 }
 function decode(string) {
   let newString = string.split('');
