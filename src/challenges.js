@@ -11,14 +11,14 @@ function compareTrue(x, y) {
 // Desafio 2
 function calcArea(base, height) {
     let area = base * height /2
-  return area
+      return area
 }
  
 
 // Desafio 3
 function splitSentence(splitfrase){
-    let frase = splitfrase.split(` `);
-  return frase
+  let frase = splitfrase.split(` `);
+    return frase
       splitArray(`Go Trybe!`)
       splitArray(`Vamo que vamo!`)
       splitArray(`Foguete!`)
@@ -27,7 +27,7 @@ function splitSentence(splitfrase){
 // Desafio 4
 function concatName(concatString){
   let newArray = (concatString[concatString.length -1] + ", " + concatString[0])
-  return newArray
+    return newArray
 
 }
 
@@ -39,8 +39,8 @@ function footballPoints(wins, ties){
 
 // Desafio 6
 function highestCount(counter) {
-let count = 0;
-let maximum = Math.max.apply(undefined, counter)
+    let count = 0;
+    let maximum = Math.max.apply(undefined, counter)
 for (let number of counter){
   if (number === maximum){
     count += 1;
@@ -85,8 +85,6 @@ for(let index = 0; index < array.length; index += 1)
     }
     return divisionArray
   }
-
- 
 
 // Desafio 9
 function encode() {
