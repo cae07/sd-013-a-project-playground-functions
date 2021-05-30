@@ -30,13 +30,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount() { 
   let maxNumber = 0;
-  for (number of array){
-    maxNumber = Math.max(number, maxNumber);
+  for (let number of array){
+  maxNumber = Math.max(number, maxNumber);
   }
   const times = array.filter(el=>{
-    if(el===number)return el;
-  })
-  return{maxNumber,times: times.length};
+    if (el === number) return el;
+  });
+  return {maxNumber, times.length}
 }
 // Desafio 7
 function catAndMouse() {
@@ -59,7 +59,7 @@ function fizzBuzz(array) {
       aux = 'bug!';
     }newArray.push(aux);
     }return newArray;
-  }}
+  }
 // Desafio 9
 function encode(frase) {
   let letra = ['a', 'e', 'i', 'o', 'u'];
