@@ -63,9 +63,23 @@ function triangleCheck(lineA,lineB,lineC) {
 console.log((triangleCheck(10, 14, 8)));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(pedido) {
+  let number = [1,2,3,4,5,6,7,8,9];
+  let soma = 0;
+  for(let i = 0; i < pedido.length; i += 1) {    
+    for(let j = 0; j < number.length; j += 1) {
+      if(pedido[i] == number[j]) {
+        soma += number[j];
+      }
+    } 
+  }
+  if(soma == 1) {
+    return `${soma} copo de água`
+  } else {
+    return `${soma} copos de água`
+  }
 }
+console.log(hydrate("5 cerveja"));
 
 module.exports = {
   generatePhoneNumber,
@@ -73,11 +87,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-function test() {
-  let test = [1,2,3,4,5,4,5,7,5]
-  let aux = 0;
-  for(let i = 0; i < test.length; i += 1) {
-    
-  }
-}
