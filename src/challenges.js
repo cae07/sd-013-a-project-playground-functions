@@ -78,7 +78,7 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-// consultei https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+//  consultei https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 function encode(string) {
   string = string.replace(/a/gi, '1'); // g vem de global e i de ignore-ignora difer de maiuscula e minuscula
   string = string.replace(/e/gi, '2');
