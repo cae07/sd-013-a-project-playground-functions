@@ -102,13 +102,58 @@ fizzBuzz([7, 9]);
 fizzBuzz([9, 25]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stg) {
+  let acesso = Array.from(stg);
+  let codificado = [];
+  for (let i = 0; i < acesso.length; i += 1) {
+    if (acesso[i] === 'a' || acesso[i] === 'e' || acesso[i] === 'i' || acesso[i] === 'o' || acesso[i] === 'u') {
+      if (acesso[i] === 'a') {
+        codificado[i] = 1;
+      }
+      if (acesso[i] === 'e') {
+        codificado[i] = 2;
+      }
+      if (acesso[i] === 'i') {
+        codificado[i] = 3;
+      }
+      if (acesso[i] === 'o') {
+        codificado[i] = 4;
+      }
+      if (acesso[i] === 'u') {
+        codificado[i] = 5;
+      }
+    } else {
+        codificado[i] = acesso[i];
+    }
+  }
+  return (codificado.join(''));
 }
-function decode() {
-  // seu código aqui
+function decode(stg) {
+  let acesso = Array.from(stg);
+  let decodificado = [];
+  for (let i = 0; i < acesso.length; i += 1) {
+    if (acesso[i] == 1 || acesso[i] == 2 || acesso[i] == 3 || acesso[i] == 4 || acesso[i] == 5) {
+      if (acesso[i] == 1) {
+        decodificado[i] = 'a';
+      }
+      if (acesso[i] == 2) {
+        decodificado[i] = 'e';
+      }
+      if (acesso[i] == 3) {
+        decodificado[i] = 'i';
+      }
+      if (acesso[i] == 4) {
+        decodificado[i] = 'o';
+      }
+      if (acesso[i] == 5) {
+        decodificado[i] = 'u';
+      }
+    } else {
+      decodificado[i] = acesso[i];
+    }
+  }
+  return (decodificado.join(''));
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
