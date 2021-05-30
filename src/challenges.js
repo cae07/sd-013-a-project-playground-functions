@@ -50,9 +50,10 @@ function highestCount(array) {
   }
   return cont;
 };
+//Ajuda recebida de Luiza Antiques e Josué Lobo
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   
 }
 
