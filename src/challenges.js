@@ -43,13 +43,13 @@ function highestCount(arr) {
 
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] > maior) {
-    maior = arr[i];
+      maior = arr[i];
+    }
   }
-}
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] === maior) {
-    vezes++;
-}
+      vezes ++;
+    }
   }
   return vezes;
 }
@@ -60,9 +60,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let dis1 = Math.abs(cat1 - mouse);
   let dis2 = Math.abs(cat2 - mouse);
 
-   if (dis1 < dis2) {
+  if (dis1 < dis2) {
     return 'cat1';
-   }else if (dis1 > dis2) {
+  } else if (dis1 > dis2) {
      return 'cat2';
    }else {
      return 'os gatos trombam e o rato foge';
@@ -74,7 +74,7 @@ function fizzBuzz(num) {
   // seu código aqui
   let array = [];
   for (let n of num){
-  if(n % 3 === 0 && n % 5 === 0) {
+  if (n % 3 === 0 && n % 5 === 0) {
     array.push ('fizzBuzz');
   }else if (n % 3 === 0) {
     array.push ('fizz');
