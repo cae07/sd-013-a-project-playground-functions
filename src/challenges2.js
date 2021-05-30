@@ -1,5 +1,5 @@
 // Desafio 10
-// Ajudado por Ricardo Souza turma 13 A
+// Ajudado por Ricardo Souza Turma 13 A
 function techList(tech, name) {
   let menor = tech.sort();
   let array = [];
@@ -15,7 +15,7 @@ function techList(tech, name) {
   return array;
 }
 
-// Desafio 11 - Ajudado pela Bianca no plantão da manhã e pelo sumo no plantão da noite
+// Desafio 11 - Ajudado pela Bianca no plantão da manhã e pelo Sumo a noite
 function generatePhoneNumber(numeros) {
   let contagem = 0;
   //  verifica se o array é igual 11
@@ -30,7 +30,6 @@ function generatePhoneNumber(numeros) {
     }
   }
 
-  // Verifica se existem mais de 3 numeros repetidos
   for (index = 0; index < numeros.length; index += 1) {
     for (counter = 0; counter < numeros.length; counter += 1) {
       if (numeros[index] === numeros[counter]) {
@@ -43,22 +42,17 @@ function generatePhoneNumber(numeros) {
     contagem = 0;
   }
 
-  // retorna o numero pronto
   for (index = 0; index < numeros.length; index += 1) {
   }
-  let numPronto = '(' + numeros[0] + numeros[1] + ') ' + numeros[2] + numeros[3] + numeros[4] + numeros[5] + numeros[6] + '-'
-  + numeros[7] + numeros[8] + numeros[9] + numeros[10];
+  let numPronto = '(' + numeros[0] + numeros[1] + ') ' + numeros[2] + numeros[3] + 
+  numeros[4] + numeros[5] + numeros[6] + '-' + numeros[7] + numeros[8] + numeros[9]
+   + numeros[10];
   return numPronto;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
-    return 'false';
-  } else if (lineA < Math.abs(lineB - lineC))
-  
 }
-console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
