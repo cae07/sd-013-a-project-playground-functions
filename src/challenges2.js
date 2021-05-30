@@ -37,16 +37,23 @@ function generatePhoneNumber(numbers) {
         return msg;
       } else if(numbers[i] > 9) {
         return msg;
-      } else if( numbers.indexOf(numbers.slice(1,11)[i]) != i ) {
+      } else if( numbers.indexOf(numbers[i]) != i ) {
         count ++;
-      } else if(count >= 3) {
-        return msg;
-      }
+      } 
+    }
+    if(count >= 3) {
+      return msg;
     }
   }
+
+  
+
+
+
+
   return contato;
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
 
 // Desafio 12
 function triangleCheck() {
