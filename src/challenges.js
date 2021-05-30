@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(x, y) {
-  if ( (x === true) && (y === true)) {
+  if ((x === true) && (y === true)) {
     return true;
   } else {
     return false;
@@ -37,7 +37,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  vitoria = wins * 3;
+  let vitoria = wins * 3;
   return vitoria + ties;
 }
 console.log(footballPoints(14, 8));
@@ -50,6 +50,7 @@ function highestCount(nums) {
   let count = 0;
 
   for (let j = 0; j < nums.length; j += 1) {
+
     if (maior == nums[j]) {
       count++;
     }
@@ -62,7 +63,6 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
   if ( (cat1 - mouse) > (cat2 - mouse)){
     return "cat2";
   } else if ( (mouse - cat1) == (cat2 - mouse) ){
@@ -79,7 +79,7 @@ console.log(catAndMouse(5, 4, 6));
 function fizzBuzz(nums) {
   let aux = [];
   for (let i = 0; i < nums.length; i += 1) {
-    if ( (nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
+    if ((nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
       aux.push('fizzBuzz')
     } else if (nums[i] % 5 == 0) {
       aux.push('buzz');
@@ -113,7 +113,7 @@ console.log(encode('Hello My Friend'))
 
 function decode(frase) {
   let letra = ['a', 'e', 'i', 'o', 'u'];
-  let numero = [1,2,3,4,5];
+  let numero = [1, 2, 3, 4, 5];
   for (let i = 0; i < frase.length; i += 1) {
     for (let j = 0; j < numero.length; j += 1) {
       if (frase[i] == numero[j]) {
