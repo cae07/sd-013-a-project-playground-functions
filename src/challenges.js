@@ -78,35 +78,43 @@ function fizzBuzz(Array) {
 }
 // Desafio 9
 function encode(string) {
-  let splitStringArray = string.split ('');
-  for(let index in splitStringArray) {
-    if (splitStringArray[index] === 'a') {
-      splitStringArray[index] = 1;
-    } else if (splitStringArray[index] === 'e') {
-      splitStringArray[index] = 2;
-    } else if (splitStringArray[index] === '1') {
-      splitStringArray[index] = 3;
-    } else if (splitStringArray[index] === 'o') {
-      splitStringArray[index] = 4;
-    } else if (splitStringArray[index] === 'u') {
-      splitStringArray[index] = 5;
+  let newString = string.split('');
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] === 'a'){
+      newString[index] = '1';
+    } else if (string[index] === 'e'){
+      newString[index] = '2';
+    } else if(string[index] === 'i'){
+      newString[index] = '3';
+    } else if (string[index] === 'o'){
+      newString[index] = '4';
+    } else if (string[index] === 'u'){
+      newString[index] = '5';
+    }else {
+      newString[index] = string[index];
     }
   }
-  return splitStringArray.join('');
+  return newString.join('');
 }
-function decode(code) {
-  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'};
-  let decoded = '';
-  for (let symbol in code) {
-    if(numbers[code[symbol]]) {
-      decoded += numbers[code[symbol]];
-    } else {
-      decoded += code[symbol];
+function decode(string) {
+  let newString = string.split('');
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] = '1'){
+      newString[index] = 'a';
+    } else if (string[index] === '2'){
+      newString[index] = 'e';
+    } else if (string[index] === '3'){
+      newString[index] = 'i';
+    } else if(string[index] === '4'){
+      newString [index] = 'o';
+    } else if (string[index] === '5'){
+      newString (string[index] = 'u');
+    } else{
+      newString[index] = string[index];
     }
   }
-  return decoded;
+  return newString.join('');
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
