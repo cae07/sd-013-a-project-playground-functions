@@ -1,7 +1,23 @@
+/* eslint-disable sonarjs/prefer-object-literal */
+/* eslint-disable max-len */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
 // Desafio 10
 function techList(arrayTecnologias, name) {
   // seu código aqui
-  let resultado = {};
+  let resultado = [];
+  let aux = arrayTecnologias.sort();
+  if (arrayTecnologias > [0]) {
+    for (let index = 0; index < arrayTecnologias.length; index += 1) {
+      let auxiliarResultado = {};
+      auxiliarResultado.tech = aux[index];
+      auxiliarResultado.name = name;
+      resultado.push(auxiliarResultado);
+    }
+  } else {
+    resultado = 'Vazio!';
+  }
   return resultado;
 }
 
