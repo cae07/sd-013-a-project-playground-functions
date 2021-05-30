@@ -38,7 +38,6 @@ console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
   vitoria = wins * 3;
-  
   return vitoria + ties;
 }
 console.log(footballPoints(14, 8));
@@ -47,16 +46,14 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(nums) {
-  
   let maior = Math.max(...nums);
   let count = 0;
 
-  for(let j = 0; j < nums.length; j += 1) {
-    if(maior == nums[j]) {
+  for (let j = 0; j < nums.length; j += 1) {
+    if (maior == nums[j]) {
       count++;
     }
   }
-  
   return count;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
@@ -100,14 +97,13 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(frase) {
-  let letra = ['a','e','i','o','u'];
-  let numero = [1,2,3,4,5];
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+  let numero = [1, 2, 3, 4, 5];
 
-  for(let i = 0; i < frase.length; i += 1) {
-    for(let j = 0; j <  letra.length; j += 1) {
-      if(frase[i] == letra[j]) {
-        frase = frase.replace(frase[i], numero[j]);
-        
+  for (let i = 0; i < frase.length; i += 1) {
+    for (let j = 0; j <  letra.length; j += 1) {
+      if (frase[i] == letra[j]) {
+        frase = frase.replace(frase[i], numero[j]);       
       }
     }
   }
