@@ -1,16 +1,27 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+var bool = true
+var bool2 = true
+function compareTrue(value1, value2){
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+  // seu código aqui
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-  
+function calcArea(base, height, area) {
+  area = 1/2*base*height;
+  return area
 }
+  // seu código aqui
 
 // Desafio 3
-function splitSentence() {
+function splitSentence("oi tudo bem") {
+ let array = string.split(" ");
+ console.log(array);
   // seu código aqui
 }
 
@@ -30,7 +41,9 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse ) return
+  "os gatos trombam e o rato foge"
   // seu código aqui
 }
 
@@ -59,3 +72,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
