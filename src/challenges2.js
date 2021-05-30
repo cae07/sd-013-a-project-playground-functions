@@ -1,25 +1,25 @@
 // Desafio 10
-//realizado com ajuda do Silvio
+// realizado com ajuda do Silvio
 function techList(tecnologias, name) {
- if (tecnologias.length === 0) {
-  return 'Vazio!';
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
   }
 
-let tecnologia = [];
-tecnologias.sort();
+  let tecnologia = [];
+  tecnologias.sort();
 
-for (let valor in tecnologias) {
-  tecnologia.push({
-    tech: tecnologias[valor],
-    name: name,
-  })
-}
-return tecnologia;
+  for (let valor = 0; valor < tecnologias.length; valor += 1) {
+    tecnologia.push({
+      tech: tecnologias[valor],
+      name,
+    });
+  }
+  return tecnologia;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12

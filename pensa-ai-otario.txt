@@ -1,0 +1,21 @@
+1. funcao vai receber 2 parametros
+
+2. declarar uma variavel vazia para um objeto
+
+3. fazer uma ordenação a partir do campo tech no objeto
+
+4. criar um for para passar pelo array de tecnologia.
+
+5. para cada indice do for, incrementar o objeto criado
+anteriormente com tech: "primeiro parametro" e name: "segundo parametro"
+
+6. return do objeto
+
+7. verificação de erro. caso o array venha vazio, dar um
+return com "vazio"
+
+---------------------------------------------------------------
+
+1. funcao vai receber um array contendo 11 numeros
+
+2. 

@@ -44,20 +44,18 @@ function footballPoints(wins, ties) {
   // receber numero de empates com nome ties
 }
 
-// Desafio realizado com ajuda do seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
+// Desafio realizado com ajuda do Matheus Duarte e Vitor seguinte link https://www.youtube.com/watch?v=pkJXwPvselI
 
 // Desafio 6
 function highestCount(parametro) {
-  let contador = 0;
   let maiorNumero = parametro[0];
-
+  let contador = 0;
   for (let indice = 0; indice < parametro.length; indice += 1) {
     if (parametro[indice] > maiorNumero) {
       maiorNumero = parametro[indice];
+      contador = 0;
     }
-  }
-  for (let index = 0; index < parametro.length; index += 1) {
-    if (parametro[index] === maiorNumero) {
+    if (parametro[indice] === maiorNumero) {
       contador += 1;
     }
   }
@@ -71,7 +69,7 @@ function highestCount(parametro) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < (Math.abs(mouse - cat2))) {
     return 'cat1';
-  } else if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))) {
+  } if (Math.abs(mouse - cat1) > (Math.abs(mouse - cat2))) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -81,14 +79,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let retornaString = [];
   for (let index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
-      retornaString.push('fizz');
-    } else if (numeros[index] % 5 === 0 && numeros[index] % 3 !== 0) {
-      retornaString.push('buzz');
-    } else if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      retornaString.push('fizzBuzz');
-    } else {
-      retornaString.push('bug!');
+    retornaString[index] = 'bug!';
+    if (numeros[index] % 15 === 0) {
+      retornaString[index] = 'fizzBuzz';
+    } else if (numeros[index] % 3 === 0) {
+      retornaString[index] = 'fizz';
+    } else if (numeros[index] % 5 === 0) {
+      retornaString[index] = 'buzz';
     }
   }
   return retornaString;
