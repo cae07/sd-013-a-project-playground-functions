@@ -1,12 +1,12 @@
 // Desafio 1
-function compareTrue(x,y) {
+function compareTrue(x, y) {
   if( (x === true) && (y === true)) {
     return true;
   } else {
     return false;
   }
 }
-console.log(compareTrue(true,false));
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base,heigh) {
@@ -36,7 +36,7 @@ console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   vitoria = wins * 3;
   
   return vitoria + ties;
@@ -64,7 +64,7 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
 
   if( (cat1 - mouse) > (cat2 - mouse)){
     return "cat2";
@@ -93,10 +93,8 @@ function fizzBuzz(nums) {
       aux.push('bug!');
     }
   }
-
   return aux;
 }
-
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
