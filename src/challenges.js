@@ -50,9 +50,8 @@ function highestCount(nums) {
   let count = 0;
 
   for (let j = 0; j < nums.length; j += 1) {
-
-    if (maior == nums[j]) {
-      count++;
+    if (maior === nums[j]) {
+      count += 1;
     }
   }
   return count;
@@ -78,12 +77,13 @@ console.log(catAndMouse(5, 4, 6));
 // Desafio 8
 function fizzBuzz(nums) {
   let aux = [];
+
   for (let i = 0; i < nums.length; i += 1) {
-    if ((nums[i] % 3 == 0) && (nums[i] % 5 == 0)) {
+    if ((nums[i] % 3 === 0) && (nums[i] % 5 === 0)) {
       aux.push('fizzBuzz')
-    } else if (nums[i] % 5 == 0) {
+    } else if (nums[i] % 5 === 0) {
       aux.push('buzz');
-    } else if ( (nums[i] % 3 == 0) ) {
+    } else if ( (nums[i] % 3 === 0) ) {
       aux.push('fizz');
     } else {
       aux.push('bug!');
@@ -102,7 +102,7 @@ function encode(frase) {
 
   for (let i = 0; i < frase.length; i += 1) {
     for (let j = 0; j <  letra.length; j += 1) {
-      if (frase[i] == letra[j]) {
+      if (frase[i] === letra[j]) {
         frase = frase.replace(frase[i], numero[j]);       
       }
     }
@@ -114,9 +114,10 @@ console.log(encode('Hello My Friend'))
 function decode(frase) {
   let letra = ['a', 'e', 'i', 'o', 'u'];
   let numero = [1, 2, 3, 4, 5];
+
   for (let i = 0; i < frase.length; i += 1) {
     for (let j = 0; j < numero.length; j += 1) {
-      if (frase[i] == numero[j]) {
+      if (frase[i] === numero[j]) {
         frase = frase.replace(frase[i],letra[j]);        
       }
     }
