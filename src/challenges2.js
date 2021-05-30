@@ -59,7 +59,7 @@ function montaNumero(numero) {
   return `(${ddd}) ${prefixNumber}-${sufixNumber}`;
 }
 
-// Desafio 11
+// Desafio 11 Matheus Duarte e Matheus Camillo me ajudaram a fazer o exercicio
 function generatePhoneNumber(numero) {
   if (checarComprimeto(numero)) {
     return 'Array com tamanho incorreto.';
