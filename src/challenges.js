@@ -22,7 +22,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let array = [];
-  for (i = 0; i < string.length; i += 1) {
+  for (let i = 0; i < string.length; i += 1) {
     return string.split(' '); // tags: " ", " ", "", etc
   }
 }
@@ -44,21 +44,62 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(14, 8))
 
+
+//O que será verificado:
+
+// Retorne 2 quando o parâmetro passado na função highestCount seja [9, 1, 2, 3, 9, 5, 7]
+
+// Retorne 1 quando o parâmetro passado na função highestCount seja [0, 4, 4, 4, 9, 2, 1]
+
+// Retorne 3 quando o parâmetro passado na função highestCount seja [0, 0, 0]
+
 // Desafio 6
 function highestCount(array) {
+  let count = array[0];
+  let deregueJohnson = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if(count < array[i]) {
+			deregueJohnson = 0;
+      count = array[i];
+    } if (array [i] === count) {
+      deregueJohnson += 1;
+    } 
+	}		
+	return deregueJohnson;
+} 
 
-}
 
+//Math.abs
 // Desafio 7
-function catAndMouse() {
-
+function catAndMouse(mouse, cat1, cat2) {
+	let distanceCat1 = Math.abs(cat1 - mouse);
+	let distanceCat2 = Math.abs(cat2 - mouse);
+	if (distanceCat1 < distanceCat2) {
+		return "cat1";
+	} else if(distanceCat2 < distanceCat1){
+		return "cat2";
+	} else {
+	return "os gatos trombam e o rato foge";
+	}
 }
+console.log(catAndMouse(1, 3, 6))
 
-// Desafio 8
-function fizzBuzz() {
 
+// Desafio 8]
+function fizzBuzz(array) {
+	let jubileu = [];
+	for (let i = 0; i < array.length; i += 1) {
+		if((array[i] % 3 === 0) && (array[i] % 5 === 0)){
+			jubileu.push("fizzBuzz");
+		} else if (array[i] % 5 === 0) {
+			jubileu.push("buzz");
+		} else if (array[i] % 3 === 0) {
+			jubileu.push("fizz");
+		} else {
+			jubileu.push("bug!");
+		}
+	} return jubileu;
 }
-
 // Desafio 9
 function encode() {
 
@@ -79,3 +120,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+//AGRADECIMENTOS PELA AJUDA NO PROJETO: LUIZA ANTIQUES; JOSUÉ LOBO
