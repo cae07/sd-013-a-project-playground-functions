@@ -93,12 +93,42 @@ function fizzBuzz(matriz) {
   return array;
 }
 
-// Desafio 9
-function encode(codific) {
-  
+// Desafio 9 // Busquei ajuda pela sintaxe for in do colega Silvio Fabian
+function encode(codi) {
+  let vogais = "";
+  for (let words in codi) {
+    if (codi[words] === "a") {
+      vogais = vogais + "1";
+    } else if (codi[words] === "e") {
+      vogais = vogais + "2";
+    } else if (codi[words] === "i") {
+      vogais = vogais + "3";
+    } else if (codi[words] === "o") {
+      vogais = vogais + "4";
+    } else if (codi[words] === "u") {
+      vogais = vogais + "5";
+    } else {
+      vogais = vogais + codi[words];
+    }
+  } return vogais;
 }
-function decode() {
-  // seu código aqui
+function decode(deco) {
+  let numbers = "";
+  for (let words in deco) {
+    if (deco[words] === "1") {
+      numbers = numbers + "a";
+    } else if (deco[words] === "2") {
+      numbers = numbers + "e";
+    } else if (deco[words] === "3") {
+      numbers = numbers + "i";
+    } else if (deco[words] === "4") {
+      numbers = numbers + "o";
+    } else if (deco[words] === "5") {
+      numbers = numbers + "u";
+    } else {
+      numbers = numbers + deco[words];
+    }
+  } return numbers;
 }
 
 module.exports = {
