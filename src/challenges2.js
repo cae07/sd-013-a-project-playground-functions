@@ -15,7 +15,7 @@ function generatePhoneNumber(numeros) {
       for (let c = i + 1; c < numeros.length; c += 1) {
         if (numeros[i] == numeros[c]) {
           nume.push(numeros[i]);
-          if(nume.length >= 3) {
+          if(nume.length > 3) {
             return "não é possível gerar um número de telefone com esses valores";
           }
         }
