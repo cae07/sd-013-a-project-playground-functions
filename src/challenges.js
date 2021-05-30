@@ -74,14 +74,29 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let arrayAux = [];
+
+  for(let num of numbers){
+    if(num % 3 == 0 && num % 5 == 0){
+      arrayAux.push("fizzBuzz")
+    }else if(num % 5 == 0){
+      arrayAux.push("buzz")
+    }else if(num % 3 == 0){
+      arrayAux.push("fizz")
+    }else {
+      arrayAux.push("bug!")
+    }
+    
+  }
+  return arrayAux
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
+
 function decode() {
   // seu código aqui
 }
