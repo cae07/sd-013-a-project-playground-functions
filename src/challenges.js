@@ -19,10 +19,10 @@ function splitSentence(gildo) {
 }
 
 // Desafio 4
-function concatName(shakespeare) {
-  return shakespeare.split [shakespeare.lenght -1]
-  + "," + shakespeare.split [0];
-}
+function concatName(array) {
+    return array [array.length -1]
+  + "," + " " + array[0];
+ } 
 
 // Desafio 5
 function footballPoints(wins, ties) {
