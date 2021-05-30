@@ -14,8 +14,24 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(array) {
+  let regex = /\d+/g;
+  let numString = array.match(regex);  
+  let conta = 0;
+
+  let numInteg = numString.map(function (result){
+    let resultado = parseInt(result);
+    return resultado
+  })
+
+  for (let index = 0; index < numInteg.length; index++) {
+    conta += numInteg[index]
+  }
+
+  if (conta > 1){
+    return `${conta} copos de água`;
+  } 
+  return `${conta} copo de água`;
 }
 
 module.exports = {
