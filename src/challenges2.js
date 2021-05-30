@@ -46,7 +46,7 @@ function generatePhoneNumber(numbers) {
       }
     }
   }
-  contato = `(${numbers.slice(0,2).join('')})${numbers.slice(2,7).join('')}-${numbers.slice(7,11).join('')}`
+  contato = `(${numbers.slice(0,2).join('')}) ${numbers.slice(2,7).join('')}-${numbers.slice(7,11).join('')}`
 
   return contato;
 }
