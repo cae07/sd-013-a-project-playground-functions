@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
+  return array[array.length-1] +"," + " "+ array[0];
 }
 
 // Desafio 5
@@ -37,7 +37,7 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > maior) {
       // [5,1,9,3]-5>5, não, 1>5 não, 9>5 sim!!! 3>5não.
-      maior = array[index]; // maior passa a ser o indice 3, o maior deixa de ser array[0], passa a ser array[3]
+      maior = array[index]; // maior passa a ser o indice 2, o maior deixa de ser array[0], passa a ser array[2]
       contar = 0; // reinicia a contagem para onde começou
     }
     if (maior === array[index]) {
