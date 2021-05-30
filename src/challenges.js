@@ -24,7 +24,8 @@ function concatName(array) {
   let bothNames = `${array[array.length -1]}, ${array[0]}`;
   return bothNames;
 }
-console.log(concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 // Desafio 5
 function footballPoints(wins,ties) {
   let winsPoints = 3;
