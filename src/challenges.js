@@ -25,13 +25,19 @@ function concatName(meuArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let rankWin = 3;
+  let rankTie = 1;
+
+  return wins * rankWin + ties * rankTie;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numArray) {
+  return [...numArray]
+    .sort(descending)
+    .filter((n, idx, array) => n === array[0])
+    .reduce((t) => t + 1, 0);
 }
 
 // Desafio 7
