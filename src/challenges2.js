@@ -36,7 +36,7 @@ function generatePhoneNumber(numbers) {
         return msg;
       } else if(numbers[i] > 9) {
         return msg;
-      } else if((numbers.indexOf(numbers[i]) != i))  {
+      } else if((numbers[i] != i))  {
         count ++;
       } else  if(count >= 3) {
         return msg;
@@ -48,9 +48,7 @@ function generatePhoneNumber(numbers) {
 console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 function lados(a,b,c) {
-  if ((a > (b + c)) || (b > (a + c)) || c > (a + b)) {
-    return false;
-  } else if ((a < Math.abs((b - c))) || (b < Math.abs((a - c))) || Math.abs((c < (b - a)))) {
+  if ((((a > (b + c)) || (b > (a + c)) || c > (a + b))) || (((a < Math.abs((b - c))) || (b < Math.abs((a - c))) || Math.abs((c < (b - a)))))) {
     return false;
   } else if (((a < (b + c)) && a > Math.abs((b - c)))  || ((b < (a + c)) && (b > Math.abs((a - c)))) || (c < (a + b)) && (c < Math.abs((b - a)))) {
     return true;
