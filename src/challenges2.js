@@ -26,17 +26,18 @@ console.log(techList([],"Lucas"))
 function generatePhoneNumber(numbers) {
   let msg = "não é possível gerar um número de telefone com esses valores";
   let contato = `(${numbers.slice(0,2).join('')}) ${numbers.slice(2,7).join('')}-${numbers.slice(7,11).join('')}`;
-  
+  let count = 0;
   if(numbers.length != 11) {
     return "Array com tamanho incorreto.";
   } else {
     for(let i = 0; i < numbers.length; i += 1) {
-      let count = 0;
+    
       if(numbers[i] < 0) {
         return msg;
       } else if(numbers[i] > 9) {
         return msg;
       } else  {
+        
         for(let k = 0; k < numbers.length; k += 1) {
             if(numbers[i] == numbers[k]) {
                 count += 1;
@@ -50,7 +51,7 @@ function generatePhoneNumber(numbers) {
   }
   return contato;
 }
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 function lados(a,b,c) {
   if ((((a > (b + c)) || (b > (a + c)) || c > (a + b))) || (((a < Math.abs((b - c))) || (b < Math.abs((a - c))) || Math.abs((c < (b - a)))))) {
