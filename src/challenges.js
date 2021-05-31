@@ -44,15 +44,6 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(14, 8))
 
-
-//O que será verificado:
-
-// Retorne 2 quando o parâmetro passado na função highestCount seja [9, 1, 2, 3, 9, 5, 7]
-
-// Retorne 1 quando o parâmetro passado na função highestCount seja [0, 4, 4, 4, 9, 2, 1]
-
-// Retorne 3 quando o parâmetro passado na função highestCount seja [0, 0, 0]
-
 // Desafio 6
 function highestCount(array) {
   let count = array[0];
@@ -67,8 +58,6 @@ function highestCount(array) {
 	}		
 	return deregueJohnson;
 } 
-
-
 //Math.abs
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -101,12 +90,46 @@ function fizzBuzz(array) {
 	} return jubileu;
 }
 // Desafio 9
-function encode() {
-
+function encode(string) {
+  let encodedWord = "";
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == "a") {
+      encodedWord += "1";
+    } else if (string[index] === "e") {
+      encodedWord += "2";
+    } else if (string[index] === "i") {
+     encodedWord += "3";
+    } else if (string[index] === "o") {
+      encodedWord += "4";
+    } else if (string[index] === "u") {
+      encodedWord += "5";
+    } else {
+      encodedWord += string[index];
+    }
+  }
+    return encodedWord;
 }
-function decode() {
 
+function decode(estringue) {
+  let decodedWord = "";
+  for (let index of estringue) {
+    if (index == "1") {
+      decodedWord += "a";
+    } else if (index == "2") {
+      decodedWord += "e";
+    } else if (index == "3") {
+      decodedWord += "i";
+    } else if (index == "4") {
+      decodedWord += "o";
+    } else if (index == "5") {
+      decodedWord += "u";
+    } else {
+      decodedWord += index;
+    }
+  }
+    return decodedWord;
 }
+
 
 module.exports = {
   calcArea,
@@ -119,6 +142,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
-
-//AGRADECIMENTOS PELA AJUDA NO PROJETO: LUIZA ANTIQUES; JOSUÉ LOBO
+}
