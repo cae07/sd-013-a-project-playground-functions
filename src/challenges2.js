@@ -89,9 +89,19 @@ function checkParam (param1, param2, param3) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let int = string.match(/[0-9]+/g);
+  let sum = 0;
+  for (let index = 0; index < int.length; index += 1) {
+    sum += parseInt(int[index]);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  } else {
+    return `${sum} copos de água`;
+  }
 }
+
 
 module.exports = {
   generatePhoneNumber,
