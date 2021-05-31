@@ -28,7 +28,6 @@ function concatName(array) {
   let concat;
 
   for (let indexConcat = 0; indexConcat < array.length; indexConcat += 1) {
-
     if (indexConcat === 0) {
       primeiroItem = array[indexConcat];
     } else if (indexConcat === (array.length - 1)) {
@@ -42,7 +41,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsPoints = wins * 3; 
+  let winsPoints = wins * 3;
   let tiesPoints = ties * 1;
 
   let points = winsPoints + tiesPoints;
@@ -51,15 +50,15 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highestNumber = numbers[0]; 
+  let highestNumber = numbers[0];
   let counter = 0;
 
   for (let indexCount = 0; indexCount < numbers.length; indexCount += 1) {
-    //Dúvidas sobre o exercício esclarecidas pelo Sumo no plantão
-    if (highestNumber < numbers[indexCount]){
+    // Dúvidas sobre o exercício esclarecidas pelo Sumo no plantão
+    if (highestNumber < numbers[indexCount]) {
       highestNumber = numbers[indexCount];
       counter = 1;
-    } else if (highestNumber === numbers[indexCount]){
+    } else if (highestNumber === numbers[indexCount]) {
       counter += 1;
     }
   }
@@ -86,12 +85,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let words = [];
 
-  for (let index in numbers){
+  for (let index in numbers) {
     if ((numbers[index] % 3) === 0 && (numbers[index] % 5) === 0) {
       words.push('fizzBuzz');
-    } else if((numbers[index] % 3) === 0) {
+    } else if ((numbers[index] % 3) === 0) {
       words.push('fizz');
-    } else if((numbers[index] % 5) === 0) {
+    } else if ((numbers[index] % 5) === 0) {
       words.push('buzz');
     } else {
       words.push('bug!');
@@ -103,33 +102,33 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(message) {
-  //Referências usadas para consulta sobre concatenação: https://www.w3schools.com/jsref/jsref_concat_string.asp // https://masteringjs.io/tutorials/fundamentals/string-concat
-  let encodedMessage = "";
+  // Referências usadas para consulta sobre concatenação: https://www.w3schools.com/jsref/jsref_concat_string.asp // https://masteringjs.io/tutorials/fundamentals/string-concat
+  let encodedMessage = '';
   for (let index in message) {
     switch (message[index]) {
-      case 'a': 
-        encodedMessage += "1";
-        break;
+      case 'a':
+      encodedMessage += '1';
+      break;
 
       case 'e':
-        encodedMessage += "2";
-        break;
+      encodedMessage += '2';
+      break;
 
-      case 'i': 
-        encodedMessage += "3";
-        break;
+      case 'i':
+      encodedMessage += '3';
+      break;
 
-      case 'o': 
-        encodedMessage += "4";
-        break;
+      case 'o':
+      encodedMessage += '4';
+      break;
 
-      case 'u': 
-        encodedMessage += "5";
-        break;
+      case 'u':
+      encodedMessage += '5';
+      break;
 
-      default: 
-        encodedMessage += message[index];
-        break;
+      default:
+      encodedMessage += message[index];
+      break;
     }
   }
 
@@ -137,32 +136,32 @@ function encode(message) {
 }
 
 function decode(message) {
-  let decodedMessage = "";
+  let decodedMessage = '';
   for (let index in message) {
     switch (message[index]) {
-      case '1': 
-        decodedMessage += "a";
-        break;
+      case '1':
+      decodedMessage += 'a';
+      break;
 
       case '2':
-        decodedMessage += "e";
-        break;
+      decodedMessage += 'e';
+      break;
 
-      case '3': 
-        decodedMessage += "i";
-        break;
+      case '3':
+      decodedMessage += 'i';
+      break;
 
-      case '4': 
-        decodedMessage += "o";
-        break;
+      case '4':
+      decodedMessage += 'o';
+      break;
 
-      case '5': 
-        decodedMessage += "u";
-        break;
+      case '5':
+      decodedMessage += 'u';
+      break;
 
-      default: 
-        decodedMessage += message[index];
-        break;
+      default:
+      decodedMessage += message[index];
+      break;
     }
   }
 
