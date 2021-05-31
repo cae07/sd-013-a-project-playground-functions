@@ -1,18 +1,21 @@
 // Desafio 10
-function techList(skills, name) {
-  let listSkills = [];
-  if (skills.lenght === 0) {
-    return "Vazio!";
+function techList(lista, nome) {
+  let retorno;
+  let listaObjetos = [];
+  if (lista.length > 0) {
+    for (let key in lista.sort()) {
+      let objeto = {
+        tech: lista[key],
+        name: nome,
+      };
+      listaObjetos.push(objeto);
+    }
+    retorno = listaObjetos;
+  } else {
+    retorno = 'Vazio!';
   }
-
-  for (let tecSkills of skills.soft()) {
-    listSkills.push({
-      tech : tecSkills,
-      name : name,
-    })
-  }
-  return listSkills;
-};
+  return retorno;
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
