@@ -44,16 +44,16 @@ console.log(soma, soma2, soma3);
 let array1 = [9, 1, 2, 3, 9, 5, 7];
 let array2 = [0, 4, 4, 4, 9, 2, 1];
 let array3 = [0, 0, 0];
-function highestCount(array1) {
-  let maiorNumero = array1[0];
+function highestCount(array) {
+  let maiorNumero = array[0];
   let counter = 0;
-  for (let i = 0; i < array1.length; i += 1) {
-    if (array1[i] >= maiorNumero) {
-      maiorNumero = array1[i];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] >= maiorNumero) {
+      maiorNumero = array[i];
     }
   }
-  for (let j = 0; j < array1.length; j += 1) {
-    if (array1[j] === maiorNumero) {
+  for (let j = 0; j < array.length; j += 1) {
+    if (array[j] === maiorNumero) {
       counter++;
     }
   }
@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-
+let buzzArray = [2, 15, 7, 9, 45];
 function fizzBuzz(buzzArray) {
   let somaTudo = [];
   for (let index = 0; index < buzzArray.length; index += 1) {
