@@ -16,9 +16,8 @@ function techList(arrTech, strName) {
 }
 
 // Desafio 11
-/*
+/* Referência e documentação consultadas para resolução do desafio 11
 https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
-Documentação utilizada para criação da constante
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 */
 function generatePhoneNumber(arr) {
@@ -54,14 +53,11 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(str) {
-  /*
+  /* Referência e documentação consultadas para resolução do desafio 13
   https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
-  */
-  let numbers = str.match(/\d+/g).map(Number);
-
-  /*
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
   */
+  let numbers = str.match(/\d+/g).map(Number);
   const sum = (x, y) => x + y;
 
   if (numbers.reduce(sum) === 1) {

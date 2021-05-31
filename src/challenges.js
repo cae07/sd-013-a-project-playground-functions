@@ -26,10 +26,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  /*
-  Documentação consultada para uso da função Math.max.
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-  */
+  /* Documentação consultada para uso da função Math.max.
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max */
   let highValue = Math.max(...arr);
   let count = 0;
   for (let key in arr) {
@@ -54,9 +52,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  /*
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-  */
+  /* Documentação consultada para uso do método map
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map */
   let mapArr = arr.map((x) => {
     if (x % (3 * 5) === 0) {
       return 'fizzBuzz';
@@ -74,7 +71,7 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(string) {
-  /*
+  /* Referência e documentações consultadas para reduzir complexidade do desafio 9
   https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
   https://www.w3schools.com/jsref/jsref_replace.asp
