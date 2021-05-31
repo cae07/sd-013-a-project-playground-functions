@@ -31,7 +31,6 @@ function generatePhoneNumber(numbers) {
     return "Array com tamanho incorreto.";
   } else {
     for(let i = 0; i < numbers.length; i += 1) {
-        count = 0;
       if(numbers[i] < 0) {
         return msg;
       } else if(numbers[i] > 9) {
