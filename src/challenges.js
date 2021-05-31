@@ -78,11 +78,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-let buzzArray = [2, 15, 7, 9, 45];
+
 function fizzBuzz(buzzArray) {
   let somaTudo = [];
   for (let index = 0; index < buzzArray.length; index += 1) {
-    if (buzzArray[index] % 15 === 0 ) {
+    if (buzzArray[index] % 15 === 0) {
       somaTudo.push('fizzBuzz');
     } else if (buzzArray[index] % 5 === 0) {
       somaTudo.push('buzz');
