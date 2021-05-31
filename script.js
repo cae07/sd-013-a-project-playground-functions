@@ -6,3 +6,4 @@ function compareTrue(a,b) {
   return false
 }
 
+compareTrue(true, false)
