@@ -73,7 +73,7 @@ console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let array = []
+  let array = [];
   for (let i in arrayNumeros) {
     if (arrayNumeros[i] % 3 === 0 && arrayNumeros [i] % 5 === 0) {
       array.push('fizzBuzz');
@@ -91,11 +91,26 @@ function fizzBuzz(arrayNumeros) {
 console.log(fizzBuzz([50, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
+
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hello'));
+
+function decode(string) {
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
+
+  return string;
 }
 
 module.exports = {
