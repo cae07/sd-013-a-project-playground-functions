@@ -1,16 +1,22 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(acabouPandemia, tenhoDinheiro) {
+  let vouViajar;
+ 
+  vouViajar = acabouPandemia === true && tenhoDinheiro === true
+ 
+  return vouViajar;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) /2;
+
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" ")
 }
 
 // Desafio 4
