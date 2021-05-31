@@ -1,6 +1,4 @@
 // Desafio 1
-var bool = true
-var bool2 = true
 function compareTrue(value1, value2){
   if (value1 === true && value2 === true) {
     return true;
@@ -19,14 +17,17 @@ function calcArea(base, height, area) {
   // seu código aqui
 
 // Desafio 3
-function splitSentence("oi tudo bem") {
- let array = string.split(" ");
- console.log(array);
+function splitSentence(string) {
+ return string.split(" ");
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
+  let ultimonumero = names[names.lenght - 1];
+  let primeiroN = names[0];
+  return ultimonumero + ", " + primeiroN
+
   // seu código aqui
 }
 
