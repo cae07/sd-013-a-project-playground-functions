@@ -107,15 +107,16 @@ function decode(vowel) {
 }
 
 // Desafio 10
-function splitSentence(techList, name) {
+function techList(techList, name) {
   let orderedList = techList.sort();
   let obj = {tech: '', name: ''};
   let lista = [];
-  for (const k in orderedList) {
+  if (techList.length != 0) {
+    for (const k in orderedList) {
     lista.push(obj.tech = orderedList[k],obj.name = name);
   } return lista;
+  } return 'Vazio!';
 }
-
 // Desafio 11
 function generatePhoneNumber (numbers) {
   function phoneNumbers (numbers) {
@@ -141,7 +142,6 @@ function generatePhoneNumber (numbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 }}
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
 
 module.exports = {
   calcArea,
