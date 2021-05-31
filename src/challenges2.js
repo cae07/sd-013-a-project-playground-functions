@@ -84,6 +84,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
+  //88 line was inspired by: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
   let num = drinks.match(/\d+/g).map(Number);
   let answer = 0;
 
