@@ -1,8 +1,3 @@
-/* eslint-disable sonarjs/prefer-object-literal */
-/* eslint-disable max-len */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
 // Desafio 10
 function techList(arrayTecnologias, name) {
   // seu código aqui
