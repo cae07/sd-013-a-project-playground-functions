@@ -23,10 +23,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(names) {
-  let ultimonumero = names[names.lenght - 1];
-  let primeiroN = names[0];
-  return ultimonumero + ", " + primeiroN
+function concatName(nomes) {
+  let primeiroN = nomes[0];
+  let ultimoN = nomes[nomes.length - 1];
+  return ultimoN + ", " + primeiroN;
 
   // seu código aqui
 }
