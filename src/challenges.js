@@ -117,7 +117,7 @@ function decode(frase) {
 
   for (let i = 0; i < frase.length; i += 1) {
     for (let j = 0; j < numero.length; j += 1) {
-      if (frase[i] === numero[j]) {
+      if (frase[i] == numero[j]) {
         frase = frase.replace(frase[i],letra[j]);        
       }
     }
