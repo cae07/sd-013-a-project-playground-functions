@@ -1,6 +1,20 @@
+function createList(param1, param2) {
+  let responseList = [];
+  for (let item of param1.sort()) {
+    let newObj = {
+      tech: item,
+      name: param2,
+    };
+    responseList.push(newObj);
+  }
+  console.log(responseList);
+  return responseList;
+}
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(param1, param2) {
+  if (param1.length === 0) return 'Vazio!';
+  return createList(param1, param2);
 }
 
 // Desafio 11
