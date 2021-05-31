@@ -83,23 +83,24 @@ console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz(numbersArray) {
   let string = [];
-  for(let i = 0; i < numbersArray.length; i += 1) {
-    if (numbersArray[i] %3 === 0 && numbersArray[i] %5 !== 0) {
+  for (let i = 0; i < numbersArray.length; i += 1) {
+    if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 !== 0) {
       string.push('fizz');
-    } else if (numbersArray[i] %5 === 0 && numbersArray[i] %3 !== 0) {
+    } else if (numbersArray[i] % 5 === 0 && numbersArray[i] % 3 !== 0) {
       string.push('buzz');
-    } else if (numbersArray[i] %3 ===0 || numbersArray[i] %5 ===0) {
+    } else if (numbersArray[i] % 3 === 0 || numbersArray[i] % 5 === 0) {
       string.push('fizzBuzz');
-    } else if (numbersArray[i] %3 !== 0 && numbersArray[i] %5 !== 0) {
+    } else if (numbersArray[i] % 3 !== 0 && numbersArray[i] % 5 !== 0) {
       string.push('bug!');
     }
   }
   return string;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// Desafio 8
+// Desafio 9
 // Resolvido com a ajuda do Silvio Fabian e Matheus Duarte, ambos alunos da Turma 13 - Tribo A
+// Replace https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
 function encode(str) {
   let vocals = {
     a: /a/gi,
