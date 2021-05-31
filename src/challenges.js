@@ -20,7 +20,7 @@ function splitSentence(string) {
   // eslint-disable-next-line guard-for-in
   // eslint-disable-next-line no-empty-pattern
   // eslint-disable-next-line guard-for-in
-  for (let {} in string) {
+  for (word in string) {
     // eslint-disable-next-line no-func-assign
     splitSentence = string.split(' ');
   }
@@ -101,13 +101,25 @@ function fizzBuzz(array) {
   }
   return novoArray;
 }
+// Desafio 8 realizado com a ajuda de Luiza Antiques (o erro era de complexidade)
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Pesquisa em: https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+function encode(string) {
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(number) {
+  number = number.replace(/1/gi, 'a');
+  number = number.replace(/2/gi, 'e');
+  number = number.replace(/3/gi, 'i');
+  number = number.replace(/4/gi, 'o');
+  number = number.replace(/5/gi, 'u');
+  return number;
 }
 
 module.exports = {
