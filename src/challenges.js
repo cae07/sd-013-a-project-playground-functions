@@ -24,7 +24,7 @@ console.log(splitSentence('O bicho tá pegando"'));
 // Desafio 4
 function concatName(nome) {
   let resultado = `${nome[nome.length - 1]}, ${nome[0]}`;
-  //let resultado = nome[nome.length -1] + ', ' + nome[0];
+  // let resultado = nome[nome.length -1] + ', ' + nome[0];
   return resultado;
 }
 console.log(concatName(['Fulano', 'Beltrano', 'Cicrano', 'De tal']));
@@ -58,11 +58,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 > distanciaCat2) {
+  } if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato foge';
-  }
+  return 'os gatos trombam e o rato foge';
+}
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
