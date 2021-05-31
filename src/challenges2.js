@@ -36,11 +36,16 @@ function generatePhoneNumber(numbers) {
         return msg;
       } else if(numbers[i] > 9) {
         return msg;
-      } else if((numbers[i] != i))  {
-        count ++;
-      } else  if(count >= 3) {
-        return msg;
-      }
+      } else  {
+        for(let k = 0; k < numbers.length; k += 1) {
+            if(numbers[i] == numbers[k]) {
+                count += 1;
+            } else if(count >= 3) {
+                return msg;
+            }
+        
+      } 
+    }
     }
   }
   return contato;
