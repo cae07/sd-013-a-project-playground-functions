@@ -14,8 +14,32 @@ let tech = [];
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros) {
+  let mensagem = "não é possível gerar um número de telefone com esses valores";
+
+  if (numeros != 11) {
+    return "Array com tamanho incorreto.";
+  } else {
+    
+    for (let i = 0; i < numeros.length; i += 1) {
+      let count = 0;
+      
+      if (numeros[i] < 0) {
+        return mensagem;
+      }
+      else if (numeros[i] > 9) {
+        return mensagem;
+      }
+      else {
+        for (let j = 0; j < numeros.length; j += 1) {
+          if (numeros[i] == numeros[j]) {
+            count += 1;
+          }
+        }
+      }
+    }
+  }
+  let contato = `(${numero.slice(0,2)})`
 }
 
 // Desafio 12
