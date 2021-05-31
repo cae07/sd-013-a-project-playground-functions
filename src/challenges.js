@@ -29,10 +29,25 @@ function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6                              /Para resolver este desafio tive o auxilio da colega de turma Aline Roxino.
+function highestCount (arrayRecebido) {   // exemplo de parâmetros: (9, 1, 2, 3, 9, 5, 7)
+  let contagem =  0                       //parte 1: descobrir qual maior numero - usando for, apartir do índice 0 do Array recebido-
+  let maiorNumero = arrayRecebido [0]
+  for ( index = 0;  index < arrayRecebido.length; index += 1) {   // procurando nos numeros, a cada volta, uma por uma
+    if (
+      arrayRecebido [index] >= maiorNumero) {    // aqui, caso ele ache um numero maior, ele substiuti e atualiz no index.
+      maiorNumero = arrayRecebido [index];     
+      }
+    }
+    for ( index = 0; index < arrayRecebido.length; index += 1) {
+        if ( 
+      maiorNumero === arrayRecebido [index]) {
+      contagem +=1;
+     }
+    }
+      return contagem;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
