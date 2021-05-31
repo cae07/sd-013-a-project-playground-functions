@@ -45,7 +45,7 @@ function catAndMouse() {
 function fizzBuzz(array) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    newArray.push('!bug');
+    newArray.push('bug!');
     if (array[index] % 15 === 0) {
       newArray[index] = 'fizzBuzz';
     } else if (array[index] % 5 === 0) {
@@ -56,17 +56,17 @@ function fizzBuzz(array) {
   } return newArray;
 }
 // Desafio 9
-function encode(frase) {
-  let letra = ['a', 'e', 'i', 'o', 'u'];
-  let numero = [1, 2, 3, 4, 5];
-  for (let i = 0; i < frase.length; i += 1) {
-    for (let j = 0; j < letra.length; j += 1) {
-      if (frase[i] === letra[j]) {
-        frase = frase.replace(frase[i], numero[j]);
-      }
-    }
-  } return frase;
-}
+function encode() {}
+//   let letra = ['a', 'e', 'i', 'o', 'u'];
+//   let numero = [1, 2, 3, 4, 5];
+//   for (let i = 0; i < frase.length; i += 1) {
+//     for (let j = 0; j < letra.length; j += 1) {
+//       if (frase[i] === letra[j]) {
+//         frase = frase.replace(frase[i], numero[j]);
+//       }
+//     }
+//   } return frase;
+// }
 function decode() {
   // seu código aqui
 }
