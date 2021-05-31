@@ -68,8 +68,26 @@ function highestCount(valores) {
 //[9, 1, 2, 3, 9, 5, 7]
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let ratoGato1 = 0;
+  let ratoGato2 = 0;
+  if (mouse > cat1) {
+    ratoGato1 = mouse - cat1;
+  }else {
+    ratoGato1 = cat1 - mouse;    
+  }
+  if (mouse > cat2) {
+    ratoGato2 = mouse - cat2;
+  }else {
+    ratoGato2 = cat2 - mouse;
+  }
+  if (ratoGato1 < ratoGato2) {
+    return 'cat1';
+  }else if (ratoGato2 < ratoGato1) {
+    return 'cat2';
+  }else if (ratoGato1 === ratoGato2) {
+    return 'os gatos trombam e o rato foge'   
+  }
 }
 
 // Desafio 8
