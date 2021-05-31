@@ -88,11 +88,50 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  
+  let num = "";
+
+for(let i = 0; i < str.length; i++) {
+
+  if(str[i] == "a"){
+    num = num + "1";
+  }else if (str[i] == "e"){
+    num = num + "2";
+  }else if (str[i] == "i"){
+    num = num + "3";
+  }else if (str[i] == "o"){
+    num = num + "4";
+  }else if (str[i] == "u"){
+    num = num + "5";
+  }else{
+    num = num + str[i]
+  }
 }
-function decode() {
+return num;
+}
+function decode(numbers) {
   // seu código aqui
+  let str = "";
+
+for(let i = 0; i < numbers.length; i++) {
+
+  if(numbers[i] == "1"){
+    str = str + "a";
+  }else if (numbers[i] == "2"){
+    str = str + "e";
+  }else if (numbers[i] == "3"){
+    str = str + "i";
+  }else if (numbers[i] == "4"){
+    str = str + "o";
+  }else if (numbers[i] == "5"){
+    str = str + "u";
+  }else{
+    str = str + numbers[i]
+  }
+}
+return str
 }
 
 module.exports = {
