@@ -48,13 +48,18 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let onlyNumbers = str
+    .match(/\d/g)
+    .reduce((acc, curr) => Number(curr) + acc, 0);
+  return onlyNumbers === 1
+    ? `${onlyNumbers} copo de água`
+    : `${onlyNumbers} copos de água`;
 }
 
 module.exports = {

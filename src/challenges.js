@@ -78,7 +78,6 @@ function fizzBuzz(arr) {
       newArr.push('bug!');
     }
   }
-
   return newArr;
 }
 
@@ -91,25 +90,20 @@ function encode(str) {
       case 'a':
         newStr = newStr.replace('a', '1');
         break;
-
       case 'e':
         newStr = newStr.replace('e', '2');
         break;
-
       case 'i':
         newStr = newStr.replace('i', '3');
         break;
-
       case 'o':
         newStr = newStr.replace('o', '4');
         break;
-
       case 'u':
         newStr = newStr.replace('u', '5');
         break;
     }
   }
-
   return newStr;
 }
 
@@ -121,25 +115,20 @@ function decode(str) {
       case '1':
         newStr = newStr.replace('1', 'a');
         break;
-
       case '2':
         newStr = newStr.replace('2', 'e');
         break;
-
       case '3':
         newStr = newStr.replace('3', 'i');
         break;
-
       case '4':
         newStr = newStr.replace('4', 'o');
         break;
-
       case '5':
         newStr = newStr.replace('5', 'u');
         break;
     }
   }
-
   return newStr;
 }
 
