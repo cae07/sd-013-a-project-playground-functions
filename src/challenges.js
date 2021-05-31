@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(parametro_1;parametro_2) {
- if (parametro_1 = true && parametro_2 = true){
-   return true
+function compareTrue(parametro_1,parametro_2) {
+ if (parametro_1 === true && parametro_2 === true){
+   return true;
  } else {
-   return false
+   return false;
  }
 }
 
