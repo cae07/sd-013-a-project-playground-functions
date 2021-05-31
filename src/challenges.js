@@ -37,6 +37,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function matchingNumber(vault, arrayCount, numberTimes) {
+  for (let i2 = 0; i2 < arrayCount.length; i2 += 1) {
+    if (vault === arrayCount[i2]) {
+      numberTimes += 1;
+    }
+  }
+  return numberTimes;
+}
 function highestCount(arrayCount) {
   let vault = arrayCount[0];
   let numberTimes = 0;
@@ -45,12 +53,7 @@ function highestCount(arrayCount) {
       vault = arrayCount[i];
     }
   }
-  for (let i2 = 0; i2 < arrayCount.length; i2 += 1) {
-    if (vault === arrayCount[i2]) {
-      numberTimes += 1;
-    }
-  }
-  return numberTimes;
+  return matchingNumber(vault, arrayCount, numberTimes);
 }
 
 // Desafio 7
@@ -68,53 +71,43 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayFizzBuzz) {
-  let arrayVault = [];
-  for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
-    if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
-      arrayVault.push('fizzBuzz');
-    } else if (arrayFizzBuzz[i] % 3 === 0) {
-      arrayVault.push('fizz');
-    } else if (arrayFizzBuzz[i] % 5 === 0) {
-      arrayVault.push('buzz');
-    } else {
-      arrayVault.push('bug!');
-    }
+function isItDivisible(arrayFizzBuzz, i) {
+  if (arrayFizzBuzz[i] % 3 === 0 && arrayFizzBuzz[i] % 5 === 0) {
+    arrayFizzBuzz[i] = 'fizzBuzz';
+  } else if (arrayFizzBuzz[i] % 3 === 0) {
+    arrayFizzBuzz[i] = 'fizz';
+  } else if (arrayFizzBuzz[i] % 5 === 0) {
+    arrayFizzBuzz[i] = 'buzz';
+  } else {
+    arrayFizzBuzz[i] = 'bug!';
   }
-  return arrayVault;
+}
+function fizzBuzz(arrayFizzBuzz) {
+  for (let i = 0; i < arrayFizzBuzz.length; i += 1) {
+    isItDivisible(arrayFizzBuzz, i);
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
-function encode(stringEncode) {
-  let code = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  let letter = '';
-  for (let i = 0; i < stringEncode.length; i += 1) {
-    for (let key in code) {
-      if (stringEncode[i] === key) {
-        letter += code[key];
-      }
-    }
-    if (letter.length <= i) {
-      letter += stringEncode[i];
-    }
-  }
-  return letter;
+function encode(string) {
+  let encodedString = '';
+  encodedString = string.replace(/a/g, '1');
+  encodedString = encodedString.replace(/e/g, '2');
+  encodedString = encodedString.replace(/i/g, '3');
+  encodedString = encodedString.replace(/o/g, '4');
+  encodedString = encodedString.replace(/u/g, '5');
+  return encodedString;
 }
 
-function decode(stringDecode) {
-  let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let letter = '';
-  for (let i = 0; i < stringDecode.length; i += 1) {
-    for (let key in code) {
-      if (stringDecode[i] === code[key]) {
-        letter += key;
-      }
-    }
-    if (letter.length <= i) {
-      letter += stringDecode[i];
-    }
-  }
-  return letter;
+function decode(string) {
+  let decodedString = '';
+  decodedString = string.replace(/1/g, 'a');
+  decodedString = decodedString.replace(/2/g, 'e');
+  decodedString = decodedString.replace(/3/g, 'i');
+  decodedString = decodedString.replace(/4/g, 'o');
+  decodedString = decodedString.replace(/5/g, 'u');
+  return decodedString;
 }
 
 module.exports = {
