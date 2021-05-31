@@ -47,13 +47,12 @@ let array3 = [0, 0, 0];
 function highestCount(array1) {
   let maiorNumero = array1[0];
   let counter = 0;
-
-  for (let i = 0; i < array1.length; i++) {
+  for (let i = 0; i < array1.length; i += 1) {
     if (array1[i] >= maiorNumero) {
       maiorNumero = array1[i];
     }
   }
-  for (let j = 0; j < array1.length; j++) {
+  for (let j = 0; j < array1.length; j += 1) {
     if (array1[j] === maiorNumero) {
       counter++;
     }
@@ -79,15 +78,15 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-let phraseArray = [2, 15, 7, 9, 45];
-function fizzBuzz(phraseArray) {
+let buzzArray = [2, 15, 7, 9, 45];
+function fizzBuzz(buzzArray) {
   let somaTudo = [];
-  for (let index = 0; index < phraseArray.length; index += 1) {
-    if (phraseArray[index] % 5 === 0 && phraseArray[index] % 3 === 0) {
+  for (let index = 0; index < buzzArray.length; index += 1) {
+    if (buzzArray[index] % 15 === 0 ) {
       somaTudo.push('fizzBuzz');
-    } else if (phraseArray[index] % 5 === 0) {
+    } else if (buzzArray[index] % 5 === 0) {
       somaTudo.push('buzz');
-    } else if (phraseArray[index] % 3 === 0) {
+    } else if (buzzArray[index] % 3 === 0) {
       somaTudo.push('fizz');
     } else {
       somaTudo.push('bug!');
@@ -98,7 +97,7 @@ function fizzBuzz(phraseArray) {
 
 // Desafio 9
 
-function encode(name) {
+function encode(nome) {
   let saida = '';
   let obje = {
     a: 1,
@@ -107,11 +106,11 @@ function encode(name) {
     o: 4,
     u: 5,
   };
-  for (let i = 0; i < name.length; i++) {
-    if (obje[name[i]]) {
-      saida += obje[name[i]];
+  for (let i = 0; i < nome.length; i += 1) {
+    if (obje[nome[i]]) {
+      saida += obje[nome[i]];
     } else {
-      saida += name[i];
+      saida += nome[i];
     }
   }
   return saida;
