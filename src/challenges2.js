@@ -1,6 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let result = [];
+
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    let objectList = {};
+    objectList.tech = array[index];
+    objectList.name = name;
+    result.push(objectList);
+  }
+
+  result.sort((a, b) => a.tech > b.tech ? 1 : -1);
+
+  return result;
 }
 
 // Desafio 11
@@ -10,13 +24,12 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
-    return false;
-  }
-  if (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)) {
-    return false;
-  }
-  if (lineC > (lineA + lineB) || lineC < Math.abs(lineA - lineB)) {
+  const conditionsArray = [
+    (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)),
+    (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)),
+    (lineC > (lineA + lineB) || lineC < Math.abs(lineA - lineB))];
+
+  if (!conditionsArray.includes(false)) {
     return false;
   }
   return true;
