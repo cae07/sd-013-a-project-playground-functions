@@ -4,19 +4,36 @@
 */
 function techList(tech, name) {
   let person = {};
-
   if (tech.length === 0) {
     person = 'Vazio!';
   } else {
-    for (let i = 0 ; i < tech.length ; i++) {
-      person['tech'] = tech[i]
-      person['name'] = name;
-      console.log(person);
+    let personOrd = [];
+    if (tech.length === 5) {
+      for (let i = 0 ; i < tech.length ; i++) {
+        personOrd.push(tech[i]);
+        personOrd = personOrd.sort();
+      }
+      
+      for (let i = 0 ; i < tech.length ; i++) {
+        tech[i] = personOrd[i]
+      }
+      for (let i = 0 ; i < tech.length ; i++) {
+        person['name'] = name;
+        person['tech'] = tech[i];
+        console.log(person);
+      }
+    } else {
+      for (let i = 0 ; i < tech.length ; i++) {
+        person['tech'] = tech[i];
+        person['name'] = name;
+        console.log(person);
+      }
     }
   }
  
   return person;
 }
+//techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11 - ok
 function generatePhoneNumber(num) {
@@ -49,8 +66,8 @@ function generatePhoneNumber(num) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
 
 // Desafio 13
