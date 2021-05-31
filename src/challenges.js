@@ -1,5 +1,3 @@
-const { techList } = require("./challenges2");
-
 // Desafio 1
 function compareTrue(n1, n2) {
   if (n1 === true && n2 === true ) {
