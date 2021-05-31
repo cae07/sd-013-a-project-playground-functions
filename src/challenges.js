@@ -17,8 +17,11 @@ function splitSentence(value) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+  let first = value.shift();
+  let second = value.pop();
+  let thirt = `${second}, ${first}`;
+  return thirt;
 }
 
 // Desafio 5
@@ -59,16 +62,60 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(value) {
+  let num = [];
+
+  for (let i = 0; i < value.length; i ++) {
+    num[i] = 'bug!';
+    if (value[i] % 3== 0  && value[i] % 5== 0 ) {
+      num[i] = 'fizzBuzz';
+    } else if (value[i] % 5 == 0) {
+      num[i] = 'buzz';
+    } else if (value[i] % 3 == 0) {
+      num[i] = 'fizz';
+    }
+  }
+  return num;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(value) {
+  let value2 = '';
+  let palavra= {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let i of value) {
+    if (palavra[i]) {
+      value2 += palavra[i];
+    } else {
+      value2 += i;
+    }
+  }
+  return value2;
 }
-function decode() {
-  // seu código aqui
+function decode(value) {
+  let value2 = '';
+  let palavra= {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let i of value) {
+    if (palavra[i]) {
+      value2 += palavra[i];
+    } else {
+      value2 += i;
+    }
+  }
+  return value2;
 }
 
 module.exports = {
