@@ -1,24 +1,20 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  // seu código aqui
   return param1 && param2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  // seu código aqui
   return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(arrayStr) {
-  // seu código aqui
   let primeiroItem = arrayStr[0];
   let ultimoItem = arrayStr[arrayStr.length - 1];
   return `${ultimoItem}, ${primeiroItem}`;
@@ -26,79 +22,40 @@ function concatName(arrayStr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
-  let winsPoints = wins * 3;
-  let totalPoints = winsPoints + ties;
-  return totalPoints;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-// função para retornar maior num da função
-function maiorNumero(num) {
-  let maiorNum = num[0];
-
-  for (let numbers of num) {
-    if (numbers > maiorNum) maiorNum = numbers;
-  }
-  return maiorNum;
-}
-
 function highestCount(num) {
-  // seu código aqui
-  let quantMaiorNum = 0;
-  let maiorNum = maiorNumero(num);
-
-  for (let numbers of num) {
-    if (numbers === maiorNum) quantMaiorNum += 1;
-  }
-
-  return quantMaiorNum;
+  let maiorNum = Math.max(...num);
+  return num.filter((number) => number === maiorNum).length;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let distMousCat1 = Math.abs(mouse - cat1);
   let distMousCat2 = Math.abs(mouse - cat2);
-  let retorno = '';
-  if (distMousCat1 < distMousCat2) {
-    retorno = 'cat1';
-  } else if (distMousCat2 < distMousCat1) {
-    retorno = 'cat2';
-  } else {
-    retorno = 'os gatos trombam e o rato foge';
-  }
-
-  return retorno;
+  if (distMousCat1 < distMousCat2) return 'cat1';
+  if (distMousCat2 < distMousCat1) return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 // Função para retornar uma string
 function printBuzz(num) {
-  let str = '';
-  if (((num % 3) === 0) && ((num % 5) === 0)) {
-    str = 'fizzBuzz';
-  } else if ((num % 3) === 0) {
-    str = 'fizz';
-  } else if ((num % 5) === 0) {
-    str = 'buzz';
-  } else {
-    str = 'bug!';
-  }
-  return str;
+  if (((num % 3) === 0) && ((num % 5) === 0)) return 'fizzBuzz';
+  if ((num % 3) === 0) return 'fizz';
+  if ((num % 5) === 0) return 'buzz';
+  return 'bug!';
 }
 function fizzBuzz(numeros) {
-  // seu código aqui
   let arrayStr = [];
-  for (let num of numeros) {
-    arrayStr.push(printBuzz(num));
-  }
+  for (let num of numeros) arrayStr.push(printBuzz(num));
   return arrayStr;
 }
 
 // Desafio 9
 function encode(str) {
-  // seu código aqui
   str = str.replace(/a/g, '1');
   str = str.replace(/e/g, '2');
   str = str.replace(/i/g, '3');
@@ -107,7 +64,6 @@ function encode(str) {
   return str;
 }
 function decode(str) {
-  // seu código aqui
   str = str.replace(/1/g, 'a');
   str = str.replace(/2/g, 'e');
   str = str.replace(/3/g, 'i');
