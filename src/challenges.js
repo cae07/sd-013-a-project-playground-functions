@@ -15,14 +15,14 @@ function calcArea(base,height) {
 }
  // Desafio 3
 function splitSentence(palavra) {
-  let split = palavra.split[" "];
+  let split = palavra.split(" ");
 
   return split
-}
+} 
 // Desafio 4
 function concatName(array) {
   
-  let concatenacao = array[array.length -1] + "," + array[0]
+  let concatenacao = array[array.length -1] + "," + " " + array[0]
   
     return concatenacao
 } 
@@ -50,10 +50,10 @@ for (let i = 0; i<= array.length; i +=1){
   }
     }  return contador 
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
+console.log(highestCount([-2 , -2, -3]))
 // Desafio 7
-function catAndMouse(distGato1, distGato2) {
+function catAndMouse(mouse, distGato1, distGato2) {
+  mouse = mouse
   if(distGato1<distGato2){
     return "cat1";
   }else if(distGato2<distGato1){
