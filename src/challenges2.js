@@ -27,6 +27,7 @@ function generatePhoneNumber(numbers) {
   let msg = "não é possível gerar um número de telefone com esses valores";
   let contato = `(${numbers.slice(0,2).join('')}) ${numbers.slice(2,7).join('')}-${numbers.slice(7,11).join('')}`;
   let count = 0;
+
   if(numbers.length != 11) {
     return "Array com tamanho incorreto.";
   } else {
@@ -35,15 +36,13 @@ function generatePhoneNumber(numbers) {
         return msg;
       } else if(numbers[i] > 9) {
         return msg;
-      } else  {
-        
+      } else  {   
         for(let k = 0; k < numbers.length; k += 1) {
             if(numbers[i] == numbers[k]) {
                 count += 1;
-            } else if(count >= 3) {
+            } else if(count > 3) {
                 return msg;
             }
-        
       } 
     }
     }
