@@ -1,8 +1,10 @@
 // Desafio 1
 function compareTrue(val1, val2) {
   // Tio Jack mostrou no esquenta
-  if (val1 === true && val2 === true) {
+  if (val1 && val2) {
     return true;
+  } else {
+    return false;
   }
 }
 
