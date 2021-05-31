@@ -77,39 +77,48 @@ console.log(highestCount(array));
 
 
 // Desafio 7
-function catAndMouse(cat1,cat2) {
-  if (cat1 > cat2){
-    return console.log("cat2");
+function catAndMouse(mouse,cat1,cat2) {
+  let msg;
+  let distA = Math.abs(mouse - cat1);
+  let distB = Math.abs(mouse - cat2);
+  if (distA > distB){
+    msg="cat2";
+    return msg;
   }
-  else if (cat1 == cat2){
-    return console.log("os gatos trombam e o rato foge");
+  else if (distA == distB){    
+    msg="os gatos trombam e o rato foge";
+    return msg;
   }
   else {
-    return console.log("cat1");
+    msg="cat1";
+    return msg;    
   }
 }
+console.log(catAndMouse(1,0,2));
+
 
 
 // Desafio 8
-function fizzBuzz(num) {
+function fizzBuzz(num=[]) {
   let string=[];
   for (let index = 0; index < num.length; index++) {
-    if (num%3 == 0){
-      string[index]= "fizz";
+    if (num[index]%5==0 && num[index]%3 == 0){
+      string[index]= "fizzBuzz";
     }
-    else if(num%5 ==0){
-      string[index] == "Buzz";
+    else if(num[index]%5 ==0){
+      string[index] = "buzz";
     }
-    else if (num%5==0 && num%3 == 0){
-      string[index] == "fizzBuzz";
+    else if(num[index]%3 == 0) {
+      string[index] = "fizz";
     }
     else{
-      string[index] == "bug!";
+      string[index] = "bug!";
     }    
   }
   return string;
   
 }
+
 
 // Desafio 9
 function encode(string) {
@@ -122,8 +131,9 @@ function encode(string) {
   return string;
 }
 
-function decode() {
-  let novaString;    
+
+function decode(string) {
+  let novatring;    
   string = string.replace(/1/g, "a");
   string = string.replace(/2/g, "e");
   string = string.replace(/3/g, "i");

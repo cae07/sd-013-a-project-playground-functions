@@ -73,14 +73,59 @@ function generatePhoneNumber(tel=[]) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lA,lB,lC) {
+  let result;
+  if ( lA > lB+lC){
+    result = false;
+    return result;
+  }
+  else if (lA <  Math.abs(lB-lC)){
+    result = false;
+    return result;
+  } 
+  else if(lC > lA+lB){
+    result = false;
+    return result;
+  }
+  else if (lC <  Math.abs(lB-lA)){
+    result = false;
+    return result;
+  } 
+  else if(lB > lA+lC){
+    result = false;
+    return result;
+  }
+  else if (lB <  Math.abs(lA-lC)){
+    result = false;
+    return result;
+  } 
+  else {
+    result = true;
+    return result;
+  }
+  
 }
 
+
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let reg = /\d+/g;
+  let result = string.match(reg);
+  let soma=0;
+  for (let index = 0; index < result.length; index+=1) {
+    soma+= parseInt(result[index]);
+  } 
+   let msg;
+  if (soma == 1){
+     msg = (soma + " "+ "copo de água");
+  }
+  else{
+     msg = (soma + " "+ "copos de água");
+  }
+  return msg;
 }
+console.log(hydrate("1"));
 
 module.exports = {
   generatePhoneNumber,
