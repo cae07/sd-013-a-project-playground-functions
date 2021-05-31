@@ -62,7 +62,7 @@ function generatePhoneNumber(phoneNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+
   let sum = [lineA + lineB, lineB + lineC, lineA + lineC];
   let sub = [Math.abs(lineA) - Math.abs(lineB), Math.abs(lineB) - Math.abs(lineC), Math.abs(lineA) - Math.abs(lineC)];
 
@@ -83,8 +83,17 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let num = drinks.match(/\d+/g).map(Number);
+  let answer = 0;
+
+  for(let n of num){
+    answer += parseInt(n);    
+  }
+  if(answer === 1){
+    return `${answer} copo de água`
+  }
+  return `${answer} copos de água`
 }
 
 module.exports = {
