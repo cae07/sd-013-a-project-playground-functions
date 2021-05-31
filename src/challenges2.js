@@ -2,14 +2,15 @@
 function techList(list=[],name) {
   let newLis=[];
   let vazio="Vazio!";
-  if (list.length==0){
+  let listSort= list.sort();
+  if (listSort.length==0){
     return vazio;
   }
   else{
-    for (let index = 0; index < list.length; index+=1) {
+    for (let index = 0; index < listSort.length; index+=1) {
       let objetic = {
-        tec : list[index],
-        nome : name,
+        tech : listSort[index],
+        name : name,
       }
     for (let a in newLis){
 
@@ -21,6 +22,9 @@ function techList(list=[],name) {
   }
         
 }
+let a= ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let b = "Lucas";
+console.log(techList(a,b));
 
 
 // Desafio 11
