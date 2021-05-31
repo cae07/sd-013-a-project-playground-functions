@@ -30,25 +30,31 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if (lineA < (lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     if (lineB < (lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
-      if(lineC < (lineB + lineA) && (lineC > Math.abs(lineB - lineA))) {
+      if (lineC < (lineB + lineA) && (lineC > Math.abs(lineB - lineA))) {
         return true;
       }
-      else {
-        return false
-      }
-    } else {
-      return false
-    }
+    } 
   }
   else {
     return false;
   }
 }
-console.log(triangleCheck(10,14,50))
 
 // Desafio 13
-function hydrate() {
+function hydrate(str) {
   // seu código aqui
+  let soma = 0;
+  let msg = '';
+  var numbers = str.match(/\d+/g).map(Number);
+  for(let index = 0; index < numbers.length; index +=1) {
+    soma += numbers[index];
+  }
+  if (soma > 1) {
+    msg = `${soma} copos de água`;
+  } else {
+    msg = `${soma} copo de água`;
+  }
+  return msg;
 }
 
 module.exports = {
