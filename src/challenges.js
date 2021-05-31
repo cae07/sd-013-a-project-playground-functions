@@ -20,8 +20,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomeCompleto) {
+  let primeiroNome = nomeCompleto[0];
+  let ultimoNome = nomeCompleto[nomeCompleto.length - 1];
+  return ultimoNome + ", " + primeiroNome;
 }
 
 // Desafio 5
