@@ -21,8 +21,10 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(l1,l2,l3) {
+  return(l1 > Math.abs(l2) - Math.abs(l3)
+  && l2 > Math.abs(l1) - Math.abs(l3)
+  && l3 > Math.abs(l1) - Math.abs(l2));
 }
 
 // Desafio 13
