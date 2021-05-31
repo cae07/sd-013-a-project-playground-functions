@@ -28,26 +28,27 @@ function generatePhoneNumber(numbers) {
   let contato = `(${numbers.slice(0,2).join('')}) ${numbers.slice(2,7).join('')}-${numbers.slice(7,11).join('')}`;
   let count = 0;
 
+
   if(numbers.length != 11) {
     return "Array com tamanho incorreto.";
   } else {
     for(let i = 0; i < numbers.length; i += 1) {
-      if(numbers[i] < 0) {
-        return msg;
-      } else if(numbers[i] > 9) {
+      if(numbers[i] < 0 || numbers[i] > 9) {
         return msg;
       } else  {   
         for(let k = 0; k < numbers.length; k += 1) {
             if(numbers[i] == numbers[k]) {
                 count += 1;
-            } else if(count > 3) {
-                return msg;
-            }
+            } 
       } 
     }
+  }
+    if( count > 3) {
+      return msg;
+    } else {
+      return contato;
     }
   }
-  return contato;
 }
 console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
