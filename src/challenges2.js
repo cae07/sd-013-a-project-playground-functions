@@ -5,7 +5,7 @@ function techList(array, name) {
     return 'Vazio!';
   }
   for (let i = 0; i < array.length; i += 1) {
-    let obj = { tech: array[i], name: name };
+    let obj = { tech: array[i], name };
     newArr.push(obj);
     newArr.sort((a, b) => (a.tech > b.tech ? 1 : -1));
   } return newArr;
