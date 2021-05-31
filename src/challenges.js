@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(array) {
-  let maxNumber = 0;
+  let maxNumber = array[0];
   for (let number of array) {
     maxNumber = Math.max(number, maxNumber);
   }
@@ -40,7 +40,6 @@ function highestCount(array) {
 function catAndMouse() {
   // seu código aqui
 }
-
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
@@ -56,17 +55,17 @@ function fizzBuzz(array) {
   } return newArray;
 }
 // Desafio 9
-function encode() {}
-//   let letra = ['a', 'e', 'i', 'o', 'u'];
-//   let numero = [1, 2, 3, 4, 5];
-//   for (let i = 0; i < frase.length; i += 1) {
-//     for (let j = 0; j < letra.length; j += 1) {
-//       if (frase[i] === letra[j]) {
-//         frase = frase.replace(frase[i], numero[j]);
-//       }
-//     }
-//   } return frase;
-// }
+function encode() {
+  let letra = ['a', 'e', 'i', 'o', 'u'];
+  let numero = [1, 2, 3, 4, 5];
+  for (let i = 0; i < frase.length; i += 1) {
+    for (let j = 0; j < letra.length; j += 1) {
+      if (frase[i] === letra[j]) {
+        frase = frase.replace(frase[i], numero[j]);
+      }
+    }
+  } return frase;
+}
 function decode() {
   // seu código aqui
 }
