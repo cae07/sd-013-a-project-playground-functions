@@ -63,13 +63,36 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  
+  let aux = /\d+/g;
+  let numeroBebidas = drinks.match(aux);
+  let waterCoups = 0;
+  let resultado;
+  
+  for (let index = 0; index < numeroBebidas.length; index += 1) {
+    if (numeroBebidas[index] < 0 || numeroBebidas[index] > 9) {
+      resultado = "Não é possível gerar uma quantidade de copos de água com esses valores";
+      return resultado;  
+  } else {
+      for (let index = 0; index < numeroBebidas.length; index += 1) {
+        waterCoups = waterCoups + parseInt(numeroBebidas[index]);
+      }
+      if (waterCoups === 1) {
+        resultado = `${waterCoups} copo de água`;
+        return resultado;
+      } else {
+          resultado = `${waterCoups} copos de água`;
+          return resultado;
+      }
+    }
+  }
 }
 
 module.exports = {
