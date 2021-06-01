@@ -3,7 +3,7 @@ function compareTrue(v1, v2) {
   // seu código aqui
   if (v1 === true && v2 === true) {
     return true;
-  } r
+  }
   return false;
 }
 
@@ -24,15 +24,17 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(nomes) {
   // seu código aqui
-  let ultimoNome = nomes[nomes.lenght - 1];
-  let primeiroNome = nome[0];
-  let concat = (`${ultimoNome}, ${primeiroNome}`); 
+  let ultimoNome = [nomes.lenght - 1];
+  let concat = nome[ultimoNome] + ',' + nome[0];
   return concat;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsGames = wins * 3;
+  let tiesGames = ties * 1;
+  return winsGames + tiesGames;
 }
 
 // Desafio 6
