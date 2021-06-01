@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(valueA, valueB) {
-  if (valueA == true && valueB == true)
-  {
+  if (valueA && valueB) {
     return true;
-  } else {
+  }
     return false;
   }
-}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -56,11 +54,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let fizzBug = [];
   for (let count = 0; count < numbers.length; count++) {
-    if (numbers[count] % 3 == 0 && numbers[count] % 5 == 0) {
-      fizzBug[count] = "fizzBuzz";
-    } else if (numbers[count] % 3 == 0) {
-      fizzBug[count]= 'fizz';     
-    } else if (numbers[count] % 5 == 0) {
+    if (numbers[count] % 3 === 0 && numbers[count] % 5 === 0) {
+      fizzBug[count] = 'fizzBuzz';
+    } else if (numbers[count] % 3 === 0) {
+      fizzBug[count] = 'fizz';     
+    } else if (numbers[count] % 5 === 0) {
       fizzBug[count] = 'buzz';    
     } else {
       fizzBug[count] = 'bug!';
@@ -76,15 +74,15 @@ function encode(phrase) {
   for (let count = 0; count < phrase.length; count++) {
     word = phrase[count];
     if (word.includes('a')) {
-       word = '1';
+      word = '1';
     } else if (word.includes('e')) {
-       word = '2';
+      word = '2';
     } else if (word.includes('i')) {
-       word = '3';
+      word = '3';
     } else if (word.includes('o')) {
-        word = '4';
+      word = '4';
     } else if (word.includes('u')) {
-        word = '5';      
+      word = '5';      
     }
     strA += word;
   }
@@ -96,19 +94,19 @@ function decode(phrase) {
   for (let count = 0; count < phrase.length; count++) {
     word = phrase[count];
     if (word.includes('1')) {
-       word = 'a';
+      word = 'a';
     } else if (word.includes('2')) {
-       word = 'e';
+      word = 'e';
     } else if (word.includes('3')) {
-       word = 'i';
+      word = 'i';
     } else if (word.includes('4')) {
-        word = 'o';
+      word = 'o';
     } else if (word.includes('5')) {
-        word = 'u';      
+      word = 'u';      
     }
     strA += word;
   }
-    return strA;
+  return strA;
 }
 
 module.exports = {
