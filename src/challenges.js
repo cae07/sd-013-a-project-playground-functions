@@ -22,11 +22,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(nomes) {
-  // seu código aqui
-  let ultimoNome = [nomes.lenght - 1];
-  let concat = nome[ultimoNome] + ',' + nome[0];
-  return concat;
+function concatName(nome) {
+   // seu código aqui
+  for (let index = 0; index < nome.length; index += 1) {
+    concatName = (`${nome[nome.length - 1]}, ${nome[0]}`);
+  }
+  return concatName;
 }
 
 // Desafio 5
@@ -38,8 +39,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let higherNum = array[0];
+  let contador = 0;
+
+  for (let index = 0; index < array.lenght; index += 1) { 
+    if( higherNum < array[index]){ 
+      higherNum = array[index];
+    }
+  }
+  for (let index2 = 0; index2 <array.lenght; index2 += 1){ 
+    if(array[index2] === higherNum){ 
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
