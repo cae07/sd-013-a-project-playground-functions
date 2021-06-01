@@ -4,12 +4,14 @@ function compareTrue(vl1, vl2) {
   // seu código aqui
   if((lv1 === true) && (lv2 === true)){
     return true;
-  } else false;
+  } 
+    return false;
 } 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  Area = (base * height) / 2;
+    return Area;
 }
 
 // Desafio 3
