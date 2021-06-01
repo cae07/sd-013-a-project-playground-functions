@@ -23,7 +23,7 @@ function splitSentence(frase) {
 function concatName(nomeCompleto) {
   let primeiroNome = nomeCompleto[0];
   let ultimoNome = nomeCompleto[nomeCompleto.length - 1];
-  
+
   return ultimoNome + ", " + primeiroNome;
 }
 
@@ -60,19 +60,37 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato2 = Math.abs(mouse - cat2);
 
   if(distanciaGato1 < distanciaGato2) {
-    return "cat1"
+    return "cat1";
   } else if (distanciaGato2 < distanciaGato1) {
-    return "cat2"
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+//✕ Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para função fizzBuzz (9 ms)
+
+function fizzBuzz(arrayDeNumeros) {
+  let arrayDeStrings = [];
+
+  for(let number of arrayDeNumeros){
+
+    if (number % 3 === 0 && number % 5 === 0){
+      arrayDeStrings.push("fizzBuzz");
+    } else if (number % 5 === 0){
+      arrayDeStrings.push("buzz");
+    } else if  (number % 3 === 0) {
+      arrayDeStrings.push("fizz");
+    } else if (number % 3 > 0 && number % 5 > 0){
+        arrayDeStrings.push("bug!");
+    }
+  }
+
+  return arrayDeStrings;
 }
+
 
 // Desafio 9
 function encode() {
