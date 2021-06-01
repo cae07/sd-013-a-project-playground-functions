@@ -1,4 +1,4 @@
-// Iniciando o projeto
+
 // Desafio 1
 function compareTrue(v1, v2) {
   if ((v1 === true) && (v2 === true)) {
@@ -15,16 +15,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let split = string.split(' ');
-  } 
-  return split;
+  let splitS = string.split(' ');
+  return splitS;
 }
 
   // Desafio 4
   function concatName(array) {
     for (let index = 0; index < array.length; index += 1) {
-      let concatName (`${array[array.length -1]}, ${array[0]}`);
-    }
+      concatName (`${array[array.length -1]}, ${array[0]}`);
+
     return concatName;
   }
 
