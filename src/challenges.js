@@ -123,7 +123,7 @@ function encode(stg) {
         codificado[i] = 5;
       }
     } else {
-        codificado[i] = acesso[i];
+      codificado[i] = acesso[i];
     }
   }
   return (codificado.join(''));
@@ -132,20 +132,20 @@ function decode(stg) {
   let acesso = Array.from(stg);
   let decodificado = [];
   for (let i = 0; i < acesso.length; i += 1) {
-    if (acesso[i] == 1 || acesso[i] == 2 || acesso[i] == 3 || acesso[i] == 4 || acesso[i] == 5) {
-      if (acesso[i] == 1) {
+    if (acesso[i] === '1' || acesso[i] === '2' || acesso[i] === '3' || acesso[i] === '4' || acesso[i] === '5') {
+      if (acesso[i] === '1') {
         decodificado[i] = 'a';
       }
-      if (acesso[i] == 2) {
+      if (acesso[i] === '2') {
         decodificado[i] = 'e';
       }
-      if (acesso[i] == 3) {
+      if (acesso[i] === '3') {
         decodificado[i] = 'i';
       }
-      if (acesso[i] == 4) {
+      if (acesso[i] === '4') {
         decodificado[i] = 'o';
       }
-      if (acesso[i] == 5) {
+      if (acesso[i] === '5') {
         decodificado[i] = 'u';
       }
     } else {
