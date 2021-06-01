@@ -53,8 +53,8 @@ for (let i = 0; i<= array.length; i +=1){
 
 // Desafio 7
 function catAndMouse(mouse, distGato1, distGato2) {
-let gato1 = Math.abs(distGato1 + mouse);
-let gato2 = Math.abs(distGato2 + mouse);
+let gato1 = Math.abs(distGato1 - mouse);
+let gato2 = Math.abs(distGato2 - mouse);
 let felino;
 if(gato1<gato2){
 felino = "cat1";
@@ -63,7 +63,7 @@ felino = "cat1";
 }else if(gato1===gato2){
   felino = "os gatos trombam e o rato foge";
 }return felino
-} 
+}
 
 // Desafio 8
 function fizzBuzz(array) {
