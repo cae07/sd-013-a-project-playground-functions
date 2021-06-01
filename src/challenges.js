@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
-    return true;
+  return true;
   }
-    return false;
+return false;
   }
 
 // Desafio 2
@@ -30,7 +30,7 @@ function highestCount(numbersA) {
   let highestNumber = Math.max.apply(null, numbersA);
   let highestNumberRepeat = 0;
   for (let count = 0; count < numbersA.length; count++) {
-    if (highestNumber == numbersA[count]) {
+    if (highestNumber === numbersA[count]) {
       highestNumberRepeat++;
     }
   }
@@ -40,14 +40,13 @@ function highestCount(numbersA) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catPos1 = Math.abs(mouse - cat1);
-  let catPos2 = Math.abs(mouse -cat2);
+  let catPos2 = Math.abs(mouse - cat2);
   if (catPos1 < catPos2) {
-    return "cat1";
+    return 'cat1';
   } else if (catPos2 < catPos1) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge";
+    return 'cat2';
   }
+    return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -57,9 +56,9 @@ function fizzBuzz(numbers) {
     if (numbers[count] % 3 === 0 && numbers[count] % 5 === 0) {
       fizzBug[count] = 'fizzBuzz';
     } else if (numbers[count] % 3 === 0) {
-      fizzBug[count] = 'fizz';     
+      fizzBug[count] = 'fizz';
     } else if (numbers[count] % 5 === 0) {
-      fizzBug[count] = 'buzz';    
+      fizzBug[count] = 'buzz';
     } else {
       fizzBug[count] = 'bug!';
     }
@@ -86,7 +85,7 @@ function encode(phrase) {
     }
     strA += word;
   }
-    return strA;
+  return strA;
 }
 function decode(phrase) {
   let word = '';
@@ -102,7 +101,7 @@ function decode(phrase) {
     } else if (word.includes('4')) {
       word = 'o';
     } else if (word.includes('5')) {
-      word = 'u';      
+      word = 'u';
     }
     strA += word;
   }
