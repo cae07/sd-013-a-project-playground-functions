@@ -56,10 +56,20 @@ function highestCount(param6_1) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  distCat1 = ((mouse - cat1)**2)**(1/2)
-  distCat2 = ((mouse - cat2)**2)**(1/2)
+  distCat1 = mouse - cat1
+  distCat2 = mouse - cat2
+  
+  if (distCat1 <0){
+    distCat1=-distCat1
+  }
+  
+  if (distCat2 <0){
+    distCat2=-distCat2
+  }
+  
+  
   let winner
-  if (distCat1 > distCat2){
+  if (distCat1 < distCat2){
     winner = "cat1"
   } else if(distCat1 < distCat2){ 
     winner = "cat2"
@@ -71,29 +81,51 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(param8_1) {
-  let fizzBuzzArray
+  let fizzBuzzArray =[]
   for(var i=0 ; i < param8_1.length; i++){
     if (param8_1 [i]%3 === 0 && param8_1 [i]%5 === 0){
-      fizzBuzzArray[i]= "fizzBuzz"
+      fizzBuzzArray.push("fizzBuzz")
     }else if(param8_1 [i]%3 === 0){
-      fizzBuzzArray[i] = "fizz"
+      fizzBuzzArray.push("fizz")
 
     }else if(param8_1 [i]%5 === 0){
-      fizzBuzzArray[i] = "buzz"
+      fizzBuzzArray.push("buzz")
 
     } else {
-      fizzBuzzArray[i] = "bug!"
+      fizzBuzzArray.push("bug!")
     }
   }
   return fizzBuzzArray
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param9_1) {
+  let encodeArray = param9_1
+  for (var i=0 ; i< param9_1.length; i++){
+    switch (param9_1 [i]){
+      case "a" :
+      encodeArray[i] = "1";
+      break;
+      case "e":
+      encodeArray[i] = "2";
+      break;
+      case "i":
+      encodeArray[i] = "3";
+      break;
+      case "o":
+      encodeArray[i] = "4";
+      break;
+      case "u":
+      encodeArray[i] = "5";
+      break;
+      default:
+      encodeArray[i]= param9_1 [i]  
+    }
+    return encodeArray
+  }
 }
 function decode() {
-  // seu código aqui
+
 }
 
 module.exports = {
