@@ -71,17 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let novoArray = [];
-  for (let index = 0; index < array.length; index += 1) {
-    novoArray.push('bug!');
-    if (array[index] % 15 === 0) {
-      novoArray[index] = 'fizzBuzz';
-    } else if (array[index] % 5 === 0) {
-      novoArray[index] = 'buzz';
-    } else if (array[index] % 3 === 0) {
-      novoArray[index] = 'fizz';
-    }
-  } return novoArray;
+  // seu código aqui
 }
 
 // Desafio 9
