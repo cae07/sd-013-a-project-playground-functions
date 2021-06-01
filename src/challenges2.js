@@ -14,18 +14,52 @@ function techList(list, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let errorSize = 'Array com tamanho incorreto.';
-  let errorImpossible = 'não é possível gerar um número de telefone com esses valores';
-  let checkRepeat = false;
 
-  for (phoneDigit of array) {
-    if (phoneDigit < 0 | phoneDigit > 9 | checkRepeat === true) result = errorImpossible;
-    result = phoneNumber;
+function countDups(phoneNumbers, phoneDigit) {
+  let counter = 0;
+
+  for (let j = 0; j < phoneNumbers.length; j += 1) {
+    if (phoneNumbers[j] === phoneDigit) {
+      counter += 1;
+    }
   }
+  return counter;
+}
 
-  if (array.length !== 11) result = errorSize;
-  return result;
+function checkDups(phoneNumbers) {
+  for (let i = 0; i < phoneNumbers.length; i += 1) {
+    let reps = countDups(phoneNumbers, phoneNumbers[i]);
+    if (reps >= 3) {
+      return true;
+    }
+  }
+}
+
+function checkSize(phoneNumbers) {
+  return phoneNumbers.length !== 11;
+}
+
+function checkGtLt(phoneNumbers) {
+  for (let i = 0; i < phoneNumbers.length; i += 1) {
+    if (phoneNumbers[i] < 0 || phoneNumbers[i] > 9) {
+      return true;
+    }
+  }
+}
+
+function generatePhoneNumber(phoneNumbers) {
+  if (!checkSize(phoneNumbers)) {
+    if (!checkGtLt(phoneNumbers) && !checkDups(phoneNumbers)) {
+      let result = phoneNumbers.join('');
+      let area = result.slice(0, 2);
+      let exchange = result.slice(2, 7);
+      let line = result.slice(7);
+
+      return `(${area}) ${exchange}-${line}`;
+    }
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
@@ -40,7 +74,7 @@ function hydrate(barOrder) {
   let ints = barOrder.match(/\d+/g).map(Number);
   let glassCount = 0;
   for (let index = 0; index < ints.length; index += 1) glassCount += ints[index];
-  return glassCount === 1 ? glassCount + ' ' + 'copo de água' : glassCount + ' ' + 'copos de água';
+  return glassCount === 1 ? `${glassCount} copo de água` : `${glassCount} copos de água`;
 }
 
 module.exports = {

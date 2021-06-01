@@ -35,19 +35,20 @@ function catAndMouse(mouse, cat1, cat2) {
   let distMouseCat1 = Math.abs(mouse - cat1);
   let distMouseCat2 = Math.abs(mouse - cat2);
   if (distMouseCat1 < distMouseCat2) return 'cat1';
-  if (distMouseCat1 < distMouseCat2) return 'cat2';
+  if (distMouseCat1 > distMouseCat2) return 'cat2';
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) array[index] = 'fizzBuzz';
-    else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) array[index] = 'bug!';
-    else if (array[index] % 3 === 0 && array[index] % 5 !== 0) array[index] = 'fizz';
-    else array[index] = 'buzz';
+  let newArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    newArray[i] = 'bug!';
+    if (array[i] % 15 === 0) newArray[i] = 'fizzBuzz';
+    else if (array[i] % 5 === 0) newArray[i] = 'buzz';
+    else if (array[i] % 3 === 0) newArray[i] = 'fizz';
   }
-  return array;
+  return newArray;
 }
 
 // Desafio 9
