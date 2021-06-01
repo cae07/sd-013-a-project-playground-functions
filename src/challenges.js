@@ -62,22 +62,27 @@ function catAndMouse(mouse, cat1, cat2) {
   } return 'os gatos trombam e o rato foge';
 }
 
+function teste(calc3, calc5, fizzBuzzString) {
+  if (Number.isInteger(calc5) === true && Number.isInteger(calc3) === true) {
+    fizzBuzzString.push('fizzBuzz');
+  } else if (Number.isInteger(calc3) === true) {
+    fizzBuzzString.push('fizz');
+  } else if (Number.isInteger(calc5) === true) {
+    fizzBuzzString.push('buzz');
+  } else {
+    fizzBuzzString.push('bug!');
+  }
+}
 // Desafio 8
-function fizzBuzz() {
-  // let numbers = nArray;
-  // let fizzBuzzString = [];
-  // for (let i = 0; i < numbers.length; i += 1) {
-  //   let calc3 = numbers[i] / 3;
-  //   let calc5 = numbers[i] / 5;
-  //   if (Number.isInteger(calc5) === true && Number.isInteger(calc3) === true) {
-  //     fizzBuzzString.push('fizzbuzz');
-  //   } else if (Number.isInteger(calc3) === true) {
-  //     fizzBuzzString.push('fizz');
-  //   } else if (Number.isInteger(calc5) === true) {
-  //     fizzBuzzString.push('buzz');
-  //   } fizzBuzzString.push('bug!');
-  // }
-  // return fizzBuzzString;
+function fizzBuzz(nArray) {
+  let numbers = nArray;
+  let fizzBuzzString = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    let calc3 = numbers[i] / 3;
+    let calc5 = numbers[i] / 5;
+    teste(calc3, calc5, fizzBuzzString);
+  }
+  return fizzBuzzString;
 }
 
 // Desafio 9
