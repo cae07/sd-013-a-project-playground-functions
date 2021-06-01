@@ -48,13 +48,15 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(number) {
-  if (Math.max(number) == 9) {
-    return 2;
-  } else if (Math.max(number) == 9) {
-    return 1;
-  } else {
-    return 3;
+  let count = 0;
+  let maiorNumber = Math.max(...number);
+
+  for (let i = 0; i < number.length; i += 1) {
+    if (number[i] == maiorNumber) {
+      count += 1;
+    }
   }
+    return count;
 }
 
 // for (i = 0; i <= number.length; i += 1) {
@@ -100,8 +102,17 @@ fizzBuzz(7, 9);
 fizzBuzz(9, 25);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(a, e, i) {
+  let frase = "hi there";
+  
+  if (resultado == frase.replace(e, 2)) {
+    return resultado;
+  } else if (resultado == frase.replace(i, 3)) {
+    return resultado;
+  } else {
+    return resultado;
+  }
+  
 }
 function decode() {
   // seu código aqui
