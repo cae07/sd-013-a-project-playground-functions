@@ -15,12 +15,7 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let y =0;
-  for (let i=0; i < sentence.length; i++){
-    
-      
-    }
-  }
+ 
 }
 
 // Desafio 4
