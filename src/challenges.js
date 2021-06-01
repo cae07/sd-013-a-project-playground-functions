@@ -106,16 +106,29 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Desafio 9
 function encode(string) {
-  let a = 1
-  let e = 2
-  let i = 3
-  let o = 4
-  let u = 5
-  // seu código aqui
+  let frase = string;
+  for (let index = 0; index < string.length; index += 1) {
+    frase = frase.replace('a', 1);
+    frase = frase.replace('e', 2);
+    frase = frase.replace('i', 3);
+    frase = frase.replace('o', 4);
+    frase = frase.replace('u', 5);
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let frase = string;
+  for (let index = 0; index < string.length; index += 1) {
+    frase = frase.replace(1, 'a');
+    frase = frase.replace(2, 'e');
+    frase = frase.replace(3, 'i');
+    frase = frase.replace(4, 'o');
+    frase = frase.replace(5, 'u');
+  }
+  return frase;
 }
+  // seu código aqui
+
 
 module.exports = {
   calcArea,
