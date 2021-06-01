@@ -6,8 +6,8 @@ function techList(tecno, name) {
   for (let i = 0; i < tecno.length; i += 1) {
     arrayDez.push({
       tech: nomeTech[i],
-      name: name
-    })
+      name: name,
+    });
   }
 
   if (arrayDez.length < 1) {
