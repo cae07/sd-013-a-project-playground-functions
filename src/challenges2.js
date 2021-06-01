@@ -9,7 +9,7 @@ function techList(tecno, name) {
     tecnologia.push({
       tech: tecno[i],
       name,
-    })
+    });
   }
   return tecnologia;
 }

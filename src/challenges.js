@@ -21,7 +21,7 @@ function splitSentence(frase) {
 function concatName(parametro) {
   let param1 = parametro.shift();
   let param2 = parametro.pop();
-  return (param1 + ' ' + param2);
+  return (`${param1}, ${param2}`);
 }
 
 // Desafio 5
@@ -34,7 +34,7 @@ function highestCount(numbers) {
   let maior = Math.max(...numbers);
   let contador = 0;
   for (let i = 0; i < numbers.lenght; i += 1) {
-    if (maior === numbers[i]) {
+    if (maior == numbers[i]) {
       contador += 1;
     }
   }
@@ -47,11 +47,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = cat2 - mouse;
   if (dist1 > dist2) {
     return cat2;
+  } else if (dist2 > dist1) {
+    return cat1; 
+  } else if (dist2 === dist1) {
+    return ('os gatos trombam e o rato foge');
   }
-  else if (dist2 > dist1) {
-    return cat1; }
-  else if (dist2 === dist1) {
-    return ('os gatos trombam e o rato foge'); }
 }
 
 // Desafio 8
@@ -60,12 +60,11 @@ function fizzBuzz(numbers) {
   for (let i = 0; i < numbers.lenght; i += 1) {
     if ((numbers[i] % 3) === 0) {
       novoArray.push('fizz');
-    }
-    else if ((numbers[i] % 5) === 0) {
-      novoArray.push('buzz'); }
-    else if ((numbers[i] % 3) === 0 && (numbers[i] % 5) === 0) {
-      novoArray.push('fizzBuzz'); }
-    else {
+    } else if ((numbers[i] % 5) === 0) {
+      novoArray.push('buzz');
+    } else if ((numbers[i] % 3) === 0 && (numbers[i] % 5) === 0) {
+      novoArray.push('fizzBuzz');
+    } else {
       novoArray.push('bug!'); }
   }
   return novoArray;
