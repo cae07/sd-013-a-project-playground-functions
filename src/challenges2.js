@@ -10,10 +10,9 @@ function techList(arr, name) {
   for (let i = 0; i < arr.length; i += 1) {
     ordenedArr.push({
       tech: arr[i],
-      name: name,
+      name,
     });
   }
-
   return ordenedArr;
 }
 

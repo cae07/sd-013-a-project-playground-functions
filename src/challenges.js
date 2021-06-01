@@ -25,7 +25,6 @@ function concatName(arr) {
 function footballPoints(wins, ties) {
   const eachWin = 3;
   const eachTie = 1;
-
   return wins * eachWin + ties * eachTie;
 }
 
@@ -39,7 +38,6 @@ function highestCount(arr) {
       count += 1;
     }
   }
-
   return count;
 }
 
@@ -51,11 +49,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceCat2 < distanceCat1) {
     return 'cat2';
   }
-
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
-
   return 'os gatos trombam e o rato foge';
 }
 
@@ -84,51 +80,23 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(str) {
   let newStr = str;
-
-  for (let i = 0; i < str.length; i += 1) {
-    switch (str[i]) {
-      case 'a':
-        newStr = newStr.replace('a', '1');
-        break;
-      case 'e':
-        newStr = newStr.replace('e', '2');
-        break;
-      case 'i':
-        newStr = newStr.replace('i', '3');
-        break;
-      case 'o':
-        newStr = newStr.replace('o', '4');
-        break;
-      case 'u':
-        newStr = newStr.replace('u', '5');
-        break;
-    }
-  }
+  newStr
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
   return newStr;
 }
 
 function decode(str) {
   let newStr = str;
-
-  for (let i = 0; i < str.length; i += 1) {
-    switch (str[i]) {
-      case '1':
-        newStr = newStr.replace('1', 'a');
-        break;
-      case '2':
-        newStr = newStr.replace('2', 'e');
-        break;
-      case '3':
-        newStr = newStr.replace('3', 'i');
-        break;
-      case '4':
-        newStr = newStr.replace('4', 'o');
-        break;
-      case '5':
-        newStr = newStr.replace('5', 'u');
-        break;
-    }
-  }
+  newStr
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
   return newStr;
 }
 
