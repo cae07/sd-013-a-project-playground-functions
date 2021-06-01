@@ -69,14 +69,23 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  let numbers = arrays;
-  let resultado = [];
+function fizzBuzz(numbersArray) {
+   let resultado = [];
 
-  for (let index = 0; index.length; index += 1) {
-
+  for (let numbers of numbersArray) {
+    if (numbers %3 === 0 && numbers %5 === 0 ) {
+      resultado.push("fizzBuzz");
+    } else if (numbers %3 === 0) {
+      resultado.push("fizz");
+    } else if (numbers %5 === 0) {
+      resultado.push("buzz");
+    } else {
+      resultado.push("bug!");
+    }
   }
+  return resultado;
 }
+
 
 // Desafio 9
 function encode() {
