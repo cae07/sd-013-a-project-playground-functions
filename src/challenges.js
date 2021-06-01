@@ -71,20 +71,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray = [];
-
+  let novoArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    newArray.push("bug!");
+    novoArray.push('bug!');
     if (array[index] % 15 === 0) {
-      retorno = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      retorno = 'fizz';
+      novoArray[index] = 'fizzBuzz';
     } else if (array[index] % 5 === 0) {
-      retorno = 'buzz';
+      novoArray[index] = 'buzz';
+    } else if (array[index] % 3 === 0) {
+      novoArray[index] = 'fizz';
     }
-  } return newArray;
+  } return novoArray;
 }
-
 
 module.exports = {
   calcArea,
