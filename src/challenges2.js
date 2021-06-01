@@ -38,24 +38,35 @@ function generatePhoneNumber(array) {
     } 
   } return formato;  
 }
-console.log(generatePhoneNumber([3, 2, 1, 9, 5, 0, 7, 4, 0, 6, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
- let diferenca = lineA - lineB - lineC;
- if(lineA + lineB < lineC && lineA + lineC < lineB && lineB + lineC < lineB){
-    if (lineA + lineB < Math.abs(diferenca) && lineA + lineC < Math.abs(diferenca) && lineB + lineC < Math.abs(diferenca)){
-  return false;
-  } else return true;  
- }
+  // seu código aqui]
+ let AbsLineA = Math.abs(lineA);
+ let AbsLineB = Math.abs(lineB);
+ let AbsLineC = Math.abs(lineC);
+ let diferencaAbs = AbsLineA - AbsLineB - AbsLineC;
+ if(AbsLineA + AbsLineB > AbsLineC && AbsLineA + AbsLineC > AbsLineB && AbsLineB + AbsLineC > AbsLineA){
+    if (AbsLineA > diferencaAbs && AbsLineB > diferencaAbs && AbsLineC > diferencaAbs){
+  return true;
+  } else return false;  
+ } return false;
 }
-console.log(triangleCheck(2, 3, 4));
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
-}
+  let numbersOfString = /d+?/g;
+  let match = numbersOfString.exec(string);
+  let sum;
+  for(let i=0; i < string.length; i+=1){
+    
+
+    
+
+    
+  } return match;
+}  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
