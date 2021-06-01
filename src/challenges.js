@@ -56,15 +56,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let fizzBug = [];
   for (let count = 0; count < numbers.length; count++) {
-    if (numbers[count] % 3 == 0) {
-      fizzBug.push("fizz");     
+    if (numbers[count] % 3 == 0 && numbers[count] % 5 == 0) {
+      fizzBug[count] = "fizzBuzz";
+    } else if (numbers[count] % 3 == 0) {
+      fizzBug[count]= 'fizz';     
     } else if (numbers[count] % 5 == 0) {
-      fizzBug.push("buzz");    
+      fizzBug[count] = 'buzz';    
     } else {
-      fizzBug.push("bug!");
+      fizzBug[count] = 'bug!';
     }
-    return fizzBug;
   }
+  return fizzBug;
 }
 
 // Desafio 9
