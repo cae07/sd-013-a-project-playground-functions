@@ -59,15 +59,6 @@ function highestCount(number) {
     return count;
 }
 
-// for (i = 0; i <= number.length; i += 1) {
-//  if (Math.max(number[i]) == 2) {
-//    return 2;
-//  } else if (Math.max(number[i]) == 1) {
-//    return 1;
-//  } else {
-//    return 3;
-//  }
-//}  
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -85,17 +76,20 @@ catAndMouse(5, 5, 2);
 
 // Desafio 8
 function fizzBuzz(number) {
+  let array = [];
+
   for (let i = 0; i < number.length; i += 1) {
-    if (number[i] % 3 == 0) {
-      return "fizz";
+    if (number[i] % 3 == 0 && number[i] % 5 == 0) {
+      array.push("fizzBuzz");
+    } else if (number[i] % 3 == 0) {
+      array.push("fizz");
     } else if (number[i] % 5 == 0) {
-      return "buzz";
-    } else if (number[i] % 3 == 0 && number[i] % 5 == 0) {
-      return "fizzBuzz";
+      array.push("buzz");
     } else {
-      return "bug!";
+      array.push("bug!");
     }
   }
+  return array;
 }
 fizzBuzz(2, 15, 7, 9, 45);
 fizzBuzz(7, 9);
