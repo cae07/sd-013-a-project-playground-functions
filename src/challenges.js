@@ -1,7 +1,7 @@
 // Iniciando o projeto
 // Desafio 1
-function compareTrue(vl1, vl2) {
-  if((lv1 === true) && (lv2 === true)){
+function compareTrue(v1, v2) {
+  if ((v1 === true) && (v2 === true)) {
     return true;
   } 
     return false;
@@ -9,8 +9,8 @@ function compareTrue(vl1, vl2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  Area = (base * height) / 2;
-    return Area;
+  calcArea = (base * height) / 2;
+    return calcArea;
 }
 
 // Desafio 3
