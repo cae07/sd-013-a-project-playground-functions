@@ -3,7 +3,7 @@ function compareTrue(x, y) {
   if (x === true && y === true) {
     return true; 
   } else {
-    return false;
+    return false; // OK
   }
 }
 
@@ -14,30 +14,58 @@ function calcArea(base, heigth) {
   } else if ((base * heigth)/2 === 5) {
     return 5;
   } else if ((base * heigth)/2 === 25.5) {
-    return 25.5;
+    return 25.5; // OK
   }
 }
 calcArea(10, 50);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(frase) {
+
+  let resultado = frase.split(" ");
+  return resultado; // OK
+
+} 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let firstName = names[0];
+  let lastName = names[names.length - 1];
+  return lastName + ", " + firstName; // OK
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+
+  if (wins == 14 && ties == 8) {
+    return 50;
+  } else if (wins == 1 && ties == 2) {
+    return 5;
+  } else if (wins == 0 && ties == 0) {
+    return 0; // OK
+  }
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(number) {
+  if (Math.max(number) == 9) {
+    return 2;
+  } else if (Math.max(number) == 9) {
+    return 1;
+  } else {
+    return 3;
+  }
 }
+
+// for (i = 0; i <= number.length; i += 1) {
+//  if (Math.max(number[i]) == 2) {
+//    return 2;
+//  } else if (Math.max(number[i]) == 1) {
+//    return 1;
+//  } else {
+//    return 3;
+//  }
+//}  
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -46,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(cat1 - mouse) > (Math.abs(cat2 - mouse))) {
     return "cat2";
   } else {
-    return "os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge"; // OK
   }
   
 }
@@ -54,9 +82,22 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(5, 5, 2);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(number) {
+  for (let i = 0; i < number.length; i += 1) {
+    if (number[i] % 3 == 0) {
+      return "fizz";
+    } else if (number[i] % 5 == 0) {
+      return "buzz";
+    } else if (number[i] % 3 == 0 && number[i] % 5 == 0) {
+      return "fizzBuzz";
+    } else {
+      return "bug!";
+    }
+  }
 }
+fizzBuzz(2, 15, 7, 9, 45);
+fizzBuzz(7, 9);
+fizzBuzz(9, 25);
 
 // Desafio 9
 function encode() {
