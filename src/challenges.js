@@ -56,8 +56,8 @@ function highestCount(param6_1) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  distCat1 = mouse - cat1
-  distCat2 = mouse - cat2
+  distCat1 = ((mouse - cat1)**2)**(1/2)
+  distCat2 = ((mouse - cat2)**2)**(1/2)
   let winner
   if (distCat1 > distCat2){
     winner = "cat1"
