@@ -19,8 +19,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(parametro) {
-  let arrayA = parametro
-  return (arrayA[arrayA.lenght - 1] + ', ' + arrayA[0]);
+  let arrayQuatro = parametro;
+  return (arrayQuatro[arrayQuatro.length - 1]) + ", " + arrayQuatro[0];
 }
 
 // Desafio 5
@@ -84,23 +84,23 @@ function encode(letras) {
 
   for (let i = 0; i < words.length; i += 1) {
     switch (words[i]) {
-      case 'a':
-        words[i] = 1;
-        break;
-      case 'e':
-        words[i] = 2;
-        break;
-      case 'i':
-        words[i] = 3;
-        break;
-      case 'o':
-        words[i] = 4;
-        break;
-      case 'u':
-        words[i] = 5;
-        break;
-      default:
-        break;
+    case 'a':
+      words[i] = 1;
+      break;
+    case 'e':
+      words[i] = 2;
+      break;
+    case 'i':
+      words[i] = 3;
+      break;
+    case 'o':
+      words[i] = 4;
+      break;
+    case 'u':
+      words[i] = 5;
+      break;
+    default:
+      break;
     }
   }
   return words.join('');
@@ -110,23 +110,23 @@ function decode(numeros) {
 
   for (let i = 0; i < numbers9.length; i += 1) {
     switch (numbers9[i]) {
-      case '1':
-        numbers9[i] = 'a';
-        break;
-      case '2':
-        numbers9[i] = 'e';
-        break;
-      case '3':
-        numbers9[i] = 'i';
-        break;
-      case '4':
-        numbers9[i] = 'o';
-        break;
-      case '5':
-        numbers9[i] = 'u';
-        break;
-      default:
-        break;
+    case '1':
+      numbers9[i] = 'a';
+      break;
+    case '2':
+      numbers9[i] = 'e';
+      break;
+    case '3':
+      numbers9[i] = 'i';
+      break;
+    case '4':
+      numbers9[i] = 'o';
+      break;
+    case '5':
+      numbers9[i] = 'u';
+      break;
+    default:
+      break;
     }
   }
   return numbers9.join('');
