@@ -37,8 +37,106 @@ function techList(arrayOfItems, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function isDifferentThan11(array) {
+  let result = false;
+  let isDifferent = (array.length !== 11);
+
+  if (isDifferent) {
+    result = true;
+  }
+
+  return result;
+}
+
+function isValidNumber(array) {
+  let result = true;
+
+  for (let value of array) {
+    let condition = ((value < 0) || (value > 9));
+    if (condition) {
+      result = false;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function comparateNumber(array, value) {
+  let counter = 0;
+
+  for (let index = 1; index < array.length; index += 1) {
+    // console.log(`valor ${value} sendo comparado com ${array[index]}`);
+    if (value === array[index]) {
+      counter += 1;
+    }
+  }
+
+  return counter;
+}
+
+function isRepeatedNumber(array) {
+  let result = false;
+
+  for (let value of array) {
+    // console.log(`valor a ser comparado: ${value}`);
+    let counter = comparateNumber(array, value);
+    if (counter >= 3) {
+      result = true;
+      break;
+    }
+    counter = 0;
+  }
+  return result;
+}
+
+function isValid(array) {
+  let isInvalidLength = isDifferentThan11(array);
+  let isInvalidValue = ((!isValidNumber(array)) || (isRepeatedNumber(array)));
+  let result = true;
+
+  if (isInvalidLength) {
+    result = 'Array com tamanho incorreto.';
+  } else if (isInvalidValue) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return result;
+}
+
+function maskPhoneNumber(index) {
+  let inputMask = '';
+  switch (index) {
+  case 0:
+    inputMask += '(';
+    break;
+  case 2:
+    inputMask += ') ';
+    break;
+  case 7:
+    inputMask += '-';
+    break;
+  default:
+    inputMask += '';
+  }
+
+  return inputMask;
+}
+
+function generatePhoneNumber(array) {
+  let result = '';
+  let validInput = isValid(array);
+
+  if (validInput === true) {
+    for (let index = 0; index < array.length; index += 1) {
+      result += maskPhoneNumber(index);
+      result += array[index].toString();
+    }
+  } else {
+    result = validInput;
+  }
+
+  return result;
 }
 
 // Desafio 12
