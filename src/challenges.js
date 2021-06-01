@@ -105,9 +105,6 @@ function decode(string) {
   string = string.replace(/5/g, "u");
   return string;  
 }
-function decode() {
-  // seu código aqui
-}
 
 module.exports = {
   calcArea,
