@@ -2,9 +2,9 @@
 function compareTrue(v1, v2) {
   // seu código aqui
   if (v1 === true && v2 === true) {
-  return true; 
-  }
-  return false; 
+    return true;
+  } r
+  return false;
 }
 
 // Desafio 2
@@ -15,13 +15,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let array = string.split(' ');
+  return array;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+  let ultimoNome = nomes[nomes.lenght - 1];
+  let primeiroNome = nome[0];
+  let concat = (`${ultimoNome}, ${primeiroNome}`); 
+  return concat;
 }
 
 // Desafio 5
