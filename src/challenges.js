@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(valueA, valueB) {
   if (valueA && valueB) {
-  return true;
+    return true;
   }
-return false;
-  }
+  return false;
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,12 +13,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(nameA) {
-  return nameA[nameA.length-1] + ", " + nameA[0];
+  return nameA[nameA.length - 1] + ', ' + nameA[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -46,7 +46,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (catPos2 < catPos1) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8

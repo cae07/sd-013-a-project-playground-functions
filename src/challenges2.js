@@ -1,7 +1,5 @@
 // Desafio 10
-function techList(tech, name) {
-  let tech1 = tech;
-  let name1 = name; 
+function techList() {
   // seu código aqui
 }
 
