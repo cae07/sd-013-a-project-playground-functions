@@ -43,6 +43,7 @@ function highestCount(arrayNum) {
       maiorNum = arrayNum[index];
     }
   }
+
   for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
     if (arrayNum[index2] === maiorNum) {
       total += 1;
@@ -53,9 +54,10 @@ function highestCount(arrayNum) {
 
 // Desafio 7
 // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-function catAndMouse(mouse, cat1, cat2) {  
+function catAndMouse(mouse, cat1, cat2) { 
+   
   let distancia1 = Math.abs(cat1 - mouse);
-  let distancia2 = Math.abs(cat2 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);  
   
   if (distancia1 < distancia2) {
     return 'cat1';
@@ -73,13 +75,13 @@ function fizzBuzz(arrayNum) {
 
   for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
-      arrayDiv.push('fizzBuzz')
+      arrayDiv.push('fizzBuzz');
     } else if (arrayNum[index] % 3 === 0) {
-      arrayDiv.push('fizz')
+      arrayDiv.push('fizz');
     } else if (arrayNum[index] % 5 === 0) {
-      arrayDiv.push('buzz')
+      arrayDiv.push('buzz');
     } else {
-      arrayDiv.push('bug!')
+      arrayDiv.push('bug!');
     }
   }
   return arrayDiv;

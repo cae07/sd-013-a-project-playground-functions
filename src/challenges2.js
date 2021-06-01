@@ -25,8 +25,19 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+function triangleCheck(lineA, lineB,lineC) {  
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
