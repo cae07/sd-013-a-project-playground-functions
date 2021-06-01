@@ -61,15 +61,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function fizzBuzz(numbers8) {
   let novoArray = [];
 
-  for (let i = 0; i < numbers.lenght; i += 1) {
-    if ((numbers[i] % 3) === 0 && (numbers[i] % 5) === 0) {
+  for (let i = 0; i < numbers8.lenght; i += 1) {
+    if ((numbers8[i] % 3) === 0 && (numbers8[i] % 5) === 0) {
       novoArray.push('fizzBuzz');
-    } else if ((numbers[i] % 5) === 0) {
+    } else if ((numbers8[i] % 5) === 0) {
       novoArray.push('buzz');
-    } else if ((numbers[i] % 3) === 0) {
+    } else if ((numbers8[i] % 3) === 0) {
       novoArray.push('fizz');
     } else {
       novoArray.push('bug!');
@@ -79,11 +79,57 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  let words = letras.split('');
+
+  for (let i = 0; i < words.length; i += 1) {
+    switch (words[i]) {
+      case 'a':
+        words[i] = 1;
+        break;
+      case 'e':
+        words[i] = 2;
+        break;
+      case 'i':
+        words[i] = 3;
+        break;
+      case 'o':
+        words[i] = 4;
+        break;
+      case 'u':
+        words[i] = 5;
+        break;
+      default:
+        break;
+    }
+  }
+  return words.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(numeros) {
+  let numbers9 = numeros.split('');
+
+  for (let i = 0; i < numbers9.length; i += 1) {
+    switch (numbers9[i]) {
+      case '1':
+        numbers9[i] = 'a';
+        break;
+      case '2':
+        numbers9[i] = 'e';
+        break;
+      case '3':
+        numbers9[i] = 'i';
+        break;
+      case '4':
+        numbers9[i] = 'o';
+        break;
+      case '5':
+        numbers9[i] = 'u';
+        break;
+      default:
+        break;
+    }
+  }
+  return numbers9.join('');
 }
 
 module.exports = {
