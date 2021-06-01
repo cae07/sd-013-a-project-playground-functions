@@ -140,8 +140,43 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function measureSumValue(lineA, lineB, lineC) {
+  let verificationLineA = (lineA < lineB + lineC);
+  let verificationLineB = (lineB < lineC + lineA);
+  let verificationLineC = (lineC < lineA + lineB);
+  let result = false;
+
+  if (verificationLineA && verificationLineB && verificationLineC) {
+    result = true;
+  }
+
+  return result;
+}
+
+function measureAbsoluteValue(lineA, lineB, lineC) {
+  let verificationLineA = (lineA > Math.abs(lineB - lineC));
+  let verificationLineB = (lineB > Math.abs(lineC - lineA));
+  let verificationLineC = (lineC > Math.abs(lineA - lineB));
+  let result = false;
+
+  if (verificationLineA && verificationLineB && verificationLineC) {
+    result = true;
+  }
+
+  return result;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let check1 = measureSumValue(lineA, lineB, lineC);
+  let check2 = measureAbsoluteValue(lineA, lineB, lineC);
+  let isValidTriangule = (check1 && check2);
+  let result = false;
+
+  if (isValidTriangule) {
+    result = true;
+  }
+
+  return result;
 }
 
 // Desafio 13
