@@ -7,59 +7,81 @@ function techList(array, name) {
     return 'Vazio!';
   }
   for (let i = 0; i < array.length; i += 1) {
-    techs.push({ tech: array[i], name: name });
+    techs.push({ tech: array[i], name });
   }
   return techs;
 }
 
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
-
 // Desafio 11
-function generatePhoneNumber(array) {
-  let guarda = array;
-  let string = ['('];
-
-  if (guarda.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-
-  for (let num of guarda) {
-    let cont = 0;
-    for (let num2 of guarda) {
-      if (num === num2) {
-        cont += 1;
-      }
-    }
-    if (num < 0 || num > 9 || cont >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-
-  for (let i = 0; i < guarda.length; i += 1) {
+function criaNumero(array, string) {
+  for (let i = 0; i < array.length; i += 1) {
     if (i === 1) {
-      guarda[i] = guarda[i] + ') ';
+      array[i] = `${array[i]}) `;
     } else if (i === 6) {
-      guarda[i] = guarda[i] + '-';
+      array[i] = `${array[i]}-`;
     }
-    string.push(guarda[i]);
+    string.push(array[i]);
   }
   return string.join('');
 }
 
-// console.log( generatePhoneNumber([1, 2, 0, 4, 5, 6, 0, 8, 9, 0, 1]) );
+function naoCria(array, resultado) {
+  array.forEach(function (number) {
+    let cont = 0;
+    array.forEach(function (number2) {
+      if (number === number2) {
+        cont += 1;
+      }
+    });
+    if (number < 0 || number > 9 || cont >= 3) {
+      resultado = 'não é possível gerar um número de telefone com esses valores';
+    }
+  });
+  return resultado;
+}
+
+function generatePhoneNumber(array) {
+  let string = ['('];
+  let resultado = '';
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  resultado = naoCria(array, resultado);
+  if (resultado) return resultado;
+  return criaNumero(array, string);
+}
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function isAaTriangle(lineA, lineB, lineC) {
+  let result = false;
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {
-    return true;
+    result = true;
   }
+  return result;
+}
+
+function isBaTriangle(lineA, lineB, lineC) {
+  let result = false;
   if ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) {
-    return true;
+    result = true;
   }
+  return result;
+}
+
+function isCaTriangle(lineA, lineB, lineC) {
+  let result = false;
   if ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB))) {
-    return true;
+    result = true;
   }
-  return false;
+  return result;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  result = isAaTriangle(lineA, lineB, lineC);
+  result = isBaTriangle(lineA, lineB, lineC);
+  result = isCaTriangle(lineA, lineB, lineC);
+  return result;
 }
 
 // Desafio 13
@@ -74,12 +96,10 @@ function hydrate(string) {
   }
 
   if (sum === 1) {
-    return sum + ' copo de água';
+    return `${sum} copo de água`;
   }
-  return sum + ' copos de água';
+  return `${sum} copos de água`;
 }
-
-// console.log(hydrate('Eu tenho 22 anos e 3 gatos'));
 
 module.exports = {
   generatePhoneNumber,

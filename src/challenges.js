@@ -21,7 +21,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let guarda = array;
-  return (guarda[guarda.length - 1]) + ', ' + guarda[0];
+  return `${guarda[guarda.length - 1]}, ${guarda[0]}`;
 }
 
 // Desafio 5
@@ -31,21 +31,31 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let guarda = array;
-  let count = 0;
-  let maior = guarda[0];
-
-  for (let i = 1; i < guarda.length; i += 1) {
-    if (guarda[i] > maior) {
-      maior = guarda[i];
+function maiorNumero(array) {
+  let maior = array[0];
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] > maior) {
+      maior = array[i];
     }
   }
-  for (let i2 = 0; i2 < guarda.length; i2 += 1) {
-    if (maior === guarda[i2]) {
+  return maior;
+}
+
+function repete(array, maior) {
+  let count = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (maior === array[i]) {
       count += +1;
     }
   }
+  return count;
+}
+
+function highestCount(array) {
+  let maior = maiorNumero(array);
+  let count = repete(array, maior);
+
   return count;
 }
 
@@ -64,78 +74,48 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function buzzebug(elemento, string) {
+  if ((elemento % 3 === 0) && (elemento % 5 === 0)) {
+    string.push('fizzBuzz');
+  } else if ((elemento % 3 === 0)) {
+    string.push('fizz');
+  } else if ((elemento % 5 === 0)) {
+    string.push('buzz');
+  } else {
+    string.push('bug!');
+  }
+  return string;
+}
+
 function fizzBuzz(array) {
   let string = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
-      string.push('fizzBuzz');
-    } else if ((array[i] % 3 === 0)) {
-      string.push('fizz');
-    } else if ((array[i] % 5 === 0)) {
-      string.push('buzz');
-    } else {
-      string.push('bug!');
-    }
+    buzzebug(array[i], string);
   }
   return string;
 }
 
 // Desafio 9
 function encode(string) {
-  let word = string.split('');
+  let str = string;
+  str = str.replace(/a/g, '1');
+  str = str.replace(/e/g, '2');
+  str = str.replace(/i/g, '3');
+  str = str.replace(/o/g, '4');
+  str = str.replace(/u/g, '5');
 
-  for (let i = 0; i < word.length; i += 1) {
-    switch (word[i]) {
-    case 'a':
-      word[i] = 1;
-      break;
-    case 'e':
-      word[i] = 2;
-      break;
-    case 'i':
-      word[i] = 3;
-      break;
-    case 'o':
-      word[i] = 4;
-      break;
-    case 'u':
-      word[i] = 5;
-      break;
-    default:
-      break;
-    }
-  }
-
-  return word.join('');
+  return str;
 }
-
 function decode(string) {
-  let word = string.split('');
+  let str = string;
+  str = str.replace(/1/g, 'a');
+  str = str.replace(/2/g, 'e');
+  str = str.replace(/3/g, 'i');
+  str = str.replace(/4/g, 'o');
+  str = str.replace(/5/g, 'u');
 
-  for (let i = 0; i < word.length; i += 1) {
-    switch (word[i]) {
-    case '1':
-      word[i] = 'a';
-      break;
-    case '2':
-      word[i] = 'e';
-      break;
-    case '3':
-      word[i] = 'i';
-      break;
-    case '4':
-      word[i] = 'o';
-      break;
-    case '5':
-      word[i] = 'u';
-      break;
-    default:
-      break;
-    }
-  }
-
-  return word.join('');
+  return str;
 }
 
 module.exports = {
