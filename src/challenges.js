@@ -50,17 +50,19 @@ for (let i = 0; i<= array.length; i +=1){
   }
     }  return contador 
 }
-console.log(highestCount([-2 , -2, -3]))
+
 // Desafio 7
 function catAndMouse(mouse, distGato1, distGato2) {
-  mouse = mouse
-  if(distGato1<distGato2){
-    return "cat1";
-  }else if(distGato2<distGato1){
-    return "cat2";
-  }else if(distGato1===distGato2) {
-    return "os gatos trombam e o rato foge";
-  } 
+let gato1 = Math.abs(distGato1 + mouse);
+let gato2 = Math.abs(distGato2 + mouse);
+let felino;
+if(gato1<gato2){
+felino = "cat1";
+}else if(gato2<gato1){
+  felino = "cat2";
+}else if(gato1===gato2){
+  felino = "os gatos trombam e o rato foge";
+}return felino
 } 
 
 // Desafio 8
