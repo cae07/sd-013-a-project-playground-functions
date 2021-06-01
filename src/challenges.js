@@ -45,13 +45,13 @@ function highestCount(array) {
   let contador = 0;
   for (let index1 = 0; index1 < array.length; index1 +=1) {
     if (higherNumber < array[index1]) {
-     higherNumber = array[index1];
+      higherNumber = array[index1];
     }
   } for (let index2=0; index2 < array.length; index2 +=1) {
-    if (array[index2] === higherNumber){
-        contador +=1;
-      }
-    } return contador;
+    if (array[index2] === higherNumber) {
+      contador +=1;
+    }
+  } return contador;
 }
 
 // Desafio 7
@@ -75,11 +75,23 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+
+function encode(string) {
   // seu código aqui
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(number) {
+  number = number.replace(/1/gi, 'a');
+  number = number.replace(/2/gi, 'e');
+  number = number.replace(/3/gi, 'i');
+  number = number.replace(/4/gi, 'o');
+  number = number.replace(/5/gi, 'u');
+  return number;
 }
 
 module.exports = {
