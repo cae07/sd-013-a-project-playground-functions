@@ -53,8 +53,8 @@ function highestCount(numbersArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionCat1 = mouse - cat1;
-  let positionCat2 = mouse - cat2;
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
   let winner = 0;
 
   if (positionCat1 > positionCat2) {
@@ -66,12 +66,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return winner;
 }
-catAndMouse(1, 0, 2);
 
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let numbers = arrays;
+  let resultado = [];
+
+  for (let index = 0; index.length; index += 1) {
+
+  }
 }
 
 // Desafio 9
