@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-    if (a === true && b === true) {
-      return true;
-    } else {
+  if (a === true && b === true) {
+    return true;
+  } else {
     return false;
-    }
   }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,23 +14,33 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  array.sort(function (a, b) {
+    return a - b;
+  });
+  var maiores = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[array.length - 1] === array[index]) {
+      maiores = maiores + 1;
+    }
+  }
+  return maiores;
 }
+//Referencia para Sort: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 // Desafio 7
 function catAndMouse() {

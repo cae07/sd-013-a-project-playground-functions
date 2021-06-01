@@ -5,3 +5,5 @@
 node_modules/
 tests/
 .DS_Store
+a.js
+.gitignore
