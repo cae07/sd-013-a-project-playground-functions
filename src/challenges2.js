@@ -187,7 +187,7 @@ function comparator(character) {
   for (let index = 0; index < numbers.length; index += 1) {
     let isNumber = (character === numbers[index].toString());
     if (isNumber) {
-      result += parseInt(character, 10);
+      result = parseInt(character, 10);
     }
   }
 
