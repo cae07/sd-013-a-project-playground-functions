@@ -1,10 +1,12 @@
 // Desafio 1
-function compareTrue(param1_1,param1_2) {
- if (param1_1 === true && param1_2 === true){
-   return true;
+function compareTrue(param1_1 , param1_2) {
+ let comparison =false
+  if (param1_1 === true && param1_2 === true){
+    comparison = true;
  } else {
-   return false;
+  comparison = false;
  }
+ return comparison
 }
 
 // Desafio 2
@@ -33,14 +35,14 @@ function highestCount(param6_1) {
   let max_number =0;
   let sumMaxNumber=0;
   
-    for (i = 0; i < param6_1.length; i++){
+    for (var i = 0; i < param6_1.length; i++){
       if (param6_1[i]>max_number){
         max_number = param6_1 [i];
       }
     }
 
 
-    for (y = 0; y < param6_1.length; y++){
+    for (var y = 0; y < param6_1.length; y++){
       if (param6_1[y] === max_number){
         sumMaxNumber = sumMaxNumber +1;
       }
@@ -49,13 +51,35 @@ function highestCount(param6_1) {
   }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  distCat1 = mouse - cat1
+  distCat2 = mouse - cat2
+  let winner
+  if (distCat1 < distCat2){
+    winner = "cat1"
+  } else { 
+    winner = "cat2"
+  }
+  return winner
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(param8_1) {
+  let fizzBuzzArray
+  for(var i=0 ; i < param8_1.length; i++){
+    if (param8_1 [i]%3 === 0 && param8_1 [i]%5 === 0){
+      fizzBuzzArray[i]= "fizzBuzz"
+    }else if(param8_1 [i]%3 === 0){
+      fizzBuzzArray[i] = "fizz"
+
+    }else if(param8_1 [i]%5 === 0){
+      fizzBuzzArray[i] = "buzz"
+
+    } else {
+      fizzBuzzArray[i] = "bug!"
+    }
+  }
+  return fizzBuzzArray
 }
 
 // Desafio 9
