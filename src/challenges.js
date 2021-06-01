@@ -43,21 +43,21 @@ function highestCount(array) {
   // seu código aqui
   let higherNumber = array[0];
   let contador = 0;
-  for(let index1 = 0; index1 < array.length; index1 +=1) {
+  for (let index1 = 0; index1 < array.length; index1 +=1) {
     if (higherNumber < array[index1]) {
-    higherNumber = array[index1];
-    } 
-  } for(let index2=0; index2 < array.length; index2 +=1) {
-      if (array[index2] === higherNumber){
+     higherNumber = array[index1];
+    }
+  } for (let index2=0; index2 < array.length; index2 +=1) {
+    if (array[index2] === higherNumber){
         contador +=1;
       }
-    } return contador;   
+    } return contador;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let dist1 = Math.abs(mouse - cat1); 
+  let dist1 = Math.abs(mouse - cat1);
   let dist2 = Math.abs(mouse - cat2);
 
   if (dist1 > dist2) {
@@ -69,10 +69,20 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    newArray.push("bug!");
+    if (array[index] % 15 === 0) {
+      retorno = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      retorno = 'fizz';
+    } else if (array[index]] % 5 === 0) {
+      retorno = 'buzz';
+    }
+  } return newArray;
 }
 
 // Desafio 9
