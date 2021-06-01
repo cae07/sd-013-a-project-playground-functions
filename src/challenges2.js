@@ -180,9 +180,44 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function comparator(character) {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let result = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    let isNumber = (character === numbers[index].toString());
+    if (isNumber) {
+      result += parseInt(character, 10);
+    }
+  }
+
+  return result;
 }
+
+function positiveNumberIdentifier(phrase) {
+  let storer = 0;
+
+  for (let character of phrase) {
+    storer += comparator(character);
+  }
+
+  return storer;
+}
+
+function hydrate(string) {
+  let cupsOfWater = positiveNumberIdentifier(string);
+  let result;
+
+  if (cupsOfWater === 1) {
+    result = `${cupsOfWater} copo de água`;
+  } else {
+    result = `${cupsOfWater} copos de água`;
+  }
+
+  return result;
+}
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
