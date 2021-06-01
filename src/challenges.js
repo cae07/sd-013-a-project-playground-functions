@@ -84,6 +84,14 @@ function fizzBuzz(array) {
   } return novoArray;
 }
 
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
+
 module.exports = {
   calcArea,
   catAndMouse,
