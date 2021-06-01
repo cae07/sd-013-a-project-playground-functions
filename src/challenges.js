@@ -71,7 +71,7 @@ function catAndMouse(mouse,cat1,cat2) {
   let winner
   if (distCat1 < distCat2){
     winner = "cat1"
-  } else if(distCat1 < distCat2){ 
+  } else if(distCat2 < distCat1){ 
     winner = "cat2"
   }else{
     winner = "os gatos trombam e o rato foge"
