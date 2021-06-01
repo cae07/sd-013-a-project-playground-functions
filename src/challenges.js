@@ -40,10 +40,10 @@ function highestCount(numbers) {
   }
   for (let i2 = 0; i2 < numbers.length; i2 += 1) {
     if (maior === numbers[i2]) {
-      count = count + 1;
+      contador += 1;
     }
   }
-  return count;
+  return contador;
 }
 
 // Desafio 7
@@ -61,19 +61,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers8) {
+function fizzBuzz (numbers8) {
   let novoArray = [];
 
-  for (let i = 0; i < numbers8.lenght; i += 1) {
-    if ((numbers8[i] % 3) === 0 && (numbers8[i] % 5) === 0) {
-      novoArray.push('fizzBuzz');
-    } else if ((numbers8[i] % 5) === 0) {
-      novoArray.push('buzz');
-    } else if ((numbers8[i] % 3) === 0) {
-      novoArray.push('fizz');
-    } else {
-      novoArray.push('bug!');
-    }
+  for (var i = 0; i < numbers8.length; i++) {
+if (numbers8[i] % 3 === 0 && numbers8[i] % 5 === 0) {
+  novoArray.push("fizzBuzz");
+} else if (numbers8[i] % 3 === 0) {
+  novoArray.push("fizz");
+} else if (numbers8[i] % 5 === 0) {
+  novoArray.push("buzz");
+} else {
+  novoArray.push("bug!");
+}
   }
   return novoArray;
 }
