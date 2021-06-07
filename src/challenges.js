@@ -9,7 +9,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,7 +19,7 @@ function splitSentence(meuNome) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  return arrayOfStrings[arrayOfStrings.length -1] + ", " + arrayOfStrings[0];
+  return arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
 }
 
 // Desafio 5
@@ -48,8 +48,20 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs (mouse - cat1);
+  let distance2 = Math.abs (mouse - cat2);
+  let result = '';
+  if (distance1 == distance2) {
+    result = 'os gatos trombam e o rato foge';
+  }
+  else if (distance1 < distance2) {
+    result = 'cat1';
+  }
+  else {
+    result = 'cat2';
+  }
+  return result;
 }
 
 // Desafio 8
