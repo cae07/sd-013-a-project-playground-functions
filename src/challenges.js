@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(input) {
   let aux = [];
-  for (let index = 0; index < input.length; index+= 1) {
+  for (let index = 0; index < input.length; index += 1) {
     if (input[index] % 3 === 0 && input[index] % 5 === 0) {
       aux.push('fizzBuzz');
     }
@@ -75,21 +75,31 @@ function fizzBuzz(input) {
       aux.push('fizz');
     }
     else if (input[index] % 5 === 0) {
-      aux.push('buzz')
+      aux.push('buzz');
     }
     else {
-      aux.push('bug!')
+      aux.push('bug!');
     }
   }
   return aux;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = string.replace(/1/gi, 'a');
+  string = string.replace(/2/gi, 'e');
+  string = string.replace(/3/gi, 'i');
+  string = string.replace(/4/gi, 'o');
+  string = string.replace(/5/gi, 'u');
+  return string;
 }
 
 module.exports = {
