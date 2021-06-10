@@ -44,7 +44,6 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // depois de bater a cabeça, percebi que 
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 > distanceCat2) return 'cat2'; 
@@ -116,4 +115,4 @@ function decode(word) {
   }
 
   return decodeWord;
-}
+};
