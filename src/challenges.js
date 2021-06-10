@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
+  if (a && b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +18,7 @@ function splitSentence(meuNome) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  return arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
+  return `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
 }
 
 // Desafio 5
@@ -54,11 +53,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let result = '';
   if (distance1 === distance2) {
     result = 'os gatos trombam e o rato foge';
-  }
-  else if (distance1 < distance2) {
+  } else if (distance1 < distance2) {
     result = 'cat1';
-  }
-  else {
+  } else {
     result = 'cat2';
   }
   return result;
@@ -70,14 +67,11 @@ function fizzBuzz(input) {
   for (let index = 0; index < input.length; index += 1) {
     if (input[index] % 3 === 0 && input[index] % 5 === 0) {
       aux.push('fizzBuzz');
-    }
-    else if (input[index] % 3 === 0) {
+    } else if (input[index] % 3 === 0) {
       aux.push('fizz');
-    }
-    else if (input[index] % 5 === 0) {
+    } else if (input[index] % 5 === 0) {
       aux.push('buzz');
-    }
-    else {
+    } else {
       aux.push('bug!');
     }
   }
