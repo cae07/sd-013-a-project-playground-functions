@@ -5,31 +5,37 @@ function compareTrue(booleano1, booleano2){
 
 compareTrue(true, false);
 
+
 // Desafio 2
 function calcArea(base, height) {
   let calculo = (base * height) / 2;
   return calculo;
 }
 
+
 // Desafio 3
 function splitSentence(string) {
-  return string['go', 'Trybe'];
+  return string.splitSentence[''];
 }
+
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length - 1] + ' , ' + array[0];
+  let concat = array[array.length - 1] + ', ' + array[0];
   return concat;
 }
 
+
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties);
 }
+
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+   // seu código aqui
 }
 
 // Desafio 7
