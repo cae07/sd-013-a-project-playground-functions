@@ -1,11 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(booleano1, booleano2){
+  return booleano1 && booleano2;
 }
 
+compareTrue(true, false);
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calculo = (base * height) / 2;
+  return calculo;
 }
 
 // Desafio 3
