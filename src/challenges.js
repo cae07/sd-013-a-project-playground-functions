@@ -75,7 +75,19 @@ function catAndMouse(mouse, cat1, cat2) {
 //}
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(valor) {
+  let retornarValor = [];
+  for (let index = 0; index < valor.length; index += 1) {
+    retornarValor[index] = 'bug!';
+    if (valor[index] % 15 === 0) {
+      retornarValor[index] = 'fizzBuzz';
+    } else if (valor[index] % 3 === 0) {
+      retornarValor[index] = 'fizz';
+    } else if (valor[index] % 5 === 0) {
+      retornarValor[index] = 'buzz';
+    }
+  }
+  return retornarValor;
   // seu código aqui
 }
 
