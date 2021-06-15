@@ -1,5 +1,4 @@
 // Desafio 10
-function techList() {
   //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
   // seu código aqui
   function techList(tecnologias, name) {

@@ -92,10 +92,44 @@ function fizzBuzz(valor) {
 }
 
 // Desafio 9
-function encode() {
+  function encode(codifica) {
+    let recebeNumero = '';
+    let code = {
+      a: 1,
+      e: 2,
+      i: 3,
+      o: 4,
+      u: 5,
+    };
+  
+    for (let key of codifica) {
+      if (code[key]) {
+        recebeNumero += code[key];
+      } else {
+        recebeNumero += key;
+      }
+    }
+    return recebeNumero;
   // seu código aqui
 }
-function decode() {
+function decode(decodifica) {
+  let recebeNumero = '';
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let key of decodifica) {
+    if (code[key]) {
+      recebeNumero += code[key];
+    } else {
+      recebeNumero += key;
+    }
+  }
+  return recebeNumero;
   // seu código aqui
 }
 
