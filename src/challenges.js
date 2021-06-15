@@ -41,8 +41,8 @@ function footballPoints(wins, ties) {
 function highestCount(h) {
 
     // seu código aqui
-    let aux = null;
-    var high = null;
+    let aux = 0;
+    var high = h[0];
     // descobre maior valor
     for(let i = 0; i < h.length; i++){
       if(high < h[i]){
@@ -58,21 +58,87 @@ function highestCount(h) {
     return aux;
   }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1 , cat2) {
   // seu código aqui
+  var d1 = Math.abs(cat1 - mouse);
+  var d2 = Math.abs(cat2 - mouse);
+  if(d1 === d2){
+    return 'os gatos trombam e o rato foge';
+  }else if(d1 > d2){
+    return 'cat2';
+  }else if(d1 < d2){
+    return 'cat1';
+  }
+
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(n) {
   // seu código aqui
+  var r=[]; 
+  for(var i = 0;i < n.length; i++){
+    if(n[i] % 3 === 0 && n[i] % 5 === 0){
+      r.push("fizzBuzz");
+      
+    }else if (n[i] % 3 === 0) {
+      r.push("fizz");
+      
+    }else if (n[i] % 5 === 0) {
+      r.push("buzz");
+      
+    }else{
+      r.push("bug!");
+     
+    }
+    
+  }
+  return r;
+
 }
 
 // Desafio 9
-function encode() {
+function encode(n) {
+ 
   // seu código aqui
+  n = n.replace('a','1');
+  n = n.replace('a','1');
+  n = n.replace('a','1');
+  n = n.replace('e','2');
+  n = n.replace('e','2');
+  n = n.replace('e','2');
+  n = n.replace('i','3');
+  n = n.replace('i','3');
+  n = n.replace('i','3');
+  n = n.replace('o','4');
+  n = n.replace('o','4');
+  n = n.replace('o','4');
+  n = n.replace('u','5');
+  n = n.replace('u','5');
+  n = n.replace('u','5');
+  n = n.replace('u','5');
+  return n;
+
 }
-function decode() {
+function decode(n) {
   // seu código aqui
+ n = n.replace('1','a');
+ n = n.replace('1','a');
+ n = n.replace('1','a');
+ n = n.replace('2','e');
+ n = n.replace('2','e');
+ n = n.replace('2','e');
+ n = n.replace('3','i');
+ n = n.replace('3','i');
+ n = n.replace('3','i');
+ n = n.replace('4','o');
+ n = n.replace('4','o');
+ n = n.replace('4','o');
+ n = n.replace('5','u');
+ n = n.replace('5','u');
+ n = n.replace('5','u');
+ n = n.replace('5','u');
+
+  return n;
 }
 
 module.exports = {
