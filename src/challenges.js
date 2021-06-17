@@ -65,7 +65,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let arrayFizzBuzz = [2, 15, 7, 9, 45];
+
+  for(let index = 0; index < arrayFizzBuzz.length; index +=1){
+    
+  }
 }
+
 
 
 
