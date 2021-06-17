@@ -3,7 +3,7 @@ function compareTrue(booleano1, booleano2){
   return booleano1 && booleano2;
 }
 
-//compareTrue(true, false);
+compareTrue(true, false);
 
 
 // Desafio 2
