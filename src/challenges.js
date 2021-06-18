@@ -43,10 +43,6 @@ function footballPoints(wins, ties) {
 
   }
 
-
-
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
@@ -61,14 +57,14 @@ function catAndMouse(mouse, cat1, cat2) {
    else (dis1 === dist2) {
      return "os gatos trobam e o rato foge";
    }
-}
+};
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayFizzBuzz = [2, 15, 7, 9, 45];
 
   for(let index = 0; index < arrayFizzBuzz.length; index +=1){
-    
+
   }
 }
 
