@@ -38,10 +38,10 @@ function footballPoints(wins, ties) {
   let maiorNumero = [9, 1, 2, 3, 9, 5, 7];
   let contador = 0;
 
-  function highestCount(maiorNumero)
-  for(let index = 0; index <= maiorNumero.length; index += 1){
-
+  function highestCount(maiorNumero){
+    for(let index = 0; index <= maiorNumero.length; index += 1){
   }
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -50,11 +50,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if(dist1 < cat1){
     return cat1;
-  }
-   else if (dis2 < cat2) {
+  } else if (dis2 < cat2) {
     return cat2;
-  }
-   else (dis1 === dist2) {
+  } else if (dis1 === dist2) {
      return "os gatos trobam e o rato foge";
    }
 };
