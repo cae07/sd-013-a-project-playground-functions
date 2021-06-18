@@ -5,41 +5,44 @@ function compareTrue(booleano1, booleano2){
 
 compareTrue(true, false);
 
-
 // Desafio 2
 function calcArea(base, height) {
   let calculo = (base * height) / 2;
   return calculo;
 }
 
-//console.log(calcArea(base * height) /2 );
 
 // Desafio 3
 function splitSentence(string) {
-  return string.splitSentence[' , '];
+  return string.splitSentence[' '];
 }
 
-//https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964
+
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length - 1] + '' + ',' + array[0];
+  let concat = array[array.length - 1] + ', ' + array[0];
   return concat;
-}
+};
 
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
 }
-//console.log(footbalPoints((wins * 3) + ties));
+
 
 // Desafio 6
   let maiorNumero = [9, 1, 2, 3, 9, 5, 7];
   let contador = 0;
 
   function highestCount(maiorNumero){
-    for(let index = 0; index <= maiorNumero.length; index += 1){
+    for(let index = 0; index < maiorNumero.length; index += 1){
+      for(let contador = 0; contador < maiorNumero.length; contador += 0)
+      if(maiorNumero[index] === maiorNumero[contador]){
+        contador += 1;
+      }
+      return contador;
   }
 };
 
@@ -50,9 +53,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if(dist1 < cat1){
     return cat1;
-  } else if (dis2 < cat2) {
+  } if (dis2 < cat2) {
     return cat2;
-  } else if (dis1 === dist2) {
+  } if (dis1 === dist2) {
      return "os gatos trobam e o rato foge";
    }
 };
@@ -60,11 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let arrayFizzBuzz = [2, 15, 7, 9, 45];
-
-  for(let index = 0; index < arrayFizzBuzz.length; index +=1){
-
-  }
-}
+};
 
 
 
