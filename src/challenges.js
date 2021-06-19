@@ -52,11 +52,11 @@ let contador = 0;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
-  let dis2 = mouse - cat2;
+  let dist2 = mouse - cat2;
 
-  if(dist1 < dis2){
+  if(dist1 < dist2){
     return cat1;
-  } else if (dis2 < dist1) {
+  } else if (dist2 < dist1) {
     return cat2;
   } else if (dist1 === dist2) {
     return "os gatos trobam e o rato foge";
