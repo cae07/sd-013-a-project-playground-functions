@@ -15,10 +15,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split[' '];
+  let divisor = string.split(' ');
+  return divisor;
 };
-
-
 
 // Desafio 4
 function concatName(arrayNomes) {
@@ -34,25 +33,21 @@ function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
 };
 
-let maiorNumero = [9, 1, 2, 3, 9, 5, 7];
-let contador = 0;
+
 
 // Desafio 6
-  function highestCount(array){
-    let maiorValor = array[0];
+  function highestCount(maiorNumero){
+    let maiorNumero = [];
     let contador = 0;
-    for(let index = 0; index < array.length; index += 1){
-      if(array[index] >= maiorValor){
-        maiorValor = array[index];
-      }
-    }
-    for(let index = 0; index < array.length; index += 0){
-      if(array[index] === maiorValor){
+
+    for(let index = 0; index < maiorNumero.length; index += 1){
+      if(maiorNumero[index] === Math.max(contador)){
         contador += 1;
       }
     }
     return contador;
 };
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,19 +64,23 @@ function catAndMouse(mouse, cat1, cat2) {
 };
 
 // Desafio 8
-function fizzBuzz(array) {
-   let arrayFizzBuzz = [];
+//function fizzBuzz(arrayF){
+  let arrayFizzBuzz = [];
    for(let index = 0; index < array.length; index +=1){
-   let arrayFiiz = array[index];
-  } if(array[index] % 3 === 0 && arrayFiiz % 5) {
-    arrayFizzBuzz.push('fizzBuzz');
-  } else if(array[index] % 5 === 0){
-    arrayFizzBuzz.push('buzz');
-  } else if(array[index] % 3 === 0){
-    arrayFizzBuzz.push('fizz');
-  }
-  return arrayFizzBuzz;
+      if(arrayF[index] % 3 === 0 && arrayF[index] % 5 === 0){
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if(arrayF[index] % 5 === 0){
+      arrayFizzBuzz.push('buzz');
+    } else if(arrayF[index] % 3 === 0){
+      arrayFizzBuzz.push('fizz');
+    } else  {
+      arrayFizzBuzz.push = 'bug!';
+    }
+    return arrayFizzBuzz;
 };
+
+
+
 
 // Desafio 9
 function encode() {
