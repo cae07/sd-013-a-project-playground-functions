@@ -36,18 +36,9 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-  function highestCount(maiorNumero){
-    let maiorNumero = [];
-    let contador = 0;
-
-    for(let index = 0; index < maiorNumero.length; index += 1){
-      if(maiorNumero[index] === Math.max(contador)){
-        contador += 1;
-      }
-    }
-    return contador;
-};
-
+  function highestCount(){
+    
+  }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -64,19 +55,20 @@ function catAndMouse(mouse, cat1, cat2) {
 };
 
 // Desafio 8
-//function fizzBuzz(arrayF){
-  let arrayFizzBuzz = [];
+function fizzBuzz(array){
+  let arrayFizz = [];
    for(let index = 0; index < array.length; index +=1){
-      if(arrayF[index] % 3 === 0 && arrayF[index] % 5 === 0){
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if(arrayF[index] % 5 === 0){
-      arrayFizzBuzz.push('buzz');
-    } else if(arrayF[index] % 3 === 0){
-      arrayFizzBuzz.push('fizz');
-    } else  {
-      arrayFizzBuzz.push = 'bug!';
+      if((array[index] % 3 === 0) && (array[index] % 5 === 0)){
+      arrayFizz.push('fizzBuzz');
+    } else if(array[index] % 3 === 0){
+      arrayFizz.push('fizz');
+    } else if(array[index] % 5 === 0){
+      arrayFizz.push('buzz');
+    } else if ((array[index] % 3 !== 0) && (array[index] % 5 !== 0)){
+      arrayFizz.push = ('bug!');
     }
-    return arrayFizzBuzz;
+  }
+    return arrayFizz;
 };
 
 
@@ -102,4 +94,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
