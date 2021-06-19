@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.splitSentence[' '];
+  return string.split[', '];
 };
 
 
@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(arrayNomes) {
   let primeiroNome = arrayNomes[0];
   let ultimoNome = arrayNomes[arrayNomes.length - 1];
-  return ultimoNome + ' ,' + primeiroNome;
+  return ultimoNome + ', ' + primeiroNome;
 };
 
 
@@ -39,9 +39,7 @@ let contador = 0;
 
 // Desafio 6
   function highestCount(maiorNumero){
-
-    for(let index = 0; index < maiorNumero.length; index += 1){
-      for(let contador = 0; contador < maiorNumero.length; contador += 0)
+      for(let contador = 0; contador < maiorNumero.length; contador += 0){
       if(maiorNumero[index] === maiorNumero[contador]){
         contador += 1;
       }
