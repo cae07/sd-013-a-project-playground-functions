@@ -9,14 +9,14 @@ compareTrue(true, false);
 function calcArea(base, height) {
   let calculo = (base * height) / 2;
   return calculo;
-}
+};
 
 
 
 // Desafio 3
 function splitSentence(string) {
   return string.splitSentence[' '];
-}
+};
 
 
 
@@ -32,7 +32,7 @@ function concatName(arrayNomes) {
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
-}
+};
 
 let maiorNumero = [9, 1, 2, 3, 9, 5, 7];
 let contador = 0;
@@ -65,17 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  let arrayFizzBuzz = [2, 15, 7, 9, 45];
-  for(let index = 0; index < arrayFizzBuzz.length; index +=1){
-    arrayFiiz = 'bug';
-   } if(arrayFizzBuzz[index] % 15 === 0) {
-      arrayFiiz[index] = 'fizzBuzz';
-   } else if(arrayFizzBuzz[index] % 5 === 0){
-      arrayFiiz[index] = 'buzz';
-   } else if(arrayFizzBuzz[index] % 3 === 0){
-     arrayFiiz[index] = 'fizz';
-   }
-   return arrayFiiz;
+   // seu código aqui
 }
 
 // Desafio 9
