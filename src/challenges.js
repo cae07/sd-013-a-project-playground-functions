@@ -56,17 +56,27 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if(dist1 < dis2){
     return cat1;
-  } else if (dis2 < dis1) {
+  } else if (dis2 < dist1) {
     return cat2;
-  } else if (dis1 === dist2) {
+  } else if (dist1 === dist2) {
     return "os gatos trobam e o rato foge";
   }
 };
 
 // Desafio 8
 function fizzBuzz() {
-
-};
+  let arrayFizzBuzz = [2, 15, 7, 9, 45];
+  for(let index = 0; index < arrayFizzBuzz.length; index +=1){
+    arrayFiiz = 'bug';
+   } if(arrayFizzBuzz[index] % 15 === 0) {
+      arrayFiiz[index] = 'fizzBuzz';
+   } else if(arrayFizzBuzz[index] % 5 === 0){
+      arrayFiiz[index] = 'buzz';
+   } else if(arrayFizzBuzz[index] % 3 === 0){
+     arrayFiiz[index] = 'fizz';
+   }
+   return arrayFiiz;
+}
 
 // Desafio 9
 function encode() {
