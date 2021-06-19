@@ -21,10 +21,12 @@ function splitSentence(string) {
 
 
 // Desafio 4
-function concatName(array) {
-  let concat = array[array.length - 1] + ', ' + array[0];
-  return concat;
+function concatName(arrayNomes) {
+  let primeiroNome = arrayNomes[0];
+  let ultimoNome = arrayNomes[arrayNomes.length - 1];
+  return ultimoNome + ' ,' + primeiroNome;
 };
+
 
 
 // Desafio 5
@@ -57,8 +59,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (dis2 < dis1) {
     return cat2;
   } else if (dis1 === dist2) {
-     return "os gatos trobam e o rato foge";
-   }
+    return "os gatos trobam e o rato foge";
+  }
 };
 
 // Desafio 8
