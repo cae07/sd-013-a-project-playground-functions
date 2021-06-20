@@ -37,20 +37,19 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
   function highestCount(){
-    
-  }
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = mouse - cat1;
-  let dist2 = mouse - cat2;
+  let dist1 = Math.abs(cat1 - mouse);
+  let dist2 = Math.abs(cat2 - mouse);
 
-  if(dist1 <= dist2){
-    return cat1;
-  } else if (dist2 <= dist1) {
-    return cat2;
+  if(dist1 < dist2){
+    return 'cat1';
+  } else if (dist2 < dist1) {
+    return 'cat2';
   } else if (dist1 === dist2) {
-    return "os gatos trobam e o rato foge";
+    return "os gatos trombam e o rato foge";
   }
 };
 
@@ -61,15 +60,13 @@ function fizzBuzz(array){
       if((array[index] % 3 === 0) && (array[index] % 5 === 0)){
       arrayFizz.push('fizzBuzz');
     } else if(array[index] % 3 === 0){
-      arrayFizz.push('fizz');
+      arrayFizz.push  ('fizz');
     } else if(array[index] % 5 === 0){
-      arrayFizz.push('buzz');
-    } else if ((array[index] % 3 !== 0) && (array[index] % 5 !== 0)){
-      arrayFizz.push = ('bug!');
-    }
+       arrayFizz.push ('buzz');
+    } else arrayFizz.push('bug!')
   }
-    return arrayFizz;
-};
+  return arrayFizz;
+}
 
 
 

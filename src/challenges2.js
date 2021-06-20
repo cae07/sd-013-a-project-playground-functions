@@ -1,6 +1,5 @@
 // Desafio 10
-function techList(listTech, name) {
-  let techListName = [];
+function techList(){
 
 }
 
