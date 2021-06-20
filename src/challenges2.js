@@ -19,7 +19,8 @@
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numero) {
+  
   // seu código aqui
 }
 
@@ -29,7 +30,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+// https://www.youtube.com/watch?v=oSjv2oehaGc
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+// https://stackoverflow.com/questions/5946278/javascript-extracting-the-digits-from-different-positions-from-a-string
+function hydrate(texto) {
+  let array = texto.match(/\d+/g);
+  let sum = 0;
+  for(let index = 0; index < array.length; index += 1) {
+    sum = sum + parseInt(array[index]);
+  }
+  if(sum > 1){
+    return sum + ' copos de água';
+  } else {
+  return sum + ' copo de água';
+  }
   // seu código aqui
 }
 
