@@ -95,16 +95,7 @@ function decode(nameReverse) {
   nameReverse = nameReverse.replace(/4/g, 'o');
   nameReverse = nameReverse.replace(/5/g, 'u');
   return nameReverse;
-
-
-
-
-
-
-
-
-
-}
+};
 
 module.exports = {
   calcArea,
