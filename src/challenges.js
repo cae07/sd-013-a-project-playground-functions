@@ -26,18 +26,23 @@ function concatName(arrayNomes) {
   return ultimoNome + ', ' + primeiroNome;
 };
 
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties);
 };
 
 
-
 // Desafio 6
-  function highestCount(){
-}
+  function highestCount(list){
+    let maiorValor = Math.max.apply(null, list);
+    let numbers = 0;
+    for(let index = 0; index < list.length; index += 1){
+      if(list[index] === maiorValor){
+        numbers += 1;
+      }
+    }
+    return numbers;
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,12 +77,33 @@ function fizzBuzz(array){
 
 
 // Desafio 9
-function encode() {
-
-
+function encode(name) {
+  name = name.replace(/a/g, '1');
+  name = name.replace(/e/g, '2');
+  name = name.replace(/i/g, '3');
+  name = name.replace(/o/g, '4');
+  name = name.replace(/u/g, '5');
+  return name;
 }
-function decode() {
-  // seu código aqui
+
+
+
+function decode(nameReverse) {
+  nameReverse = nameReverse.replace(/1/g, 'a');
+  nameReverse = nameReverse.replace(/2/g, 'e');
+  nameReverse = nameReverse.replace(/3/g, 'i');
+  nameReverse = nameReverse.replace(/4/g, 'o');
+  nameReverse = nameReverse.replace(/5/g, 'u');
+  return nameReverse;
+
+
+
+
+
+
+
+
+
 }
 
 module.exports = {
