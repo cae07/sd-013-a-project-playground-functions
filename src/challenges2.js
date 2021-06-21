@@ -10,7 +10,7 @@ function techList(techList, nome){
   }
    if(techList.length > 0){
     return techListName;
-  } else 'Vazio!';
+  } else return  'Vazio!';
 };
 
 // Desafio 11
@@ -43,13 +43,13 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
   return true;
-};
+  };
   function checkC(lineA, lineB, lineC){
     if(lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)){
       return false;
     }
     return true;
-  }
+  };
 
 // Desafio 13
 function hydrate(string) {
