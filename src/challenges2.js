@@ -53,9 +53,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(stringIce) {
-  contador = 0;
-  drinkCheck = /\d+/g;
-  waterOn = stringIce.match(drinkCheck);
+  let contador = 0;
+  let drinkCheck = /\d+/g;
+  let waterOn = stringIce.match(drinkCheck);
   for(let index = 0; index < waterOn.length; index += 1){
     rain = parseInt(waterOn[index])
     contador += rain;
