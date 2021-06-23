@@ -1,23 +1,24 @@
 // Desafio 10
-function techList(techList, nome){
+function techList(techListCode, name){
   let techListName = [];
-  for(let listTechnology of techList.sort()){
+  for(let listTechnology of techListCode.sort()){
     techListName.push(
       {
       tech: listTechnology,
-      name: nome
+      name: name
       });
   }
-   if(techList.length > 0){
+   if(techListCode.length > 0){
     return techListName;
   } else return  'Vazio!';
 };
 
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Matheus'));
+// .sort() ordena os elementos do próprio array e retorna o array.
+
 // Desafio 11
 function generatePhoneNumber(){
-   // seu código aqui
-};
-
+}
 
 
 
@@ -31,7 +32,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
   function checkA(lineA, lineB, lineC){
-    let fullTriangle = Math.abs(lineA, lineB, lineC) || Math.abs(lineB, lineC, lineA) || Math.abs(lineC, lineA, lineB)
+   let fullTriangle = Math.abs(lineA, lineB, lineC) || Math.abs(lineB, lineC, lineA) || Math.abs(lineC, lineA, lineB)
   if(fullTriangle){
     return true;
   }
@@ -51,21 +52,27 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   };
 
+  //console.log(10, 14, 8);
+
 // Desafio 13
 function hydrate(stringIce) {
   let contador = 0;
-  let drinkCheck = /\d+/g;
-  let waterOn = stringIce.match(drinkCheck);
-  for(let index = 0; index < waterOn.length; index += 1){
-    rain = parseInt(waterOn[index])
-    contador += rain;
+  //let bar = 0; //'1 cachaça, 5 cervejas e 1 copos de vinhos'
+  let waterOn = stringIce.match(/\d+/g); // d de digito e o + para pegar mais de um
+  for (index = 0; index < waterOn.length; index += 1){
+    let bar = parseInt(waterOn[index]);
+    contador += bar;
+
   }
-  if(contador > 1){
-    return contador + " copos de água"
-  } else {
+  if(contador === 1){
     return contador + " copo de água"
-  }
-}
+  } else return contador + " copos de água"
+};
+
+//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
+// .match() retorna uma correspondência entre uma string com uma expressão regular, montar só com os números da string com números em formato de string.
+// .parseInt() analisa um argumento string e retorna um inteiro na base especificada, para transformar os números em formato de string em números
 
 module.exports = {
   generatePhoneNumber,

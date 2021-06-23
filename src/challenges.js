@@ -19,6 +19,8 @@ function splitSentence(string) {
   return divisor;
 };
 
+// .split() divide uma String em uma lista ordenada de substrings.
+
 // Desafio 4
 function concatName(arrayNomes) {
   let primeiroNome = arrayNomes[0];
@@ -43,9 +45,12 @@ function footballPoints(wins, ties) {
     }
     return numbers;
 };
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//Math.max() retorna o maior de um ou mais números.
+
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
 
@@ -57,24 +62,25 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 };
+// Math.abs(x) retorna o valor absoluto de um número "x".
 
 // Desafio 8
 function fizzBuzz(array){
   let arrayFizz = [];
    for(let index = 0; index < array.length; index +=1){
-      if((array[index] % 3 === 0) && (array[index] % 5 === 0)){
-      arrayFizz.push('fizzBuzz');
+      if((array[index] % 3 === 0 && array[index] % 5 === 0)){
+        arrayFizz.push('fizzBuzz');
     } else if(array[index] % 3 === 0){
-      arrayFizz.push  ('fizz');
+      arrayFizz.push('fizz');
     } else if(array[index] % 5 === 0){
-       arrayFizz.push ('buzz');
+      arrayFizz.push('buzz');
     } else arrayFizz.push('bug!')
   }
   return arrayFizz;
 }
-
-
-
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// === 0, para ter certeza que será divisível, para o resto ser 0.
+//.push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array
 
 // Desafio 9
 function encode(name) {
@@ -96,6 +102,8 @@ function decode(nameReverse) {
   nameReverse = nameReverse.replace(/5/g, 'u');
   return nameReverse;
 };
+
+// .replace() retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres).
 
 module.exports = {
   calcArea,
