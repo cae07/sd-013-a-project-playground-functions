@@ -6,13 +6,16 @@ function techList(array, name) {
     return 'Vazio!';
   }
   for (let index = 0; index < array.length; index += 1) {
-    let objectList = {};
+    let objectList = {
+      tech: null,
+      name: null,
+    };
     objectList.tech = array[index];
     objectList.name = name;
     result.push(objectList);
   }
 
-  result.sort((a, b) => a.tech > b.tech ? 1 : -1);
+  result.sort((a, b) => (a.tech > b.tech ? 1 : -1));
 
   return result;
 }

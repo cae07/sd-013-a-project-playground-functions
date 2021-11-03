@@ -74,23 +74,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+const calcFunction = (number) => {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return ('fizzBuzz');
+  } if (number % 5 === 0) {
+    return ('buzz');
+  } if (number % 3 === 0) {
+    return ('fizz');
+  }
+  return ('bug!');
+};
+const fizzBuzz = (array) => {
   let arrayVazio = [];
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      arrayVazio.push('fizzBuzz');
-    } else if (array[index] % 5 === 0) {
-      arrayVazio.push('buzz');
-    } else if (array[index] % 3 === 0) {
-      arrayVazio.push('fizz');
-    } else {
-      arrayVazio.push('bug!');
-    }
+    const atualNumber = array[index];
+    arrayVazio.push(calcFunction(atualNumber));
   }
-
   return arrayVazio;
-}
+};
 
 // Desafio 9
 function encode(palav) {
