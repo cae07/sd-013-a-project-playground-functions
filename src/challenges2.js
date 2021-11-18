@@ -15,7 +15,7 @@ function techList(arrayNomes, name) {
 console.log(techList([], 'yuri'));
 
 // Desafio 11
-// function generatePhoneNumber(arrayNumbers) {
+function generatePhoneNumber() {
 //   if (arrayNumbers.length >= 12) return 'Array com tamanho incorreto.';
 //   let parentesis = arrayNumbers.slice(0, 2).join('');
 //   let primeiroBloco = arrayNumbers.slice(2, 7).join('');
@@ -33,7 +33,7 @@ console.log(techList([], 'yuri'));
 //     });
 //   });
 //   return mensagem;
-// }
+}
 
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 // Desafio 12
