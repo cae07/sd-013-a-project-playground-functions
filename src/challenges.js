@@ -1,35 +1,28 @@
 // Desafio 1 == OK, passou nos 3 testes
-function compareTrue(veredito1, veredito2) {
-
-  if( veredito1 == true && veredito2 == true){
-    return true;
-  }else {
-    return false; }
-}
-console.log(compareTrue(false, false));
+const compareTrue = (veredito1, veredito2) => {
+  const trueOrFalse = (veredito1 && veredito2);
+  return (trueOrFalse);
+};
+console.log(compareTrue(false, true));
 
 // Desafio 2 == OK, passou nos 3 testes
-function calcArea(base, height) {
-
-  let area = base * height / 2;
-  return area;
-}
-console.log(calcArea(51, 1));
+const calcArea = (base, height) => {
+  let area = base * height;
+  return area / 2;
+};
+console.log(calcArea(50, 1));
 
 // Desafio 3 == OK, passou nos 3 testes
-function splitSentence(string) {
-  string = string.split(' ');
-  return string;
-}
+const splitSentence = (string) => string.split(' ');
 console.log(splitSentence('go trybe'));
 
 // Desafio 4 == OK, passou nos 3 testes
-function concatName(array) {
+const concatName = (array) => {
   let primeiro = array[0];
-  let ultimo = array[array.length-1];
-  let result = ultimo + ', '+ primeiro;
-  return result; 
-}
+  let ultimo = array[array.length - 1];
+  let result = ultimo.concat(' ', primeiro);
+  return result;
+};
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5 == OK, passou nos 3 testes.
