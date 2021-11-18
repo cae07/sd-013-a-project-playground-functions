@@ -75,12 +75,35 @@ const fizzBuzz = ((array) => {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+const encode = (string) => {
+  const arrayCaracteres = string.split('');
+  const arrayEncode = [];
+  arrayCaracteres.forEach((item) => {
+    if (item === 'a') arrayEncode.push(1);
+    else if (item === 'e') arrayEncode.push(2);
+    else if (item === 'i') arrayEncode.push(3);
+    else if (item === 'o') arrayEncode.push(4);
+    else if (item === 'u') arrayEncode.push(5);
+    else arrayEncode.push(item);
+  });
+  return arrayEncode.join('');
+};
+console.log(encode('hi there!'));
+
+const decode = (string) => {
+  const arrayMutado = string.split('');
+  const arrayDecode = [];
+  arrayMutado.forEach((item) => {
+    if (item === '1') arrayDecode.push('a');
+    else if (item === '2') arrayDecode.push('e');
+    else if (item === '3') arrayDecode.push('i');
+    else if (item === '4') arrayDecode.push('o');
+    else if (item === '5') arrayDecode.push('u');
+    else arrayDecode.push(item);
+  });
+  return arrayDecode.join('');
+};
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
