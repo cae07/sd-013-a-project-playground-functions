@@ -74,6 +74,8 @@ function fizzBuzz(array) {
 function encode() {
   // seu código aqui
 }
+
+encode('hi there');
 function decode() {
   // seu código aqui
 }
